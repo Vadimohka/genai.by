@@ -1,0 +1,8 @@
+{
+  "name": "CAIO Практика",
+  "short_name": "CAIO",
+  "icons": [{ "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "display": "standalone"
+}

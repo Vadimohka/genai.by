@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Бесплатные индивидуальные консультации и обучение команд для CAIO: стратегия, портфель AI-кейсов, архитектура, governance, экономика и внедрение.">
+  <meta name="geo.region" content="BY-HM">
+  <meta name="geo.placename" content="Минск">
+  <meta name="geo.address" content="ул. Чернышевского, 5">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="CAIO / Практика — Вадим Владымцев × Виталий Бахмат">
+  <meta property="og:description" content="Разбираем реальный мандат CAIO и помогаем собрать управляемую систему внедрения AI. Индивидуально и с командами. Бесплатно.">
+  <meta property="og:site_name" content="CAIO / Практика">
+  <meta property="og:url" content="https://genai.by/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="CAIO / Практика — бесплатные консультации и обучение команд">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CAIO / Практика — Вадим Владымцев × Виталий Бахмат">
+  <meta name="twitter:description" content="Бесплатная индивидуальная работа и обучение команд для руководителей корпоративного AI.">
+  <meta name="twitter:url" content="https://genai.by/">
+  <meta name="twitter:image" content="https://genai.by/assets/img/og-caio.png">
+
+  <title>CAIO / Практика — бесплатные консультации и обучение команд</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <!-- Yandex.Metrika counter -->
+  <script>
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j += 1) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t); a = e.getElementsByTagName(t)[0]; k.async = 1; k.src = r; a.parentNode.insertBefore(k, a);
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=110878224', 'ym');
+
+    ym(110878224, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: 'dataLayer', referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+  </script>
+  <!-- /Yandex.Metrika counter -->
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260901-8">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "CAIO / Практика",
+    "url": "https://genai.by/",
+    "description": "Бесплатные индивидуальные консультации и обучение команд для руководителей, отвечающих за корпоративный AI.",
+    "inLanguage": "ru",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BY",
+      "addressLocality": "Минск",
+      "streetAddress": "ул. Чернышевского, 5"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Беларусь"
+    },
+    "about": [
+      {
+        "@type": "Person",
+        "name": "Вадим Владымцев",
+        "jobTitle": "CTO StackLevel Group; Co-founder Century",
+        "url": "https://vadimohka.com/",
+        "sameAs": ["https://www.linkedin.com/in/vadimohka/"]
+      },
+      {
+        "@type": "Person",
+        "name": "Виталий Бахмат",
+        "jobTitle": "CEO, Co-founder Century",
+        "sameAs": ["https://www.linkedin.com/in/vbakhmat/"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/110878224" style="position:absolute;left:-9999px" alt=""></div></noscript>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <div class="viewport-frame">
+    <div class="site-shell">
+      <header class="site-header" data-header>
+        <a class="brand" href="#top" aria-label="CAIO Практика — на главную">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M27 11.5a11 11 0 1 0 0 17"/><path d="m20 11 9 9-9 9"/></svg></span>
+          <span class="brand-copy">
+            <strong>CAIO</strong>
+            <small>практика</small>
+          </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a href="#experts">Эксперты</a>
+          <a href="#work">Работа</a>
+          <a href="#format">Формат</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="header-cta" href="#contact">Написать нам</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+            <span></span><span></span>
+          </button>
+        </div>
+
+        <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+          <a href="#experts">Эксперты</a>
+          <a href="#work">Работа</a>
+          <a href="#format">Формат</a>
+        </nav>
+      </header>
+
+      <main id="main">
+        <section class="hero section-dark" id="top" aria-labelledby="hero-title">
+          <div class="grid-backdrop" aria-hidden="true"></div>
+          <div class="glow glow-one" aria-hidden="true"></div>
+          <div class="glow glow-two" aria-hidden="true"></div>
+
+          <div class="hero-copy reveal">
+            <h1 id="hero-title">
+              Практика для CAIO.<br>
+              <em>Консультации и работа с командами.</em>
+            </h1>
+
+            <p class="hero-lead">
+              Индивидуальные консультации и работа с командами для CAIO, CTO, CIO
+              и руководителей трансформации.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">
+                <span>Обсудить задачу</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="button button-ghost" href="#work">Что будет на выходе</a>
+            </div>
+
+          </div>
+
+          <div class="hero-motion" aria-hidden="true">
+            <span class="hero-motion-line hero-motion-line-one"></span>
+            <span class="hero-motion-line hero-motion-line-two"></span>
+            <span class="hero-motion-line hero-motion-line-three"></span>
+          </div>
+        </section>
+
+        <section class="work section-dark" id="work" aria-labelledby="work-title">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <div class="eyebrow"><span>02 / Совместная работа</span></div>
+              <h2 id="work-title">Работаем с вашей<br><em>текущей задачей.</em></h2>
+            </div>
+            <p>Берём одну актуальную задачу, собираем контекст, определяем критерии и фиксируем следующий шаг.</p>
+          </div>
+
+          <div class="outcome-layout">
+            <div class="outcome-sticky reveal">
+              <span class="mono-label">Стоимость</span>
+              <strong>0</strong>
+              <p>Индивидуальные консультации и обучение команд — бесплатно.</p>
+              <div class="zero-ring" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="outcome-list">
+              <article class="outcome-item reveal">
+                <span>01</span>
+                <div>
+                  <h3>90-дневная повестка CAIO</h3>
+                  <p>Что решить сначала, кого вовлечь и какие зависимости важно учесть.</p>
+                </div>
+              </article>
+              <article class="outcome-item reveal">
+                <span>02</span>
+                <div>
+                  <h3>Карта портфеля и критерии отбора</h3>
+                  <p>Единый способ сравнивать кейсы по ценности, сложности, данным, риску и готовности владельца процесса.</p>
+                </div>
+              </article>
+              <article class="outcome-item reveal">
+                <span>03</span>
+                <div>
+                  <h3>Decision rights и operating model</h3>
+                  <p>Кто предлагает, кто проверяет, кто финансирует, кто принимает риск и кто отвечает после запуска.</p>
+                </div>
+              </article>
+              <article class="outcome-item reveal">
+                <span>04</span>
+                <div>
+                  <h3>Базовый контур governance</h3>
+                  <p>Инвентаризация, оценка, доступы, human review, мониторинг, инциденты и след изменений — без бюрократии ради бюрократии.</p>
+                </div>
+              </article>
+              <article class="outcome-item reveal">
+                <span>05</span>
+                <div>
+                  <h3>Вопросы к архитектуре и вендорам</h3>
+                  <p>Набор проверок для данных, интеграций, размещения, наблюдаемости, стоимости и выхода из зависимости.</p>
+                </div>
+              </article>
+              <article class="outcome-item reveal">
+                <span>06</span>
+                <div>
+                  <h3>План обучения команды</h3>
+                  <p>Знания и практики для конкретных ролей, решений и рабочих процессов.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <p class="outcome-disclaimer reveal">Для старта выбираем один–три артефакта, которые помогают двигаться дальше.</p>
+        </section>
+
+        <section class="experts section-light" id="experts" aria-labelledby="experts-title">
+          <div class="light-grid" aria-hidden="true"></div>
+          <div class="section-heading reveal">
+            <div class="eyebrow eyebrow-dark"><span>01 / Эксперты практики</span></div>
+            <h2 id="experts-title">Вадим Владымцев и Виталий Бахмат.</h2>
+            <p>Консультации ведут руководители Century и StackLevel Group с опытом в продукте, архитектуре и внедрении AI-решений.</p>
+          </div>
+
+          <div class="expert-grid">
+            <article class="expert-card reveal">
+              <div class="expert-identity">
+                <img class="expert-photo" src="assets/img/vadim-vladymtsev-176.jpg" srcset="assets/img/vadim-vladymtsev-96.jpg 96w, assets/img/vadim-vladymtsev-176.jpg 176w" sizes="(max-width: 720px) 90px, 150px" width="150" height="150" alt="Вадим Владымцев" loading="lazy" decoding="async">
+                <div>
+                  <h3>Вадим Владымцев</h3>
+                  <p>Co-founder Century · CTO StackLevel Group</p>
+                </div>
+              </div>
+              <div class="expert-body">
+                <p>Работает на стыке продукта, архитектуры и инженерной эксплуатации: от защищённого доступа к данным до перехода от пилота к внедрению.</p>
+              </div>
+              <div class="expert-links">
+                <a href="https://vadimohka.com/" target="_blank" rel="noopener noreferrer">vadimohka.com <span>↗</span></a>
+                <a href="https://www.linkedin.com/in/vadimohka/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+              </div>
+            </article>
+
+            <article class="expert-card reveal">
+              <div class="expert-identity">
+                <img class="expert-photo" src="assets/img/vitaliy-bakhmat-176.jpg" srcset="assets/img/vitaliy-bakhmat-96.jpg 96w, assets/img/vitaliy-bakhmat-176.jpg 176w" sizes="(max-width: 720px) 90px, 150px" width="150" height="150" alt="Виталий Бахмат" loading="lazy" decoding="async">
+                <div>
+                  <h3>Виталий Бахмат</h3>
+                  <p>CEO, Co-founder Century</p>
+                </div>
+              </div>
+              <div class="expert-body">
+                <p>Ведёт бизнес-внедрение: выбор направлений для пилотов, работа с руководителями и владельцами процессов, вовлечение сотрудников.</p>
+              </div>
+              <div class="expert-links">
+                <a href="https://www.linkedin.com/in/vbakhmat/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+                <a href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">Century <span>↗</span></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="context-panel reveal">
+            <div class="context-copy">
+              <h3>Century + StackLevel Group</h3>
+              <p>Практический опыт в продукте, архитектуре и внедрении корпоративных AI-решений.</p>
+            </div>
+            <div class="context-links">
+              <a href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">Century ↗</a>
+              <a href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">StackLevel ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="format section-dark" id="format" aria-labelledby="format-title">
+          <div class="section-heading split-heading reveal">
+            <div>
+              <div class="eyebrow"><span>03 / Формат</span></div>
+              <h2 id="format-title">Как проходит<br><em>совместная работа.</em></h2>
+            </div>
+            <p>Формат подбираем под вашу роль, команду и ближайшее управленческое решение.</p>
+          </div>
+
+          <div class="process-board reveal">
+            <article class="process-step">
+              <span>01</span>
+              <div>
+                <small>Контекст</small>
+                <h3>Короткая диагностика</h3>
+                <p>Мандат, стейкхолдеры, портфель, ограничения и решение, которое нужно принять.</p>
+              </div>
+            </article>
+            <article class="process-step">
+              <span>02</span>
+              <div>
+                <small>Работа</small>
+                <h3>Индивидуальная сессия</h3>
+                <p>Разбираем варианты, критерии и последствия для вашей ситуации.</p>
+              </div>
+            </article>
+            <article class="process-step">
+              <span>03</span>
+              <div>
+                <small>Команда</small>
+                <h3>Совместный практикум</h3>
+                <p>Синхронизируем бизнес, IT, данные, безопасность и владельцев процессов.</p>
+              </div>
+            </article>
+            <article class="process-step">
+              <span>04</span>
+              <div>
+                <small>Выход</small>
+                <h3>Рабочий артефакт</h3>
+                <p>Фиксируем договорённости и следующий шаг на горизонте 30/60/90 дней.</p>
+              </div>
+            </article>
+          </div>
+
+        </section>
+
+        <section class="audience section-dark" aria-labelledby="audience-title">
+          <div class="audience-card reveal">
+            <div>
+              <span class="mono-label">Кому полезно</span>
+              <h2 id="audience-title">Кому подходит<br>эта практика.</h2>
+            </div>
+            <div class="audience-list">
+              <div><span>01</span><p>Новый CAIO, которому нужно собрать первые 90 дней и договориться о мандате.</p></div>
+              <div><span>02</span><p>CTO, CIO или CDAO, на которого фактически легла ответственность за AI.</p></div>
+              <div><span>03</span><p>Руководитель трансформации, инноваций или AI Center of Excellence.</p></div>
+              <div><span>04</span><p>C-level команда, которая только проектирует роль и operating model.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq section-dark" aria-labelledby="faq-title">
+          <div class="section-heading reveal">
+            <div class="eyebrow"><span>05 / Перед разговором</span></div>
+            <h2 id="faq-title">Коротко о формате.</h2>
+          </div>
+
+          <div class="faq-list reveal">
+            <details>
+              <summary><span>Это действительно бесплатно?</span><i></i></summary>
+              <p>Да. Индивидуальные консультации и обучение команд проходят без оплаты. Никакой покупки продукта или услуг не требуется.</p>
+            </details>
+            <details>
+              <summary><span>Нужно ли уже быть CAIO?</span><i></i></summary>
+              <p>Нет. Достаточно отвечать за AI-стратегию, портфель инициатив, внедрение или координацию бизнеса и технологий.</p>
+            </details>
+            <details>
+              <summary><span>С чего начать сообщение?</span><i></i></summary>
+              <p>Напишите отрасль, вашу роль, текущую ситуацию и одно решение, которое нужно принять. Используйте обезличенные данные.</p>
+            </details>
+            <details>
+              <summary><span>Можно прийти всей командой?</span><i></i></summary>
+              <p>Да. Особенно полезен кросс-функциональный состав: бизнес, IT, данные, безопасность, юристы и владелец процесса.</p>
+            </details>
+            <details>
+              <summary><span>Будет ли запись или типовой курс?</span><i></i></summary>
+              <p>Основной формат — живая работа с вашим контекстом. Материалы и последовательность тем подбираются под задачу.</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="contact section-dark" id="contact" aria-labelledby="contact-title">
+          <div class="contact-inner reveal">
+            <div class="contact-copy">
+              <span class="mono-label">Связаться</span>
+              <h2 id="contact-title">Напишите тому,<br>с кем хотите обсудить задачу.</h2>
+              <p>Можно коротко: компания, роль и вопрос, который важно решить сейчас.</p>
+            </div>
+
+            <div class="contact-actions" aria-label="Прямые ссылки в Telegram">
+              <a class="contact-button" href="https://t.me/vadimohka" target="_blank" rel="noopener noreferrer">
+                <span><small>Telegram / Вадим</small><strong>@vadimohka</strong></span>
+                <i aria-hidden="true">↗</i>
+              </a>
+              <a class="contact-button" href="https://t.me/vitalibakhmat" target="_blank" rel="noopener noreferrer">
+                <span><small>Telegram / Виталий</small><strong>@vitalibakhmat</strong></span>
+                <i aria-hidden="true">↗</i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M27 11.5a11 11 0 1 0 0 17"/><path d="m20 11 9 9-9 9"/></svg></span>
+          <div><strong>CAIO / PRACTICE</strong><small>Vadim × Vitali</small></div>
+        </div>
+        <div class="footer-links">
+          <a href="https://vadimohka.com/" target="_blank" rel="noopener noreferrer">Vadim</a>
+          <a href="https://www.linkedin.com/in/vbakhmat/" target="_blank" rel="noopener noreferrer">Vitali</a>
+          <a href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">Century</a>
+          <a href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">StackLevel</a>
+        </div>
+        <div class="footer-meta">
+          <span>© <span data-year>2026</span></span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
