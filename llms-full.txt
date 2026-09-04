@@ -10,7 +10,7 @@ CAIO / Practice — одностраничная практика для CAIO, C
 Эксперты:
 - Вадим Владымцев — Co-founder Century · CTO StackLevel Group. https://vadimohka.com/
 - Виталий Бахмат — CEO, Co-founder Century. https://www.linkedin.com/in/vbakhmat/
-- Егор Крычев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. https://www.linkedin.com/in/ekrychev/
+- Егор Крячев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. https://www.linkedin.com/in/ekrychev/
 
 Контакты: https://genai.by/#contact
 Robots: https://genai.by/robots.txt

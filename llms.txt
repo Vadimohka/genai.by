@@ -22,7 +22,7 @@ CAIO / Practice — консультации и совместные практ�
 
 - Вадим Владымцев — Co-founder Century, CTO StackLevel Group. Продукт, архитектура и инженерная эксплуатация корпоративного AI. Telegram: https://t.me/vadimohka
 - Виталий Бахмат — CEO и Co-founder Century. Бизнес-внедрение AI, работа с руководителями и владельцами процессов. Telegram: https://t.me/vitalibakhmat
-- Егор Крычев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. LinkedIn: https://www.linkedin.com/in/ekrychev/
+- Егор Крячев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. LinkedIn: https://www.linkedin.com/in/ekrychev/
 
 ## Контакты и география
 
