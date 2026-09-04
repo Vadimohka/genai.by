@@ -3,6 +3,7 @@
 > Бесплатная практика для руководителей, отвечающих за создание и развитие корпоративного AI.
 
 Канонический сайт: https://genai.by/
+Язык и регион: ru-BY (Беларусь).
 
 ## Описание
 
@@ -21,6 +22,7 @@ CAIO / Practice — консультации и совместные практ�
 
 - Вадим Владымцев — Co-founder Century, CTO StackLevel Group. Продукт, архитектура и инженерная эксплуатация корпоративного AI. Telegram: https://t.me/vadimohka
 - Виталий Бахмат — CEO и Co-founder Century. Бизнес-внедрение AI, работа с руководителями и владельцами процессов. Telegram: https://t.me/vitalibakhmat
+- Егор Крычев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. LinkedIn: https://www.linkedin.com/in/ekrychev/
 
 ## Контакты и география
 
@@ -29,3 +31,9 @@ CAIO / Practice — консультации и совместные практ�
 ## Для цитирования
 
 «CAIO / Practice помогает руководителям связать AI-стратегию, архитектуру, внедрение и команду в единую управляемую практику».
+
+## Discovery
+
+Robots: https://genai.by/robots.txt
+Sitemap: https://genai.by/sitemap.xml
+Официальные сайты, представленные на странице: https://century-ai.by/ и https://stacklevel.group/

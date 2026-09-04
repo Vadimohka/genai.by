@@ -1,0 +1,18 @@
+# CAIO / Practice — полный источник
+
+Канонический URL: https://genai.by/
+Язык и регион: ru-BY (Беларусь).
+
+CAIO / Practice — одностраничная практика для CAIO, CTO, CIO и руководителей трансформации. На сайте опубликованы бесплатные индивидуальные консультации и работа с командами по текущим задачам: 90-дневная повестка CAIO, карта портфеля и критерии отбора, decision rights и operating model, governance, вопросы к архитектуре и вендорам, а также план обучения команды.
+
+Формат включает короткую диагностику, индивидуальную сессию, совместный практикум и рабочий артефакт.
+
+Эксперты:
+- Вадим Владымцев — Co-founder Century · CTO StackLevel Group. https://vadimohka.com/
+- Виталий Бахмат — CEO, Co-founder Century. https://www.linkedin.com/in/vbakhmat/
+- Егор Крычев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. https://www.linkedin.com/in/ekrychev/
+
+Контакты: https://genai.by/#contact
+Robots: https://genai.by/robots.txt
+Sitemap: https://genai.by/sitemap.xml
+Официальные сайты: https://century-ai.by/ и https://stacklevel.group/

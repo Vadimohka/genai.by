@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru-BY">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,20 +11,22 @@
   <meta name="geo.address" content="ул. Чернышевского, 5">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://genai.by/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/">
 
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="ru_RU">
-  <meta property="og:title" content="CAIO / Практика — Вадим Владымцев × Виталий Бахмат">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="CAIO / Практика — Вадим Владымцев × Виталий Бахмат × Егор Крычев">
   <meta property="og:description" content="Разбираем реальный мандат CAIO и помогаем собрать управляемую систему внедрения AI. Индивидуально и с командами. Бесплатно.">
   <meta property="og:site_name" content="CAIO / Практика">
   <meta property="og:url" content="https://genai.by/">
   <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:height" content="1200">
   <meta property="og:image:alt" content="CAIO / Практика — бесплатные консультации и обучение команд">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CAIO / Практика — Вадим Владымцев × Виталий Бахмат">
+  <meta name="twitter:title" content="CAIO / Практика — Вадим Владымцев × Виталий Бахмат × Егор Крычев">
   <meta name="twitter:description" content="Бесплатная индивидуальная работа и обучение команд для руководителей корпоративного AI.">
   <meta name="twitter:url" content="https://genai.by/">
   <meta name="twitter:image" content="https://genai.by/assets/img/og-caio.png">
@@ -44,8 +46,9 @@
   </script>
   <!-- /Yandex.Metrika counter -->
 
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="site.webmanifest">
   <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
@@ -54,35 +57,13 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "CAIO / Практика",
-    "url": "https://genai.by/",
-    "description": "Бесплатные индивидуальные консультации и обучение команд для руководителей, отвечающих за корпоративный AI.",
-    "inLanguage": "ru",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "BY",
-      "addressLocality": "Минск",
-      "streetAddress": "ул. Чернышевского, 5"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Беларусь"
-    },
-    "about": [
-      {
-        "@type": "Person",
-        "name": "Вадим Владымцев",
-        "jobTitle": "CTO StackLevel Group; Co-founder Century",
-        "url": "https://vadimohka.com/",
-        "sameAs": ["https://www.linkedin.com/in/vadimohka/"]
-      },
-      {
-        "@type": "Person",
-        "name": "Виталий Бахмат",
-        "jobTitle": "CEO, Co-founder Century",
-        "sameAs": ["https://www.linkedin.com/in/vbakhmat/"]
-      }
+    "@graph": [
+      {"@type":"WebSite","@id":"https://genai.by/#website","name":"CAIO / Практика","url":"https://genai.by/","inLanguage":"ru-BY"},
+      {"@type":"WebPage","@id":"https://genai.by/#webpage","url":"https://genai.by/","isPartOf":{"@id":"https://genai.by/#website"},"inLanguage":"ru-BY"},
+      {"@type":"Service","@id":"https://genai.by/#service","name":"CAIO Practice","description":"Бесплатные индивидуальные консультации и обучение команд для CAIO, CTO, CIO и руководителей трансформации.","provider":{"@id":"https://genai.by/#vadim"},"contributor":[{"@id":"https://genai.by/#vitaliy"},{"@id":"https://genai.by/#egor"}]},
+      {"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","jobTitle":"Co-founder Century · CTO StackLevel Group","url":"https://vadimohka.com/","sameAs":["https://www.linkedin.com/in/vadimohka/"]},
+      {"@type":"Person","@id":"https://genai.by/#vitaliy","name":"Виталий Бахмат","jobTitle":"CEO, Co-founder Century","sameAs":["https://www.linkedin.com/in/vbakhmat/"]},
+      {"@type":"Person","@id":"https://genai.by/#egor","name":"Егор Крычев","alternateName":"Egor Krychev","jobTitle":"CAIO · CENTURY AI","description":"Работает с AI-архитектурой и инженерной реализацией: помогает переводить задачи и ограничения внедрения в работающие системы.","sameAs":["https://www.linkedin.com/in/ekrychev/"],"affiliation":{"@type":"Organization","name":"CENTURY AI"}}
     ]
   }
   </script>
@@ -226,8 +207,8 @@
           <div class="light-grid" aria-hidden="true"></div>
           <div class="section-heading reveal">
             <div class="eyebrow eyebrow-dark"><span>01 / Эксперты практики</span></div>
-            <h2 id="experts-title">Вадим Владымцев и Виталий Бахмат.</h2>
-            <p>Консультации ведут руководители Century и StackLevel Group с опытом в продукте, архитектуре и внедрении AI-решений.</p>
+            <h2 id="experts-title">Вадим Владымцев, Виталий Бахмат и Егор Крычев.</h2>
+            <p>Практику ведут специалисты Century и StackLevel Group с опытом в продукте, архитектуре и внедрении AI-решений.</p>
           </div>
 
           <div class="expert-grid">
@@ -262,6 +243,22 @@
               <div class="expert-links">
                 <a href="https://www.linkedin.com/in/vbakhmat/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
                 <a href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">Century <span>↗</span></a>
+              </div>
+            </article>
+
+            <article class="expert-card reveal">
+              <div class="expert-identity">
+                <div class="expert-photo expert-initials" aria-hidden="true">ЕК</div>
+                <div>
+                  <h3>Егор Крычев</h3>
+                  <p>CAIO · CENTURY AI</p>
+                </div>
+              </div>
+              <div class="expert-body">
+                <p>Работает с AI-архитектурой и инженерной реализацией: помогает переводить задачи и ограничения внедрения в работающие системы.</p>
+              </div>
+              <div class="expert-links">
+                <a href="https://www.linkedin.com/in/ekrychev/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
               </div>
             </article>
           </div>
@@ -377,13 +374,17 @@
               <p>Можно коротко: компания, роль и вопрос, который важно решить сейчас.</p>
             </div>
 
-            <div class="contact-actions" aria-label="Прямые ссылки в Telegram">
+            <div class="contact-actions" aria-label="Прямые ссылки">
               <a class="contact-button" href="https://t.me/vadimohka" target="_blank" rel="noopener noreferrer">
                 <span><small>Telegram / Вадим</small><strong>@vadimohka</strong></span>
                 <i aria-hidden="true">↗</i>
               </a>
               <a class="contact-button" href="https://t.me/vitalibakhmat" target="_blank" rel="noopener noreferrer">
                 <span><small>Telegram / Виталий</small><strong>@vitalibakhmat</strong></span>
+                <i aria-hidden="true">↗</i>
+              </a>
+              <a class="contact-button" href="https://www.linkedin.com/in/ekrychev/" target="_blank" rel="noopener noreferrer">
+                <span><small>LinkedIn / Егор</small><strong>Егор Крычев</strong></span>
                 <i aria-hidden="true">↗</i>
               </a>
             </div>
@@ -395,7 +396,7 @@
       <footer class="site-footer">
         <div class="footer-brand">
           <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M27 11.5a11 11 0 1 0 0 17"/><path d="m20 11 9 9-9 9"/></svg></span>
-          <div><strong>CAIO / PRACTICE</strong><small>Vadim × Vitali</small></div>
+          <div><strong>CAIO / PRACTICE</strong><small>Vadim × Vitali × Egor</small></div>
         </div>
         <div class="footer-links">
           <a href="https://vadimohka.com/" target="_blank" rel="noopener noreferrer">Vadim</a>
