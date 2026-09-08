@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Практическая оценка RAG по слоям: retrieval, grounding, точность цитат, полезность, отказ без данных и permission-тесты.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/rag-evaluation-citations/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Как оценивать RAG и ответы с источниками">
+  <meta property="og:description" content="Практическая оценка RAG по слоям: retrieval, grounding, точность цитат, полезность, отказ без данных и permission-тесты.">
+  <meta property="og:url" content="https://genai.by/publications/rag-evaluation-citations/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Как оценивать RAG и ответы с источниками — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/rag-evaluation-citations/#article","headline":"Как оценивать RAG и ответы с источниками","description":"Практическая оценка RAG по слоям: retrieval, grounding, точность цитат, полезность, отказ без данных и permission-тесты.","datePublished":"2026-07-21T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/rag-evaluation-citations/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Как оценивать RAG и ответы с источниками","item":"https://genai.by/publications/rag-evaluation-citations/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Как оценивать RAG и ответы с источниками</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Наука, технологии и инновации</span>
+          <h1>Как оценивать RAG и ответы с источниками</h1>
+          <p>RAG оценивают по слоям: находит ли retrieval нужный фрагмент, опирается ли ответ на него, верна ли цитата, полезен ли результат и соблюдены ли права доступа.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-07-21T00:00:00+03:00">21 июля 2026</time></span><span>3 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section">Главное</a></li><li><a href="#retrieval">Сначала проверяйте retrieval</a></li><li><a href="#grounding-citations">Grounding и citations — отдельные проверки</a></li><li><a href="#100">Полевой пример: контрольный прогон из 100 вопросов</a></li><li><a href="#score">Критическая ошибка не должна растворяться в среднем score</a></li><li><a href="#rag">Минимальная карта оценки RAG</a></li><li><a href="#section-2">Как собрать контрольный набор</a></li><li><a href="#section-4">Источники и ссылки</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Главное</h2><p>Не сводите оценку RAG к мнению «ответ выглядит хорошо». Сначала проверьте retrieval на эталонных вопросах, затем grounding и цитаты, после — полезность ответа, отказ при нехватке данных и permission-тесты. Каждый слой должен иметь отдельную причину ошибки.</p></div></section><section><div><p><span>У RAG есть неприятная особенность: красивый ответ может скрывать сразу несколько разных ошибок. Нужный документ не найден, найден не тот фрагмент, ответ опирается не на контекст, цитата ведёт не туда, а доступы нарушены. Если всё это свести к общему впечатлению «выглядит нормально», система будет деградировать незаметно.</span></p><p><span>Поэтому оценка RAG должна разделять retrieval, grounding, citations, usefulness и access control. Такой подход поддерживается и техническими рекомендациями NIST по generative AI, и практикой production-RAG систем.</span></p><section><h2 id="retrieval">Сначала проверяйте retrieval</h2><p><span>Если нужный документ не попал в top-k, дальнейшая оценка стиля ответа мало что даст. На этом слое полезен небольшой эталонный набор вопросов с ожидаемыми источниками и ручная проверка попадания фрагмента.</span></p><p><span>В корпоративных знаниях часто важнее не abstract relevance, а попадание в один разрешённый и актуальный документ. Поэтому recall и reviewed passage hit обычно полезнее, чем усреднённая метрика по всем текстам.</span></p></section><section><h2 id="grounding-citations">Grounding и citations — отдельные проверки</h2><p><span>Даже правильный retrieved chunk не гарантирует корректный ответ. Модель может додумать шаг, склеить две версии инструкции или указать ссылку на соседний, но недостаточный источник. Проверяйте утверждения по пунктам: что именно сказано, где это подтверждается и достаточно ли доказательства для бизнес-задачи.</span></p><ul><li><span>Ответ подтверждается найденным контекстом, а не общей вероятностью модели.</span></li><li><span>Цитата ведёт на тот же источник и тот же смысловой фрагмент.</span></li><li><span>При нехватке данных система отказывается или явно маркирует неполноту ответа.</span></li></ul></section><section><h2 id="100">Полевой пример: контрольный прогон из 100 вопросов</h2><p><span>В RAG-помощнике ГрГМУ мы использовали зафиксированный набор из 100 вопросов и экспертную рубрику качества. В одном датированном контрольном прогоне 99 ответов получили оценку «отлично», один — «хорошо», проблемных ответов не было.</span></p><p><span>Эти числа описывают только конкретную версию базы, конфигурации и набора. Это не «99% accuracy» модели и не гарантия для будущих вопросов. Полезное доказательство здесь — воспроизводимая процедура: сохранить вопросы, разрешённые источники, роли, версии компонентов, оценки и причины ошибок, а затем повторить прогон после изменения retrieval, prompt, модели или данных.</span></p><ul><li><span>Не переносить результат одного набора на все пользовательские запросы.</span></li><li><span>Публиковать распределение оценок и критические ошибки, а не только среднее.</span></li><li><span>Добавлять новые реальные ошибки в versioned regression-набор.</span></li></ul></section><section><h2 id="score">Критическая ошибка не должна растворяться в среднем score</h2><p><span>Для production-RAG полезно иметь release gate: утечка доступа, неверная цитата в чувствительном процессе или уверенный ответ без доказательств должны блокировать релиз независимо от общего среднего балла. Именно так оценка остаётся инженерным инструментом, а не витриной для демо.</span></p></section></div></section><section><div><p>Сравнение</p><h2 id="rag">Минимальная карта оценки RAG</h2><div><div class="article-table"><table><thead><tr><th scope="col">Слой</th><th scope="col">Вопрос</th><th scope="col">Практический сигнал</th></tr></thead><tbody><tr><th scope="row">Retrieval</th><td>Найден ли нужный источник?</td><td>Recall@k или ручная проверка попадания</td></tr><tr><th scope="row">Grounding</th><td>Подтверждается ли ответ контекстом?</td><td>Pass/fail по утверждениям</td></tr><tr><th scope="row">Citation</th><td>Ведёт ли ссылка к нужному фрагменту?</td><td>Точность и полнота цитат</td></tr><tr><th scope="row">Usefulness</th><td>Решает ли ответ задачу пользователя?</td><td>Рубрика или парное сравнение</td></tr><tr><th scope="row">Access</th><td>Не попал ли запрещённый источник?</td><td>Permission test по ролям</td></tr></tbody></table></div></div></div></section><section><div><div><p>Что проверить</p><h2 id="section-2">Как собрать контрольный набор</h2></div><ol><li><span>Включить частые, редкие, неоднозначные и устаревшие вопросы.</span></li><li><span>Для каждого вопроса указать допустимые источники и ожидаемый отказ.</span></li><li><span>Отдельно добавить запросы без ответа в базе знаний.</span></li><li><span>Проверить роли с разными правами на один и тот же вопрос.</span></li><li><span>Повторять набор после изменения chunking, индекса, модели или prompt.</span></li></ol></div></section><section><div><div><p>Как мы подходим к задаче</p><p>CENTURY сначала исправляет retrieval и доступы. Настройка стиля ответа не компенсирует неверный документ, а общий score не должен скрывать утечку прав или ошибочную цитату.</p></div></div></section><section><h2 id="section-4">Источники и ссылки</h2><ul><li><a href="https://arxiv.org/abs/2005.11401" rel="noopener noreferrer" target="_blank">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a></li><li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" rel="noopener noreferrer" target="_blank">NIST Generative AI Profile</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Контрольный набор для AI-агента: итог задачи, tool calls, права, негативные сценарии, handoff, стоимость, latency и регрессии.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/ai-agent-evaluation-guide/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Как тестировать AI-агента перед запуском: eval, негативные сценарии и регрессии">
+  <meta property="og:description" content="Контрольный набор для AI-агента: итог задачи, tool calls, права, негативные сценарии, handoff, стоимость, latency и регрессии.">
+  <meta property="og:url" content="https://genai.by/publications/ai-agent-evaluation-guide/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Как тестировать AI-агента перед запуском: eval, негативные сценарии и регрессии — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/ai-agent-evaluation-guide/#article","headline":"Как тестировать AI-агента перед запуском: eval, негативные сценарии и регрессии","description":"Контрольный набор для AI-агента: итог задачи, tool calls, права, негативные сценарии, handoff, стоимость, latency и регрессии.","datePublished":"2026-08-18T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/ai-agent-evaluation-guide/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#egor","name":"Егор Крячев","url":"https://genai.by/#egor"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Как тестировать AI-агента перед запуском: eval, негативные сценарии и регрессии","item":"https://genai.by/publications/ai-agent-evaluation-guide/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Как тестировать AI-агента перед запуском: eval, негативные сценарии и регрессии</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Автоматизация</span>
+          <h1>Как тестировать AI-агента перед запуском: eval, негативные сценарии и регрессии</h1>
+          <p>Eval AI-агента проверяет не только текст ответа, но и конечный результат, tool calls, права, handoff, побочные эффекты, latency и стоимость.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-18T00:00:00+03:00">18 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/egor-kryachev-176.png" width="88" height="88" alt="Егор Крячев" decoding="async">
+          <span>Автор</span>
+          <a href="/#egor">Егор Крячев</a>
+          <small>CAIO · CENTURY AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section">Главное</a></li><li><a href="#section-2">Оценивайте результат, путь и побочные эффекты</a></li><li><a href="#section-3">Соберите контрольный набор из реальной работы</a></li><li><a href="#score">Не смешивайте все ошибки в один score</a></li><li><a href="#section-4">Проверяйте систему, а не только модель</a></li><li><a href="#section-5">Добавьте независимую проверку результата</a></li><li><a href="#section-6">Отдельно прогоните негативные сценарии</a></li><li><a href="#baseline">Зафиксируйте baseline и запускайте регрессию</a></li><li><a href="#section-7">Когда агент готов к ограниченному запуску</a></li><li><a href="#ai">Слои оценки AI-агента</a></li><li><a href="#section-8">Что включить в контрольный набор</a></li><li><a href="#section-10">Источники и ссылки</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Главное</h2><p>Соберите versioned набор реальных задач, заранее опишите допустимый итог и запрещённые действия, а затем проверяйте outcome, trajectory и side effects. Критическое нарушение прав не должно компенсироваться красивым средним score.</p></div></section><section><div><p><span>Пять удачных разговоров в демо не доказывают, что агент готов к работе. В демо обычно задают ожидаемые вопросы, интеграции отвечают, документы свежие, а человек рядом замечает странность раньше пользователя.</span></p><p><span>Eval нужен, чтобы заменить впечатление повторяемой проверкой. Он отвечает не на вопрос «модель умная?», а на вопрос «система выполняет наш процесс с допустимым качеством, риском и стоимостью?»</span></p><section><h2 id="section-2">Оценивайте результат, путь и побочные эффекты</h2><p><span>У обычного чатбота часто проверяют текст ответа. У агента этого мало. Он может написать идеальное сообщение после неправильного изменения в CRM.</span></p><p><span>Минимум три слоя:</span></p><ol><li><strong>Outcome:</strong><span> задача действительно завершена или корректно передана человеку.</span></li><li><strong>Trajectory:</strong><span> выбраны допустимые инструменты, порядок и параметры.</span></li><li><strong>Side effects:</strong><span> не создано дублей, не затронуты чужие данные, не выполнено лишних действий.</span></li></ol><p><span>Иногда правильных траекторий несколько. Поэтому не стоит жёстко требовать единственный путь, если важны результат и ограничения. Но для платежа или удаления допустимая последовательность может быть строго определена.</span></p></section><section><h2 id="section-3">Соберите контрольный набор из реальной работы</h2><p><span>Начните не с тысячи искусственных вопросов, а с 50–100 репрезентативных задач. Включите:</span></p><ul><li><span>частые и простые случаи;</span></li><li><span>редкие, но дорогие ошибки;</span></li><li><span>неполные и противоречивые данные;</span></li><li><span>недоступную интеграцию;</span></li><li><span>повтор одного и того же запроса;</span></li><li><span>запрос пользователя без нужных прав;</span></li><li><span>попытку заставить агента игнорировать правила;</span></li><li><span>ситуацию, где единственный правильный результат — отказ или handoff.</span></li></ul><p><span>Для каждой задачи зафиксируйте допустимый итог, запрещённые действия, необходимые доказательства и лимит стоимости/времени.</span></p></section><section><h2 id="score">Не смешивайте все ошибки в один score</h2><p><span>Средние 92 балла могут скрывать один перевод денег не тому получателю. Разделите метрики:</span></p><div><div class="article-table"><table><thead><tr><th scope="col"><span>Слой</span></th><th scope="col"><span>Что измерять</span></th></tr></thead><tbody><tr><th scope="row"><span>Выполнение</span></th><td><span>task success, корректный конечный статус</span></td></tr><tr><th scope="row"><span>Инструменты</span></th><td><span>правильность выбора и параметров tool call</span></td></tr><tr><th scope="row"><span>Безопасность</span></th><td><span>нарушения прав, лишние действия, утечки</span></td></tr><tr><th scope="row"><span>Handoff</span></th><td><span>обязательные и ложные передачи человеку</span></td></tr><tr><th scope="row"><span>Надёжность</span></th><td><span>повторы, таймауты, восстановление после сбоя</span></td></tr><tr><th scope="row"><span>Опыт</span></th><td><span>понятность ответа и усилие пользователя</span></td></tr><tr><th scope="row"><span>Экономика</span></th><td><span>токены, вызовы внешних API, время, стоимость задачи</span></td></tr></tbody></table></div></div><p><span>Критические нарушения должны быть отдельным release gate. Их нельзя компенсировать красивым стилем в других примерах.</span></p></section><section><h2 id="section-4">Проверяйте систему, а не только модель</h2><p><span>Anthropic отдельно подчёркивает, что агентные eval сложнее обычных: диалог многошаговый, агент меняет состояние и использует инструменты. Ошибка может находиться в описании инструмента, политике, API, состоянии очереди или данных — а не в самой модели.</span></p><p><span>Поэтому в трассировке нужны версия модели, prompt и policy, входные данные, tool calls, ответы интеграций и конечное состояние. Без версий регрессию невозможно воспроизвести.</span></p></section><section><h2 id="section-5">Добавьте независимую проверку результата</h2><p><span>LLM-as-a-judge полезен для смысла и качества текста, но не должен единолично подтверждать права доступа или факт внешней операции. Где возможно, используйте детерминированный oracle: запись существует, сумма совпадает, запрещённый документ не извлечён, письмо осталось черновиком, задача появилась в очереди один раз.</span></p><p><span>Для субъективных критериев задайте короткую рубрику и периодически сверяйте автоматическую оценку с человеком.</span></p></section><section><h2 id="section-6">Отдельно прогоните негативные сценарии</h2><p><span>Позитивный тест спрашивает: «Сможет ли агент создать задачу?» Негативный: «Сможет ли он создать её от имени другого пользователя, дважды, без обязательного поля или после истечения подтверждения?»</span></p><p><span>Нужны проверки:</span></p><ul><li><span>prompt injection в письме или документе;</span></li><li><span>подмена идентификатора ресурса;</span></li><li><span>чрезмерно большой ввод;</span></li><li><span>секрет в логе или сообщении об ошибке;</span></li><li><span>неизвестный статус внешнего API;</span></li><li><span>повтор после таймаута;</span></li><li><span>превышение бюджета шагов;</span></li><li><span>исчезновение оператора после handoff.</span></li></ul></section><section><h2 id="baseline">Зафиксируйте baseline и запускайте регрессию</h2><p><span>Eval имеет смысл, если запускается снова после изменения модели, промпта, схемы инструмента, базы знаний или политики. Сравнивайте не только общий процент успеха, но и категории ошибок, стоимость и latency.</span></p><p><span>В проекте RAG-помощника ГрГМУ контрольный прогон после исправлений дал 99 ответов с оценкой «отлично», один — «хорошо», проблемных — 0 из 100 вопросов. Это результат конкретного набора и версии, а не универсальная «точность 99%» или независимый тест на новых вопросах. Для интерпретации нужны дата, рубрика оценки, состав источников и повтор после изменений.</span></p></section><section><h2 id="section-7">Когда агент готов к ограниченному запуску</h2><ul><li><span>Все критические сценарии проходят без нарушения прав и лишних действий.</span></li><li><span>Для важных отказов и handoff нет потерянных задач.</span></li><li><span>Ретрай не создаёт дубль.</span></li><li><span>Установлены бюджеты времени, шагов и стоимости.</span></li><li><span>Ошибку можно воспроизвести по трассировке.</span></li><li><span>Есть владелец метрик и расписание повторного eval.</span></li><li><span>Пилот ограничен группой пользователей и обратимым набором инструментов.</span></li></ul><p><span>Первый production — не финальный экзамен, а начало наблюдения. Но без контрольного набора наблюдать будет не с чем сравнивать.</span></p></section></div></section><section><div><p>Сравнение</p><h2 id="ai">Слои оценки AI-агента</h2><div><div class="article-table"><table><thead><tr><th scope="col">Слой</th><th scope="col">Вопрос</th><th scope="col">Сигнал</th></tr></thead><tbody><tr><th scope="row">Outcome</th><td>Задача действительно завершена?</td><td>Корректный конечный статус</td></tr><tr><th scope="row">Trajectory</th><td>Допустимы ли инструменты и параметры?</td><td>Проверка трассировки</td></tr><tr><th scope="row">Safety</th><td>Не нарушены ли права?</td><td>Pass/fail release gate</td></tr><tr><th scope="row">Operations</th><td>Система выдерживает сбой?</td><td>Повторы, timeout, recovery</td></tr></tbody></table></div></div></div></section><section><div><div><p>Что проверить</p><h2 id="section-8">Что включить в контрольный набор</h2></div><ol><li><span>Частые, редкие и дорогие ошибки.</span></li><li><span>Неполные, противоречивые и устаревшие данные.</span></li><li><span>Вопросы без ответа и ожидаемый handoff.</span></li><li><span>Разные роли пользователя и попытки обойти правила.</span></li><li><span>Повтор после timeout, лимиты бюджета и недоступный API.</span></li></ol></div></section><section><div><div><p>Как мы подходим к задаче</p><p>В кейсе RAG-помощника ГрГМУ результат 99/100 относится к одному контрольному прогону. CENTURY фиксирует версию набора и повторяет его после изменений модели, prompt, инструментов или базы знаний.</p></div></div></section><section><h2 id="section-10">Источники и ссылки</h2><ul><li><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" rel="noopener noreferrer" target="_blank">Anthropic: Demystifying evals for AI agents</a></li><li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" rel="noopener noreferrer" target="_blank">OpenAI: A practical guide to building AI agents</a></li><li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" rel="noopener noreferrer" target="_blank">NIST Generative AI Profile</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Как построить финансового AI-помощника: сверка выписок, внутренние переводы, возвраты, точные суммы и проверяемые объяснения. Условный пример в BYN.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/financial-ai-assistant-reconciliation/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Финансовый AI-помощник: сначала сверка операций, затем объяснения">
+  <meta property="og:description" content="Как построить финансового AI-помощника: сверка выписок, внутренние переводы, возвраты, точные суммы и проверяемые объяснения. Условный пример в BYN.">
+  <meta property="og:url" content="https://genai.by/publications/financial-ai-assistant-reconciliation/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Финансовый AI-помощник: сначала сверка операций, затем объяснения — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/financial-ai-assistant-reconciliation/#article","headline":"Финансовый AI-помощник: сначала сверка операций, затем объяснения","description":"Как построить финансового AI-помощника: сверка выписок, внутренние переводы, возвраты, точные суммы и проверяемые объяснения. Условный пример в BYN.","datePublished":"2026-08-19T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/financial-ai-assistant-reconciliation/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Финансовый AI-помощник: сначала сверка операций, затем объяснения","item":"https://genai.by/publications/financial-ai-assistant-reconciliation/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Финансовый AI-помощник: сначала сверка операций, затем объяснения</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Автоматизация</span>
+          <h1>Финансовый AI-помощник: сначала сверка операций, затем объяснения</h1>
+          <p>Архитектура финансового помощника с проверяемыми числами: повторы импорта, переводы между счетами, возвраты и отделение категории от факта.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-19T00:00:00+03:00">19 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">Начать с надёжного журнала</a></li><li><a href="#section-2">Условная сверка двух счетов</a></li><li><a href="#section-3">Разделить факт и предположение</a></li><li><a href="#section-4">Вычислять отдельно от генерации текста</a></li><li><a href="#section-5">Какие проверки нужны до запуска</a></li></ol></aside>
+        <article class="article-body">
+          <p>Помощник сообщает, что расходы выросли, хотя пользователь просто перевёл деньги между своими счетами. Или дважды учитывает покупку после повторной загрузки выписки. Ошибка возникла до генерации текста — в модели данных и расчёте.</p>
+<p>Для анализа личных финансов полезно разделить импорт, сверку, вычисления и объяснение. Языковая модель может помогать с категориями и формулировками, но суммы и основания выводов должны восстанавливаться по операциям.</p>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/51980">«Финансовый навигатор» Готчени, Осадчего и Владымцева</a> опубликован как концепт платформы. Ниже предложена практическая архитектура такого помощника, без утверждения, что описанный продукт был выпущен или доказал финансовую эффективность. Материал посвящён обработке данных, а не инвестиционным рекомендациям.</p>
+<h2 id="section-1">Начать с надёжного журнала</h2>
+<p>Для операции сохраняют счёт, идентификатор источника, сумму, валюту, направление, статус и даты, которые действительно предоставляет источник. Исходное описание сохраняют отдельно от нормализованного и от предложенной категории.</p>
+<p>Повторный импорт того же набора не должен создавать новые расходы. При наличии устойчивых идентификаторов их используют с областью уникальности соответствующего источника и счёта. При их отсутствии совпадение суммы и даты — только признак возможного дубля: одинаковые покупки могут происходить законно.</p>
+<p>Неоднозначные совпадения направляют на подтверждение. Скрытое удаление «похожих» операций способно занизить расходы так же, как дубли способны их завысить.</p>
+<p>Различайте подтверждённые и предварительные записи по правилам источника. Если предварительная операция заменяется окончательной, нужно сохранить связь или иной проверяемый порядок согласования. Нельзя безусловно суммировать обе записи.</p>
+<h2 id="section-2">Условная сверка двух счетов</h2>
+<p>Предположим, на начало периода на счёте A находилось 3 000 BYN, на счёте B — 0 BYN. В периоде отражены только следующие подтверждённые операции.</p>
+<table>
+<thead>
+<tr>
+<th>Операция</th>
+<th>Счёт</th>
+<th style="text-align:right">Изменение остатка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Поступление заработной платы</td>
+<td>A</td>
+<td style="text-align:right">+2 000 BYN</td>
+</tr>
+<tr>
+<td>Перевод на собственный счёт B</td>
+<td>A</td>
+<td style="text-align:right">−500 BYN</td>
+</tr>
+<tr>
+<td>Получение перевода со счёта A</td>
+<td>B</td>
+<td style="text-align:right">+500 BYN</td>
+</tr>
+<tr>
+<td>Покупка продуктов</td>
+<td>A</td>
+<td style="text-align:right">−120 BYN</td>
+</tr>
+<tr>
+<td>Частичный возврат по этой покупке</td>
+<td>A</td>
+<td style="text-align:right">+20 BYN</td>
+</tr>
+</tbody>
+</table>
+<p>Конечный остаток на A составляет 4 400 BYN, на B — 500 BYN. Совокупно это 4 900 BYN. Изменение общей суммы — плюс 1 900 BYN: поступление 2 000 BYN за вычетом чистого расхода 100 BYN.</p>
+<p>Перевод 500 BYN между включёнными в анализ собственными счетами не создаёт расхода на уровне их совокупности. Но на каждом счёте обе стороны движения сохраняются. Возврат уменьшает расход по исходной покупке в пределах выбранного способа отчётности.</p>
+<p>Числа и счета в этом примере вымышлены. Если часть счетов не подключена, помощник должен сообщать о неполном охвате: он не вправе автоматически признавать любой исходящий перевод внутренним.</p>
+<h2 id="section-3">Разделить факт и предположение</h2>
+<p>Сумма и валюта берутся из подтверждённой записи. Категория «продукты» может быть результатом правила, выбора пользователя или предположения модели. Эти источники решения стоит различать.</p>
+<p>Если описание неоднозначно, покажите предложенную категорию и возможность исправить её. Отсутствие уверенности нельзя скрывать категоричным пояснением. Корректировка должна быть обратимой и не менять исходную операцию.</p>
+<p>Не выводите медицинские, религиозные и другие чувствительные сведения о человеке из неполного описания платежа. Для финансового отчёта обычно достаточно согласованной категории расходов; подробный личный профиль не следует создавать побочно.</p>
+<p>Справочник категорий и правила переноса исправлений нужно версионировать. Иначе отчёт за прошлый месяц изменится после обновления модели, а пользователь не поймёт причину.</p>
+<h2 id="section-4">Вычислять отдельно от генерации текста</h2>
+<p>Сервис расчёта формирует проверяемый результат: период, охваченные счета, валюты, операции, исключения и итоговые суммы. Помощник получает этот результат для объяснения. Числа в тексте сверяют с расчётным объектом перед показом.</p>
+<p>Денежную арифметику выполняют с точным для задачи представлением и явными правилами округления. Суммы в разных валютах не складывают без выбранного правила пересчёта, источника курса и даты. Когда этих сведений нет, итоги показывают раздельно.</p>
+<p>Каждое значимое утверждение должно раскрывать основание. По фразе «расходы на продукты составили 100 BYN» пользователь должен видеть покупку на 120 BYN и возврат 20 BYN. Персональные записи доступны только уполномоченному владельцу или пользователю с разрешённым доступом.</p>
+<h2 id="section-5">Какие проверки нужны до запуска</h2>
+<p>Прогоните повторный импорт, внутренний перевод, частичный возврат, удаление ошибочной категории, несколько валют и выписку за неполный период. На тестовых данных проверьте, что сумма операций согласуется с начальными и конечными остатками в пределах модели источника.</p>
+<p>Если сверка не проходит, помощник сообщает о расхождении и ограничивает вывод. Он не должен придумывать операцию для выравнивания остатка. Отсутствующая комиссия, неполный набор записей и ошибка импорта требуют разных исправлений.</p>
+<p>Доступ на чтение выписок отделяют от права совершать платежи. Аналитический помощник не получает право движения денег только потому, что умеет объяснять расходы. Работа с внешними действиями требует отдельного процесса, описанного в <a href="/publications/ai-agent-action-security/">материале о безопасности AI-агентов</a>.</p>
+<p>Польза такого сервиса начинается с возможности проверить каждое число. На этой основе можно строить объяснения и наблюдения; без сверки убедительный текст лишь усложняет обнаружение ошибки.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

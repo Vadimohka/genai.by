@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Архитектура фоновых AI-заданий: статусы, outbox, идемпотентность, ограничения повторов, неопределённый результат внешнего действия и корректная отмена.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/serverless-ai-background-jobs/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Serverless для AI: очередь, повторы и длительные задания">
+  <meta property="og:description" content="Архитектура фоновых AI-заданий: статусы, outbox, идемпотентность, ограничения повторов, неопределённый результат внешнего действия и корректная отмена.">
+  <meta property="og:url" content="https://genai.by/publications/serverless-ai-background-jobs/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Serverless для AI: очередь, повторы и длительные задания — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/serverless-ai-background-jobs/#article","headline":"Serverless для AI: очередь, повторы и длительные задания","description":"Архитектура фоновых AI-заданий: статусы, outbox, идемпотентность, ограничения повторов, неопределённый результат внешнего действия и корректная отмена.","datePublished":"2026-08-15T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/serverless-ai-background-jobs/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Serverless для AI: очередь, повторы и длительные задания","item":"https://genai.by/publications/serverless-ai-background-jobs/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Serverless для AI: очередь, повторы и длительные задания</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Автоматизация</span>
+          <h1>Serverless для AI: очередь, повторы и длительные задания</h1>
+          <p>Как разделить приём запроса и выполнение, сохранить задание при сбое и не повторить внешнее действие вместе с сообщением из очереди.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-15T00:00:00+03:00">15 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">Выбирать среду под длительность операции</a></li><li><a href="#section-2">Разделить жизненный цикл задания</a></li><li><a href="#section-3">Повтор сообщения не должен создавать повторное действие</a></li><li><a href="#section-4">Ограничить нагрузку и стоимость повторов</a></li><li><a href="#section-5">Отмена тоже имеет границы</a></li><li><a href="#section-6">Что проверять перед запуском</a></li></ol></aside>
+        <article class="article-body">
+          <p>Пользователь отправляет документ, система принимает запрос, а обработка занимает несколько минут. За это время может оборваться соединение, закончиться лимит выполнения или повторно прийти сообщение из очереди. Архитектура должна сохранить одно понятное задание и корректно довести его до результата.</p>
+<p>Для таких операций стоит разделять приём запроса, выполнение и получение результата. Выбор serverless-платформы не отменяет состояния задания, ограничений ресурсов и восстановления после сбоев.</p>
+<p>Тема развёртывания приложений в бессерверной архитектуре рассматривалась в <a href="https://libeldoc.bsuir.by/handle/123456789/52693">работе Лаппо и Владымцева</a>. Ниже — прикладная схема для AI-обработки с длительными или повторяемыми шагами.</p>
+<h2 id="section-1">Выбирать среду под длительность операции</h2>
+<p>Лимиты конкретного сервиса проверяют до реализации. Например, <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-timeout.html">AWS Lambda допускает время выполнения до 900 секунд</a>. Это характеристика данного сервиса, а не всех бессерверных платформ.</p>
+<p>Долгая обработка, загрузка большой модели и требования к оборудованию могут потребовать другого типа исполнителя: фонового контейнера, пакетного задания или постоянно работающего сервиса. Приём запроса при этом может оставаться короткой функцией.</p>
+<p>Отдельно учитывайте доступность выбранного поставщика, договорные условия и разрешённое место обработки данных. Техническое описание сервиса не подтверждает возможность его использования любой организацией.</p>
+<h2 id="section-2">Разделить жизненный цикл задания</h2>
+<p>В предложенной схеме входной сервис проверяет пользователя и формат, сохраняет задание и возвращает его идентификатор. Исполнитель забирает работу из очереди, записывает промежуточные состояния и итог. Пользователь получает результат через проверку статуса или уведомление.</p>
+<p>Полезные состояния — «принято», «ожидает выполнения», «выполняется», «завершено», «требует разбора» и «отменено». Успешный приём запроса означает создание задания, но не выполнение бизнес-операции.</p>
+<p>Запись задания и постановку сообщения в очередь нужно согласовать. Один из вариантов — transactional outbox: запись задания и будущего сообщения совершается в одной транзакции базы данных, а отдельный процесс доставляет сообщение в очередь. Это уменьшает риск потерять работу между двумя несвязанными действиями. Повторную доставку такая схема всё равно должна переносить корректно.</p>
+<h2 id="section-3">Повтор сообщения не должен создавать повторное действие</h2>
+<p><a href="https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html">AWS описывает обработку сообщений SQS через Lambda как доставку как минимум один раз</a>: возможны повторы, обработчики должны учитывать их. Аналогичные гарантии всегда проверяют для выбранной связки сервисов.</p>
+<p>Ключ идемпотентности связывают с пользователем или организацией и логической операцией. Сохраняют также отпечаток входа: один ключ с изменившимся содержимым нельзя молча принять за прежний запрос.</p>
+<p>Но одного флага в локальной базе недостаточно для внешнего действия. Если исполнитель записал результат в стороннюю систему и упал до сохранения локального подтверждения, повтор способен создать дубль. Нужен поддерживаемый внешней системой ключ операции, проверка её фактического состояния либо процедура сверки и ручного разбора.</p>
+<table>
+<thead>
+<tr>
+<th>Момент сбоя</th>
+<th>Какой вопрос нужно решить</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>До записи задания</td>
+<td>Может ли клиент безопасно повторить запрос</td>
+</tr>
+<tr>
+<td>После записи, до очереди</td>
+<td>Кто гарантирует последующую постановку в очередь</td>
+</tr>
+<tr>
+<td>Во время вычисления</td>
+<td>Откуда продолжать и допустим ли повтор вычислений</td>
+</tr>
+<tr>
+<td>После внешнего действия, до подтверждения</td>
+<td>Как узнать, было ли действие выполнено</td>
+</tr>
+<tr>
+<td>После готового результата</td>
+<td>Как вернуть тот же результат при повторном запросе</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-4">Ограничить нагрузку и стоимость повторов</h2>
+<p>Задайте максимальную параллельность, ограничения на размер входа и число повторных попыток. Общий бюджет задания должен учитывать все его шаги, обращения к модели и повторные исполнения.</p>
+<p>Лимит ожидания пользователя, лимит исполнителя и время скрытия сообщения в очереди выполняют разные функции. Их нельзя выбрать одним случайным значением. Например, слишком ранняя повторная выдача сообщения способна запустить второго исполнителя, пока первый ещё работает.</p>
+<p>После исчерпания допустимых попыток задание направляют в отдельную очередь разбора. Сохраняйте причину, последнюю подтверждённую стадию и ссылку на исходный запрос. Повторный запуск из этой очереди проходит те же проверки идемпотентности.</p>
+<h2 id="section-5">Отмена тоже имеет границы</h2>
+<p>Нажатие «Отменить» может остановить ещё не начатую работу. Для уже выполняемой операции нужно определить точки, в которых исполнитель проверяет запрос отмены.</p>
+<p>Если внешнее действие завершилось, нельзя показать, что его не было. Потребуется предусмотренная компенсирующая операция либо сообщение о невозможности автоматической отмены. Например, прекращение ожидания в браузере не отменяет уже записанный документ.</p>
+<p>Разделяйте «запрос отмены принят» и «выполнение остановлено». Это такие же разные состояния, как приём и завершение задания.</p>
+<h2 id="section-6">Что проверять перед запуском</h2>
+<p>Испытайте обрыв на каждом значимом переходе, повторное сообщение, задержку очереди, отказ поставщика модели и одновременный запуск двух исполнителей. Для внешних действий проверьте сценарий неопределённого результата, когда ответ потерялся после выполнения.</p>
+<p>Наблюдаемость должна связывать запрос, задание, попытку, обращение к модели и внешний результат. Пользователь видит бизнес-статус; команда — технические детали, необходимые для восстановления, с ограничением доступа к чувствительным данным.</p>
+<p>О выборе степени автономности полезно читать отдельно в статье <a href="/publications/ai-agent-vs-chatbot-vs-workflow/">«AI-агент, чатбот или workflow automation»</a>. Для обработки с известными шагами явный жизненный цикл задания часто позволяет точнее определить поведение при сбое.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

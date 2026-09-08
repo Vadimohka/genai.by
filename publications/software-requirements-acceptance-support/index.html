@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Практическая структура ТЗ: цели, роли, сценарии, данные, интеграции, нефункциональные требования, acceptance criteria и Definition of Done.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/software-requirements-acceptance-support/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Как написать ТЗ и критерии приёмки, чтобы не спорить в конце проекта">
+  <meta property="og:description" content="Практическая структура ТЗ: цели, роли, сценарии, данные, интеграции, нефункциональные требования, acceptance criteria и Definition of Done.">
+  <meta property="og:url" content="https://genai.by/publications/software-requirements-acceptance-support/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Как написать ТЗ и критерии приёмки, чтобы не спорить в конце проекта — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/software-requirements-acceptance-support/#article","headline":"Как написать ТЗ и критерии приёмки, чтобы не спорить в конце проекта","description":"Практическая структура ТЗ: цели, роли, сценарии, данные, интеграции, нефункциональные требования, acceptance criteria и Definition of Done.","datePublished":"2026-08-18T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/software-requirements-acceptance-support/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vitaliy","name":"Виталий Бахмат","url":"https://genai.by/#vitaliy"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Как написать ТЗ и критерии приёмки, чтобы не спорить в конце проекта","item":"https://genai.by/publications/software-requirements-acceptance-support/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Как написать ТЗ и критерии приёмки, чтобы не спорить в конце проекта</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Бизнес</span>
+          <h1>Как написать ТЗ и критерии приёмки, чтобы не спорить в конце проекта</h1>
+          <p>Хорошее ТЗ фиксирует цель, границы, роли, данные, интеграции, ошибки, нефункциональные требования, проверяемую приёмку и правила изменения scope.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-18T00:00:00+03:00">18 августа 2026</time></span><span>6 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vitaliy-bakhmat-176.jpg" width="88" height="88" alt="Виталий Бахмат" decoding="async">
+          <span>Автор</span>
+          <a href="/#vitaliy">Виталий Бахмат</a>
+          <small>CEO, Co-founder CENTURY</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section">Главное</a></li><li><a href="#section-2">Начните с результата, а не технологии</a></li><li><a href="#section-3">Минимальная структура рабочего ТЗ</a></li><li><a href="#acceptance-criteria">Как писать acceptance criteria</a></li><li><a href="#section-4">Не забудьте негативные критерии</a></li><li><a href="#definition-of-done-acceptance-criteria">Definition of Done шире acceptance criteria</a></li><li><a href="#ai">Как принимать AI-функцию</a></li><li><a href="#section-5">Изменения — часть ТЗ</a></li><li><a href="#section-6">Гарантия, поддержка и развитие</a></li><li><a href="#section-7">Приёмочный пакет</a></li><li><a href="#section-8">Последняя проверка перед стартом</a></li><li><a href="#section-9">Что должно быть в ТЗ</a></li><li><a href="#section-10">Критерии готовности</a></li><li><a href="#section-13">Источники и ссылки</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Главное</h2><p>Пишите требования через наблюдаемое поведение: кто, при каких условиях и что получает в результате. Добавляйте негативные сценарии, Definition of Done, доказательства запуска и отдельные правила для гарантии, поддержки и развития.</p></div></section><section><div><p><span>Плохое ТЗ бывает и на две страницы, и на двести. Объём не решает главную проблему: заказчик описывает желаемую функцию, подрядчик достраивает десятки решений в голове, а расхождение обнаруживается на приёмке.</span></p><p><span>Хорошее ТЗ не пытается предсказать каждую кнопку на год вперёд. Оно фиксирует цель, границы, проверяемое поведение и правила изменения.</span></p><section><h2 id="section-2">Начните с результата, а не технологии</h2><p><span>Вместо «разработать систему с микросервисной архитектурой и AI»:</span></p><blockquote><span>Менеджер обрабатывает входящую заявку из формы и Telegram в одной очереди, не создаёт дубликат при повторной отправке и видит источник обращения. Руководитель измеряет время до первого ответа.</span></blockquote><p><span>Здесь понятны пользователь, процесс, защита от ошибки и метрика. Архитектура появится после анализа нагрузки, интеграций и команды.</span></p></section><section><h2 id="section-3">Минимальная структура рабочего ТЗ</h2><h3><span>1. Контекст и цель</span></h3><p><span>Как процесс работает сейчас, что не устраивает, кто владелец, какой baseline и какой результат нужен.</span></p><h3><span>2. Scope и out of scope</span></h3><p><span>Что входит в первую поставку и чего там сознательно нет. Out of scope защищает обе стороны лучше, чем фраза «и другие функции по необходимости».</span></p><h3><span>3. Пользователи и роли</span></h3><p><span>Не просто «администратор» и «пользователь», а разрешённые ресурсы и действия. Для каждого сценария укажите, от чьего имени он выполняется.</span></p><h3><span>4. Сценарии</span></h3><p><span>Триггер, предусловия, основной поток, исключения, итоговое состояние. GOV.UK предлагает user story как короткую формулировку потребности пользователя, но сама story не заменяет acceptance criteria.</span></p><h3><span>5. Данные</span></h3><p><span>Источник, владелец, формат, качество, сроки хранения, миграция, удаление и права. Для AI — какие данные разрешено передавать модели и использовать в eval.</span></p><h3><span>6. Интеграции</span></h3><p><span>API, версия, sandbox, лимиты, аутентификация, timeout, retry, idempotency и поведение при недоступности.</span></p><h3><span>7. Нефункциональные требования</span></h3><p><span>Доступность, latency, объём, безопасность, accessibility, аудит, backup, RTO/RPO, поддерживаемые браузеры и устройства.</span></p><h3><span>8. Приёмка и эксплуатация</span></h3><p><span>Тестовые данные, среда, ответственные, доказательства, Definition of Done, обучение, документация, гарантия и SLA.</span></p><p><span>ISO/IEC/IEEE 29148 описывает процессы и содержание requirements engineering. Не обязательно превращать небольшой проект в тяжёлую процедуру, но полезен базовый принцип стандарта: требование должно быть однозначным, необходимым, осуществимым, проверяемым и трассируемым.</span></p></section><section><h2 id="acceptance-criteria">Как писать acceptance criteria</h2><p><span>Критерий должен давать наблюдаемый pass/fail.</span></p><p><span>Плохо:</span></p><blockquote><span>Система быстро отправляет уведомление и корректно обрабатывает ошибки.</span></blockquote><p><span>Лучше:</span></p><blockquote><span>После создания заявки с валидными данными система в течение 60 секунд создаёт одно уведомление менеджеру. Повтор запроса с тем же </span><code>submission_id</code><span> не создаёт вторую заявку. Если сервис уведомлений недоступен, заявка сохраняется, задача отправки остаётся в очереди, а ошибка видна в мониторинге без персональных данных.</span></blockquote><p><span>В хорошем критерии есть условие, действие, измеримый результат и поведение при сбое. Указанные 60 секунд и сохранение в очереди — пример требований для согласования, а не описание каждого проекта CENTURY.</span></p></section><section><h2 id="section-4">Не забудьте негативные критерии</h2><p><span>Функция считается готовой не только когда разрешённое действие работает, но и когда запрещённое не работает.</span></p><ul><li><span>Пользователь роли A не видит записи роли B.</span></li><li><span>Файл запрещённого типа не попадает в рабочее хранилище.</span></li><li><span>Повтор платежного callback не меняет баланс дважды.</span></li><li><span>Агент не отправляет письмо без подтверждения.</span></li><li><span>RAG не использует документ после отзыва права.</span></li><li><span>Ошибка API не раскрывает stack trace и секрет.</span></li></ul></section><section><h2 id="definition-of-done-acceptance-criteria">Definition of Done шире acceptance criteria</h2><p><span>Acceptance criteria относятся к конкретной функции. Definition of Done — общий gate для любого элемента: review, тесты, документация, security checks, deployability, monitoring и отсутствие известных критических дефектов.</span></p><p><span>В DoD можно включить:</span></p><ul><li><span>код reviewed и находится в репозитории заказчика или согласованном контуре;</span></li><li><span>автоматические проверки прошли;</span></li><li><span>миграция и rollback протестированы;</span></li><li><span>новые логи не содержат секретов;</span></li><li><span>dashboards и alerts созданы;</span></li><li><span>инструкция поддержки обновлена;</span></li><li><span>функция проверена в согласованной среде;</span></li><li><span>результат показан владельцу процесса.</span></li></ul><p><span>Важно разделять доказательства: локальные тесты, CI, staging, deployment и live-проверка — разные этапы. Один не подменяет другой.</span></p></section><section><h2 id="ai">Как принимать AI-функцию</h2><p><span>Фраза «ответ должен быть точным» не проверяется. Нужен versioned eval-набор:</span></p><ul><li><span>реальные типы задач;</span></li><li><span>ожидаемые источники;</span></li><li><span>допустимый отказ;</span></li><li><span>запрещённые tool calls;</span></li><li><span>роли пользователей;</span></li><li><span>rubrics качества;</span></li><li><span>бюджеты latency и стоимости.</span></li></ul><p><span>Общий score не должен компенсировать утечку права или критическое действие. Такие ошибки — отдельный blocker.</span></p></section><section><h2 id="section-5">Изменения — часть ТЗ</h2><p><span>Требования изменятся. Зафиксируйте процесс:</span></p><ol><li><span>кто предлагает изменение;</span></li><li><span>как оценивается влияние на срок, цену и риски;</span></li><li><span>кто принимает решение;</span></li><li><span>какая версия требований становится активной;</span></li><li><span>что происходит с уже выполненной работой.</span></li></ol><p><span>Это полезнее обещания «работаем гибко», которое каждая сторона понимает по-своему.</span></p></section><section><h2 id="section-6">Гарантия, поддержка и развитие</h2><p><span>Разделите три понятия до подписания акта.</span></p><p><strong>Гарантия:</strong><span> исправление поведения, которое не соответствует утверждённым требованиям и критериям.</span></p><p><strong>Поддержка:</strong><span> реакция на инциденты, мониторинг, восстановление и согласованные операционные работы по SLA.</span></p><p><strong>Развитие:</strong><span> новые сценарии и изменение требований.</span></p><p><span>В SLA укажите часы, каналы, уровни критичности, время реакции/восстановления, исключения, эскалацию и отчётность. Не обещайте 24/7, если дежурной команды нет.</span></p></section><section><h2 id="section-7">Приёмочный пакет</h2><p><span>К финалу этапа заказчик получает не только интерфейс:</span></p><ul><li><span>ссылку на версию требований;</span></li><li><span>release notes;</span></li><li><span>результаты acceptance и security checks;</span></li><li><span>известные ограничения;</span></li><li><span>инструкции запуска и rollback;</span></li><li><span>схему данных и интеграций;</span></li><li><span>доступы в согласованных владельцах;</span></li><li><span>monitoring/support runbook;</span></li><li><span>экспорт или миграционный пакет, если он входит в этап.</span></li></ul><p><span>Юридические формулировки об интеллектуальных правах, конфиденциальности, персональных данных и актировании должны быть согласованы в договоре с учётом актуального белорусского права. Эта статья описывает инженерную приёмку и не заменяет юридическую проверку.</span></p></section><section><h2 id="section-8">Последняя проверка перед стартом</h2><p><span>Дайте ТЗ человеку, который не участвовал во встречах, и попросите ответить:</span></p><ul><li><span>какой бизнес-результат нужен;</span></li><li><span>что точно входит и не входит;</span></li><li><span>как ведут себя три главных сценария и ошибки;</span></li><li><span>какие данные и системы участвуют;</span></li><li><span>что будет показано на приёмке;</span></li><li><span>кто поддерживает продукт после запуска.</span></li></ul><p><span>Если ответы приходится восстанавливать из переписки, ТЗ ещё не готово. Исправить это до разработки дешевле, чем в последнюю неделю проекта.</span></p></section></div></section><section><div><p>Сравнение</p><h2 id="section-9">Что должно быть в ТЗ</h2><div><div class="article-table"><table><thead><tr><th scope="col">Раздел</th><th scope="col">Проверяемый вопрос</th></tr></thead><tbody><tr><th scope="row">Цель и scope</th><td>Какой процесс меняем и чего нет в первой версии?</td></tr><tr><th scope="row">Роли и данные</th><td>Кто что видит, меняет, хранит и удаляет?</td></tr><tr><th scope="row">Интеграции</th><td>Что при timeout, повторе, недоступности и миграции?</td></tr><tr><th scope="row">Приёмка</th><td>Какой pass/fail результат покажем владельцу?</td></tr></tbody></table></div></div></div></section><section><div><div><p>Что проверить</p><h2 id="section-10">Критерии готовности</h2></div><ol><li><span>Основные и негативные сценарии имеют pass/fail критерии.</span></li><li><span>Права, повторы, ошибки и recovery проверены.</span></li><li><span>CI, security checks, миграция и rollback дают доказательство.</span></li><li><span>Документация поддержки, мониторинг и доступы переданы.</span></li><li><span>Гарантия, SLA и развитие разделены в договорённостях.</span></li></ol></div></section><section><div><div><p>Как мы подходим к задаче</p><p>CENTURY разделяет локальные тесты, CI, staging, deploy и live-проверку: это разные доказательства готовности. Такой же принцип лежит в основе ТЗ — результат этапа должен быть наблюдаемым и воспроизводимым.</p></div></div></section><section><h2 id="section-13">Источники и ссылки</h2><ul><li><a href="https://pravo.by/document/?guid=3871&amp;p0=HK9800218" rel="noopener noreferrer" target="_blank">Гражданский кодекс Республики Беларусь: договор и подряд</a></li><li><a href="https://cpd.by/pravovaya-osnova/natsionalnoye-zakonodatelstvo/" rel="noopener noreferrer" target="_blank">Национальный центр защиты персональных данных: законодательство Беларуси</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

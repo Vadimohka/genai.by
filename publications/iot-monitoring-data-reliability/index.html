@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Как строить надёжный мониторинг: время и качество измерения, потеря связи, поздние пакеты, дубли и подтверждение уведомлений. Без ложного статуса нормы.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/iot-monitoring-data-reliability/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Удалённый мониторинг: как не принять пропавшие данные за норму">
+  <meta property="og:description" content="Как строить надёжный мониторинг: время и качество измерения, потеря связи, поздние пакеты, дубли и подтверждение уведомлений. Без ложного статуса нормы.">
+  <meta property="og:url" content="https://genai.by/publications/iot-monitoring-data-reliability/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Удалённый мониторинг: как не принять пропавшие данные за норму — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/iot-monitoring-data-reliability/#article","headline":"Удалённый мониторинг: как не принять пропавшие данные за норму","description":"Как строить надёжный мониторинг: время и качество измерения, потеря связи, поздние пакеты, дубли и подтверждение уведомлений. Без ложного статуса нормы.","datePublished":"2026-08-01T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/iot-monitoring-data-reliability/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Удалённый мониторинг: как не принять пропавшие данные за норму","item":"https://genai.by/publications/iot-monitoring-data-reliability/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Удалённый мониторинг: как не принять пропавшие данные за норму</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Наука, технологии и инновации</span>
+          <h1>Удалённый мониторинг: как не принять пропавшие данные за норму</h1>
+          <p>Почему последнее нормальное измерение не подтверждает текущее состояние. Актуальность телеметрии, повторы, покрытие и маршрут уведомления.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-01T00:00:00+03:00">1 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">У каждого измерения должно быть время и качество</a></li><li><a href="#section-2">Разделить состояния в интерфейсе</a></li><li><a href="#section-3">Что происходит при повторной доставке</a></li><li><a href="#section-4">Измерять покрытие наблюдения</a></li><li><a href="#section-5">Замкнуть маршрут уведомления</a></li></ol></aside>
+        <article class="article-body">
+          <p>На панели зелёный индикатор, потому что последнее измерение было нормальным. Но само измерение сделано давно, связь с устройством потеряна, а новые данные не поступают. Интерфейс сохраняет видимость благополучия в момент, когда система уже не знает текущего состояния.</p>
+<p>Для мониторинга нужно отдельно описывать наблюдаемую величину, пригодность измерения и доступность канала. Эти состояния нельзя сводить к одному числу или цвету.</p>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/49353">Публикация об архитектуре дистанционного мониторинга на основе IoT</a> рассматривает прототип системы наблюдения за параметрами человека. Дальше разобраны общие инженерные принципы доставки и интерпретации телеметрии. Они не являются рекомендациями по диагностике или выбору медицинских порогов.</p>
+<h2 id="section-1">У каждого измерения должно быть время и качество</h2>
+<p>Сохраняйте идентификатор устройства, идентификатор или последовательный номер измерения, время на устройстве и время получения сервером. Полезны версия прошивки, единицы измерения и результат первичной проверки качества.</p>
+<p>Время события и время доставки отвечают на разные вопросы. Пакет, пришедший сейчас, может описывать состояние несколько минут назад. Если часы устройства сбились, сервер должен учитывать эту неопределённость, а не выводить точное время без оговорки.</p>
+<p>Для каждого сценария определите максимально допустимый возраст данных. Он зависит от назначения системы и не выбирается универсально для всех датчиков. После его превышения интерфейс меняет статус актуальности независимо от последнего измеренного значения.</p>
+<h2 id="section-2">Разделить состояния в интерфейсе</h2>
+<table>
+<thead>
+<tr>
+<th>Состояние</th>
+<th>Что известно системе</th>
+<th>Какое действие предусмотрено</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Актуальное пригодное измерение</td>
+<td>Есть свежий вход, прошедший проверки</td>
+<td>Использовать его в рамках разрешённой задачи</td>
+</tr>
+<tr>
+<td>Измерение сомнительного качества</td>
+<td>Пакет получен, но значение нельзя надёжно интерпретировать</td>
+<td>Показать ограничение и запустить проверку датчика или условий измерения</td>
+</tr>
+<tr>
+<td>Данные устарели</td>
+<td>Последний пригодный вход старше допустимого интервала</td>
+<td>Не выдавать его за текущее состояние</td>
+</tr>
+<tr>
+<td>Связь отсутствует</td>
+<td>Канал или устройство недоступны</td>
+<td>Запустить предусмотренный технический маршрут реагирования</td>
+</tr>
+</tbody>
+</table>
+<p>Сохранённое значение можно показать как историческое, с его временем. Оно не должно поддерживать текущий статус «норма», когда наблюдение прервано.</p>
+<h2 id="section-3">Что происходит при повторной доставке</h2>
+<p>Устройство с нестабильной связью может накопить измерения и отправить их позже. При повторе передачи возможны дубли. Например, <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html">MQTT 5.0</a> прямо допускает повторную доставку при QoS 1 — режиме «как минимум один раз».</p>
+<p>Обработчик должен узнавать одну и ту же запись и не создавать из неё несколько событий. Для этого нужен устойчивый ключ измерения; одной приблизительной пары «время и значение» может быть недостаточно, поскольку одинаковые значения способны возникать законно.</p>
+<p>Поздний пакет записывают в историю со временем измерения. Он не должен вытеснять более свежие данные на текущем индикаторе только потому, что пришёл последним. Повторное соединение также не означает, что восстановлена непрерывная история: проверьте диапазон пропущенных номеров.</p>
+<p>Гарантии транспорта относятся к определённому участку передачи. Они сами по себе не доказывают, что данные записаны в прикладную базу, обработаны алгоритмом и доведены до ответственного человека.</p>
+<h2 id="section-4">Измерять покрытие наблюдения</h2>
+<p>Точность алгоритма и доступность данных — отдельные характеристики. Система может хорошо обрабатывать пригодные записи, но получать их слишком редко для своей задачи.</p>
+<p>Рассмотрим условный технический тест. Из 100 ожидаемых уникальных измерений получено 80, из них 70 пригодны для обработки. Доставка покрывает 80% ожидаемого потока, а пригодные данные — 70%. Дополнительные повторные пакеты не увеличивают это покрытие.</p>
+<p>Определение ожидаемого количества зависит от режима датчика. Для событийного устройства, которое отправляет данные только при изменении, знаменатель будет другим. Его нужно установить до расчёта метрик.</p>
+<p>Отдельно измеряйте задержку от события до принятого уведомления. В неё входят передача, очередь, вычисление и доставка сообщения. Среднее значение может скрывать редкие задержки, критичные для выбранной операции.</p>
+<h2 id="section-5">Замкнуть маршрут уведомления</h2>
+<p>Для значимого события назначьте получателя, срок реакции и порядок эскалации. Статусы «уведомление создано», «доставлено» и «принято человеком» различаются. Полезно проверять весь маршрут на учебном событии, включая недоступность основного получателя.</p>
+<p>Разделяйте сообщения о наблюдаемом событии и техническую потерю наблюдения. Для них могут требоваться разные исполнители и действия. Подавление повторов должно уменьшать шум, сохраняя информацию о длительности проблемы.</p>
+<p>Доступ к устройствам и панели ограничивают по ролям, а данные в передаче и хранении защищают согласно назначению системы. Обновления прошивки и алгоритма проходят проверку совместимости с сохранёнными записями.</p>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/53959">Работа об алгоритме измерения частоты сердечных сокращений</a> посвящена отдельной вычислительной задаче. Наличие алгоритма не подтверждает пригодность всей системы для медицинского использования: назначение, клинические условия и безопасность требуют самостоятельной оценки. Инженерный минимум остаётся общим — система должна честно показывать, когда она располагает данными, а когда наблюдение потеряно.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

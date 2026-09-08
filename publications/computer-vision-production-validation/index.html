@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Подготовка компьютерного зрения к эксплуатации: условия съёмки, независимый тест, ложные тревоги на смену и версии обработки. Условный расчёт ошибок.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/computer-vision-production-validation/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Компьютерное зрение после пилота: данные, ложные тревоги и обновления">
+  <meta property="og:description" content="Подготовка компьютерного зрения к эксплуатации: условия съёмки, независимый тест, ложные тревоги на смену и версии обработки. Условный расчёт ошибок.">
+  <meta property="og:url" content="https://genai.by/publications/computer-vision-production-validation/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Компьютерное зрение после пилота: данные, ложные тревоги и обновления — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/computer-vision-production-validation/#article","headline":"Компьютерное зрение после пилота: данные, ложные тревоги и обновления","description":"Подготовка компьютерного зрения к эксплуатации: условия съёмки, независимый тест, ложные тревоги на смену и версии обработки. Условный расчёт ошибок.","datePublished":"2026-08-13T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/computer-vision-production-validation/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Компьютерное зрение после пилота: данные, ложные тревоги и обновления","item":"https://genai.by/publications/computer-vision-production-validation/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Компьютерное зрение после пилота: данные, ложные тревоги и обновления</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Наука, технологии и инновации</span>
+          <h1>Компьютерное зрение после пилота: данные, ложные тревоги и обновления</h1>
+          <p>Что проверить между демонстрацией и рабочим контролем: происхождение снимков, ошибки, нагрузку на оператора и обновление всей цепочки.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-13T00:00:00+03:00">13 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">Определить допустимое изображение</a></li><li><a href="#section-2">Разделить обучение и проверку по происхождению данных</a></li><li><a href="#section-3">Посчитать нагрузку от ложных тревог</a></li><li><a href="#section-4">Выпускать систему ограниченно</a></li><li><a href="#section-5">Обновление должно иметь собственную приёмку</a></li><li><a href="#section-6">Медицинские задачи требуют отдельного основания</a></li></ol></aside>
+        <article class="article-body">
+          <p>Модель правильно выделяет дефект на демонстрационных снимках. В эксплуатации ей предстоит работать с другим освещением, загрязнённой оптикой, новыми партиями изделий и изменённым положением камеры. Для выпуска нужны сведения о качестве всей операции в этих условиях.</p>
+<p>Программа внедрения должна связывать изображение, разметку, решение модели и действие человека. Иначе высокий показатель на наборе снимков останется отдельным экспериментом, который трудно использовать в рабочем процессе.</p>
+<h2 id="section-1">Определить допустимое изображение</h2>
+<p>Опишите, что камера должна видеть: объект, ракурс, освещение, диапазон размеров и допустимые помехи. Зафиксируйте настройки оборудования и преобразования изображения. Для снимка вне этих условий предусмотрите статус «непригоден для оценки».</p>
+<p>При работе с тепловизионными данными отдельно определите, нужны ли задаче измеренные температуры или достаточно визуальных признаков. Цветовое представление нельзя считать достоверной температурной шкалой без сведений о преобразовании и настройке прибора.</p>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/52741">Исследование обработки тепловизионных видеосигналов</a> рассматривает обработку тепловизионных видеосигналов. В прикладном проекте путь от исходных данных до кадра должен быть воспроизводимым: изменение палитры или нормализации не должно незаметно менять смысл входа для модели.</p>
+<h2 id="section-2">Разделить обучение и проверку по происхождению данных</h2>
+<p>Соседние кадры одного видео могут быть почти одинаковыми. Если часть попала в обучение, а часть в тест, результат способен описывать узнавание знакомых условий вместо работы на новом объекте.</p>
+<p>Выбирайте разбиение по тому уровню, на который хотите переносить вывод: изделие, партия, камера, площадка или период. Разделение по случайным изображениям подходит не для каждого из этих вопросов.</p>
+<p>Разметку также нужно проверять. Опишите, кто определяет наличие дефекта, по каким критериям и что делать при расхождении оценок. Спорный пример не становится надёжным эталоном после механического выбора большинства.</p>
+<p>Часть материала стоит оставить для независимой итоговой проверки и не использовать для подбора порога. При изменении целевой площадки или типа объекта границы прежнего результата пересматривают.</p>
+<h2 id="section-3">Посчитать нагрузку от ложных тревог</h2>
+<p>Рассмотрим вымышленную смену с 10 000 изделий. В ней действительно дефектны 100 изделий. Модель находит 90 из них и ошибочно помечает 2% исправных.</p>
+<p>Из 9 900 исправных изделий получаются 198 ложных тревог. Всего на проверку поступят 288 изделий: 90 с дефектом и 198 без него. Доля подтверждённых дефектов среди тревог составит 31,25%. Ещё 10 дефектных изделий останутся пропущенными.</p>
+<p>Этот расчёт показывает, почему одного показателя обнаружения недостаточно. Если каждую тревогу рассматривает специалист, 198 лишних проверок имеют самостоятельную цену. Пропуски оценивают отдельно с учётом последствий.</p>
+<table>
+<thead>
+<tr>
+<th>Что измерять</th>
+<th>Какое решение поддерживает показатель</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Пропуски по типам дефекта</td>
+<td>Допустима ли модель для выбранного контроля</td>
+</tr>
+<tr>
+<td>Ложные тревоги на смену</td>
+<td>Хватит ли времени на проверку и не заблокируется ли поток</td>
+</tr>
+<tr>
+<td>Доля непригодных снимков</td>
+<td>Работает ли система сбора данных</td>
+</tr>
+<tr>
+<td>Время полного решения</td>
+<td>Укладывается ли операция в производственный цикл</td>
+</tr>
+<tr>
+<td>Качество по площадкам и условиям</td>
+<td>Где подтверждена применимость результата</td>
+</tr>
+</tbody>
+</table>
+<p>Все числа примера условные. Рабочий порог выбирают по измерениям и стоимости разных ошибок, затем проверяют на данных, не использованных для его подбора.</p>
+<h2 id="section-4">Выпускать систему ограниченно</h2>
+<p>Начните с режима, в котором предложение модели можно сопоставить с действующим контролем без автоматического изменения судьбы изделия. Сохраните связь между входным снимком, версией модели, решением оператора и последующим подтверждением качества.</p>
+<p>При ограниченном включении автоматических действий должны быть определены разрешённые случаи и резервный процесс. Непригодный снимок не должен автоматически получать статус «дефекта нет».</p>
+<p>Собирайте сведения о случаях, в которых модель ничего не обнаружила. Если проверяются только тревоги, оценить пропуски невозможно. Способ контрольного отбора зависит от риска и возможностей процесса.</p>
+<h2 id="section-5">Обновление должно иметь собственную приёмку</h2>
+<p>Изменение камеры, объектива, освещения или подготовки изображений может потребовать такой же проверки, как новая модель. Версионируйте весь путь обработки и храните возможность возврата к предыдущему варианту.</p>
+<p>Повторное обучение на исправлениях операторов требует проверки состава данных: ошибки разметки и перекос к уже показанным тревогам могут попасть в новую версию. До выпуска сравните изменения по типам дефекта и условиям съёмки, а не только по общей средней.</p>
+<p>Для эксплуатации заранее определите, кто анализирует изменение потока, утверждает новую версию и останавливает автоматическое действие. Подробный подход к <a href="/publications/ai-agent-evaluation-guide/">проверке систем перед запуском</a> полезен и здесь, хотя набор тестов будет предметным.</p>
+<h2 id="section-6">Медицинские задачи требуют отдельного основания</h2>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/52722">Публикация о компьютерном зрении и MLOps в медицинском обслуживании</a> обозначает направление применения. Она не заменяет проверку конкретного медицинского изделия и условий его использования.</p>
+<p><a href="https://www.imdrf.org/sites/default/files/2025-02/IMDRF_AIML%20WG_GMLP_N88%20Final.pdf">Принципы IMDRF GMLP 2025</a> выделяют независимость обучающих и тестовых наборов, репрезентативность клинических данных и оценку взаимодействия человека с системой. Промышленный пример с изделиями не даёт оснований переносить его пороги на пациентов. Назначение, клиническую оценку и применимые требования определяют отдельно.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

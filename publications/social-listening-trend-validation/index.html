@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Как проверять тренды в соцсетях: постоянная выборка, доля упоминаний, дубли, источники и ошибки AI-классификации. Пример расчёта и границы выводов.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/social-listening-trend-validation/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Аналитика соцсетей: как отличить тренд от изменения выборки">
+  <meta property="og:description" content="Как проверять тренды в соцсетях: постоянная выборка, доля упоминаний, дубли, источники и ошибки AI-классификации. Пример расчёта и границы выводов.">
+  <meta property="og:url" content="https://genai.by/publications/social-listening-trend-validation/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Аналитика соцсетей: как отличить тренд от изменения выборки — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/social-listening-trend-validation/#article","headline":"Аналитика соцсетей: как отличить тренд от изменения выборки","description":"Как проверять тренды в соцсетях: постоянная выборка, доля упоминаний, дубли, источники и ошибки AI-классификации. Пример расчёта и границы выводов.","datePublished":"2026-08-05T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/social-listening-trend-validation/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Аналитика соцсетей: как отличить тренд от изменения выборки","item":"https://genai.by/publications/social-listening-trend-validation/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Аналитика соцсетей: как отличить тренд от изменения выборки</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Наука, технологии и инновации</span>
+          <h1>Аналитика соцсетей: как отличить тренд от изменения выборки</h1>
+          <p>Почему трёхкратный рост упоминаний ещё не доказывает тренд. Проверка знаменателя, источников, повторов и классификации сообщений.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-05T00:00:00+03:00">5 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">Сначала определить, что именно измеряется</a></li><li><a href="#section-2">Пример, в котором рост числа сообщений вводит в заблуждение</a></li><li><a href="#section-3">Разобрать повторы и классификацию</a></li><li><a href="#section-4">Не считать доступными закрытые переписки</a></li><li><a href="#section-5">Когда сигнал можно передавать бизнесу</a></li></ol></aside>
+        <article class="article-body">
+          <p>Количество упоминаний темы выросло втрое. Прежде чем объявлять тренд, проверьте, не добавились ли новые источники, не изменился ли запрос и не попал ли в выборку поток копий одной публикации.</p>
+<p>Аналитический отчёт должен описывать наблюдаемую аудиторию и способ сбора. Без этого числа выглядят убедительно, но их сравнение может не иметь содержательного смысла.</p>
+<p>Тема поиска трендов с помощью больших данных рассматривалась в <a href="https://libeldoc.bsuir.by/handle/123456789/52030">публикации о выявлении трендов</a>. Для рабочего инструмента её полезно дополнить протоколом проверки выборки, повторов и интерпретации сигнала.</p>
+<h2 id="section-1">Сначала определить, что именно измеряется</h2>
+<p>Упоминание, публикация, автор и обсуждение — разные единицы. Один автор способен написать несколько сообщений, одна новость — разойтись в сотнях копий. Из роста публикаций нельзя автоматически вывести рост числа людей, заинтересованных в теме.</p>
+<p>Зафиксируйте цель. Для наблюдения за репутационным инцидентом важны скорость распространения и конкретные претензии. Для исследования спроса — устойчивый интерес в релевантных сегментах. Для поиска вопросов к продукту — содержание запросов, даже если их немного.</p>
+<p>Паспорт наблюдения должен содержать источники, период, языки, запрос, правила включения и исключения, а также известные ограничения доступа. Его версию сохраняют вместе с результатом.</p>
+<h2 id="section-2">Пример, в котором рост числа сообщений вводит в заблуждение</h2>
+<p>Рассмотрим условные данные. В первом периоде собрано 10 000 доступных сообщений, из них 200 по нужной теме. Во втором — 60 000 сообщений, из них 600 тематических.</p>
+<table>
+<thead>
+<tr>
+<th>Показатель</th>
+<th style="text-align:right">Первый период</th>
+<th style="text-align:right">Второй период</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Все собранные сообщения</td>
+<td style="text-align:right">10 000</td>
+<td style="text-align:right">60 000</td>
+</tr>
+<tr>
+<td>Тематические сообщения</td>
+<td style="text-align:right">200</td>
+<td style="text-align:right">600</td>
+</tr>
+<tr>
+<td>Доля тематических сообщений</td>
+<td style="text-align:right">2%</td>
+<td style="text-align:right">1%</td>
+</tr>
+</tbody>
+</table>
+<p>Абсолютное число упоминаний выросло втрое, а их доля в собранном потоке уменьшилась вдвое. При этом даже второй вывод нельзя переносить на всё общество: состав источников мог измениться.</p>
+<p>Для сопоставления выделите постоянную панель источников и посчитайте показатели на ней. Новые источники покажите отдельно. Когда один канал даёт основную часть потока, полезно проверить, сохраняется ли вывод без него.</p>
+<p>Нормирование помогает увидеть устройство данных, но не исправляет неизвестную вероятность попадания сообщений в выборку. Отчёт по доступным публикациям не становится репрезентативным опросом населения.</p>
+<h2 id="section-3">Разобрать повторы и классификацию</h2>
+<p>Храните исходный идентификатор публикации и связь с копиями. Различайте точный дубль, цитирование, репост и самостоятельное сообщение на ту же тему. Для оценки распространения репосты могут быть важны; для анализа новых аргументов их повторный подсчёт искажает картину.</p>
+<p>Не объявляйте автоматическим аккаунтом любого активного автора. Подозрение на неорганический поток требует отдельного основания, а спорные случаи лучше показывать как неопределённые. Публичный отчёт не должен приписывать человеку мотивы по частоте публикаций.</p>
+<p>Если модель определяет тональность или тему, проверьте классификацию на размеченной выборке. В неё должны попасть короткие ответы, цитаты, ирония, смешанные оценки и сообщения на используемых языках. Ошибки по отдельным категориям важнее одной средней точности, когда одна из категорий запускает управленческую реакцию.</p>
+<p>Версию классификатора и правил разметки фиксируют. Иначе скачок на графике может отражать замену модели, которую читатель отчёта примет за изменение настроений.</p>
+<h2 id="section-4">Не считать доступными закрытые переписки</h2>
+<p>Название мессенджера в обзоре технологий не доказывает, что его сообщения доступны для аналитического сбора. Например, <a href="https://signal.org/">Signal описывает сквозное шифрование своих сообщений и звонков</a>. Из этого сервиса нельзя по умолчанию делать источник чужих переписок для мониторинга рынка.</p>
+<p>Для каждого источника отдельно определите допустимость доступа, использования и хранения данных. Техническая возможность загрузить страницу не решает вопросы условий площадки и прав людей. Не включайте закрытые группы и личные сообщения в обычную панель публичного мониторинга без надлежащих оснований.</p>
+<p>В рабочие отчёты переносите столько персональных сведений, сколько нужно для согласованной задачи. Для анализа распространённых вопросов часто достаточно агрегатов и обезличенных примеров.</p>
+<h2 id="section-5">Когда сигнал можно передавать бизнесу</h2>
+<p>Перед уведомлением проверьте, сохраняется ли изменение в сопоставимых источниках, связано ли оно с несколькими независимыми обсуждениями и действительно ли сообщения относятся к нужному предмету. Дальше нужен человек, способный интерпретировать контекст и цену ложной тревоги.</p>
+<p>Полезное уведомление выглядит конкретно: в определённой панели выросла доля обращений о конкретной проблеме; приведены несколько проверенных примеров; указаны период и ограничения. Формулировки о «мнении всех пользователей» требуют гораздо более сильного основания.</p>
+<p>AI здесь можно использовать для группировки, поиска повторяющихся вопросов и подготовки черновика обзора. Итоговый вывод должен сохранять границы наблюдения. Число сообщений отвечает на вопрос о собранных сообщениях; вывод о рынке требует дополнительной проверки.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

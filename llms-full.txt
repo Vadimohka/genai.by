@@ -1,0 +1,80 @@
+# CAIO / Practice — полный источник
+
+Канонический URL: https://genai.by/
+Язык и регион: ru-BY (Беларусь).
+
+CAIO / Practice — одностраничная практика для CAIO, CTO, CIO и руководителей трансформации. На сайте опубликованы бесплатные индивидуальные консультации и работа с командами по текущим задачам: 90-дневная повестка CAIO, карта портфеля и критерии отбора, decision rights и operating model, governance, вопросы к архитектуре и вендорам, а также план обучения команды.
+
+Формат включает короткую диагностику, индивидуальную сессию, совместный практикум и рабочий артефакт.
+
+Эксперты:
+- Вадим Владымцев — Co-founder CENTURY · CTO STACKLEVEL GROUP. https://vadimohka.com/
+- Виталий Бахмат — CEO, Co-founder CENTURY. https://www.linkedin.com/in/vbakhmat/
+- Егор Крячев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. https://www.linkedin.com/in/ekrychev/
+
+Контакты: https://genai.by/#contact
+Robots: https://genai.by/robots.txt
+Sitemap: https://genai.by/sitemap.xml
+Официальные сайты: https://century-ai.by/ и https://stacklevel.group/
+
+## Тематические направления экспертов
+
+- Бизнес, экономика AI и стратегия — Виталий Бахмат: https://genai.by/#vitaliy
+- Автоматизация, AI-агенты и процессы — Егор Крячев: https://genai.by/#egor
+- Наука, технологии и инновации — Вадим Владымцев: https://genai.by/#vadim
+
+## Полные публикации
+
+Каталог: https://genai.by/publications/
+Всего материалов: 39.
+
+### Виталий Бахмат
+
+- https://genai.by/publications/ai-project-cost-timeline/ — Из чего складываются стоимость и сроки AI-проекта (2026-07-21)
+- https://genai.by/publications/private-ai-tco/ — Реальная стоимость private AI: считаем TCO, а не цену GPU (2026-08-18)
+- https://genai.by/publications/software-development-cost-belarus/ — Сколько стоит заказная разработка ПО в Беларуси и откуда берётся смета (2026-08-18)
+- https://genai.by/publications/how-to-choose-software-contractor/ — Как выбрать подрядчика на разработку: что проверить до договора (2026-08-18)
+- https://genai.by/publications/software-requirements-acceptance-support/ — Как написать ТЗ и критерии приёмки, чтобы не спорить в конце проекта (2026-08-18)
+
+### Егор Крячев
+
+- https://genai.by/publications/ai-agent-vs-chatbot-vs-workflow/ — AI-агент, чатбот или workflow automation: что выбрать (2026-07-21)
+- https://genai.by/publications/ai-agent-action-security/ — Как дать AI-агенту доступ к реальным системам и не потерять контроль (2026-08-18)
+- https://genai.by/publications/ai-agent-human-handoff/ — Human handoff: когда AI-агент обязан передать задачу человеку (2026-08-18)
+- https://genai.by/publications/ai-agent-evaluation-guide/ — Как тестировать AI-агента перед запуском: eval, негативные сценарии и регрессии (2026-08-18)
+- https://genai.by/publications/how-ai-automates-companies/ — Как ИИ автоматизирует компании: задачи, контекст и новые границы ролей (2026-08-23)
+- https://genai.by/publications/ai-agent-vs-generic-chatbot/ — Чат-бот, Telegram-бот или AI-агент: как мы выбираем решение для бизнеса (2026-04-15)
+
+### Вадим Владымцев
+
+- https://genai.by/publications/rag-evaluation-citations/ — Как оценивать RAG и ответы с источниками (2026-07-21)
+- https://genai.by/publications/private-on-prem-ai/ — Когда нужен private или on-prem AI (2026-07-21)
+- https://genai.by/publications/rag-vs-fine-tuning/ — RAG или fine-tuning: что выбрать для корпоративных знаний (2026-08-18)
+- https://genai.by/publications/rag-access-control/ — Права доступа в RAG: фильтровать до поиска, а не после ответа (2026-08-18)
+- https://genai.by/publications/rag-knowledge-base-updates/ — Как обновлять базу знаний RAG без поломки активной версии (2026-08-18)
+- https://genai.by/publications/private-ai-cloud-hybrid-on-prem/ — Cloud, hybrid или on-prem: как выбрать контур для AI (2026-08-18)
+- https://genai.by/publications/private-ai-threat-model/ — Модель угроз для private AI: что остаётся опасным внутри периметра (2026-08-18)
+- https://genai.by/publications/knowledge-base-launch/ — Как мы запустили базу знаний CENTURY и где проходит граница её возможностей (2026-05-05)
+- https://genai.by/publications/new-models-may-2026/ — Как мы выбираем и маршрутизируем модели в CENTURY (2026-05-04)
+- https://genai.by/publications/ai-systems-inventory/ — Реестр AI-систем: как найти скрытые расходы и бесхозные интеграции (2026-09-05)
+- https://genai.by/publications/ai-pilot-production-decision/ — Когда AI-пилот можно запускать в работу: протокол решения (2026-09-07)
+- https://genai.by/publications/ai-business-value-measurement/ — Как посчитать эффект AI, когда сотрудники работают быстрее (2026-09-08)
+- https://genai.by/publications/ai-process-ownership-training/ — Кто отвечает за AI-процесс: роли, решения и обучение (2026-09-01)
+- https://genai.by/publications/ai-data-quality-contract/ — Готовы ли данные к AI: контракт качества для одной задачи (2026-08-03)
+- https://genai.by/publications/social-listening-trend-validation/ — Аналитика соцсетей: как отличить тренд от изменения выборки (2026-08-05)
+- https://genai.by/publications/recommendation-system-business-metrics/ — Рекомендательная система: как измерять пользу без ловушки кликов (2026-08-07)
+- https://genai.by/publications/ai-programming-education-independent-skills/ — ИИ на занятиях по программированию: как сохранить самостоятельное решение (2026-08-09)
+- https://genai.by/publications/ai-learning-assistant-validation/ — Учебный AI-помощник: как проверять задания, ответы и реальный результат (2026-08-11)
+- https://genai.by/publications/digital-application-statuses/ — Личный кабинет без потерянных заявлений: статусы, ошибки и повторная отправка (2026-08-23)
+- https://genai.by/publications/reproducible-allocation-algorithms/ — Алгоритм распределения мест: как сделать результат воспроизводимым (2026-08-25)
+- https://genai.by/publications/iot-monitoring-data-reliability/ — Удалённый мониторинг: как не принять пропавшие данные за норму (2026-08-01)
+- https://genai.by/publications/computer-vision-production-validation/ — Компьютерное зрение после пилота: данные, ложные тревоги и обновления (2026-08-13)
+- https://genai.by/publications/serverless-ai-background-jobs/ — Serverless для AI: очередь, повторы и длительные задания (2026-08-15)
+- https://genai.by/publications/logistics-event-document-integration/ — Цифровая логистика: как связать события, документы и работу без сети (2026-09-02)
+- https://genai.by/publications/ai-model-efficiency-benchmark/ — Как сравнивать AI-модели по скорости, качеству и энергии (2026-08-17)
+- https://genai.by/publications/xr-pilot-value-validation/ — VR и AR в работе: как проверить пользу до закупки оборудования (2026-08-21)
+- https://genai.by/publications/financial-ai-assistant-reconciliation/ — Финансовый AI-помощник: сначала сверка операций, затем объяснения (2026-08-19)
+
+### Совместная публикация Вадима Владымцева и Виталия Бахмата
+
+- https://genai.by/publications/ai-fundraising-nko/ — ИИ не заменит фандрайзера. Но может заметно разгрузить команду НКО (2026-08-31)

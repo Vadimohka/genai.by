@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Как спроектировать подачу заявлений: понятные статусы, повтор без дублей, ошибки полей, доступность и испытания после обрыва связи. С примерами сообщений.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/digital-application-statuses/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Личный кабинет без потерянных заявлений: статусы, ошибки и повторная отправка">
+  <meta property="og:description" content="Как спроектировать подачу заявлений: понятные статусы, повтор без дублей, ошибки полей, доступность и испытания после обрыва связи. С примерами сообщений.">
+  <meta property="og:url" content="https://genai.by/publications/digital-application-statuses/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Личный кабинет без потерянных заявлений: статусы, ошибки и повторная отправка — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/digital-application-statuses/#article","headline":"Личный кабинет без потерянных заявлений: статусы, ошибки и повторная отправка","description":"Как спроектировать подачу заявлений: понятные статусы, повтор без дублей, ошибки полей, доступность и испытания после обрыва связи. С примерами сообщений.","datePublished":"2026-08-23T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/digital-application-statuses/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Личный кабинет без потерянных заявлений: статусы, ошибки и повторная отправка","item":"https://genai.by/publications/digital-application-statuses/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Личный кабинет без потерянных заявлений: статусы, ошибки и повторная отправка</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Автоматизация</span>
+          <h1>Личный кабинет без потерянных заявлений: статусы, ошибки и повторная отправка</h1>
+          <p>Как отличить загрузку от подачи и регистрации, пережить повторную отправку и показать пользователю подтверждённое состояние заявления.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-23T00:00:00+03:00">23 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">Разделить сохранение, отправку и регистрацию</a></li><li><a href="#section-2">Что делать, когда ответ на отправку потерялся</a></li><li><a href="#section-3">Ошибка должна помогать исправлению</a></li><li><a href="#section-4">Как испытывать кабинет перед открытием</a></li><li><a href="#section-5">Где уместен AI-помощник</a></li></ol></aside>
+        <article class="article-body">
+          <p>Пользователь прикрепил файл, нажал кнопку и увидел «Готово». Что именно готово: файл загружен, заявление отправлено, получено системой или принято к рассмотрению? Если интерфейс не различает эти состояния, человек вынужден звонить в поддержку либо отправлять всё повторно.</p>
+<p>Для электронных заявлений полезно проектировать статусную модель до оформления экранов. Она должна описывать события процесса и подтверждения, которые действительно есть у системы.</p>
+<p>Тема взаимодействия абитуриента с электронным кабинетом исследовалась в <a href="https://libeldoc.bsuir.by/handle/123456789/57556">работе Суровцева и Владымцева</a>. Ниже разобран общий сценарий цифровой подачи. Это не описание действующих правил приёма какого-либо учреждения.</p>
+<h2 id="section-1">Разделить сохранение, отправку и регистрацию</h2>
+<p>Каждый пользовательский статус связывают с однозначным системным событием. Загрузка вложения ещё не означает подачи заявления. Успешное получение данных сервером может предшествовать их регистрации в профильном процессе.</p>
+<table>
+<thead>
+<tr>
+<th>Статус</th>
+<th>Что уже произошло</th>
+<th>Что сообщает интерфейс</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Черновик</td>
+<td>Данные сохранены для продолжения</td>
+<td>«Заявление ещё не отправлено»</td>
+</tr>
+<tr>
+<td>Вложения загружены</td>
+<td>Файлы получены и связаны с черновиком</td>
+<td>Какие файлы доступны и есть ли замечания</td>
+</tr>
+<tr>
+<td>Отправлено</td>
+<td>Система приняла команду подачи с идентификатором</td>
+<td>Номер отправки и способ проверить дальнейший статус</td>
+</tr>
+<tr>
+<td>Зарегистрировано</td>
+<td>Ответственная система зафиксировала регистрацию</td>
+<td>Регистрационный номер и время подтверждённого события</td>
+</tr>
+<tr>
+<td>Требует исправления</td>
+<td>Обнаружены конкретные замечания</td>
+<td>Какие поля или файлы изменить и как повторно подать версию</td>
+</tr>
+</tbody>
+</table>
+<p>Названия и переходы адаптируют к реальному процессу. Если требуется отдельное решение о принятии к рассмотрению, его нельзя подменять технической регистрацией.</p>
+<p>На странице статуса полезно показывать текущую версию заявления и историю значимых переходов. После исправления пользователь должен понимать, какая версия рассматривается, а какая осталась в истории.</p>
+<h2 id="section-2">Что делать, когда ответ на отправку потерялся</h2>
+<p>Рассмотрим обычный технический сценарий: сервер принял заявление, но соединение оборвалось до получения ответа браузером. Пользователь видит ошибку и нажимает кнопку ещё раз.</p>
+<p>Повторная отправка должна быть связана с той же логической операцией. Для этого команда подачи получает устойчивый идентификатор, а сервер хранит результат её обработки. При повторе с тем же содержимым он возвращает прежний результат. Повтор с изменившимися данными обрабатывают как отдельную версию или явно отклоняют по правилам интерфейса.</p>
+<p>Это требует проверки на сервере. Блокировка кнопки в браузере не защищает от обновления страницы, другого устройства и повторного запроса после сбоя.</p>
+<p>Сообщение пользователю в неопределённой ситуации должно быть точным: «Не удалось получить подтверждение. Проверяем статус отправки». Заявлять «ничего не отправлено» можно только при наличии основания. Пользователь должен иметь способ получить окончательный статус без создания новых заявлений.</p>
+<h2 id="section-3">Ошибка должна помогать исправлению</h2>
+<p>Сообщение «Некорректные данные» не объясняет, где возникла проблема. Укажите поле, причину и допустимый способ исправления. Сохраняйте уже введённые сведения, если это совместимо с требованиями безопасности.</p>
+<p>Для вложения полезны название, размер, статус загрузки и понятная причина отказа. Если файл получил сервер, но он ещё не прошёл проверку, показывайте это отдельным состоянием. Не обещайте принятие содержимого только на основании успешной передачи байтов.</p>
+<p><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a> содержит требования к обозначению ошибок, подписям полей, работе с клавиатурой и сообщениям о статусе. В частности, критерий 4.1.3 касается доступности статусных сообщений для вспомогательных технологий без обязательного переноса фокуса.</p>
+<p>При реализации проверьте не только визуальный вид. Пользователь с клавиатурой должен добраться до ошибочного поля, понять замечание и продолжить подачу. Цвет не должен быть единственным носителем смысла.</p>
+<h2 id="section-4">Как испытывать кабинет перед открытием</h2>
+<p>Пройдите весь процесс на тестовой записи: заполнение, загрузку, возврат к черновику, отправку, регистрацию, исправление и повторную подачу. Для каждого перехода проверьте, совпадают ли экран и фактическое состояние в принимающей системе.</p>
+<p>Отдельный набор нужен для сбоев: обрыв связи после приёма запроса, двойное нажатие, истечение сессии, неподдерживаемый файл, повтор из другого окна. Проверяйте доступ к чужой записи через подстановку идентификатора. Непрозрачный номер не заменяет проверку полномочий.</p>
+<p>В нагрузочном тесте измеряйте завершение подачи, задержку подтверждения и длину очереди обработки. Быстрое открытие главной страницы не доказывает, что весь процесс выдержит поток заявлений.</p>
+<p>У поддержки должен быть идентификатор операции и история её состояний. Это позволяет разбирать конкретный случай без просьбы переслать все персональные документы через случайный канал.</p>
+<h2 id="section-5">Где уместен AI-помощник</h2>
+<p>Помощник может объяснять поля по утверждённой инструкции и помогать найти причину ошибки. Состояние заявления он должен получать из соответствующей системы с учётом прав пользователя. Предполагать регистрацию по тексту переписки недопустимо.</p>
+<p>Для правил, влияющих на сроки и права заявителя, нужен подтверждённый актуальный источник. В интерфейсе стоит ясно отделить справочное объяснение от официального статуса и решения ответственного подразделения.</p>
+<p>Приёмку такого кабинета удобно строить на сценариях и ожидаемых состояниях. Подход к фиксации результата описан в статье <a href="/publications/software-requirements-acceptance-support/">о требованиях и критериях приёмки</a>.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

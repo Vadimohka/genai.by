@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Как подключить AI-агента к CRM, почте и документам: минимальные права, risk tiers, подтверждения, идемпотентность, аудит и rollback.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/ai-agent-action-security/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Как дать AI-агенту доступ к реальным системам и не потерять контроль">
+  <meta property="og:description" content="Как подключить AI-агента к CRM, почте и документам: минимальные права, risk tiers, подтверждения, идемпотентность, аудит и rollback.">
+  <meta property="og:url" content="https://genai.by/publications/ai-agent-action-security/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Как дать AI-агенту доступ к реальным системам и не потерять контроль — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/ai-agent-action-security/#article","headline":"Как дать AI-агенту доступ к реальным системам и не потерять контроль","description":"Как подключить AI-агента к CRM, почте и документам: минимальные права, risk tiers, подтверждения, идемпотентность, аудит и rollback.","datePublished":"2026-08-18T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/ai-agent-action-security/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#egor","name":"Егор Крячев","url":"https://genai.by/#egor"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Как дать AI-агенту доступ к реальным системам и не потерять контроль","item":"https://genai.by/publications/ai-agent-action-security/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Как дать AI-агенту доступ к реальным системам и не потерять контроль</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Автоматизация</span>
+          <h1>Как дать AI-агенту доступ к реальным системам и не потерять контроль</h1>
+          <p>Безопасный AI-агент начинается с ограниченных инструментов, минимальных прав, подтверждений, идемпотентности, аудита и понятного rollback — не с длинного системного промпта.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-18T00:00:00+03:00">18 августа 2026</time></span><span>6 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/egor-kryachev-176.png" width="88" height="88" alt="Егор Крячев" decoding="async">
+          <span>Автор</span>
+          <a href="/#egor">Егор Крячев</a>
+          <small>CAIO · CENTURY AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section">Главное</a></li><li><a href="#section-2">Сначала решите, нужен ли здесь агент</a></li><li><a href="#section-3">Инвентаризация инструментов важнее системного промпта</a></li><li><a href="#section-4">Разделите действия по риску</a></li><li><a href="#section-5">Не давайте агенту общий сервисный аккаунт</a></li><li><a href="#section-6">Подтверждение — отдельное состояние, а не вопрос в чате</a></li><li><a href="#section-7">Защититесь от повторных действий</a></li><li><a href="#section-8">Журналируйте не мысли модели, а проверяемые события</a></li><li><a href="#section-9">Продумайте остановку до первого запуска</a></li><li><a href="#checklist-production">Минимальный checklist перед production</a></li><li><a href="#section-10">Уровни риска для инструментов</a></li><li><a href="#section-11">Перед подключением реальных данных</a></li><li><a href="#section-13">Источники и ссылки</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Главное</h2><p>Подключайте к агенту только конкретные действия с ограниченными параметрами. Чтение, запись, отправка и удаление разделяйте; рискованные операции выполняйте через отдельное подтверждение человека, а повторный вызов не должен создавать повторный внешний эффект.</p></div></section><section><div><p><span>У AI-агента есть неприятный момент взросления. Пока он отвечает в тестовом чате, ошибка выглядит смешно. Как только ему дают почту, CRM, календарь или доступ к файлам, та же ошибка становится отправленным письмом, испорченной карточкой клиента или удалённым документом.</span></p><p><span>Поэтому безопасность агента начинается не с промпта «будь осторожен». Она начинается с архитектуры, в которой модель физически не может сделать больше, чем ей разрешили.</span></p><section><h2 id="section-2">Сначала решите, нужен ли здесь агент</h2><p><span>Если процесс можно надёжно описать обычным workflow, так и делайте. Модель не обязана выбирать следующий шаг, если этот шаг известен заранее. Например, сохранить заявку, проверить обязательные поля и уведомить менеджера — это нормальная детерминированная цепочка. Агент нужен там, где порядок действий зависит от контекста: разобрать запрос, найти данные в нескольких системах, выбрать подходящий сценарий и обработать исключение.</span></p><p><span>Практическое правило простое: модель может предлагать решение, а критический переход выполняет обычный код с явными проверками.</span></p></section><section><h2 id="section-3">Инвентаризация инструментов важнее системного промпта</h2><p><span>До подключения модели выпишите все доступные действия. Не «работа с CRM», а отдельно:</span></p><ul><li><span>прочитать карточку клиента;</span></li><li><span>найти сделку;</span></li><li><span>добавить внутреннюю заметку;</span></li><li><span>изменить стадию;</span></li><li><span>отправить сообщение;</span></li><li><span>удалить запись.</span></li></ul><p><span>У каждого инструмента должны быть понятные входные параметры, ограниченный результат и собственная политика доступа. Универсальный инструмент вроде </span><code>execute_any_sql</code><span> или </span><code>call_any_url</code><span> экономит пару дней разработки, а потом превращает любую ошибку рассуждения в инцидент.</span></p><p><span>OWASP называет эту проблему excessive agency: системе дают лишнюю функциональность, лишние полномочия или слишком много автономии. Нормальное лечение — не ещё один абзац в инструкции модели, а меньше доступных функций и прав.</span></p></section><section><h2 id="section-4">Разделите действия по риску</h2><p><span>Мы используем четыре практических уровня.</span></p><div><div class="article-table"><table><thead><tr><th scope="col"><span>Уровень</span></th><th scope="col"><span>Пример</span></th><th scope="col"><span>Как выполнять</span></th></tr></thead><tbody><tr><th scope="row"><span>Низкий</span></th><td><span>Поиск документа, чтение статуса</span></td><td><span>Автоматически, с журналом</span></td></tr><tr><th scope="row"><span>Средний</span></th><td><span>Черновик письма, внутренняя заметка</span></td><td><span>Автоматически, но без внешней отправки</span></td></tr><tr><th scope="row"><span>Высокий</span></th><td><span>Отправка клиенту, смена статуса сделки</span></td><td><span>После явного подтверждения человеком</span></td></tr><tr><th scope="row"><span>Критический</span></th><td><span>Платёж, удаление, изменение прав</span></td><td><span>Отдельный защищённый процесс; часто вообще вне агента</span></td></tr></tbody></table></div></div><p><span>Риск зависит не только от названия действия. Письмо самому себе и массовая рассылка — разные инструменты. Чтение публичного каталога и чтение кадровых документов — тоже.</span></p></section><section><h2 id="section-5">Не давайте агенту общий сервисный аккаунт</h2><p><span>Безопаснее выполнять действие в контексте конкретного пользователя и его роли. Если менеджер не видит финансовый отчёт, агент менеджера тоже не должен его видеть. Если сотрудник не может менять права доступа, модель не должна получать это право через «техническую» учётную запись.</span></p><p><span>Это соответствует zero trust: нахождение внутри корпоративной сети само по себе не создаёт доверия. На каждом запросе важны идентичность, роль, ресурс и конкретное действие.</span></p></section><section><h2 id="section-6">Подтверждение — отдельное состояние, а не вопрос в чате</h2><p><span>Плохой approval выглядит так: «Вы уверены?» — «Да». Через пять минут непонятно, что именно подтвердил человек и не изменились ли параметры.</span></p><p><span>Хорошее подтверждение хранит:</span></p><ul><li><span>точное действие и цель;</span></li><li><span>итоговые параметры, которые будут отправлены;</span></li><li><span>ожидаемый эффект;</span></li><li><span>срок действия подтверждения;</span></li><li><span>пользователя, который подтвердил;</span></li><li><span>идентификатор операции для защиты от повторного запуска.</span></li></ul><p><span>В одной из наших архитектурных схем рискованный запуск переходит в отдельное состояние </span><code>waiting_for_human</code><span>. После подтверждения выполняется именно сохранённый план, а не заново сгенерированная версия. Это небольшая деталь, но она убирает класс ошибок «человек видел одно, модель сделала другое».</span></p></section><section><h2 id="section-7">Защититесь от повторных действий</h2><p><span>Агенты повторяют вызовы: из-за таймаута, сетевой ошибки, ретрая или непонятного ответа инструмента. Поэтому внешняя операция должна быть идемпотентной. Один </span><code>submission_id</code><span> — одна заявка; один </span><code>payment_intent</code><span> — один платёж; один ключ операции — одно изменение.</span></p><p><span>В API заявок CENTURY используются проверка полей, ограничения размера запроса и частоты обращений, защита от повторной отправки и безопасные сообщения об ошибках. Такие механизмы нужны и вокруг агента. При этом границы защиты зависят от хранения состояния и внешнего API: кеш в памяти процесса не гарантирует однократную доставку после рестарта или неоднозначного ответа внешней системы.</span></p></section><section><h2 id="section-8">Журналируйте не мысли модели, а проверяемые события</h2><p><span>Для разбора инцидента нужны факты:</span></p><ol><li><span>кто инициировал задачу;</span></li><li><span>какая версия агента и политики работала;</span></li><li><span>какие инструменты были вызваны;</span></li><li><span>какие параметры прошли проверку;</span></li><li><span>что подтвердил человек;</span></li><li><span>какой внешний результат получен;</span></li><li><span>был ли откат.</span></li></ol><p><span>Логи не должны превращаться в свалку персональных данных и секретов. Токены, пароли и полные содержимые закрытых документов там не нужны. Нужны идентификаторы, тип события, решение политики и ссылка на защищённый источник доказательств.</span></p></section><section><h2 id="section-9">Продумайте остановку до первого запуска</h2><p><span>У агента должны быть stop conditions: лимит шагов, времени и стоимости; остановка после повторяющейся ошибки; запрет на смену цели; передача человеку, если действие не подтверждено или система отвечает неоднозначно.</span></p><p><span>И ещё — rollback. Для изменений файлов или кода мы предпочитаем изолированное рабочее пространство и контрольную точку до рискованного шага. Для CRM это может быть журнал предыдущих значений. Для отправленного письма настоящего rollback нет, поэтому отправка и требует более строгого gate.</span></p></section><section><h2 id="checklist-production">Минимальный checklist перед production</h2><ul><li><span>У агента нет универсальных инструментов и общих администраторских прав.</span></li><li><span>Чтение, запись, отправка и удаление разделены.</span></li><li><span>Высокорисковые действия требуют содержательного подтверждения.</span></li><li><span>Повторный вызов не создаёт повторный внешний эффект.</span></li><li><span>Все решения политики и действия попадают в аудит.</span></li><li><span>Есть лимиты шагов, времени, стоимости и повторов.</span></li><li><span>Негативные сценарии проверены до подключения реальных данных.</span></li><li><span>Для обратимых операций существует проверенный rollback.</span></li></ul><p><span>Если на половину пунктов ответ «добавим потом», агент пока готов только к демо. Это нормально. Ненормально — выдавать демо за управляемую рабочую систему.</span></p></section></div></section><section><div><p>Сравнение</p><h2 id="section-10">Уровни риска для инструментов</h2><div><div class="article-table"><table><thead><tr><th scope="col">Уровень</th><th scope="col">Пример</th><th scope="col">Правило</th></tr></thead><tbody><tr><th scope="row">Низкий</th><td>Поиск документа или статуса</td><td>Автоматически, с журналом</td></tr><tr><th scope="row">Средний</th><td>Черновик письма или внутренняя заметка</td><td>Без внешней отправки</td></tr><tr><th scope="row">Высокий</th><td>Отправка клиенту или смена сделки</td><td>Явное подтверждение</td></tr><tr><th scope="row">Критический</th><td>Платёж, удаление или права</td><td>Отдельный защищённый процесс</td></tr></tbody></table></div></div></div></section><section><div><div><p>Что проверить</p><h2 id="section-11">Перед подключением реальных данных</h2></div><ol><li><span>Убрать универсальные инструменты и общие администраторские права.</span></li><li><span>Разделить чтение, запись, отправку и удаление.</span></li><li><span>Сохранять точные параметры подтверждённого действия.</span></li><li><span>Сделать повтор внешней операции идемпотентным.</span></li><li><span>Задать лимиты шагов, времени, стоимости и повторов.</span></li></ol></div></section><section><div><div><p>Как мы подходим к задаче</p><p>В проектах CENTURY агент рассматривается как управляемый исполнитель внутри процесса: политики инструментов, контекст пользователя, подтверждение и аудит находятся вне модели и проверяются обычным кодом.</p></div></div></section><section><h2 id="section-13">Источники и ссылки</h2><ul><li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" rel="noopener noreferrer" target="_blank">OpenAI: A practical guide to building AI agents</a></li><li><a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" rel="noopener noreferrer" target="_blank">OWASP: Excessive Agency</a></li><li><a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener noreferrer" target="_blank">NIST AI Risk Management Framework</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

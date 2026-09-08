@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Как оценивать рекомендательную систему по результату продукта: смещение кликов, холодный старт, контрольные показатели и проверка перед запуском.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/recommendation-system-business-metrics/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Рекомендательная система: как измерять пользу без ловушки кликов">
+  <meta property="og:description" content="Как оценивать рекомендательную систему по результату продукта: смещение кликов, холодный старт, контрольные показатели и проверка перед запуском.">
+  <meta property="og:url" content="https://genai.by/publications/recommendation-system-business-metrics/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Рекомендательная система: как измерять пользу без ловушки кликов — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/recommendation-system-business-metrics/#article","headline":"Рекомендательная система: как измерять пользу без ловушки кликов","description":"Как оценивать рекомендательную систему по результату продукта: смещение кликов, холодный старт, контрольные показатели и проверка перед запуском.","datePublished":"2026-08-07T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/recommendation-system-business-metrics/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Рекомендательная система: как измерять пользу без ловушки кликов","item":"https://genai.by/publications/recommendation-system-business-metrics/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Рекомендательная система: как измерять пользу без ловушки кликов</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Наука, технологии и инновации</span>
+          <h1>Рекомендательная система: как измерять пользу без ловушки кликов</h1>
+          <p>Как связать рекомендации с задачей продукта, учесть позицию показа и проверить результат после клика. От простого сравнения до эксперимента.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-07T00:00:00+03:00">7 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">Выбрать результат, который имеет смысл после клика</a></li><li><a href="#section-2">Клик зависит от места показа</a></li><li><a href="#section-3">Начать с понятного варианта сравнения</a></li><li><a href="#section-4">Как устроить проверку</a></li><li><a href="#section-5">Пример решения по результатам</a></li></ol></aside>
+        <article class="article-body">
+          <p>Рекомендации могут получать больше кликов и при этом хуже выполнять задачу продукта. Пользователь открывает предложенный товар, но не покупает его; читает яркий заголовок, но не находит нужного ответа; выбирает учебный материал, который не помогает освоить тему.</p>
+<p>Поэтому до обучения модели нужно определить, какой результат считается полезным и какие ограничения нельзя нарушать ради его роста.</p>
+<p><a href="https://developers.google.com/machine-learning/recommendation/overview">Обзор рекомендательных систем Google</a> описывает задачу персонального отбора контента. Для внедрения этого недостаточно: потребуется связать наблюдаемое поведение с целью конкретного сервиса.</p>
+<h2 id="section-1">Выбрать результат, который имеет смысл после клика</h2>
+<p>Для магазина это может быть завершённая покупка с учётом возвратов и доступности товара. Для базы знаний — найденный ответ и завершённая операция. Для обучения — выполнение следующего задания и проверяемое освоение материала.</p>
+<p>Задайте основную метрику и защитные показатели. Если оптимизируется покупка, наблюдайте за возвратами и жалобами. Если скорость нахождения ответа — за ошибочными решениями после чтения. Для каждой метрики укажите период, единицу наблюдения и правило связывания события с показанной рекомендацией.</p>
+<p>Не используйте задержанный результат раньше, чем он успел проявиться. Сравнение возвратов на второй день после покупки с возвратами за полный месяц создаёт неравные условия.</p>
+<h2 id="section-2">Клик зависит от места показа</h2>
+<p>Пользователь не выбирает из всего каталога: он реагирует на то, что ему показали. Предмет на первой позиции получает другую возможность быть замеченным, чем предмет в конце списка.</p>
+<p>Работа <a href="https://arxiv.org/abs/1608.04468">Joachims, Swaminathan и Schnabel о смещённой обратной связи</a> разбирает проблему позиционного смещения в данных о кликах. Практическое следствие для продукта: журнал показов нужен вместе с журналом действий. Отсутствие клика по непоказанному объекту нельзя трактовать как установленное отсутствие интереса.</p>
+<p>Сохраняйте идентификатор запроса рекомендаций, набор доступных кандидатов, показанный порядок и последующие события. Доступ к этим журналам и сроки хранения определяют по задаче и требованиям к данным.</p>
+<p>Если система учится только на собственных прошлых показах, популярные объекты могут снова получать больше возможностей для взаимодействия. Механизм знакомства с новыми объектами стоит проектировать отдельно и проверять с ограничением риска для пользователя.</p>
+<h2 id="section-3">Начать с понятного варианта сравнения</h2>
+<p>Сложную модель полезно сравнить с простым подходом: популярное в подходящей категории, продолжение текущего сценария или ручные правила подбора. Такой вариант должен соблюдать те же ограничения доступности, цены и прав, что и новая система.</p>
+<p>Для нового пользователя можно предложить выбор интересов или использовать контекст текущей задачи. Не нужно придумывать подробный профиль по одному действию. Для нового объекта полезны корректные атрибуты и отдельный способ получить первые наблюдения.</p>
+<p>Публикация <a href="https://libeldoc.bsuir.by/handle/123456789/52069">об анализе эстетических предпочтений с помощью нейросетей</a> относится к исследовательской постановке задачи. Система, предсказывающая взаимодействие с изображением, не получает из этого объективную меру красоты или достоверный психологический портрет человека.</p>
+<h2 id="section-4">Как устроить проверку</h2>
+<table>
+<thead>
+<tr>
+<th>Этап</th>
+<th>Что сравнивать</th>
+<th>Типичная причина неверного вывода</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Проверка на исторических данных</td>
+<td>Качество на данных, не использованных для настройки</td>
+<td>В обучении оказались будущие события</td>
+</tr>
+<tr>
+<td>Проверка правил</td>
+<td>Доступность объектов, права, исключения, лимиты</td>
+<td>Модель предлагает недопустимый объект</td>
+</tr>
+<tr>
+<td>Ограниченный эксперимент</td>
+<td>Заранее определённый деловой результат</td>
+<td>Группы различаются условиями или смешиваются</td>
+</tr>
+<tr>
+<td>Наблюдение после запуска</td>
+<td>Качество по сегментам и задержанные последствия</td>
+<td>Среднее скрывает ухудшение для части пользователей</td>
+</tr>
+</tbody>
+</table>
+<p>При разбиении по времени сохраните реальную последовательность появления данных. Признак, которого ещё не было в момент рекомендации, не должен помогать модели в историческом тесте.</p>
+<p>В эксперименте заранее определите единицу назначения в группы. Если один человек регулярно пользуется сервисом, независимое переключение варианта на каждой странице может смешивать влияние. Объём наблюдений и способ оценки неопределённости зависят от этой структуры.</p>
+<h2 id="section-5">Пример решения по результатам</h2>
+<p>Предположим, в вымышленном эксперименте кликабельность выросла с 5% до 7%, а доля завершённых покупок среди пользователей с показом уменьшилась с 2% до 1,8%. Эти числа сами по себе ещё не устанавливают статистически устойчивый эффект: нужны объём выборки и оценка неопределённости.</p>
+<p>Но уже нельзя отчитаться об успехе только по росту кликов. Следует проверить, какие объекты получили показы, соблюдались ли ограничения и не ухудшилось ли соответствие цели пользователя. При недостатке данных решение откладывают; при подтверждённом вреде возвращают предыдущий вариант.</p>
+<p>Для каждого выпуска сохраняйте версию модели, признаков, каталога и правил. Встроенный резервный подбор должен оставаться полезным, когда персональная рекомендация недоступна или данных слишком мало.</p>
+<p>Результат внедрения — воспроизводимое улучшение выбранной операции в известных условиях. Один красивый пример персонального попадания этого не доказывает.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Проверка готовности AI-пилота: границы задачи, независимый тест, исключения, эксплуатация и польза. Таблица свидетельств и пример итогового решения.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/ai-pilot-production-decision/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Когда AI-пилот можно запускать в работу: протокол решения">
+  <meta property="og:description" content="Проверка готовности AI-пилота: границы задачи, независимый тест, исключения, эксплуатация и польза. Таблица свидетельств и пример итогового решения.">
+  <meta property="og:url" content="https://genai.by/publications/ai-pilot-production-decision/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Когда AI-пилот можно запускать в работу: протокол решения — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/ai-pilot-production-decision/#article","headline":"Когда AI-пилот можно запускать в работу: протокол решения","description":"Проверка готовности AI-пилота: границы задачи, независимый тест, исключения, эксплуатация и польза. Таблица свидетельств и пример итогового решения.","datePublished":"2026-09-07T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/ai-pilot-production-decision/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Когда AI-пилот можно запускать в работу: протокол решения","item":"https://genai.by/publications/ai-pilot-production-decision/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Когда AI-пилот можно запускать в работу: протокол решения</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Бизнес</span>
+          <h1>Когда AI-пилот можно запускать в работу: протокол решения</h1>
+          <p>Какие свидетельства собрать к концу пилота и как оформить разрешение на эксплуатацию, ограниченную доработку или закрытие сценария.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-09-07T00:00:00+03:00">7 сентября 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">Зафиксировать границу пилота до итогового теста</a></li><li><a href="#section-2">Какие свидетельства положить на стол</a></li><li><a href="#section-3">Отличать проверку ответов от проверки рабочего процесса</a></li><li><a href="#section-4">Пример итогового решения</a></li><li><a href="#section-5">Как не застрять в бесконечной доработке</a></li></ol></aside>
+        <article class="article-body">
+          <p>Пилот заканчивается, когда у команды достаточно оснований для следующего решения: запустить ограниченную эксплуатацию, устранить конкретный дефект или закрыть сценарий. Рабочая демонстрация даёт лишь часть этих оснований.</p>
+<p>Разница хорошо видна на обработке документов. Модель может правильно извлечь поля из подготовленного набора, а промышленный процесс всё равно останется неготовым: неизвестно, кто разбирает спорные документы, как выявлять пропущенные задания и что делать при изменении формата входных файлов.</p>
+<p>Проверку готовности удобно оформить коротким протоколом. Его составляет команда, а решение принимает владелец процесса с участием ответственных за эксплуатацию и риски.</p>
+<h2 id="section-1">Зафиксировать границу пилота до итогового теста</h2>
+<p>В описании пилота укажите допустимые входы, ожидаемый результат и пределы автоматизации. Для извлечения полей это могут быть конкретные типы документов и языки. Для помощника поддержки — перечень тем и запрет на самостоятельную отправку ответа.</p>
+<p>За пределами этой области система должна переходить в заранее предусмотренный режим: передавать документ человеку, возвращать сообщение об ограничении или отказываться от действия. Расширение области применения требует новой проверки.</p>
+<p>Затем выберите исходный процесс для сравнения. Нужны его фактические затраты времени, ошибки и исключения. Сравнение с идеализированной ручной работой или с заведомо плохим черновиком не помогает решить, стоит ли менять действующую операцию.</p>
+<p>Отложенный набор для итоговой оценки не используют для настройки промптов и правил. Если команда исправляла систему по этому набору, его результаты уже не являются независимой проверкой. Для следующего решения потребуется свежий материал либо явно ограниченный вывод.</p>
+<h2 id="section-2">Какие свидетельства положить на стол</h2>
+<p>В <a href="https://research.google/pubs/the-ml-test-score-a-rubric-for-ml-production-readiness-and-technical-debt-reduction/">The ML Test Score</a> готовность ML-системы рассматривается через проверки данных, модели, инфраструктуры и мониторинга. Для управленческого решения этот принцип можно превратить в следующую таблицу.</p>
+<table>
+<thead>
+<tr>
+<th>Область</th>
+<th>Свидетельство готовности</th>
+<th>Что блокирует расширение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Качество операции</td>
+<td>Сопоставление с исходным процессом на заранее определённой выборке</td>
+<td>Проверялись только удобные случаи</td>
+</tr>
+<tr>
+<td>Исключения</td>
+<td>Результаты обработки нештатных и неизвестных входов</td>
+<td>Система скрывает ошибку правдоподобным ответом</td>
+</tr>
+<tr>
+<td>Данные и полномочия</td>
+<td>Согласованный перечень источников, доступов и действий</td>
+<td>Неясно, какие данные покидают разрешённую среду</td>
+</tr>
+<tr>
+<td>Эксплуатация</td>
+<td>Журнал заданий, уведомления, ответственный за сбой, проверенный откат</td>
+<td>Восстановление зависит от присутствия разработчика</td>
+</tr>
+<tr>
+<td>Польза</td>
+<td>Измерение полного цикла с проверкой и исправлениями</td>
+<td>Учитывается только скорость генерации</td>
+</tr>
+</tbody>
+</table>
+<p>Это предложенная форма протокола, без универсальных проходных процентов. Порог зависит от последствий ошибки и требований конкретной операции.</p>
+<h2 id="section-3">Отличать проверку ответов от проверки рабочего процесса</h2>
+<p>В теневом режиме система получает входы, но её результат не меняет рабочие записи и не влияет на клиента. Это позволяет сравнить ответы и изучить ошибки. Однако такая проверка не показывает, сколько времени сотрудник потратит на новый интерфейс и как будет действовать при противоречии между моделью и документом.</p>
+<p>Ограниченная эксплуатация добавляет эти наблюдения. Для неё заранее определяют доступных пользователей, типы заданий, предельную нагрузку и порядок остановки. Исполнители должны знать, где заканчивается автоматизация и кому принадлежит спорный случай.</p>
+<p>Сложные документы нельзя незаметно исключать из знаменателя. Отдельно показывайте долю входов, подходящих под условия пилота, долю автоматически завершённых операций и долю возвратов человеку. Высокое качество на узком подмножестве может быть полезным результатом, если это подмножество честно описано.</p>
+<p>Отсутствие инцидентов в небольшом тесте не доказывает отсутствие риска. Поэтому опасные сценарии проверяют целенаправленно, а остаточную неопределённость записывают в решение.</p>
+<h2 id="section-4">Пример итогового решения</h2>
+<p>Ниже — вымышленный пример формулировки, а не отчёт о проведённом проекте.</p>
+<blockquote>
+<p>Разрешить ограниченную эксплуатацию извлечения реквизитов из документов согласованного формата. До записи в учётную систему результат подтверждает оператор. Остальные форматы остаются в ручном процессе. Массовую обработку не включать до проверки восстановления после сбоя. За эту проверку отвечает команда интеграции; решение о расширении принимает владелец документооборота. При расхождении сумм или потере связи с источником задание передаётся оператору без автоматической записи.</p>
+</blockquote>
+<p>В этой записи понятны область разрешения, нерешённый вопрос, владелец и резервный порядок. Формулировка «пилот успешен, рекомендуем масштабирование» этих сведений не содержит.</p>
+<h2 id="section-5">Как не застрять в бесконечной доработке</h2>
+<p>Для продолжения пилота нужна проверяемая гипотеза. Например: «Ошибки связаны с двумя вариантами формы; после исправления проверим новые документы обоих вариантов». Вместе с гипотезой задают бюджет, срок и условие прекращения эксперимента.</p>
+<p>Если очередное расширение не даёт нового знания, полезно пересмотреть саму задачу. Иногда достаточно сузить набор входов или оставить модели подготовку черновика. Иногда ручной процесс оказывается приемлемее по совокупности затрат и рисков.</p>
+<p>Вопросы стоимости раскрыты отдельно в материале <a href="/publications/ai-project-cost-timeline/">о сроках и бюджете AI-проекта</a>, а устройство тестового набора — в <a href="/publications/ai-agent-evaluation-guide/">руководстве по оценке AI-агентов</a>. Итоговый протокол связывает эти результаты с одним решением и ответственным за него.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Как сравнивать AI-конфигурации на рабочей задаче: качество, p95 задержки, повторы, затраты на результат и энергия. Условный пример выбора и протокол теста.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/ai-model-efficiency-benchmark/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Как сравнивать AI-модели по скорости, качеству и энергии">
+  <meta property="og:description" content="Как сравнивать AI-конфигурации на рабочей задаче: качество, p95 задержки, повторы, затраты на результат и энергия. Условный пример выбора и протокол теста.">
+  <meta property="og:url" content="https://genai.by/publications/ai-model-efficiency-benchmark/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Как сравнивать AI-модели по скорости, качеству и энергии — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/ai-model-efficiency-benchmark/#article","headline":"Как сравнивать AI-модели по скорости, качеству и энергии","description":"Как сравнивать AI-конфигурации на рабочей задаче: качество, p95 задержки, повторы, затраты на результат и энергия. Условный пример выбора и протокол теста.","datePublished":"2026-08-17T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/ai-model-efficiency-benchmark/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Как сравнивать AI-модели по скорости, качеству и энергии","item":"https://genai.by/publications/ai-model-efficiency-benchmark/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Как сравнивать AI-модели по скорости, качеству и энергии</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Наука, технологии и инновации</span>
+          <h1>Как сравнивать AI-модели по скорости, качеству и энергии</h1>
+          <p>Испытательный протокол для сравнения конфигураций AI: одинаковая задача, ограничения качества, полная задержка и явные границы измерения энергии.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-17T00:00:00+03:00">17 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">Сравнивать конфигурации на одной операции</a></li><li><a href="#section-2">Зафиксировать условия запуска</a></li><li><a href="#section-3">Пример, где дешёвый вариант не проходит требования</a></li><li><a href="#section-4">Измерять энергию в явных границах</a></li><li><a href="#section-5">Как оформить решение</a></li></ol></aside>
+        <article class="article-body">
+          <p>Модель быстрее отвечает на короткий запрос, но чаще требует повторной попытки. Другая медленнее начинает генерацию, зато укладывается в требования на длинных документах. Сравнение по одному времени ответа не показывает, какая конфигурация лучше выполнит рабочую задачу.</p>
+<p>Для выбора нужен испытательный протокол: одинаковые входы, определённый результат, ограничения качества и нагрузки, зафиксированные настройки. Цена и энергия приобретают смысл внутри этих условий.</p>
+<h2 id="section-1">Сравнивать конфигурации на одной операции</h2>
+<p>Определите, что считается завершённым заданием: корректно извлечённые поля, принятый ответ или прошедший проверки документ. Сохраните набор входов и способ оценивания. Разделите материал для настройки и итоговой проверки.</p>
+<p>Участником сравнения является вся конфигурация: модель, промпт, инструменты, подготовка данных и правила повторов. Если одному варианту разрешён дополнительный поиск, а другому нет, это сравнение систем с разными возможностями. Его можно проводить, но различие нужно указать.</p>
+<p>Порог качества, допустимую задержку и обязательные ограничения устанавливают до испытания. Быстрый вариант, который не выполняет требования операции, не становится победителем по низкой стоимости.</p>
+<p>Тема ресурсных ограничений нейросетей рассматривается в <a href="https://libeldoc.bsuir.by/handle/123456789/52690">публикации 2023 года</a>. Для решения о конкретной системе нужны собственные измерения: общие рассуждения о росте вычислений не определяют её рабочую эффективность.</p>
+<h2 id="section-2">Зафиксировать условия запуска</h2>
+<p>В протокол включают версии компонентов, параметры генерации, аппаратную конфигурацию или идентификатор сервиса, размеры входов и правила кэширования. Холодный запуск и прогретый режим проверяют отдельно, если оба встречаются в эксплуатации.</p>
+<p>Сначала измерьте выполнение единичных заданий, затем повторите тест при ожидаемой параллельности и в режиме перегрузки. В пользовательскую задержку включайте ожидание очереди, обращения к инструментам и подготовку результата.</p>
+<p>Скорость в токенах в секунду полезна для диагностики, но не всегда сопоставима между моделями: объём и способ разбиения текста различаются. Для прикладного выбора важнее время завершённой операции с принятым результатом.</p>
+<p>Не ограничивайтесь одним прогоном. Повторения показывают разброс качества и задержки. Для внешнего сервиса фиксируйте дату и доступные сведения о версии; неизменное имя модели не всегда даёт полный контроль над внутренней реализацией.</p>
+<h2 id="section-3">Пример, где дешёвый вариант не проходит требования</h2>
+<p>Ниже — условный тест из 1 000 заданий. До запуска установлено: не менее 95% принятых результатов на этом тесте и p95 полной задержки не более 10 секунд. Это иллюстративные требования, не рекомендация для любого продукта. p95 означает, что примерно 95% измеренных задержек не превышают указанное значение.</p>
+<table>
+<thead>
+<tr>
+<th>Показатель</th>
+<th style="text-align:right">Конфигурация A</th>
+<th style="text-align:right">Конфигурация B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Принятые результаты</td>
+<td style="text-align:right">960</td>
+<td style="text-align:right">800</td>
+</tr>
+<tr>
+<td>p95 полной задержки</td>
+<td style="text-align:right">9 секунд</td>
+<td style="text-align:right">4 секунды</td>
+</tr>
+<tr>
+<td>Стоимость машинного прогона</td>
+<td style="text-align:right">30 условных денежных единиц</td>
+<td style="text-align:right">18 условных денежных единиц</td>
+</tr>
+<tr>
+<td>Затраты прогона на принятый результат</td>
+<td style="text-align:right">0,03125</td>
+<td style="text-align:right">0,0225</td>
+</tr>
+</tbody>
+</table>
+<p>B дешевле и быстрее, но не проходит установленное условие качества. На данном этапе сравнения она не подходит для самостоятельного выполнения всей операции.</p>
+<p>Нельзя незаметно добавить B исправление человеком и оставить прежнюю стоимость. В таком случае получится новая конфигурация, для которой повторно измеряют полный цикл, затраты и качество.</p>
+<p>Даже выполнение порога на 1 000 заданиях не доказывает его соблюдение на любом будущем потоке. Оцените неопределённость и покрытие важных классов входов; редкие критические ошибки проверяют отдельно.</p>
+<h2 id="section-4">Измерять энергию в явных границах</h2>
+<p>Энергия — это накопленное потребление за интервал работы. Для сравнения задайте, какие компоненты входят в измерение: ускоритель, весь сервер, сеть, хранение и другие необходимые части.</p>
+<p>Показатель мощности одной GPU не равен энергозатратам всей операции. Значение паспортной мощности также не является измеренным расходом. При собственном стенде используйте доступные измерения с известными единицами и частотой; указывайте, включён ли простой и как распределены общие расходы.</p>
+<p><a href="https://arxiv.org/abs/2410.12032">MLPerf Power</a> предлагает методологию сопоставимого измерения энергетической эффективности ML-систем. Описанный здесь прикладной тест не является сертифицированным прогоном MLPerf и не заменяет его правил.</p>
+<p>Для внешнего API без телеметрии поставщика нельзя честно вычислить энергию запроса из количества токенов. В этом случае фиксируйте неизвестность, а доступную стоимость измеряйте отдельно. Углеродный след потребует дополнительных сведений об энергоснабжении и границах учёта.</p>
+<h2 id="section-5">Как оформить решение</h2>
+<p>Сохраните исходные задания, критерии приёмки, настройки, результаты отдельных попыток и сводку по классам входов. В решении укажите, какой вариант прошёл ограничения и в каких условиях проводилась проверка.</p>
+<p>Стоимость полного владения рассматривается отдельно в статье <a href="/publications/private-ai-tco/">о TCO private AI</a>. Испытательный протокол даёт для такого расчёта измеренные характеристики и помогает не подменить полезную работу количеством генераций.</p>
+<p>После изменения модели, маршрутизации или нагрузки повторите значимую часть теста. Выбор относится к зафиксированной конфигурации; он не является бессрочным свойством названия модели.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

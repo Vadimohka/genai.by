@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Безопасный корпоративный RAG: identity propagation, ACL в индексе, фильтр до retrieval, permission-aware citations, кеш и leak-тесты.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/rag-access-control/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Права доступа в RAG: фильтровать до поиска, а не после ответа">
+  <meta property="og:description" content="Безопасный корпоративный RAG: identity propagation, ACL в индексе, фильтр до retrieval, permission-aware citations, кеш и leak-тесты.">
+  <meta property="og:url" content="https://genai.by/publications/rag-access-control/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Права доступа в RAG: фильтровать до поиска, а не после ответа — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/rag-access-control/#article","headline":"Права доступа в RAG: фильтровать до поиска, а не после ответа","description":"Безопасный корпоративный RAG: identity propagation, ACL в индексе, фильтр до retrieval, permission-aware citations, кеш и leak-тесты.","datePublished":"2026-08-18T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/rag-access-control/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Права доступа в RAG: фильтровать до поиска, а не после ответа","item":"https://genai.by/publications/rag-access-control/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Права доступа в RAG: фильтровать до поиска, а не после ответа</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Наука, технологии и инновации</span>
+          <h1>Права доступа в RAG: фильтровать до поиска, а не после ответа</h1>
+          <p>Корпоративный RAG не должен сначала показать модели закрытый документ, а потом пытаться вырезать его из ответа. Identity propagation и ACL нужны до retrieval.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-18T00:00:00+03:00">18 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section">Главное</a></li><li><a href="#section-2">Откуда берётся утечка</a></li><li><a href="#section-3">Как должен идти запрос</a></li><li><a href="#section-4">Что хранить рядом с фрагментом</a></li><li><a href="#acl">ACL меняются независимо от текста</a></li><li><a href="#section-5">Кеш тоже участвует в модели доступа</a></li><li><a href="#section-6">Цитата не является контролем доступа</a></li><li><a href="#permission-eval">Permission eval должен быть отдельным</a></li><li><a href="#section-7">Что делать с вопросом по нескольким областям доступа</a></li><li><a href="#checklist">Минимальный checklist</a></li><li><a href="#section-8">Где применять контроль доступа</a></li><li><a href="#permission-eval-2">Permission eval</a></li><li><a href="#section-10">Источники и ссылки</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Главное</h2><p>Перед поиском подтвердите пользователя, вычислите его effective permissions и отфильтруйте индекс по разрешённым ресурсам. Кеш, история диалога, citations и логи должны учитывать те же права.</p></div></section><section><div><p><span>Самая опасная ошибка корпоративного RAG часто выглядит как качественный ответ. Система находит точный фрагмент, хорошо его пересказывает и даже ставит ссылку — только документ предназначался другому отделу.</span></p><p><span>Фильтр после генерации здесь не помогает. Модель уже увидела закрытый текст и могла перенести его в ответ, промежуточную трассировку или кеш. Права должны применяться до retrieval или внутри самого поиска.</span></p><section><h2 id="section-2">Откуда берётся утечка</h2><p><span>Документы приезжают из SharePoint, Google Drive, CRM, файловых папок и внутренних API. При индексации команды часто сохраняют текст и название, но теряют исходные ACL. В результате vector store становится единой копией знаний без прежних границ.</span></p><p><span>Вторая ошибка — использовать один технический аккаунт для всех запросов. Источник отвечает: «этому сервису можно», но это ничего не говорит о правах конкретного сотрудника.</span></p><p><span>Третья — проверять доступ только при открытии ссылки. Пользователь не откроет файл, но уже увидит его содержание в ответе.</span></p></section><section><h2 id="section-3">Как должен идти запрос</h2><ol><li><span>Приложение получает подтверждённую идентичность пользователя.</span></li><li><span>Определяет его роли, группы и контекст организации.</span></li><li><span>Формирует фильтр допустимых ресурсов.</span></li><li><span>Retrieval ищет только внутри разрешённого множества.</span></li><li><span>Модель получает только разрешённые фрагменты.</span></li><li><span>Цитата ведёт на источник, который пользователь тоже может открыть.</span></li></ol><p><span>AWS описывает такой контроль через identity propagation и metadata filtering; Microsoft поддерживает document-level access control в поисковом индексе. Реализация зависит от платформы, но принцип одинаков: решение о доступе предшествует выдаче текста модели.</span></p></section><section><h2 id="section-4">Что хранить рядом с фрагментом</h2><p><span>Минимальные метаданные:</span></p><ul><li><span>стабильный ID исходного документа;</span></li><li><span>версия и дата действия;</span></li><li><span>владелец источника;</span></li><li><span>tenant или организация;</span></li><li><span>допустимые пользователи, группы или policy reference;</span></li><li><span>класс чувствительности;</span></li><li><span>статус: активен, отозван, архивирован;</span></li><li><span>ссылка на оригинал.</span></li></ul><p><span>Не обязательно размножать огромный список пользователей в каждом chunk. Можно хранить ссылку на policy и разрешать её на этапе запроса. Важно, чтобы переиндексация текста и обновление прав были согласованы.</span></p></section><section><h2 id="acl">ACL меняются независимо от текста</h2><p><span>Сотрудник перешёл в другой отдел, папку закрыли, документ рассекретили — содержимое могло остаться прежним. Значит, pipeline должен уметь обновлять права без полного переобучения или ожидания ночной индексации.</span></p><p><span>Нужны события или регулярная сверка ACL, дата последней синхронизации и политика поведения при сбое. Безопасный default — не показывать документ, если актуальность разрешения подтвердить нельзя.</span></p></section><section><h2 id="section-5">Кеш тоже участвует в модели доступа</h2><p><span>Опасно кешировать ответ только по тексту вопроса. Два сотрудника спрашивают одно и то же, но имеют разные права. Ключ кеша должен учитывать пользователя или эффективную policy, tenant, версию индекса и другие параметры, влияющие на разрешённый контекст.</span></p><p><span>То же относится к semantic cache и истории диалога. Ответ, когда-то построенный из закрытого документа, не должен всплыть у другого пользователя через память разговора.</span></p></section><section><h2 id="section-6">Цитата не является контролем доступа</h2><p><span>Цитата помогает проверить grounding. Она не доказывает, что источник разрешён. Более того, название файла вроде </span><code>Сокращения_2027_финал.xlsx</code><span> уже может раскрыть чувствительную информацию.</span></p><p><span>Перед показом нужно проверять и содержимое фрагмента, и метаданные цитаты, и возможность открыть оригинал. Если прямой URL не поддерживает авторизацию, лучше показать безопасный идентификатор и открыть документ через контролируемый gateway.</span></p></section><section><h2 id="permission-eval">Permission eval должен быть отдельным</h2><p><span>Возьмите одинаковый вопрос и прогоните его от нескольких ролей:</span></p><ul><li><span>сотрудник отдела;</span></li><li><span>сотрудник другого отдела;</span></li><li><span>руководитель;</span></li><li><span>внешний пользователь;</span></li><li><span>пользователь после отзыва права.</span></li></ul><p><span>Проверяйте не только финальный ответ, но и retrieved chunks, citations, кеш, логи и телеметрию. Добавьте документы-приманки с уникальными маркерами: если маркер появился не у той роли, тест однозначно провален.</span></p><p><span>Критическая утечка не должна растворяться в среднем RAG score. Это отдельный release blocker.</span></p></section><section><h2 id="section-7">Что делать с вопросом по нескольким областям доступа</h2><p><span>Иногда для полного ответа нужны три документа, а пользователю доступны два. Система не должна угадывать содержание третьего. Она может ответить по разрешённым источникам и явно сказать, что результат неполный, либо передать запрос владельцу процесса.</span></p><p><span>Такой отказ лучше уверенного ответа, собранного из того, что случайно оказалось в индексе.</span></p></section><section><h2 id="checklist">Минимальный checklist</h2><ul><li><span>Идентичность пользователя доходит до retrieval.</span></li><li><span>ACL исходного источника не теряются при индексации.</span></li><li><span>Фильтрация выполняется до передачи контекста модели.</span></li><li><span>Изменение прав синхронизируется независимо от текста.</span></li><li><span>Кеш учитывает effective permissions и версию индекса.</span></li><li><span>История разговора не является самостоятельным источником фактов.</span></li><li><span>Пользователь может открыть показанную цитату.</span></li><li><span>Permission tests входят в обязательную регрессию.</span></li></ul><p><span>RAG без модели доступа — это не корпоративный поиск. Это общая копия документов с удобным разговорным интерфейсом.</span></p></section></div></section><section><div><p>Сравнение</p><h2 id="section-8">Где применять контроль доступа</h2><div><div class="article-table"><table><thead><tr><th scope="col">Слой</th><th scope="col">Что проверять</th><th scope="col">Почему это важно</th></tr></thead><tbody><tr><th scope="row">Identity</th><td>Пользователь, tenant, роль</td><td>Один сервисный аккаунт скрывает границы</td></tr><tr><th scope="row">Retrieval</th><td>ACL/metadata до выдачи</td><td>Модель не видит запрещённый chunk</td></tr><tr><th scope="row">Cache</th><td>Права и версия policy</td><td>Чужой ответ не переиспользуется</td></tr><tr><th scope="row">Citation</th><td>Доступ к оригиналу</td><td>Ссылка не раскрывает закрытый источник</td></tr></tbody></table></div></div></div></section><section><div><div><p>Что проверить</p><h2 id="permission-eval-2">Permission eval</h2></div><ol><li><span>Прогнать один вопрос от нескольких ролей.</span></li><li><span>Проверить retrieved chunks, а не только финальный ответ.</span></li><li><span>Добавить документы-приманки с уникальными маркерами.</span></li><li><span>Проверить отзыв доступа и изменение группы.</span></li><li><span>Не компенсировать критическую утечку средним RAG score.</span></li></ol></div></section><section><div><div><p>Как мы подходим к задаче</p><p>В RAG-проектах CENTURY права относятся к источнику и запросу, а не к красивой цитате. Если разрешение нельзя подтвердить, безопасный default — не показывать документ и объяснить неполноту результата.</p></div></div></section><section><h2 id="section-10">Источники и ссылки</h2><ul><li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture-generative-ai/gen-ai-agents.html" rel="noopener noreferrer" target="_blank">AWS: Security reference architecture for generative AI</a></li><li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture-generative-ai/bedrock-integration.html" rel="noopener noreferrer" target="_blank">AWS: Identity propagation for generative AI</a></li><li><a href="https://learn.microsoft.com/en-us/azure/search/search-document-level-access-overview" rel="noopener noreferrer" target="_blank">Microsoft: Document-level access control</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

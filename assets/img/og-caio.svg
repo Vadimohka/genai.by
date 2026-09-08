@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#fff" stroke-opacity=".06"/>
+    </pattern>
+    <radialGradient id="glow" cx="75%" cy="20%" r="65%">
+      <stop offset="0" stop-color="#ccff00" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#ccff00" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" x2="1">
+      <stop stop-color="#ccff00"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#000"/>
+  <rect x="24" y="24" width="1152" height="582" rx="44" fill="#0c0c0c" stroke="#fff" stroke-opacity=".12"/>
+  <rect x="24" y="24" width="1152" height="582" rx="44" fill="url(#grid)"/>
+  <rect x="24" y="24" width="1152" height="582" rx="44" fill="url(#glow)"/>
+  <rect x="72" y="68" width="54" height="54" rx="15" fill="#ccff00"/>
+  <text x="99" y="102" text-anchor="middle" fill="#000" font-family="monospace" font-size="18" font-weight="700">C/</text>
+  <text x="148" y="91" fill="#ebebeb" font-family="sans-serif" font-size="24" font-weight="700">CAIO / PRACTICE</text>
+  <text x="148" y="116" fill="#ebebeb" fill-opacity=".42" font-family="monospace" font-size="12" letter-spacing="3">VADIM × VITALI</text>
+  <text x="72" y="248" fill="#ebebeb" font-family="sans-serif" font-size="78" font-weight="500" letter-spacing="-5">CAIO отвечает</text>
+  <text x="72" y="330" fill="#ebebeb" font-family="sans-serif" font-size="78" font-weight="500" letter-spacing="-5">за результат</text>
+  <text x="72" y="412" fill="url(#title)" font-family="sans-serif" font-size="78" font-style="italic" font-weight="500" letter-spacing="-5">всей системы.</text>
+  <text x="76" y="500" fill="#ebebeb" fill-opacity=".62" font-family="sans-serif" font-size="25">Бесплатные консультации и обучение команд</text>
+  <g transform="translate(880 350)">
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#ccff00" stroke-opacity=".18"/>
+    <circle cx="0" cy="0" r="88" fill="none" stroke="#fff" stroke-opacity=".12"/>
+    <circle cx="-42" cy="0" r="44" fill="#151515" stroke="#fff" stroke-opacity=".18"/>
+    <circle cx="42" cy="0" r="44" fill="#ccff00"/>
+    <text x="-42" y="13" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="38" font-weight="300">V</text>
+    <text x="42" y="13" text-anchor="middle" fill="#000" font-family="sans-serif" font-size="38" font-weight="300">B</text>
+  </g>
+</svg>

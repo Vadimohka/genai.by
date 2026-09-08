@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Как контролировать алгоритм распределения: приоритеты, равенство, версии данных, инварианты и объяснение из журнала. Учебный пример с двумя направлениями.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/reproducible-allocation-algorithms/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Алгоритм распределения мест: как сделать результат воспроизводимым">
+  <meta property="og:description" content="Как контролировать алгоритм распределения: приоритеты, равенство, версии данных, инварианты и объяснение из журнала. Учебный пример с двумя направлениями.">
+  <meta property="og:url" content="https://genai.by/publications/reproducible-allocation-algorithms/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Алгоритм распределения мест: как сделать результат воспроизводимым — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/reproducible-allocation-algorithms/#article","headline":"Алгоритм распределения мест: как сделать результат воспроизводимым","description":"Как контролировать алгоритм распределения: приоритеты, равенство, версии данных, инварианты и объяснение из журнала. Учебный пример с двумя направлениями.","datePublished":"2026-08-25T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/reproducible-allocation-algorithms/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Алгоритм распределения мест: как сделать результат воспроизводимым","item":"https://genai.by/publications/reproducible-allocation-algorithms/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Алгоритм распределения мест: как сделать результат воспроизводимым</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Наука, технологии и инновации</span>
+          <h1>Алгоритм распределения мест: как сделать результат воспроизводимым</h1>
+          <p>Версии правил, входной срез, инварианты и след расчёта: как объяснить назначение места или ресурса без догадок языковой модели.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-25T00:00:00+03:00">25 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section-1">Начать с формального описания правил</a></li><li><a href="#section-2">Небольшой учебный пример</a></li><li><a href="#section-3">Зафиксировать входной срез</a></li><li><a href="#section-4">Проверять свойства результата</a></li><li><a href="#section-5">Объяснять из следа расчёта</a></li></ol></aside>
+        <article class="article-body">
+          <p>Когда система распределяет места, заявки или ограниченные ресурсы, вопрос «почему получился такой результат» должен иметь проверяемый ответ. Нужны исходные данные, действовавшие правила и последовательность решений. Убедительное объяснение, созданное после расчёта, не заменяет этих материалов.</p>
+<p>В <a href="https://libeldoc.bsuir.by/handle/123456789/60486">работе Владымцева и Могилевца 2025 года</a> рассматривается оптимизация зачисления на примере автоматизированной системы БГУИР. Для других задач полезен более общий инженерный вопрос: как отделить утверждённые правила распределения от реализации и последующего объяснения.</p>
+<h2 id="section-1">Начать с формального описания правил</h2>
+<p>До выбора алгоритма определите доступные ресурсы, ограничения, приоритеты, основания для отказа и порядок разрешения равенства. У правил должны быть версия, дата применимости и уполномоченный владелец.</p>
+<p>Не оставляйте в коде неявных приоритетов. Порядок строк в базе данных, время поступления технического запроса или случайное значение не должны решать судьбу заявки, если такой порядок прямо не предусмотрен правилами.</p>
+<p>Когда правила противоречат друг другу или не описывают спорную ситуацию, система должна обнаружить неопределённость. Самостоятельно выбрать удобное толкование и скрыть его в алгоритме — непригодный способ автоматизации.</p>
+<h2 id="section-2">Небольшой учебный пример</h2>
+<p>Представим вымышленное распределение на два учебных направления, X и Y. На каждом одно место. Для примера заранее установлено: заявки рассматриваются по убыванию балла; кандидат получает первое доступное направление из своего списка. Реальные правила приёма могут быть устроены иначе.</p>
+<table>
+<thead>
+<tr>
+<th>Заявка</th>
+<th style="text-align:right">Балл</th>
+<th>Предпочтения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align:right">98</td>
+<td>X, затем Y</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align:right">96</td>
+<td>Только X</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align:right">95</td>
+<td>Только Y</td>
+</tr>
+</tbody>
+</table>
+<p>При этих правилах A получает X, B остаётся без места, C получает Y. Можно вообразить другое распределение: A на Y и B на X. Оно тоже заполняет оба места, но лишает A первого выбора. Чтобы выбирать между такими вариантами, нужна заранее установленная цель и правило приоритета. Само заполнение всех мест ещё не определяет единственный правильный результат.</p>
+<p>Если A изменит предпочтения на Y, затем X, результат станет другим: A получает Y, B — X, C остаётся без места. Поэтому версия списка предпочтений входит в исходные данные расчёта.</p>
+<p>Если у A и B одинаковый балл, описанных условий недостаточно для определения порядка. Сначала нужно утверждённое правило разрешения равенства. Выбор по внутреннему идентификатору не становится допустимым только потому, что его легко воспроизвести.</p>
+<h2 id="section-3">Зафиксировать входной срез</h2>
+<p>Для каждого запуска сохраните состав заявок, версии их данных, доступную ёмкость и версию правил. Отдельно укажите момент, на который сформирован срез. Изменения после этого момента должны попадать в следующий расчёт по определённой процедуре.</p>
+<p>Входной набор полезно снабдить контрольной суммой, а результат — идентификатором запуска. Это помогает обнаружить подмену или случайное изменение файлов, но не доказывает корректность самих правил и полномочия на их утверждение.</p>
+<p>Персональные данные в диагностических выгрузках ограничивают необходимым составом. Для технического сравнения часто достаточно внутренних идентификаторов; возможность сопоставить их с людьми должна оставаться у уполномоченных сотрудников.</p>
+<h2 id="section-4">Проверять свойства результата</h2>
+<p>Примеры покрывают лишь часть поведения. Дополнительно проверяйте инварианты — условия, которые должны выполняться для любого допустимого входа.</p>
+<table>
+<thead>
+<tr>
+<th>Свойство</th>
+<th>Пример проверки</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ограничение ёмкости</td>
+<td>Число назначений не превышает доступные места</td>
+</tr>
+<tr>
+<td>Единственность</td>
+<td>Одна заявка не получает несколько несовместимых назначений</td>
+</tr>
+<tr>
+<td>Допустимость</td>
+<td>Назначенный вариант разрешён условиями заявки и правилами</td>
+</tr>
+<tr>
+<td>Воспроизводимость</td>
+<td>Одинаковые версии входа и правил дают одинаковый результат</td>
+</tr>
+<tr>
+<td>Независимость от случайного порядка</td>
+<td>Перестановка строк не меняет итог, если правила не используют этот порядок</td>
+</tr>
+</tbody>
+</table>
+<p>Для сложных квот и приоритетов потребуются дополнительные свойства. Универсальный жадный алгоритм из учебного примера не следует переносить на такие случаи без доказательства соответствия правилам.</p>
+<p>Проверяйте крайние входы: пустой набор, нулевую ёмкость, одинаковые приоритеты, отозванную заявку, недопустимое предпочтение. Полезно сравнивать независимые реализации на небольших наборах, для которых результат можно проверить полным перебором.</p>
+<h2 id="section-5">Объяснять из следа расчёта</h2>
+<p>Журнал должен сохранять применённое правило, рассмотренный вариант, причину принятия или отклонения и состояние ограничений. Для пересмотра конкретной заявки этого часто важнее, чем общий процент успешных назначений.</p>
+<p>Языковую модель можно использовать для перевода структурированного следа на понятный язык. Ей передают только разрешённые данные и проверяют, что объяснение не добавляет новых оснований. При отсутствии следа система сообщает о невозможности подтвердить причину.</p>
+<p>Официальное решение принимает уполномоченный процесс. Модель не должна изменять приоритеты или подменять основания красивым рассуждением.</p>
+<p>Перед публикацией результата проверьте подпись ответственного, версию запуска и порядок обработки исправлений. Повторный расчёт нельзя незаметно выдавать за прежний: участники и сопровождающие системы должны различать версии.</p>
+<p>Статья описывает инженерный порядок контроля, а не актуальные условия поступления. Применимые правила, полномочия и порядок обжалования необходимо определять для конкретной организации и периода.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

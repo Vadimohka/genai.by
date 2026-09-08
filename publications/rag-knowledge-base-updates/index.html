@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Версионирование RAG: staging index, manifest, probe search, atomic switch, rollback, идемпотентная индексация и отзыв источников.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/publications/rag-knowledge-base-updates/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_BY">
+  <meta property="og:title" content="Как обновлять базу знаний RAG без поломки активной версии">
+  <meta property="og:description" content="Версионирование RAG: staging index, manifest, probe search, atomic switch, rollback, идемпотентная индексация и отзыв источников.">
+  <meta property="og:url" content="https://genai.by/publications/rag-knowledge-base-updates/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Как обновлять базу знаний RAG без поломки активной версии — CAIO / Практика</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260908-2">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/publications/rag-knowledge-base-updates/#article","headline":"Как обновлять базу знаний RAG без поломки активной версии","description":"Версионирование RAG: staging index, manifest, probe search, atomic switch, rollback, идемпотентная индексация и отзыв источников.","datePublished":"2026-08-18T00:00:00+03:00","inLanguage":"ru-BY","mainEntityOfPage":"https://genai.by/publications/rag-knowledge-base-updates/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/#vadim","name":"Вадим Владымцев","url":"https://genai.by/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практика","url":"https://genai.by/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://genai.by/"},{"@type":"ListItem","position":2,"name":"Публикации","item":"https://genai.by/publications/"},{"@type":"ListItem","position":3,"name":"Как обновлять базу знаний RAG без поломки активной версии","item":"https://genai.by/publications/rag-knowledge-base-updates/"}]}]}</script>
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">К содержанию</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/" aria-label="CAIO Практика — на главную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практика</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-cta" href="/#contact">Написать нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мобильная навигация" data-mobile-menu hidden>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/" aria-current="page">Публикации</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><a href="/publications/">Публикации</a><span>/</span><span>Как обновлять базу знаний RAG без поломки активной версии</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Наука, технологии и инновации</span>
+          <h1>Как обновлять базу знаний RAG без поломки активной версии</h1>
+          <p>Надёжное обновление RAG — это manifest, staging index, probe search, проверка прав, атомарное переключение alias, идемпотентная очередь и rollback.</p>
+          <div class="article-meta"><span>Опубликовано <time datetime="2026-08-18T00:00:00+03:00">18 августа 2026</time></span><span>5 мин чтения</span></div>
+        </div>
+        <aside class="article-author" aria-label="Автор публикации">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадим Владымцев" decoding="async">
+          <span>Автор</span>
+          <a href="/#vadim">Вадим Владымцев</a>
+          <small>Продукт, архитектура и инженерная эксплуатация AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">В статье</span><ol><li><a href="#section">Главное</a></li><li><a href="#section-2">Не обновляйте активную коллекцию «на месте»</a></li><li><a href="#manifest">Manifest делает обновление объяснимым</a></li><li><a href="#section-3">Какие проверки нужны до переключения</a></li><li><a href="#section-4">Переключение должно быть атомарным</a></li><li><a href="#section-5">Очередь индексации должна переживать рестарт</a></li><li><a href="#section-6">Удаление важнее добавления</a></li><li><a href="#section-7">Не меняйте всё одновременно</a></li><li><a href="#section-8">Что показывать владельцу базы</a></li><li><a href="#release-checklist-rag">Release checklist версии RAG</a></li><li><a href="#section-9">Контрольные точки обновления</a></li><li><a href="#section-10">Перед публикацией версии</a></li><li><a href="#section-12">Источники и ссылки</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Главное</h2><p>Не меняйте активную коллекцию на месте. Соберите новую версию отдельно, проверьте полноту, retrieval, ACL и удаление устаревших источников, затем атомарно переключите активный alias и сохраните предыдущую версию для быстрого отката.</p></div></section><section><div><p><span>RAG часто запускают как импорт: загрузили документы, построили embeddings — готово. В рабочей системе база знаний живёт. Положения меняются, файлы удаляются, права отзываются, модель embeddings обновляется. Самая неприятная ошибка — частично обновить активный индекс и несколько часов отвечать из смеси старых и новых данных.</span></p><p><span>Мы предпочитаем относиться к базе знаний как к версии приложения: собрать отдельно, проверить, переключить и иметь возможность откатить.</span></p><section><h2 id="section-2">Не обновляйте активную коллекцию «на месте»</h2><p><span>Если pipeline удалил старые chunks, а сервис embeddings упал на середине новых, активная база останется неполной. Пользователь не увидит техническую ошибку — он просто получит уверенное «информации нет».</span></p><p><span>Безопаснее создавать новую версию:</span></p><ol><li><span>зафиксировать manifest источников;</span></li><li><span>скачать и проверить документы;</span></li><li><span>нормализовать и разбить текст;</span></li><li><span>построить embeddings в staging collection;</span></li><li><span>проверить количество объектов и контрольные запросы;</span></li><li><span>атомарно переключить alias активной версии;</span></li><li><span>сохранить предыдущую версию для rollback.</span></li></ol><p><span>Пока новый индекс не прошёл gate, пользователи продолжают работать со старым.</span></p></section><section><h2 id="manifest">Manifest делает обновление объяснимым</h2><p><span>Для каждого источника полезно хранить:</span></p><ul><li><span>ID и canonical URL;</span></li><li><span>checksum содержимого;</span></li><li><span>версию или дату действия;</span></li><li><span>владельца;</span></li><li><span>ACL и класс данных;</span></li><li><span>parser/chunking version;</span></li><li><span>embedding model version;</span></li><li><span>время успешной индексации.</span></li></ul><p><span>Тогда можно ответить, почему документ попал в конкретную сборку, и переобработать только изменившиеся источники. Один и тот же manifest должен давать тот же набор объектов — это основа идемпотентности.</span></p></section><section><h2 id="section-3">Какие проверки нужны до переключения</h2><p><strong>Полнота.</strong><span> Количество документов и chunks соответствует manifest; обязательные источники присутствуют.</span></p><p><strong>Парсинг.</strong><span> Нет пустых документов, поломанных таблиц и страниц, состоящих из меню или повторяющихся заголовков.</span></p><p><strong>Retrieval probes.</strong><span> Для небольшого набора известных вопросов нужные фрагменты попадают в top-k.</span></p><p><strong>Права.</strong><span> Роли видят только разрешённые маркеры.</span></p><p><strong>Актуальность.</strong><span> Отозванный документ отсутствует, новый имеет правильный статус и дату.</span></p><p><strong>Совместимость.</strong><span> Приложение понимает схему метаданных новой версии.</span></p><p><span>Один успешный запрос «что такое компания» ничего не проверяет. Probe-набор должен содержать важные, редкие и проблемные документы.</span></p></section><section><h2 id="section-4">Переключение должно быть атомарным</h2><p><span>Приложение читает логическое имя вроде </span><code>knowledge_active</code><span>, а не жёсткий ID коллекции. После всех проверок alias одним действием указывает на новую версию. Новые запросы идут туда; начатые запросы завершаются на прежней.</span></p><p><span>Если поиск, citations или permission tests деградировали, alias возвращается назад. Rollback не должен требовать повторной индексации — иначе это не быстрый откат.</span></p><p><span>В одном из наших RAG-проектов активная версия переключается только после проверки количества points и probe search. Сбой MinIO, embeddings, PostgreSQL или Qdrant оставляет предыдущую версию активной. Это не «сложная AI-магия», а нормальная транзакционная дисциплина вокруг нескольких нетранзакционных систем.</span></p></section><section><h2 id="section-5">Очередь индексации должна переживать рестарт</h2><p><span>Большой импорт редко заканчивается за один HTTP-запрос. Нужна durable queue с lease, подтверждением выполнения и возвратом зависшей задачи. Повторная обработка не должна создавать дубли — каждый документ и chunk имеют стабильный ключ версии.</span></p><p><span>Отдельные liveness и readiness помогают не направлять трафик в процесс, который запущен, но ещё не может обращаться к индексу или базе. Это особенно важно во время обновления зависимостей.</span></p></section><section><h2 id="section-6">Удаление важнее добавления</h2><p><span>Команды хорошо тестируют появление нового документа и хуже — исчезновение старого. Но отозванная инструкция или право доступа создают больший риск.</span></p><p><span>Для удаления нужны tombstone или manifest diff, проверка отсутствия chunks во всех активных слоях, очистка кеша и тест по уникальному маркеру удалённого источника. Старые версии индекса можно хранить для rollback ограниченное время, но доступ к ним должен оставаться закрытым.</span></p></section><section><h2 id="section-7">Не меняйте всё одновременно</h2><p><span>Новая модель embeddings, другой chunk size, reranker и новый prompt в одной версии не позволят понять причину улучшения или деградации. По возможности меняйте один слой и сравнивайте на том же наборе. Если миграция вынужденно комплексная, сохраните обе версии и проведите shadow или A/B-проверку без смешивания пользовательских ответов.</span></p></section><section><h2 id="section-8">Что показывать владельцу базы</h2><p><span>Технического «успешно» мало. Нужен понятный отчёт:</span></p><ul><li><span>какие источники добавлены, изменены и удалены;</span></li><li><span>какие не обработались и почему;</span></li><li><span>какая версия активна;</span></li><li><span>когда была последняя успешная сборка;</span></li><li><span>какие контрольные вопросы прошли;</span></li><li><span>можно ли откатить;</span></li><li><span>кто подтвердил публикацию.</span></li></ul><p><span>Так база знаний перестаёт быть чёрным ящиком команды AI и становится управляемым корпоративным ресурсом.</span></p></section><section><h2 id="release-checklist-rag">Release checklist версии RAG</h2><ul><li><span>Новый индекс собран отдельно от активного.</span></li><li><span>Manifest, схемы и версии моделей сохранены.</span></li><li><span>Проверены полнота, retrieval, citations и ACL.</span></li><li><span>Переключение alias атомарно.</span></li><li><span>Предыдущая версия доступна для быстрого rollback.</span></li><li><span>Повторы pipeline идемпотентны.</span></li><li><span>Сбой любой зависимости не портит активную версию.</span></li><li><span>Удаление и отзыв прав проверены так же, как добавление.</span></li></ul><p><span>Если база обновляется часто, этот pipeline ценнее ещё одной настройки промпта. Пользователь простит чуть сухой ответ. Ответ по отменённому документу — вряд ли.</span></p></section></div></section><section><div><p>Сравнение</p><h2 id="section-9">Контрольные точки обновления</h2><div><div class="article-table"><table><thead><tr><th scope="col">Этап</th><th scope="col">Проверка</th><th scope="col">Результат</th></tr></thead><tbody><tr><th scope="row">Manifest</th><td>Источники, checksum, ACL</td><td>Понятная версия сборки</td></tr><tr><th scope="row">Staging</th><td>Парсинг и embeddings</td><td>Активная база не затронута</td></tr><tr><th scope="row">Probe</th><td>Известные вопросы и роли</td><td>Причина переключения доказана</td></tr><tr><th scope="row">Switch</th><td>Alias и rollback</td><td>Короткое атомарное изменение</td></tr></tbody></table></div></div></div></section><section><div><div><p>Что проверить</p><h2 id="section-10">Перед публикацией версии</h2></div><ol><li><span>Новая коллекция собрана отдельно от активной.</span></li><li><span>Проверены полнота, retrieval, citations и ACL.</span></li><li><span>Удаление отозванных источников протестировано.</span></li><li><span>Повтор pipeline не создаёт дубли.</span></li><li><span>Сбой зависимостей оставляет прошлую версию активной.</span></li></ol></div></section><section><div><div><p>Как мы подходим к задаче</p><p>В нашем RAG-паттерне staging-индекс переключается только после проверки количества points и контрольного поиска; сбой MinIO, embeddings, PostgreSQL или Qdrant не портит предыдущую рабочую версию.</p></div></div></section><section><h2 id="section-12">Источники и ссылки</h2><ul><li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/gen-ai-lifecycle-operational-excellence/preprod-hardening.html" rel="noopener noreferrer" target="_blank">AWS: Pre-production hardening for generative AI</a></li><li><a href="https://arxiv.org/abs/2005.11401" rel="noopener noreferrer" target="_blank">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a></li><li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" rel="noopener noreferrer" target="_blank">NIST Generative AI Profile</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Следующий шаг</span><h2>Разобрать тему<br>на вашей задаче.</h2><a class="button button-primary" href="/#contact">Обсудить задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практика для AI-лидеров и команд, которые внедряют AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навигация в подвале">
+        <span class="footer-label">Навигация</span>
+        <a href="/#experts">Эксперты</a>
+        <a href="/#work">Работа</a>
+        <a href="/#format">Формат</a>
+        <a href="/publications/">Публикации</a>
+        <a href="/#contact">Контакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Компании</span>
+        <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+        <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Минск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
