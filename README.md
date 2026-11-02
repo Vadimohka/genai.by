@@ -15,3 +15,21 @@ Telegram: [@vadimohka](https://t.me/vadimohka)
 CEO и Co-founder CENTURY. Ведёт бизнес-внедрение AI: от выбора направлений для пилотов до работы с руководителями и владельцами процессов.
 
 Telegram: [@vitalibakhmat](https://t.me/vitalibakhmat)
+
+## Егор Крячев
+
+CAIO · CENTURY AI. Работает с AI-архитектурой и инженерной реализацией: помогает переводить задачи и ограничения внедрения в работающие системы.
+
+LinkedIn: [Egor Kryachev](https://www.linkedin.com/in/ekrychev/)
+
+## Андрей Собалевич
+
+Head of AI, Myfin Group. Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику.
+
+Внедрение · Продукт · Аналитика
+
+LinkedIn: [Andrei Sobalevich](https://www.linkedin.com/in/andrei-sobalevich/)
+
+## Публикация
+
+GitHub Pages публикует статические файлы при обновлении `main` или ручном запуске workflow. Тесты в процессе публикации не запускаются. В артефакт `_site` попадают только файлы сайта: каталог `tests`, настройки GitHub и служебные Markdown-файлы исключены. Локальные тесты остаются в репозитории.

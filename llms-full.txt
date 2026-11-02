@@ -2,6 +2,7 @@
 
 Канонический URL: https://genai.by/
 Язык и регион: ru-BY (Беларусь).
+Обновлено: 2026-11-02.
 
 CAIO / Practice — одностраничная практика для CAIO, CTO, CIO и руководителей трансформации. На сайте опубликованы бесплатные индивидуальные консультации и работа с командами по текущим задачам: 90-дневная повестка CAIO, карта портфеля и критерии отбора, decision rights и operating model, governance, вопросы к архитектуре и вендорам, а также план обучения команды.
 
@@ -11,10 +12,13 @@ CAIO / Practice — одностраничная практика для CAIO, C
 - Вадим Владымцев — Co-founder CENTURY · CTO STACKLEVEL GROUP. https://vadimohka.com/
 - Виталий Бахмат — CEO, Co-founder CENTURY. https://www.linkedin.com/in/vbakhmat/
 - Егор Крячев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. https://www.linkedin.com/in/ekrychev/
+- Андрей Собалевич (Andrei Sobalevich) — Head of AI, Myfin Group. Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику. Специализации: Внедрение · Продукт · Аналитика. Профиль: https://genai.by/#andrei-sobalevich. LinkedIn: https://www.linkedin.com/in/andrei-sobalevich/
 
 Контакты: https://genai.by/#contact
 Robots: https://genai.by/robots.txt
 Sitemap: https://genai.by/sitemap.xml
+Структурированные данные (JSON-LD): https://genai.by/ai.json
+Краткий источник для LLM: https://genai.by/llms.txt
 Официальные сайты: https://century-ai.by/ и https://stacklevel.group/
 
 ## Тематические направления экспертов
@@ -22,6 +26,7 @@ Sitemap: https://genai.by/sitemap.xml
 - Бизнес, экономика AI и стратегия — Виталий Бахмат: https://genai.by/#vitaliy
 - Автоматизация, AI-агенты и процессы — Егор Крячев: https://genai.by/#egor
 - Наука, технологии и инновации — Вадим Владымцев: https://genai.by/#vadim
+- Внедрение · Продукт · Аналитика — Андрей Собалевич: https://genai.by/#andrei-sobalevich
 
 ## Полные публикации
 

@@ -2079,6 +2079,19 @@ p {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16);
 }
 
+/* Frame the supplied portrait without changing the original photograph. */
+.expert-photo-portrait {
+  overflow: hidden;
+}
+
+.expert-photo-portrait img {
+  display: block;
+  width: 250%;
+  max-width: none;
+  height: auto;
+  transform: translate(-26%, -19%);
+}
+
 .expert-initials {
   display: grid;
   place-items: center;
@@ -2282,7 +2295,7 @@ main {
 @media (min-width: 1061px) {
   .experts .section-heading h2 {
     max-width: none;
-    white-space: nowrap;
+    text-wrap: balance;
     font-size: clamp(3.1rem, 4.25vw, 5.5rem);
   }
 }
