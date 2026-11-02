@@ -26,6 +26,6 @@ assert.doesNotMatch(publicationCss, /\.publication-header\b/, 'publication style
 assert.doesNotMatch(publicationCss, /\.publication-footer\b/, 'publication stylesheet does not define a separate footer');
 assert.doesNotMatch(html, /<address\b[^>]*class="contact-address"/, 'the contact address is not rendered in the page');
 assert.match(html, /<meta name="geo\.address"/, 'geo data remains available to crawlers');
-assert.match(html, /assets\/css\/styles\.css\?v=20261103-2/, 'the updated stylesheet is requested with a fresh cache key');
+assert.match(html, /assets\/css\/styles\.css\?v=20261103-3/, 'the updated stylesheet is requested with a fresh cache key');
 
 console.log('layout contract passed');
