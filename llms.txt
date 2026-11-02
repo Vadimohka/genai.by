@@ -4,7 +4,7 @@
 
 Канонический сайт: https://genai.by/
 Язык и регион: ru-BY (Беларусь).
-Обновлено: 2026-11-02.
+Обновлено: 2026-11-03.
 
 ## Описание
 
@@ -24,7 +24,7 @@ CAIO / Practice — консультации и совместные практ�
 - Вадим Владымцев — Co-founder CENTURY, CTO STACKLEVEL GROUP. Продукт, архитектура и инженерная эксплуатация корпоративного AI. Telegram: https://t.me/vadimohka
 - Виталий Бахмат — CEO и Co-founder CENTURY. Бизнес-внедрение AI, работа с руководителями и владельцами процессов. Telegram: https://t.me/vitalibakhmat
 - Егор Крячев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. LinkedIn: https://www.linkedin.com/in/ekrychev/
-- Андрей Собалевич (Andrei Sobalevich) — Head of AI, Myfin Group. Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику. LinkedIn: https://www.linkedin.com/in/andrei-sobalevich/
+- Андрей Собалевич (Andrei Sobalevich) — Head of AI, Myfin Group · Bankiros.ru. Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику. LinkedIn: https://www.linkedin.com/in/andrei-sobalevich/
 
 ## Контакты и география
 
@@ -40,7 +40,7 @@ Robots: https://genai.by/robots.txt
 Sitemap: https://genai.by/sitemap.xml
 Структурированные данные (JSON-LD): https://genai.by/ai.json
 Полный источник для LLM: https://genai.by/llms-full.txt
-Официальные сайты, представленные на странице: https://century-ai.by/ и https://stacklevel.group/
+Сайты компаний экспертов: https://century-ai.by/, https://stacklevel.group/, https://bankiros.ru/
 
 ## Тематические направления экспертов
 
@@ -52,4 +52,7 @@ Sitemap: https://genai.by/sitemap.xml
 ## Публикации
 
 Каталог публикаций: https://genai.by/publications/
-В каталоге 39 полных публикаций.
+В каталоге 40 публикаций.
+
+Новая публикация Андрея Собалевича: https://genai.by/publications/ai-financial-advice-checklist/ — Можно ли доверять AI свои деньги: как проверять финансовые советы.
+Источник адаптации: https://cifrateka.ru/articles/stoit-li-doveryat-neyroseti-svoi-dengi-/

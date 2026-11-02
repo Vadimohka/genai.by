@@ -2,7 +2,7 @@
 
 Канонический URL: https://genai.by/
 Язык и регион: ru-BY (Беларусь).
-Обновлено: 2026-11-02.
+Обновлено: 2026-11-03.
 
 CAIO / Practice — одностраничная практика для CAIO, CTO, CIO и руководителей трансформации. На сайте опубликованы бесплатные индивидуальные консультации и работа с командами по текущим задачам: 90-дневная повестка CAIO, карта портфеля и критерии отбора, decision rights и operating model, governance, вопросы к архитектуре и вендорам, а также план обучения команды.
 
@@ -12,14 +12,14 @@ CAIO / Practice — одностраничная практика для CAIO, C
 - Вадим Владымцев — Co-founder CENTURY · CTO STACKLEVEL GROUP. https://vadimohka.com/
 - Виталий Бахмат — CEO, Co-founder CENTURY. https://www.linkedin.com/in/vbakhmat/
 - Егор Крячев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. https://www.linkedin.com/in/ekrychev/
-- Андрей Собалевич (Andrei Sobalevich) — Head of AI, Myfin Group. Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику. Специализации: Внедрение · Продукт · Аналитика. Профиль: https://genai.by/#andrei-sobalevich. LinkedIn: https://www.linkedin.com/in/andrei-sobalevich/
+- Андрей Собалевич (Andrei Sobalevich) — Head of AI, Myfin Group · Bankiros.ru. Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику. Специализации: Внедрение · Продукт · Аналитика. Профиль: https://genai.by/#andrei-sobalevich. LinkedIn: https://www.linkedin.com/in/andrei-sobalevich/
 
 Контакты: https://genai.by/#contact
 Robots: https://genai.by/robots.txt
 Sitemap: https://genai.by/sitemap.xml
 Структурированные данные (JSON-LD): https://genai.by/ai.json
 Краткий источник для LLM: https://genai.by/llms.txt
-Официальные сайты: https://century-ai.by/ и https://stacklevel.group/
+Сайты компаний экспертов: https://century-ai.by/, https://stacklevel.group/, https://bankiros.ru/
 
 ## Тематические направления экспертов
 
@@ -31,7 +31,7 @@ Sitemap: https://genai.by/sitemap.xml
 ## Полные публикации
 
 Каталог: https://genai.by/publications/
-Всего материалов: 39.
+Всего материалов: 40.
 
 ### Виталий Бахмат
 
@@ -83,3 +83,8 @@ Sitemap: https://genai.by/sitemap.xml
 ### Совместная публикация Вадима Владымцева и Виталия Бахмата
 
 - https://genai.by/publications/ai-fundraising-nko/ — ИИ не заменит фандрайзера. Но может заметно разгрузить команду НКО (2026-08-31)
+
+### Андрей Собалевич
+
+- https://genai.by/publications/ai-financial-advice-checklist/ — Можно ли доверять AI свои деньги: как проверять финансовые советы (2026-11-03; дата публикации адаптации на genai.by).
+  Автор исходного материала — Андрей Собалевич, Head of AI в Myfin Group и Bankiros.ru. Источник: https://cifrateka.ru/articles/stoit-li-doveryat-neyroseti-svoi-dengi-/

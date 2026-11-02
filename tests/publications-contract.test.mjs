@@ -15,7 +15,10 @@ const newArchiveSlugs = new Set([
   'serverless-ai-background-jobs', 'ai-model-efficiency-benchmark',
   'logistics-event-document-integration', 'xr-pilot-value-validation',
 ]);
+const adaptedArticleSlug = 'ai-financial-advice-checklist';
+const adaptedArticleSource = 'https://cifrateka.ru/articles/stoit-li-doveryat-neyroseti-svoi-dengi-/';
 const expectedAuthors = {
+  [adaptedArticleSlug]: ['Андрей Собалевич', 'andrei-sobalevich'],
   'ai-project-cost-timeline': ['Виталий Бахмат', 'vitaliy'],
   'private-ai-tco': ['Виталий Бахмат', 'vitaliy'],
   'software-development-cost-belarus': ['Виталий Бахмат', 'vitaliy'],
@@ -58,6 +61,7 @@ const expectedAuthors = {
 };
 
 const expectedPublished = {
+  [adaptedArticleSlug]: '2026-11-03T00:00:00+03:00',
   'ai-project-cost-timeline': '2026-07-21T00:00:00+03:00',
   'private-ai-tco': '2026-08-18T00:00:00+03:00',
   'software-development-cost-belarus': '2026-08-18T00:00:00+03:00',
@@ -128,13 +132,13 @@ const dirs = (await readdir(publicationsRoot, { withFileTypes: true }))
 assert.deepEqual(dirs, Object.keys(expectedAuthors).sort(), 'all and only the selected publications exist');
 
 const catalogue = await readFile(new URL('../publications/index.html', import.meta.url), 'utf8');
-assert.equal((catalogue.match(/class="publication-card"/g) || []).length, 39, 'catalogue lists 39 publications');
+assert.equal((catalogue.match(/class="publication-card"/g) || []).length, 40, 'catalogue lists 40 publications');
 assert.match(catalogue, /Бизнес[\s\S]*Автоматизация[\s\S]*Наука, технологии и инновации/, 'catalogue groups publications by assigned author topic');
 assert.match(catalogue, /<meta property="og:type" content="website">/, 'catalogue identifies itself as a website page');
 assert.doesNotMatch(catalogue, /class="publication-card-id">\s*[DA]\d{2}\b/, 'catalogue hides source numbering');
 assert.match(catalogue, /ai-fundraising-nko/, 'catalogue links the NGO fundraising publication');
 assert.match(catalogue, /<span class="mono-label">11 материалов<\/span><h2 id="group-business">Бизнес<\/h2>/, 'business group count includes new business publications');
-assert.match(catalogue, /"numberOfItems":39/, 'catalogue structured data counts all publications');
+assert.match(catalogue, /"numberOfItems":40/, 'catalogue structured data counts all publications');
 assert.match(catalogue, /<header class="site-header" data-header>/, 'catalogue uses the shared site header');
 assert.doesNotMatch(catalogue, /publication-header|publication-footer/, 'catalogue has no separate header or footer components');
 assert.match(catalogue, /<nav class="desktop-nav"[^>]*>[\s\S]*?href="\/\#experts"[\s\S]*?href="\/\#work"[\s\S]*?href="\/\#format"[\s\S]*?href="\/publications\/"/, 'catalogue uses the shared desktop navigation');
@@ -164,10 +168,15 @@ for (const slug of dirs) {
   assert.match(html, /"@type":"Article"/, `${slug} exposes Article structured data`);
   assert.match(html, /<meta property="og:type" content="article">/, `${slug} identifies itself as an article`);
   assert.match(html, new RegExp(`"name":"${author}"`), `${slug} exposes the assigned author in structured data`);
-  assert.doesNotMatch(html, /Материал CENTURY|сторонний материал|isBasedOn/i, `${slug} has no external-material attribution`);
+  if (slug === adaptedArticleSlug) {
+    assert.ok(html.includes(`href="${adaptedArticleSource}"`), 'adapted article visibly links its original source');
+    assert.match(html, /"isBasedOn":/, 'adapted article exposes its source relationship in structured data');
+  } else {
+    assert.doesNotMatch(html, /Материал CENTURY|сторонний материал|isBasedOn/i, `${slug} has no external-material attribution`);
+  }
   assert.doesNotMatch(html, /Полезный файл|<h2[^>]*>Скачать|Применить это к своему проекту|century-ai\.by\/artifacts|<a[^>]*>Скачать<\/a>/i, `${slug} has no download or apply-to-project blocks`);
   assertSharedFooter(html, slug);
-  assert.match(html, new RegExp(`"datePublished":"${expectedPublished[slug].replaceAll('+', '\\+')}"`), `${slug} exposes the shifted publication date`);
+  assert.match(html, new RegExp(`"datePublished":"${expectedPublished[slug].replaceAll('+', '\\+')}"`), `${slug} exposes the expected publication date`);
   assert.match(html, new RegExp(`<time datetime="${expectedPublished[slug].replaceAll('+', '\\+')}\">${visibleDate(expectedPublished[slug])}</time>`), `${slug} shows the publication date without a timezone shift`);
   assert.doesNotMatch(html, /dateModified|Обновлено|updated/i, `${slug} omits update dates`);
   assert.doesNotMatch(html, new RegExp(legacyBrand, 'i'), `${slug} contains no old brand or domain`);
@@ -206,19 +215,23 @@ const errorPage = await readFile(new URL('../404.html', import.meta.url), 'utf8'
 assertSharedFooter(errorPage, '404 page');
 
 const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8');
-assert.equal((sitemap.match(/<loc>/g) || []).length, 41, 'sitemap contains home, catalogue, and 39 articles');
+assert.equal((sitemap.match(/<loc>/g) || []).length, 42, 'sitemap contains home, catalogue, and 40 articles');
 for (const [slug, published] of Object.entries(expectedPublished)) {
   const escapedUrl = `https://genai.by/publications/${slug}/`.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   assert.match(sitemap, new RegExp(`<url>\\s*<loc>${escapedUrl}</loc>\\s*<lastmod>${published.slice(0, 10)}</lastmod>\\s*</url>`), `${slug} sitemap date matches publication date`);
 }
 
 const manifest = JSON.parse(await readFile(new URL('../publications/manifest.json', import.meta.url), 'utf8'));
-assert.equal(manifest.length, 39, 'public manifest lists all publications');
+assert.equal(manifest.length, 40, 'public manifest lists all publications');
 for (const item of manifest) {
-  assert.equal(item.published, expectedPublished[item.slug], `${item.slug} manifest date is shifted by one week`);
+  assert.equal(item.published, expectedPublished[item.slug], `${item.slug} manifest date matches the publication date`);
   assert.ok(!('modified' in item), `${item.slug} manifest omits modified date`);
   assert.ok(!('ident' in item), `${item.slug} manifest omits source numbering`);
-  assert.ok(!('source_url' in item), `${item.slug} manifest omits source provenance`);
+  if (item.slug === adaptedArticleSlug) {
+    assert.equal(item.source_url, adaptedArticleSource, 'adapted article manifest retains the requested source');
+  } else {
+    assert.ok(!('source_url' in item), `${item.slug} manifest omits source provenance`);
+  }
 }
 const jointManifest = manifest.find((item) => item.slug === 'ai-fundraising-nko');
 assert.deepEqual(jointManifest.author_keys, ['vadim', 'vitaliy'], 'manifest records both authors');

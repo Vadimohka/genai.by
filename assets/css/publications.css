@@ -99,6 +99,26 @@
   filter: grayscale(1);
 }
 
+.article-author-photo {
+  grid-row: 1 / 4;
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+
+.article-author .article-author-photo img {
+  display: block;
+  width: 250%;
+  max-width: none;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  transform: translate(-26%, -19%);
+}
+
 .article-author > span {
   color: var(--lime);
   font-family: var(--font-mono);
@@ -393,6 +413,27 @@
   max-width: 45rem;
   color: var(--white-60);
   font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+}
+
+.catalogue-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.catalogue-topics a {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--white-70);
+  font-size: 0.85rem;
+}
+
+.catalogue-topics a:hover,
+.catalogue-topics a:focus-visible {
+  border-color: var(--lime);
+  color: var(--lime);
 }
 
 .publication-group {

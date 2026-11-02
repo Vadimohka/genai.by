@@ -30,6 +30,9 @@
           "url": "https://genai.by/llms-full.txt",
           "name": "CAIO / Practice — полный источник для LLM",
           "encodingFormat": "text/plain"
+        },
+        {
+          "@id": "https://genai.by/publications/ai-financial-advice-checklist/#article"
         }
       ]
     },
@@ -45,7 +48,7 @@
         "@id": "https://genai.by/#service"
       },
       "inLanguage": "ru-BY",
-      "dateModified": "2026-11-02",
+      "dateModified": "2026-11-03",
       "mainEntity": {
         "@id": "https://genai.by/#service"
       }
@@ -139,10 +142,16 @@
       "name": "Андрей Собалевич",
       "alternateName": "Andrei Sobalevich",
       "jobTitle": "Head of AI",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Myfin Group"
-      },
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Myfin Group"
+        },
+        {
+          "@type": "Organization",
+          "name": "Bankiros.ru"
+        }
+      ],
       "url": "https://genai.by/#andrei-sobalevich",
       "image": "https://genai.by/assets/img/andrei-sobalevich.jpg",
       "knowsAbout": [
@@ -153,6 +162,53 @@
       "description": "Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику.",
       "sameAs": [
         "https://www.linkedin.com/in/andrei-sobalevich/"
+      ],
+      "subjectOf": {
+        "@id": "https://genai.by/publications/ai-financial-advice-checklist/#article"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://genai.by/publications/ai-financial-advice-checklist/#article",
+      "headline": "Можно ли доверять AI свои деньги: как проверять финансовые советы",
+      "description": "Как использовать AI в финансовых вопросах: проверять источники, считать отдельно и сопоставлять условия. По материалу Андрея Собалевича на Цифратеке.",
+      "datePublished": "2026-11-03T00:00:00+03:00",
+      "inLanguage": "ru-BY",
+      "mainEntityOfPage": "https://genai.by/publications/ai-financial-advice-checklist/",
+      "image": "https://genai.by/assets/img/og-caio.png",
+      "author": {
+        "@id": "https://genai.by/#andrei-sobalevich"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CAIO / Практика",
+        "url": "https://genai.by/"
+      },
+      "contributor": {
+        "@type": "Organization",
+        "name": "CAIO / Практика",
+        "url": "https://genai.by/"
+      },
+      "creditText": "По материалу Андрея Собалевича на Цифратеке. Практический чек-лист и учебный пример — редакционное дополнение CAIO / Практика.",
+      "isBasedOn": {
+        "@type": "Article",
+        "url": "https://cifrateka.ru/articles/stoit-li-doveryat-neyroseti-svoi-dengi-/",
+        "headline": "Стоит ли доверять нейросети свои деньги?",
+        "author": {
+          "@type": "Person",
+          "@id": "https://genai.by/#andrei-sobalevich",
+          "name": "Андрей Собалевич"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Цифратека",
+          "url": "https://cifrateka.ru/"
+        }
+      },
+      "citation": [
+        "https://cifrateka.ru/articles/stoit-li-doveryat-neyroseti-svoi-dengi-/",
+        "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-alerts/artificial-intelligence-fraud",
+        "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
       ]
     }
   ]
