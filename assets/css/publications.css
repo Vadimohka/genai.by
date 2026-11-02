@@ -141,6 +141,17 @@
   font-size: 0.72rem;
 }
 
+.article-author .article-author-primary {
+  color: var(--white-70);
+}
+
+.article-author-secondary {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--white-60);
+  font-size: 0.65rem;
+}
+
 .article-author--joint {
   grid-template-columns: auto minmax(0, 1fr);
   column-gap: 1rem;

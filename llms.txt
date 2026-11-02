@@ -21,10 +21,17 @@ CAIO / Practice — консультации и совместные практ�
 
 ## Эксперты
 
+### CENTURY / STACKLEVEL GROUP
+
+Все три эксперта этой группы связаны с CENTURY и STACKLEVEL GROUP.
+
 - Вадим Владымцев — Co-founder CENTURY, CTO STACKLEVEL GROUP. Продукт, архитектура и инженерная эксплуатация корпоративного AI. Telegram: https://t.me/vadimohka
 - Виталий Бахмат — CEO и Co-founder CENTURY. Бизнес-внедрение AI, работа с руководителями и владельцами процессов. Telegram: https://t.me/vitalibakhmat
 - Егор Крячев — CAIO · CENTURY AI. AI-архитектура и инженерная реализация. LinkedIn: https://www.linkedin.com/in/ekrychev/
-- Андрей Собалевич (Andrei Sobalevich) — Head of AI, Myfin Group · Bankiros.ru. Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику. LinkedIn: https://www.linkedin.com/in/andrei-sobalevich/
+
+### MyFin Group
+
+- Андрей Собалевич (Andrei Sobalevich) — Head of AI, MyFin Group. Также связан с проектом Bankiros.ru. Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику. LinkedIn: https://www.linkedin.com/in/andrei-sobalevich/
 
 ## Контакты и география
 
@@ -40,13 +47,19 @@ Robots: https://genai.by/robots.txt
 Sitemap: https://genai.by/sitemap.xml
 Структурированные данные (JSON-LD): https://genai.by/ai.json
 Полный источник для LLM: https://genai.by/llms-full.txt
-Сайты компаний экспертов: https://century-ai.by/, https://stacklevel.group/, https://bankiros.ru/
+Компании группы CENTURY / STACKLEVEL GROUP: https://century-ai.by/, https://stacklevel.group/.
+Основная компания Андрея: MyFin Group. Дополнительная связь — Bankiros.ru: https://bankiros.ru/.
 
 ## Тематические направления экспертов
+
+### CENTURY / STACKLEVEL GROUP
 
 - Бизнес, экономика AI и стратегия — Виталий Бахмат: https://genai.by/#vitaliy
 - Автоматизация, AI-агенты и процессы — Егор Крячев: https://genai.by/#egor
 - Наука, технологии и инновации — Вадим Владымцев: https://genai.by/#vadim
+
+### MyFin Group
+
 - Внедрение · Продукт · Аналитика — Андрей Собалевич: https://genai.by/#andrei-sobalevich
 
 ## Публикации

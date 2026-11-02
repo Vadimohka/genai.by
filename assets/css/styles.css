@@ -1216,7 +1216,7 @@ p {
   transform: rotate(-35deg);
 }
 
-.expert-identity h3 {
+.expert-identity :is(h3, h4) {
   margin: 0.65rem 0 0.35rem;
   font-size: clamp(2rem, 3vw, 3.3rem);
   line-height: 0.95;
@@ -1963,7 +1963,7 @@ p {
   .expert-identity { grid-template-columns: 90px 1fr; gap: 1rem; }
   .expert-monogram { width: 90px; height: 90px; }
   .expert-monogram span { font-size: 2.6rem; }
-  .expert-identity h3 { font-size: 2rem; }
+  .expert-identity :is(h3, h4) { font-size: 2rem; }
   .expert-body { padding: 1.5rem 0.1rem; }
   .expert-body > p { font-size: 1rem; }
   .expert-links { flex-wrap: wrap; }
@@ -2546,5 +2546,211 @@ main {
     grid-template-columns: 1fr;
     grid-template-areas: "brand" "nav" "companies" "meta";
     padding: 2rem 1.5rem;
+  }
+}
+
+/* Keep the shared team together and give MyFin Group its own expert block. */
+.expert-group + .expert-group {
+  margin-top: clamp(2.5rem, 4vw, 4rem);
+  padding-top: clamp(2rem, 3vw, 3rem);
+  border-top: 1px solid var(--light-line);
+}
+
+.expert-group-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.expert-group-label {
+  color: #526600;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.expert-group-header h3 {
+  margin: 0.6rem 0 0;
+  font-size: clamp(1.6rem, 2.7vw, 2.7rem);
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+
+.expert-group-header > p {
+  max-width: 19rem;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.58);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.expert-grid--team {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.expert-grid--team .expert-card {
+  min-width: 0;
+  min-height: 25rem;
+}
+
+.expert-grid--team .expert-identity {
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.expert-grid--team .expert-photo {
+  width: 88px;
+  height: 88px;
+}
+
+.expert-grid--team .expert-identity h4 {
+  margin-top: 0;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.expert-grid--team .expert-body {
+  padding: 1.5rem 0;
+}
+
+.expert-grid--team .expert-body > p {
+  font-size: 1rem;
+}
+
+.expert-grid--team .expert-body .expert-topics {
+  margin-top: auto;
+  font-size: 0.7rem;
+}
+
+.expert-card--solo {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  grid-template-rows: 1fr auto;
+  gap: 1.5rem 2.5rem;
+  min-height: 0;
+  padding: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.expert-card--solo .expert-identity {
+  grid-row: 1 / 3;
+  grid-template-columns: 150px minmax(0, 1fr);
+  min-width: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.expert-card--solo .expert-body {
+  padding: 0;
+}
+
+.expert-card--solo .expert-body > p {
+  margin-bottom: 0;
+}
+
+.expert-card--solo .expert-links {
+  grid-column: 2;
+}
+
+.expert-identity .expert-affiliation-secondary {
+  margin-top: 0.45rem;
+  color: #606060;
+  font-size: 0.75rem;
+}
+
+.expert-card--solo .expert-identity p:first-of-type {
+  color: rgba(0, 0, 0, 0.72);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.contact-group {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-group + .contact-group {
+  margin-top: 1.5rem;
+}
+
+.contact-group h3 {
+  margin: 0 0 0.35rem;
+  color: var(--white-60);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-company-group {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.footer-company-group + .footer-company-group {
+  margin-top: 0.15rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-company-group .footer-company-secondary {
+  color: var(--white-60);
+  font-size: 0.65rem;
+  text-transform: none;
+}
+
+@media (max-width: 1060px) {
+  .expert-grid--team {
+    grid-template-columns: 1fr;
+  }
+
+  .expert-grid--team .expert-card {
+    min-height: 0;
+  }
+
+  .expert-card--solo {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .expert-card--solo .expert-identity {
+    grid-row: auto;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-line);
+  }
+
+  .expert-card--solo .expert-links {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .expert-group-header {
+    display: block;
+  }
+
+  .expert-group-header > p {
+    max-width: none;
+    margin-top: 0.75rem;
+  }
+
+  .expert-card--solo .expert-identity {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+
+  .expert-card--solo .expert-identity h4 {
+    font-size: 1.75rem;
+    line-height: 1.05;
+  }
+}
+
+@media (max-width: 420px) {
+  .expert-grid--team .expert-identity,
+  .expert-card--solo .expert-identity {
+    grid-template-columns: 1fr;
   }
 }

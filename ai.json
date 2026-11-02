@@ -96,6 +96,18 @@
       "sameAs": [
         "https://vadimohka.com/",
         "https://www.linkedin.com/in/vadimohka/"
+      ],
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "CENTURY",
+          "url": "https://century-ai.by/"
+        },
+        {
+          "@type": "Organization",
+          "name": "STACKLEVEL GROUP",
+          "url": "https://stacklevel.group/"
+        }
       ]
     },
     {
@@ -112,6 +124,18 @@
       ],
       "sameAs": [
         "https://www.linkedin.com/in/vbakhmat/"
+      ],
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "CENTURY",
+          "url": "https://century-ai.by/"
+        },
+        {
+          "@type": "Organization",
+          "name": "STACKLEVEL GROUP",
+          "url": "https://stacklevel.group/"
+        }
       ]
     },
     {
@@ -131,10 +155,18 @@
       "sameAs": [
         "https://www.linkedin.com/in/ekrychev/"
       ],
-      "affiliation": {
-        "@type": "Organization",
-        "name": "CENTURY AI"
-      }
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "CENTURY",
+          "url": "https://century-ai.by/"
+        },
+        {
+          "@type": "Organization",
+          "name": "STACKLEVEL GROUP",
+          "url": "https://stacklevel.group/"
+        }
+      ]
     },
     {
       "@type": "Person",
@@ -142,16 +174,10 @@
       "name": "Андрей Собалевич",
       "alternateName": "Andrei Sobalevich",
       "jobTitle": "Head of AI",
-      "worksFor": [
-        {
-          "@type": "Organization",
-          "name": "Myfin Group"
-        },
-        {
-          "@type": "Organization",
-          "name": "Bankiros.ru"
-        }
-      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "MyFin Group"
+      },
       "url": "https://genai.by/#andrei-sobalevich",
       "image": "https://genai.by/assets/img/andrei-sobalevich.jpg",
       "knowsAbout": [
@@ -165,6 +191,11 @@
       ],
       "subjectOf": {
         "@id": "https://genai.by/publications/ai-financial-advice-checklist/#article"
+      },
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Bankiros.ru",
+        "url": "https://bankiros.ru/"
       }
     },
     {
