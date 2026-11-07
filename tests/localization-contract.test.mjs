@@ -37,8 +37,8 @@ test('every public page has reciprocal language links and a self canonical', () 
       assert.equal(metadata(html, 'og:locale'), `${locale}_BY`);
       assert.equal(metadata(html, 'og:locale:alternate'), locale === 'be' ? 'ru_BY' : 'be_BY');
       const alternates = tags(html, 'link').filter((item) => item.hreflang);
-      assert.equal(alternates.length, 3);
-      for (const [language, prefix] of [['ru-BY', ''], ['be-BY', '/be'], ['x-default', '']]) {
+      assert.equal(alternates.length, 5);
+      for (const [language, prefix] of [['ru-BY', ''], ['ru', ''], ['be-BY', '/be'], ['be', '/be'], ['x-default', '']]) {
         assert.equal(alternates.find((item) => item.hreflang === language)?.href, `https://genai.by${prefix}${route(path)}`);
       }
       assert.equal((html.match(/<h1\b/g) || []).length, 1);

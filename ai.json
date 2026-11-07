@@ -34,13 +34,16 @@
         {
           "@id": "https://genai.by/publications/ai-financial-advice-checklist/#article"
         }
-      ]
+      ],
+      "publisher": {
+        "@id": "https://genai.by/#organization"
+      }
     },
     {
       "@type": "WebPage",
       "@id": "https://genai.by/#webpage",
       "url": "https://genai.by/",
-      "name": "CAIO / Практика — бесплатные консультации и обучение команд",
+      "name": "Консультации по AI в Беларуси — CAIO / Практика",
       "isPartOf": {
         "@id": "https://genai.by/#website"
       },
@@ -51,13 +54,17 @@
       "dateModified": "2026-11-07",
       "mainEntity": {
         "@id": "https://genai.by/#service"
+      },
+      "description": "Бесплатные консультации по внедрению AI и обучение команд. Основной регион — Беларусь; также работаем с Россией. Стратегия, архитектура, RAG и AI-агенты.",
+      "hasPart": {
+        "@id": "https://genai.by/#faq"
       }
     },
     {
       "@type": "Service",
       "@id": "https://genai.by/#service",
       "name": "CAIO Practice",
-      "description": "Бесплатные индивидуальные консультации и обучение команд для CAIO, CTO, CIO и руководителей трансформации",
+      "description": "Бесплатные консультации по внедрению AI и обучение команд. Основной регион — Беларусь; также работаем с Россией. Стратегия, архитектура, RAG и AI-агенты.",
       "provider": [
         {
           "@id": "https://genai.by/#vadim"
@@ -72,10 +79,18 @@
           "@id": "https://genai.by/#andrei-sobalevich"
         }
       ],
-      "areaServed": {
-        "@type": "Country",
-        "name": "Беларусь"
-      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Беларусь",
+          "identifier": "BY"
+        },
+        {
+          "@type": "Country",
+          "name": "Россия",
+          "identifier": "RU"
+        }
+      ],
       "availableChannel": {
         "@type": "ServiceChannel",
         "serviceUrl": "https://genai.by/#contact"
@@ -86,7 +101,7 @@
       "@id": "https://genai.by/#vadim",
       "name": "Вадим Владымцев",
       "jobTitle": "Co-founder CENTURY · CTO STACKLEVEL GROUP",
-      "url": "https://genai.by/#vadim",
+      "url": "https://vadimohka.ru/",
       "image": "https://genai.by/assets/img/vadim-vladymtsev-176.jpg",
       "knowsAbout": [
         "Наука",
@@ -94,7 +109,7 @@
         "Инновации"
       ],
       "sameAs": [
-        "https://vadimohka.com/",
+        "https://vadimohka.ru/",
         "https://www.linkedin.com/in/vadimohka/"
       ],
       "affiliation": [
@@ -213,7 +228,8 @@
       "publisher": {
         "@type": "Organization",
         "name": "CAIO / Практика",
-        "url": "https://genai.by/"
+        "url": "https://genai.by/",
+        "@id": "https://genai.by/#organization"
       },
       "contributor": {
         "@type": "Organization",
@@ -228,7 +244,10 @@
         "author": {
           "@type": "Person",
           "@id": "https://genai.by/#andrei-sobalevich",
-          "name": "Андрей Собалевич"
+          "name": "Андрей Собалевич",
+          "sameAs": [
+            "https://www.linkedin.com/in/andrei-sobalevich/"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -240,6 +259,75 @@
         "https://cifrateka.ru/articles/stoit-li-doveryat-neyroseti-svoi-dengi-/",
         "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-alerts/artificial-intelligence-fraud",
         "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://genai.by/#organization",
+      "name": "CAIO / Practice",
+      "alternateName": [
+        "CAIO / Практика",
+        "CAIO / Практыка"
+      ],
+      "url": "https://genai.by/"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://genai.by/#faq",
+      "url": "https://genai.by/#faq",
+      "inLanguage": "ru-BY",
+      "isPartOf": {
+        "@id": "https://genai.by/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Вы работаете только с Беларусью?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Основной регион практики — Беларусь, команда находится в Минске. Также работаем с руководителями и командами из России. Формат совместной работы согласуем под вашу задачу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Это действительно бесплатно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Индивидуальные консультации и обучение команд проходят без оплаты. Никакой покупки продукта или услуг не требуется."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужно ли уже быть CAIO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Достаточно отвечать за AI-стратегию, портфель инициатив, внедрение или координацию бизнеса и технологий."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "С чего начать сообщение?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Напишите отрасль, вашу роль, текущую ситуацию и одно решение, которое нужно принять. Используйте обезличенные данные."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно прийти всей командой?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Особенно полезен кросс-функциональный состав: бизнес, IT, данные, безопасность, юристы и владелец процесса."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Будет ли запись или типовой курс?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Основной формат — живая работа с вашим контекстом. Материалы и последовательность тем подбираются под задачу."
+          }
+        }
       ]
     }
   ]

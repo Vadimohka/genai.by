@@ -34,13 +34,16 @@
         {
           "@id": "https://genai.by/be/publications/ai-financial-advice-checklist/#article"
         }
-      ]
+      ],
+      "publisher": {
+        "@id": "https://genai.by/#organization"
+      }
     },
     {
       "@type": "WebPage",
       "@id": "https://genai.by/be/#webpage",
       "url": "https://genai.by/be/",
-      "name": "CAIO / Практыка — бясплатныя кансультацыі і навучанне каманд",
+      "name": "Кансультацыі па AI ў Беларусі — CAIO / Практыка",
       "isPartOf": {
         "@id": "https://genai.by/be/#website"
       },
@@ -51,13 +54,17 @@
       "dateModified": "2026-11-07",
       "mainEntity": {
         "@id": "https://genai.by/be/#service"
+      },
+      "description": "Бясплатныя кансультацыі па ўкараненні AI і навучанне каманд. Асноўны рэгіён — Беларусь; таксама працуем з Расіяй. Стратэгія, архітэктура, RAG і AI-агенты.",
+      "hasPart": {
+        "@id": "https://genai.by/be/#faq"
       }
     },
     {
       "@type": "Service",
       "@id": "https://genai.by/be/#service",
       "name": "CAIO Practice",
-      "description": "Бясплатныя індывідуальныя кансультацыі і навучанне каманд для CAIO, CTO, CIO і кіраўнікоў трансфармацыі",
+      "description": "Бясплатныя кансультацыі па ўкараненні AI і навучанне каманд. Асноўны рэгіён — Беларусь; таксама працуем з Расіяй. Стратэгія, архітэктура, RAG і AI-агенты.",
       "provider": [
         {
           "@id": "https://genai.by/be/#vadim"
@@ -72,10 +79,18 @@
           "@id": "https://genai.by/be/#andrei-sobalevich"
         }
       ],
-      "areaServed": {
-        "@type": "Country",
-        "name": "Беларусь"
-      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Беларусь",
+          "identifier": "BY"
+        },
+        {
+          "@type": "Country",
+          "name": "Расія",
+          "identifier": "RU"
+        }
+      ],
       "availableChannel": {
         "@type": "ServiceChannel",
         "serviceUrl": "https://genai.by/be/#contact"
@@ -86,7 +101,7 @@
       "@id": "https://genai.by/be/#vadim",
       "name": "Вадзім Владымцев",
       "jobTitle": "Co-founder CENTURY · CTO STACKLEVEL GROUP",
-      "url": "https://genai.by/be/#vadim",
+      "url": "https://vadimohka.ru/",
       "image": "https://genai.by/assets/img/vadim-vladymtsev-176.jpg",
       "knowsAbout": [
         "Навука",
@@ -94,7 +109,7 @@
         "Інавацыі"
       ],
       "sameAs": [
-        "https://vadimohka.com/",
+        "https://vadimohka.ru/",
         "https://www.linkedin.com/in/vadimohka/"
       ],
       "affiliation": [
@@ -213,7 +228,8 @@
       "publisher": {
         "@type": "Organization",
         "name": "CAIO / Практыка",
-        "url": "https://genai.by/be/"
+        "url": "https://genai.by/be/",
+        "@id": "https://genai.by/#organization"
       },
       "contributor": {
         "@type": "Organization",
@@ -228,7 +244,10 @@
         "author": {
           "@type": "Person",
           "@id": "https://genai.by/be/#andrei-sobalevich",
-          "name": "Андрэй Сабалевіч"
+          "name": "Андрэй Сабалевіч",
+          "sameAs": [
+            "https://www.linkedin.com/in/andrei-sobalevich/"
+          ]
         },
         "publisher": {
           "@type": "Organization",
@@ -240,6 +259,75 @@
         "https://cifrateka.ru/articles/stoit-li-doveryat-neyroseti-svoi-dengi-/",
         "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-alerts/artificial-intelligence-fraud",
         "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://genai.by/#organization",
+      "name": "CAIO / Practice",
+      "alternateName": [
+        "CAIO / Практика",
+        "CAIO / Практыка"
+      ],
+      "url": "https://genai.by/"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://genai.by/be/#faq",
+      "url": "https://genai.by/be/#faq",
+      "inLanguage": "be-BY",
+      "isPartOf": {
+        "@id": "https://genai.by/be/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Вы працуеце толькі з Беларуссю?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Асноўны рэгіён практыкі — Беларусь, каманда знаходзіцца ў Мінску. Таксама працуем з кіраўнікамі і камандамі з Расіі. Фармат сумеснай працы ўзгадняем пад вашу задачу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Гэта сапраўды бясплатна?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так. Індывідуальныя кансультацыі і навучанне каманд адбываюцца без аплаты. Купляць прадукт або паслугі не патрабуецца."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ці трэба ўжо быць CAIO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Не. Дастаткова адказваць за AI-стратэгію, партфель ініцыятыў, укараненне або каардынацыю бізнесу і тэхналогій."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "З чаго пачаць паведамленне?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Напішыце галіну, вашу ролю, бягучую сітуацыю і адно рашэнне, якое трэба прыняць. Выкарыстоўвайце абязлічаныя даныя."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ці можна прыйсці ўсёй камандай?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так. Асабліва карысна сабраць каманду з прадстаўнікоў бізнесу і IT, спецыялістаў па даных і бяспецы, юрыстаў і ўладальніка працэсу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ці будзе запіс або тыпавы курс?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Асноўны фармат — жывая праца з вашым кантэкстам. Матэрыялы і паслядоўнасць тэм падбіраюцца пад задачу."
+          }
+        }
       ]
     }
   ]

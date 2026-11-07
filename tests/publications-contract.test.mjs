@@ -189,7 +189,9 @@ for (const slug of dirs) {
 const jointArticle = await readFile(new URL('../publications/ai-fundraising-nko/index.html', import.meta.url), 'utf8');
 assert.match(jointArticle, /<a[^>]+href="\/\#vadim"[^>]*>Вадим Владымцев<\/a>/, 'joint article links Vadim');
 assert.match(jointArticle, /<a[^>]+href="\/\#vitaliy"[^>]*>Виталий Бахмат<\/a>/, 'joint article links Vitaliy');
-assert.match(jointArticle, /"author":\[[^\]]*"name":"Вадим Владымцев"[^\]]*"name":"Виталий Бахмат"/, 'joint article exposes both authors in structured data');
+const jointArticleData = JSON.parse(jointArticle.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph']
+  .find((item) => item['@type'] === 'Article');
+assert.deepEqual(jointArticleData.author.map((author) => author.name), ['Вадим Владымцев', 'Виталий Бахмат'], 'joint article exposes both authors in structured data');
 assert.match(jointArticle, /31 августа 2026/, 'joint article shows 31 August 2026');
 assert.match(jointArticle, /ИИ не заменит фандрайзера/, 'joint article keeps the supplied title and text');
 for (const phrase of [
@@ -218,7 +220,10 @@ const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8
 assert.equal((sitemap.match(/<loc>/g) || []).length, 84, 'sitemap contains home, catalogue, and 40 articles in both languages');
 for (const [slug, published] of Object.entries(expectedPublished)) {
   const escapedUrl = `https://genai.by/publications/${slug}/`.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  assert.match(sitemap, new RegExp(`<url>\\s*<loc>${escapedUrl}</loc>\\s*<lastmod>${published.slice(0, 10)}</lastmod>\\s*</url>`), `${slug} sitemap date matches publication date`);
+  const entry = sitemap.match(new RegExp(`<url>\\s*<loc>${escapedUrl}</loc>\\s*<lastmod>(\\d{4}-\\d{2}-\\d{2})</lastmod>\\s*</url>`));
+  assert.ok(entry, `${slug} sitemap includes a last modification date`);
+  assert.ok(entry[1] >= published.slice(0, 10), `${slug} last modification does not precede publication`);
+  assert.ok(entry[1] <= new Date().toISOString().slice(0, 10), `${slug} last modification is not in the future`);
 }
 
 const manifest = JSON.parse(await readFile(new URL('../publications/manifest.json', import.meta.url), 'utf8'));

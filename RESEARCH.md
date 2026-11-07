@@ -64,7 +64,7 @@
 
 ### Публичные источники
 
-- https://vadimohka.com/
+- https://vadimohka.ru/
 - https://century-ai.by/
 - https://stacklevel.group/
 - https://www.linkedin.com/in/vbakhmat/
