@@ -2,12 +2,12 @@
 .publication-page,
 .publications-page {
   color: var(--ink);
-  background: var(--paper);
+  background: var(--page);
 }
 
 .publication-shell {
   overflow: visible;
-  background: var(--paper);
+  background: var(--page);
 }
 
 .publication-shell > main {
@@ -171,7 +171,7 @@
   width: 2.75rem;
   height: 2.75rem;
   margin-left: -0.75rem;
-  border: 3px solid var(--paper);
+  border: 3px solid var(--page);
   border-radius: 50%;
   object-fit: cover;
 }
@@ -360,7 +360,7 @@
   padding: 0.12em 0.3em;
   border: 1px solid var(--line);
   border-radius: 4px;
-  background: var(--paper);
+  background: var(--page);
   font-family: var(--font-mono);
   font-size: 0.85em;
   overflow-wrap: anywhere;
@@ -373,7 +373,7 @@
   padding: 1.25rem;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--paper);
+  background: var(--page);
   color: var(--ink);
   font-family: var(--font-mono);
   font-size: 0.8125rem;
@@ -396,7 +396,7 @@
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--paper);
+  background: var(--page);
 }
 
 .article-body figure img {
@@ -471,7 +471,7 @@
 
 .article-body caption {
   padding: 1rem 1.125rem;
-  background: var(--paper);
+  background: var(--page);
   color: var(--muted);
   font-size: 0.8125rem;
   text-align: left;
@@ -483,7 +483,7 @@
   border: 1px solid var(--line);
   border-left: 3px solid var(--accent);
   border-radius: 6px;
-  background: var(--paper);
+  background: var(--page);
   color: var(--muted);
   font-size: 0.9375rem;
   line-height: 1.7;
@@ -587,7 +587,7 @@
   gap: clamp(2.5rem, 4vw, 4.5rem);
   padding: clamp(3rem, 6vw, 5.5rem) max(40px, calc((100% - 1240px) / 2));
   border-top: 1px solid var(--line);
-  background: var(--paper);
+  background: var(--page);
 }
 
 .publication-group > header {
@@ -631,8 +631,8 @@
 
 .publication-card:hover,
 .publication-card:focus-within {
-  border-color: #aab8ad;
-  box-shadow: 0 6px 20px rgba(32, 53, 44, 0.04);
+  border-color: var(--line-strong);
+  box-shadow: 0 6px 20px rgb(23 23 25 / 5%);
 }
 
 .publication-card-id {
@@ -711,7 +711,7 @@
     padding: 1.5rem;
     border: 1px solid var(--line);
     border-radius: 6px;
-    background: var(--paper);
+    background: var(--page);
   }
 
   .article-toc ol {

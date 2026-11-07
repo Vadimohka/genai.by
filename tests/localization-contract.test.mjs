@@ -154,7 +154,10 @@ test('catalogue, discovery files and sitemap cover both language versions', asyn
   const app = JSON.parse(await read('be/site.webmanifest'));
   assert.equal(app.lang, 'be-BY');
   assert.equal(app.start_url, '/be/');
-  for (const icon of app.icons) await access(join(root, icon.src.slice(1)));
+  for (const icon of app.icons) {
+    const target = new URL(icon.src, 'https://genai.by/');
+    await access(join(root, target.pathname.slice(1)));
+  }
 });
 
 test('mobile menu labels and language links follow the active locale and section', async () => {
