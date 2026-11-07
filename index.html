@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
-  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="color-scheme" content="light">
   <meta name="description" content="Бесплатные индивидуальные консультации и обучение команд для CAIO: стратегия, портфель AI-кейсов, архитектура, governance, экономика и внедрение">
   <meta name="geo.region" content="BY-HM">
   <meta name="geo.placename" content="Минск">
@@ -55,9 +55,9 @@
   <link rel="icon" href="assets/img/favicon-16.png" sizes="16x16" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261107-2">
 
   <script type="application/ld+json">
   {
@@ -74,9 +74,9 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-2">
 </head>
-<body>
+<body class="home-page">
   <noscript><div><img src="https://mc.yandex.ru/watch/110878224" style="position:absolute;left:-9999px" alt=""></div></noscript>
   <a class="skip-link" href="#main">К содержанию</a>
 
@@ -119,11 +119,12 @@
 
       <main id="main">
         <section class="hero section-dark" id="top" aria-labelledby="hero-title">
-          <div class="grid-backdrop" aria-hidden="true"></div>
-          <div class="glow glow-one" aria-hidden="true"></div>
-          <div class="glow glow-two" aria-hidden="true"></div>
+          <picture class="hero-visual" aria-hidden="true">
+            <img src="/assets/img/practice-space.webp" width="1536" height="1024" alt="" fetchpriority="high" decoding="async">
+          </picture>
 
           <div class="hero-copy reveal">
+            <div class="hero-kicker">Бесплатно · Индивидуально и с командами</div>
             <h1 id="hero-title">
               Практика для CAIO<br>
               <em>Консультации и работа с командами</em>
@@ -144,11 +145,112 @@
 
           </div>
 
-          <div class="hero-motion" aria-hidden="true">
-            <span class="hero-motion-line hero-motion-line-one"></span>
-            <span class="hero-motion-line hero-motion-line-two"></span>
-            <span class="hero-motion-line hero-motion-line-three"></span>
+          <div class="hero-footnote">
+            <span>Минск, Беларусь · Практика для AI-лидеров</span>
+            <a href="#experts">Познакомиться с экспертами <span aria-hidden="true">↓</span></a>
           </div>
+        </section>
+
+        <section class="experts section-light" id="experts" aria-labelledby="experts-title">
+          <div class="section-heading reveal">
+            <div class="eyebrow eyebrow-dark"><span>01 / Эксперты практики</span></div>
+            <h2 id="experts-title">Люди, которые внедряют AI</h2>
+            <p>Продукт, архитектура, аналитика и внедрение — знакомьтесь с экспертами и их командами</p>
+          </div>
+
+          <section class="expert-group" id="century-stacklevel" aria-labelledby="century-stacklevel-title">
+            <header class="expert-group-header reveal">
+              <div>
+                <span class="expert-group-label">Команда</span>
+                <h3 id="century-stacklevel-title">CENTURY / STACKLEVEL GROUP</h3>
+              </div>
+              <p>Продукт, бизнес и инженерная реализация AI</p>
+            </header>
+            <div class="expert-grid expert-grid--team">
+            <article class="expert-card reveal" id="vadim">
+              <div class="expert-identity">
+                <img class="expert-photo" src="assets/img/vadim-vladymtsev-176.jpg" srcset="assets/img/vadim-vladymtsev-96.jpg 96w, assets/img/vadim-vladymtsev-176.jpg 176w" sizes="(max-width: 360px) 84px, (max-width: 600px) 100px, (max-width: 920px) 112px, 128px" width="128" height="128" alt="Вадим Владымцев" loading="lazy" decoding="async">
+                <div>
+                  <h4>Вадим Владымцев</h4>
+                  <p>Co-founder CENTURY · CTO STACKLEVEL GROUP</p>
+                </div>
+              </div>
+              <div class="expert-body">
+                <p>Работает на стыке продукта, архитектуры и инженерной эксплуатации: от защищённого доступа к данным до перехода от пилота к внедрению</p>
+                <p class="expert-topics">Наука · Технологии · Инновации</p>
+              </div>
+              <div class="expert-links">
+                <a href="https://vadimohka.com/" target="_blank" rel="noopener noreferrer">vadimohka.com <span>↗</span></a>
+                <a href="https://www.linkedin.com/in/vadimohka/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+              </div>
+            </article>
+
+            <article class="expert-card reveal" id="vitaliy">
+              <div class="expert-identity">
+                <img class="expert-photo" src="assets/img/vitaliy-bakhmat-176.jpg" srcset="assets/img/vitaliy-bakhmat-96.jpg 96w, assets/img/vitaliy-bakhmat-176.jpg 176w" sizes="(max-width: 360px) 84px, (max-width: 600px) 100px, (max-width: 920px) 112px, 128px" width="128" height="128" alt="Виталий Бахмат" loading="lazy" decoding="async">
+                <div>
+                  <h4>Виталий Бахмат</h4>
+                  <p>CEO, Co-founder CENTURY</p>
+                </div>
+              </div>
+              <div class="expert-body">
+                <p>Ведёт бизнес-внедрение: выбор направлений для пилотов, работа с руководителями и владельцами процессов, вовлечение сотрудников</p>
+                <p class="expert-topics">Бизнес · Экономика AI · Стратегия</p>
+              </div>
+              <div class="expert-links">
+                <a href="https://www.linkedin.com/in/vbakhmat/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+                <a href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span>↗</span></a>
+              </div>
+            </article>
+
+            <article class="expert-card reveal" id="egor">
+              <div class="expert-identity">
+                <img class="expert-photo" src="assets/img/egor-kryachev-176.png" srcset="assets/img/egor-kryachev-96.png 96w, assets/img/egor-kryachev-176.png 176w" sizes="(max-width: 360px) 84px, (max-width: 600px) 100px, (max-width: 920px) 112px, 128px" width="128" height="128" alt="Егор Крячев" loading="lazy" decoding="async">
+                <div>
+                  <h4>Егор Крячев</h4>
+                  <p>CAIO · CENTURY AI</p>
+                </div>
+              </div>
+              <div class="expert-body">
+                <p>Работает с AI-архитектурой и инженерной реализацией: помогает переводить задачи и ограничения внедрения в работающие системы</p>
+                <p class="expert-topics">Автоматизация · AI-агенты · Процессы</p>
+              </div>
+              <div class="expert-links">
+                <a href="https://www.linkedin.com/in/ekrychev/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+              </div>
+            </article>
+            </div>
+          </section>
+
+          <section class="expert-group" id="myfin-group" aria-labelledby="myfin-group-title">
+            <header class="expert-group-header reveal">
+              <div>
+                <span class="expert-group-label">Эксперт</span>
+                <h3 id="myfin-group-title">MyFin Group</h3>
+              </div>
+              <p>Внедрение AI, внутренние продукты и аналитика</p>
+            </header>
+            <article class="expert-card expert-card--solo reveal" id="andrei-sobalevich">
+              <div class="expert-identity">
+                <span class="expert-photo expert-photo-portrait">
+                  <img src="assets/img/andrei-sobalevich.jpg" width="1365" height="2048" alt="Андрей Собалевич" loading="lazy" decoding="async">
+                </span>
+                <div>
+                  <h4>Андрей Собалевич</h4>
+                  <p>Head of AI, MyFin Group</p>
+                  <p class="expert-affiliation-secondary">Также — Bankiros.ru</p>
+                </div>
+              </div>
+              <div class="expert-body">
+                <p>Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику</p>
+                <p class="expert-topics">Внедрение · Продукт · Аналитика</p>
+              </div>
+              <div class="expert-links">
+                <a href="https://www.linkedin.com/in/andrei-sobalevich/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+                <a href="publications/ai-financial-advice-checklist/">Статья об AI и финансах <span>→</span></a>
+              </div>
+            </article>
+          </section>
         </section>
 
         <section class="work section-dark" id="work" aria-labelledby="work-title">
@@ -165,7 +267,6 @@
               <span class="mono-label">Стоимость</span>
               <strong>0</strong>
               <p>Индивидуальные консультации и обучение команд — бесплатно</p>
-              <div class="zero-ring" aria-hidden="true"><i></i><i></i><i></i></div>
             </div>
 
             <div class="outcome-list">
@@ -215,109 +316,6 @@
           </div>
 
           <p class="outcome-disclaimer reveal">Для старта выбираем один–три артефакта, которые помогают двигаться дальше</p>
-        </section>
-
-        <section class="experts section-light" id="experts" aria-labelledby="experts-title">
-          <div class="light-grid" aria-hidden="true"></div>
-          <div class="section-heading reveal">
-            <div class="eyebrow eyebrow-dark"><span>01 / Эксперты практики</span></div>
-            <h2 id="experts-title">Люди, которые внедряют AI</h2>
-            <p>Продукт, архитектура, аналитика и внедрение — знакомьтесь с экспертами и их командами</p>
-          </div>
-
-          <section class="expert-group" id="century-stacklevel" aria-labelledby="century-stacklevel-title">
-            <header class="expert-group-header reveal">
-              <div>
-                <span class="expert-group-label">Команда</span>
-                <h3 id="century-stacklevel-title">CENTURY / STACKLEVEL GROUP</h3>
-              </div>
-              <p>Продукт, бизнес и инженерная реализация AI</p>
-            </header>
-            <div class="expert-grid expert-grid--team">
-            <article class="expert-card reveal" id="vadim">
-              <div class="expert-identity">
-                <img class="expert-photo" src="assets/img/vadim-vladymtsev-176.jpg" srcset="assets/img/vadim-vladymtsev-96.jpg 96w, assets/img/vadim-vladymtsev-176.jpg 176w" sizes="88px" width="88" height="88" alt="Вадим Владымцев" loading="lazy" decoding="async">
-                <div>
-                  <h4>Вадим Владымцев</h4>
-                  <p>Co-founder CENTURY · CTO STACKLEVEL GROUP</p>
-                </div>
-              </div>
-              <div class="expert-body">
-                <p>Работает на стыке продукта, архитектуры и инженерной эксплуатации: от защищённого доступа к данным до перехода от пилота к внедрению</p>
-                <p class="expert-topics">Наука · Технологии · Инновации</p>
-              </div>
-              <div class="expert-links">
-                <a href="https://vadimohka.com/" target="_blank" rel="noopener noreferrer">vadimohka.com <span>↗</span></a>
-                <a href="https://www.linkedin.com/in/vadimohka/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
-              </div>
-            </article>
-
-            <article class="expert-card reveal" id="vitaliy">
-              <div class="expert-identity">
-                <img class="expert-photo" src="assets/img/vitaliy-bakhmat-176.jpg" srcset="assets/img/vitaliy-bakhmat-96.jpg 96w, assets/img/vitaliy-bakhmat-176.jpg 176w" sizes="88px" width="88" height="88" alt="Виталий Бахмат" loading="lazy" decoding="async">
-                <div>
-                  <h4>Виталий Бахмат</h4>
-                  <p>CEO, Co-founder CENTURY</p>
-                </div>
-              </div>
-              <div class="expert-body">
-                <p>Ведёт бизнес-внедрение: выбор направлений для пилотов, работа с руководителями и владельцами процессов, вовлечение сотрудников</p>
-                <p class="expert-topics">Бизнес · Экономика AI · Стратегия</p>
-              </div>
-              <div class="expert-links">
-                <a href="https://www.linkedin.com/in/vbakhmat/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
-                <a href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span>↗</span></a>
-              </div>
-            </article>
-
-            <article class="expert-card reveal" id="egor">
-              <div class="expert-identity">
-                <img class="expert-photo" src="assets/img/egor-kryachev-176.png" srcset="assets/img/egor-kryachev-96.png 96w, assets/img/egor-kryachev-176.png 176w" sizes="88px" width="88" height="88" alt="Егор Крячев" loading="lazy" decoding="async">
-                <div>
-                  <h4>Егор Крячев</h4>
-                  <p>CAIO · CENTURY AI</p>
-                </div>
-              </div>
-              <div class="expert-body">
-                <p>Работает с AI-архитектурой и инженерной реализацией: помогает переводить задачи и ограничения внедрения в работающие системы</p>
-                <p class="expert-topics">Автоматизация · AI-агенты · Процессы</p>
-              </div>
-              <div class="expert-links">
-                <a href="https://www.linkedin.com/in/ekrychev/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
-              </div>
-            </article>
-            </div>
-          </section>
-
-          <section class="expert-group" id="myfin-group" aria-labelledby="myfin-group-title">
-            <header class="expert-group-header reveal">
-              <div>
-                <span class="expert-group-label">Эксперт</span>
-                <h3 id="myfin-group-title">MyFin Group</h3>
-              </div>
-              <p>Внедрение AI, внутренние продукты и аналитика</p>
-            </header>
-            <article class="expert-card expert-card--solo reveal" id="andrei-sobalevich">
-              <div class="expert-identity">
-                <span class="expert-photo expert-photo-portrait">
-                  <img src="assets/img/andrei-sobalevich.jpg" width="1365" height="2048" alt="Андрей Собалевич" loading="lazy" decoding="async">
-                </span>
-                <div>
-                  <h4>Андрей Собалевич</h4>
-                  <p>Head of AI, MyFin Group</p>
-                  <p class="expert-affiliation-secondary">Также — Bankiros.ru</p>
-                </div>
-              </div>
-              <div class="expert-body">
-                <p>Отвечает за эффективное и прибыльное внедрение AI в среднем бизнесе, строит внутренние продукты и аналитику</p>
-                <p class="expert-topics">Внедрение · Продукт · Аналитика</p>
-              </div>
-              <div class="expert-links">
-                <a href="https://www.linkedin.com/in/andrei-sobalevich/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
-                <a href="publications/ai-financial-advice-checklist/">Статья об AI и финансах <span>→</span></a>
-              </div>
-            </article>
-          </section>
         </section>
 
         <section class="format section-dark" id="format" aria-labelledby="format-title">
