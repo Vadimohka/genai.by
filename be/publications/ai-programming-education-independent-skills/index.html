@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Як убудаваць AI-падказкі ў занятак па праграмаванні. Задача пра максімальную суму, правераны Python-код, тэсты і ацэнка самастойнага навыку.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/ai-programming-education-independent-skills/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/ai-programming-education-independent-skills/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/ai-programming-education-independent-skills/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/ai-programming-education-independent-skills/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="ШІ на занятках па праграмаванні: як захаваць самастойнае рашэнне">
+  <meta property="og:description" content="Як убудаваць AI-падказкі ў занятак па праграмаванні. Задача пра максімальную суму, правераны Python-код, тэсты і ацэнка самастойнага навыку.">
+  <meta property="og:url" content="https://genai.by/be/publications/ai-programming-education-independent-skills/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>ШІ на занятках па праграмаванні: як захаваць самастойнае рашэнне — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/ai-programming-education-independent-skills/#article","headline":"ШІ на занятках па праграмаванні: як захаваць самастойнае рашэнне","description":"Як убудаваць AI-падказкі ў занятак па праграмаванні. Задача пра максімальную суму, правераны Python-код, тэсты і ацэнка самастойнага навыку.","datePublished":"2026-08-09T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/ai-programming-education-independent-skills/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"ШІ на занятках па праграмаванні: як захаваць самастойнае рашэнне","item":"https://genai.by/be/publications/ai-programming-education-independent-skills/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/ai-programming-education-independent-skills/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/ai-programming-education-independent-skills/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>ШІ на занятках па праграмаванні: як захаваць самастойнае рашэнне</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Навука, тэхналогіі і інавацыі</span>
+          <h1>ШІ на занятках па праграмаванні: як захаваць самастойнае рашэнне</h1>
+          <p>Сцэнарый занятку з абмежаванымі AI-падказкамі: контрпрыклад, тлумачэнне стану алгарытму і праверка самастойнага рашэння.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-09T00:00:00+03:00">9 жніўня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section-1">Пачаць з дамоўленасці пра выкарыстанне памочніка</a></li><li><a href="#section-2">Разабраць памылку, якую лёгка прапусціць</a></li><li><a href="#section-3">Праверанае рашэнне для разбору</a></li><li><a href="#section-4">Што спытаць пасля запуску праграмы</a></li><li><a href="#section-5">Як ацэньваць навучальны вынік</a></li></ol></aside>
+        <article class="article-body">
+          <p>Калі вучань здаў працуючую праграму, выкладчык яшчэ не ведае, чаму ён навучыўся. Праграма магла быць напісаная самастойна, сабраная з падказак або цалкам атрыманая ад мадэлі. Для навучання трэба адрозніваць якасць гатовага артэфакта і здольнасць рашыць наступную задачу.</p>
+<p>AI-памочніка карысна ўключаць у занятак з загадзя зададзенай роляй: удакладніць умову, даць абмежаваную падказку, прапанаваць праверку або разабраць памылку. Кантроль самастойнага навыку павінен заставацца асобным этапам.</p>
+<p>Пытанне ўплыву GPT на праграмаванне і навучанне разглядалася ў <a href="https://libeldoc.bsuir.by/handle/123456789/52727">працы 2023 года пра ўплыў GPT</a>. Ацэнкі канкрэтных мадэляў таго перыяду не апісваюць аўтаматычна сучасныя інструменты. Ніжэй — навучальны сцэнарый, які не залежыць ад рэйтынгу мадэлі.</p>
+<h2 id="section-1">Пачаць з дамоўленасці пра выкарыстанне памочніка</h2>
+<p>Растлумачце, на якім этапе дапушчальныя падказкі і што вучань павінен прадставіць разам з кодам. Для трэніровачнага задання гэта могуць быць уласная ідэя, знойдзены контрпрыклад і тлумачэнне выпраўлення. Для кантрольнай работы ўмовы задаюцца асобна.</p>
+<p>Выкладчыку варта загадзя падрыхтаваць рашэнні, памежныя выпадкі і крытэрыі праверкі. Мадэль можна выкарыстоўваць як дадатковую крыніцу варыянтаў, але створаны ёю адказ не становіцца эталонам без праверкі.</p>
+<p>Не загружайце ў знешні сэрвіс персанальныя звесткі навучэнцаў і закрытыя матэрыялы курса па-за ўзгодненым парадкам. <a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research">Кіраўніцтва UNESCO па генератыўным AI ў адукацыі</a> разглядае педагагічную дарэчнасць і абарону даных як самастойныя пытанні ўкаранення.</p>
+<h2 id="section-2">Разабраць памылку, якую лёгка прапусціць</h2>
+<p>Вучэбная задача: знайсці максімальную суму непустога непарыўнага фрагмента паслядоўнасці цэлых лікаў.</p>
+<p>Ва ўмове важныя словы «непустога» і «непарыўнага». Для <code>[-5, -2, -7]</code> правільны адказ роўны <code>-2</code>. Значэнне <code>0</code> азначала б, што рашэнне дазволіла пусты фрагмент, хоць умова гэта забараняе.</p>
+<p>Да атрымання гатовага кода папрасіце вучня сфармуляваць, што захоўваецца пасля апрацоўкі чарговага ліку. Падказка памочніку можа выглядаць так:</p>
+<blockquote>
+<p>Не пішы рашэнне цалкам. Задай адно пытанне, якое дапаможа праверыць, ці дапускае мой алгарытм пусты фрагмент. Пасля майго адказу прапануй адзін кароткі контрпрыклад.</p>
+</blockquote>
+<p>Такі фармат абмяжоўвае аб'ём дапамогі, але сам па сабе не гарантуе захавання межаў мадэллю. Выкладчык павінен бачыць, якая падказка была выдадзеная і што вучань зрабіў пасля яе.</p>
+<h2 id="section-3">Праверанае рашэнне для разбору</h2>
+<p>Гэты фрагмент разлічаны на паслядоўнасць цэлых лікаў. Пусты ўвод лічыцца памылкай умовы.</p>
+<pre><code class="language-python">from collections.abc import Sequence
+
+
+def max_subarray_sum(values: Sequence[int]) -&gt; int:
+    """Максімальная сума непустога непарыўнага фрагмента."""
+    if len(values) == 0:
+        raise ValueError("Паслядоўнасць не павінна быць пустой")
+
+    ending_here = best = values[0]
+    for index in range(1, len(values)):
+        value = values[index]
+        ending_here = max(value, ending_here + value)
+        best = max(best, ending_here)
+    return best
+</code></pre>
+<p>Пасля апрацоўкі пазіцыі <code>index</code> зменная <code>ending_here</code> захоўвае найлепшую суму непустога фрагмента, які заканчваецца менавіта на гэтай пазіцыі. Такі фрагмент альбо пачынаецца з бягучага ліку, альбо працягвае найлепшы фрагмент, які заканчваўся на папярэднім. Зменная <code>best</code> захоўвае найлепшы вынік сярод ужо разгледжаных заканчэнняў.</p>
+<p>Для звычайнага спіса абход займае лінейны час і выкарыстоўвае пастаянную дадатковую прастору. Сцвярджэнне пра час прадугледжвае пастаянны кошт доступу да элемента і звычайны для вучэбнай ацэнкі кошт арыфметыкі.</p>
+<p>Мінімальныя праверкі:</p>
+<pre><code class="language-python">assert max_subarray_sum([-5, -2, -7]) == -2
+assert max_subarray_sum([0, 0]) == 0
+assert max_subarray_sum([4, -6, 3, 2]) == 5
+assert max_subarray_sum([7]) == 7
+
+try:
+    max_subarray_sum([])
+except ValueError:
+    pass
+else:
+    raise AssertionError("Пусты ўвод павінен быць адхілены")
+</code></pre>
+<p>Гэтыя тэсты карысныя для разбору канкрэтных межаў, але не з'яўляюцца доказам для ўсіх уваходных даных. Для невялікіх выпадковых паслядоўнасцей можна дадаткова параўнаць вынік з поўным пераборам усіх непустых фрагментаў.</p>
+<h2 id="section-4">Што спытаць пасля запуску праграмы</h2>
+<p>Папрасіце растлумачыць, чаму ініцыялізацыя нулём змяняе сэнс задачы. Затым прапануйце змяніць кантракт: дазволіць пусты фрагмент або вярнуць яшчэ і яго межы. Пры змене кантракта вучань павінен нанова вызначыць чаканы вынік і праверкі.</p>
+<p>Нарэшце, дайце блізкую задачу без памочніка. Важна праверыць перанос ідэі, а не ўзнаўленне нядаўна ўбачанага кода. Для наступнай праверкі можна змяніць даныя і фармулёўку, захаваўшы патрабаванне самастойна назваць стан алгарытму.</p>
+<p>Калі вучань справіўся толькі з падказкамі, гэта карысная інфармацыя для наступнага занятку. Яе не варта ператвараць у доказ самастойнага валодання тэмай.</p>
+<h2 id="section-5">Як ацэньваць навучальны вынік</h2>
+<p>Раздзяляйце выкананне з дапамогай, самастойнае тлумачэнне і рашэнне новага задання. Захоўвайце не толькі выніковы адказ, але і тып дапамогі: удакладненне ўмовы, навадное пытанне, гатовы контрпрыклад, фрагмент кода.</p>
+<p>Паляпшэнне выніку з AI не даказвае паляпшэння навыку без AI. Для ацэнкі навучання патрэбныя супастаўныя самастойныя заданні да і пасля заняткаў, а пры магчымасці — адкладзеная праверка. Розніцу інтэрпрэтуюць з улікам падрыхтоўкі навучэнцаў і ўмоў навучання.</p>
+<p>Выкладчык атрымлівае больш карысці ад дакладнага разумення памылкі канкрэтнага вучня, чым ад статыстыкі хутка здадзеных праграм. Убудаванага памочніка варта ацэньваць паводле таго, ці дапамагае ён выправіць гэтую памылку і затым абыходзіцца без той жа падказкі.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

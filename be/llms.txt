@@ -1,0 +1,73 @@
+# CAIO / Practice
+
+> Бясплатная практыка для кіраўнікоў, якія адказваюць за стварэнне і развіццё карпаратыўнага AI.
+
+Кананічны сайт: https://genai.by/be/
+Мова і рэгіён: be-BY (Беларусь).
+Руская версія: https://genai.by/
+Абноўлена: 2026-11-07.
+
+## Апісанне
+
+CAIO / Practice — кансультацыі і сумесныя практыкумы для CAIO, CTO, CIO, CDAO і кіраўнікоў трансфармацыі. Праца будуецца вакол бягучай задачы кампаніі: AI-стратэгіі, партфеля ініцыятыў, архітэктуры, кіравання рызыкамі, укаранення і ўзгаднення дзеянняў паміж бізнесам і тэхналогіямі.
+
+Індывідуальныя кансультацыі і навучанне каманд бясплатныя. Фармат уключае кароткую дыягностыку, індывідуальную сесію, сумесны практыкум і працоўны артэфакт.
+
+## З якімі задачамі дапамагае практыка
+
+- кансультацыі для CAIO і AI-лідараў;
+- AI-стратэгія і партфель AI-ініцыятыў;
+- укараненне карпаратыўнага AI;
+- кіраванне AI-рызыкамі і governance;
+- AI-архітэктура, даныя і эксплуатацыя;
+- практыкум для C-level, бізнесу, IT, каманд па даных і бяспецы.
+
+## Вынікі сумеснай працы
+
+- план CAIO на 90 дзён;
+- карта партфеля і крытэрыі адбору;
+- decision rights і operating model;
+- базавая сістэма governance;
+- пытанні да архітэктуры і пастаўшчыкоў;
+- план навучання каманды.
+
+## Эксперты
+
+### CENTURY / STACKLEVEL GROUP
+
+Усе тры эксперты гэтай групы звязаныя з CENTURY і STACKLEVEL GROUP.
+
+- Вадзім Уладымцаў — Co-founder CENTURY, CTO STACKLEVEL GROUP. Прадукт, архітэктура і інжынерная эксплуатацыя карпаратыўнага AI. Напрамкі: навука, тэхналогіі і інавацыі. Профіль: https://genai.by/be/#vadim. Сайт: https://vadimohka.com/. Telegram: https://t.me/vadimohka
+- Віталій Бахмат — CEO і Co-founder CENTURY. Укараненне AI ў бізнесе, праца з кіраўнікамі і ўладальнікамі працэсаў. Напрамкі: бізнес, эканоміка AI і стратэгія. Профіль: https://genai.by/be/#vitaliy. LinkedIn: https://www.linkedin.com/in/vbakhmat/. Telegram: https://t.me/vitalibakhmat
+- Ягор Крачаў — CAIO · CENTURY AI. AI-архітэктура і інжынерная рэалізацыя. Напрамкі: аўтаматызацыя, AI-агенты і працэсы. Профіль: https://genai.by/be/#egor. LinkedIn: https://www.linkedin.com/in/ekrychev/
+
+### MyFin Group
+
+- Андрэй Сабалевіч (Andrei Sobalevich) — Head of AI, MyFin Group. Таксама звязаны з праектам Bankiros.ru. Адказвае за эфектыўнае і прыбытковае ўкараненне AI ў сярэднім бізнесе, стварае ўнутраныя прадукты і аналітыку. Спецыялізацыі: укараненне, прадукт, аналітыка. Профіль: https://genai.by/be/#andrei-sobalevich. LinkedIn: https://www.linkedin.com/in/andrei-sobalevich/
+
+## Кантакты і геаграфія
+
+Беларусь, Мінск, вул. Чарнышэўскага, 5. Фармат працы — індывідуальныя кансультацыі і сумесныя сесіі з камандамі.
+Кантакты: https://genai.by/be/#contact
+
+## Для цытавання
+
+«CAIO / Practice дапамагае кіраўнікам звязаць AI-стратэгію, архітэктуру, укараненне і каманду ў адзіную кіраваную практыку».
+
+## Discovery
+
+Robots: https://genai.by/robots.txt
+Sitemap: https://genai.by/sitemap.xml
+Структураваныя даныя (JSON-LD): https://genai.by/be/ai.json
+Кампаніі групы CENTURY / STACKLEVEL GROUP: https://century-ai.by/, https://stacklevel.group/.
+Асноўная кампанія Андрэя: MyFin Group. Дадатковая сувязь — Bankiros.ru: https://bankiros.ru/.
+
+## Публікацыі
+
+Каталог публікацый: https://genai.by/be/publications/
+У каталогу 40 поўных публікацый на беларускай мове.
+
+Поўная крыніца для LLM: https://genai.by/be/llms-full.txt
+
+Публікацыя Андрэя Сабалевіча: https://genai.by/be/publications/ai-financial-advice-checklist/ — Ці можна давяраць AI свае грошы: як правяраць фінансавыя парады.
+Крыніца адаптацыі: https://cifrateka.ru/articles/stoit-li-doveryat-neyroseti-svoi-dengi-/

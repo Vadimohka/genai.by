@@ -1,0 +1,130 @@
+# CAIO / Practice — поўная крыніца
+
+> Бясплатная практыка для кіраўнікоў, якія адказваюць за стварэнне і развіццё карпаратыўнага AI.
+
+Кананічны сайт: https://genai.by/be/
+Мова і рэгіён: be-BY (Беларусь).
+Руская версія: https://genai.by/
+Абноўлена: 2026-11-07.
+
+## Апісанне
+
+CAIO / Practice — кансультацыі і сумесныя практыкумы для CAIO, CTO, CIO, CDAO і кіраўнікоў трансфармацыі. Праца будуецца вакол бягучай задачы кампаніі: AI-стратэгіі, партфеля ініцыятыў, архітэктуры, кіравання рызыкамі, укаранення і ўзгаднення дзеянняў паміж бізнесам і тэхналогіямі.
+
+Індывідуальныя кансультацыі і навучанне каманд бясплатныя. Фармат уключае кароткую дыягностыку, індывідуальную сесію, сумесны практыкум і працоўны артэфакт.
+
+## З якімі задачамі дапамагае практыка
+
+- кансультацыі для CAIO і AI-лідараў;
+- AI-стратэгія і партфель AI-ініцыятыў;
+- укараненне карпаратыўнага AI;
+- кіраванне AI-рызыкамі і governance;
+- AI-архітэктура, даныя і эксплуатацыя;
+- практыкум для C-level, бізнесу, IT, каманд па даных і бяспецы.
+
+## Вынікі сумеснай працы
+
+- план CAIO на 90 дзён;
+- карта партфеля і крытэрыі адбору;
+- decision rights і operating model;
+- базавая сістэма governance;
+- пытанні да архітэктуры і пастаўшчыкоў;
+- план навучання каманды.
+
+## Эксперты
+
+### CENTURY / STACKLEVEL GROUP
+
+Усе тры эксперты гэтай групы звязаныя з CENTURY і STACKLEVEL GROUP.
+
+- Вадзім Уладымцаў — Co-founder CENTURY, CTO STACKLEVEL GROUP. Прадукт, архітэктура і інжынерная эксплуатацыя карпаратыўнага AI. Напрамкі: навука, тэхналогіі і інавацыі. Профіль: https://genai.by/be/#vadim. Сайт: https://vadimohka.com/. Telegram: https://t.me/vadimohka
+- Віталій Бахмат — CEO і Co-founder CENTURY. Укараненне AI ў бізнесе, праца з кіраўнікамі і ўладальнікамі працэсаў. Напрамкі: бізнес, эканоміка AI і стратэгія. Профіль: https://genai.by/be/#vitaliy. LinkedIn: https://www.linkedin.com/in/vbakhmat/. Telegram: https://t.me/vitalibakhmat
+- Ягор Крачаў — CAIO · CENTURY AI. AI-архітэктура і інжынерная рэалізацыя. Напрамкі: аўтаматызацыя, AI-агенты і працэсы. Профіль: https://genai.by/be/#egor. LinkedIn: https://www.linkedin.com/in/ekrychev/
+
+### MyFin Group
+
+- Андрэй Сабалевіч (Andrei Sobalevich) — Head of AI, MyFin Group. Таксама звязаны з праектам Bankiros.ru. Адказвае за эфектыўнае і прыбытковае ўкараненне AI ў сярэднім бізнесе, стварае ўнутраныя прадукты і аналітыку. Спецыялізацыі: укараненне, прадукт, аналітыка. Профіль: https://genai.by/be/#andrei-sobalevich. LinkedIn: https://www.linkedin.com/in/andrei-sobalevich/
+
+## Кантакты і геаграфія
+
+Беларусь, Мінск, вул. Чарнышэўскага, 5. Фармат працы — індывідуальныя кансультацыі і сумесныя сесіі з камандамі.
+Кантакты: https://genai.by/be/#contact
+
+## Для цытавання
+
+«CAIO / Practice дапамагае кіраўнікам звязаць AI-стратэгію, архітэктуру, укараненне і каманду ў адзіную кіраваную практыку».
+
+## Discovery
+
+Robots: https://genai.by/robots.txt
+Sitemap: https://genai.by/sitemap.xml
+Структураваныя даныя (JSON-LD): https://genai.by/be/ai.json
+Кампаніі групы CENTURY / STACKLEVEL GROUP: https://century-ai.by/, https://stacklevel.group/.
+Асноўная кампанія Андрэя: MyFin Group. Дадатковая сувязь — Bankiros.ru: https://bankiros.ru/.
+
+## Публікацыі
+
+Каталог публікацый: https://genai.by/be/publications/
+У каталогу 40 поўных публікацый на беларускай мове.
+
+Кароткая крыніца для LLM: https://genai.by/be/llms.txt
+
+### Віталій Бахмат
+
+- https://genai.by/be/publications/ai-project-cost-timeline/ — З чаго складаюцца кошт і тэрміны AI-праекта (2026-07-21)
+- https://genai.by/be/publications/private-ai-tco/ — Рэальны кошт private AI: лічым TCO, а не цану GPU (2026-08-18)
+- https://genai.by/be/publications/software-development-cost-belarus/ — Колькі каштуе заказная распрацоўка ПЗ у Беларусі і адкуль бярэцца каштарыс (2026-08-18)
+- https://genai.by/be/publications/how-to-choose-software-contractor/ — Як выбраць падрадчыка на распрацоўку: што праверыць да заключэння дагавора (2026-08-18)
+- https://genai.by/be/publications/software-requirements-acceptance-support/ — Як напісаць ТЗ і крытэрыі прыёмкі, каб не спрачацца ў канцы праекта (2026-08-18)
+
+### Ягор Крачаў
+
+- https://genai.by/be/publications/ai-agent-vs-chatbot-vs-workflow/ — AI-агент, чатбот або workflow automation: што выбраць (2026-07-21)
+- https://genai.by/be/publications/ai-agent-action-security/ — Як даць AI-агенту доступ да рэальных сістэм і не страціць кантроль (2026-08-18)
+- https://genai.by/be/publications/ai-agent-human-handoff/ — Human handoff: калі AI-агент абавязаны перадаць задачу чалавеку (2026-08-18)
+- https://genai.by/be/publications/ai-agent-evaluation-guide/ — Як тэставаць AI-агента перад запускам: eval, негатыўныя сцэнарыі і рэгрэсіі (2026-08-18)
+- https://genai.by/be/publications/how-ai-automates-companies/ — Як ШІ аўтаматызуе кампаніі: задачы, кантэкст і новыя межы роляў (2026-08-23)
+- https://genai.by/be/publications/ai-agent-vs-generic-chatbot/ — Чат-бот, Telegram-бот або AI-агент: як мы выбіраем рашэнне для бізнесу (2026-04-15)
+
+### Вадзім Уладымцаў
+
+- https://genai.by/be/publications/rag-evaluation-citations/ — Як ацэньваць RAG і адказы з крыніцамі (2026-07-21)
+- https://genai.by/be/publications/private-on-prem-ai/ — Калі патрэбны private або on-prem AI (2026-07-21)
+- https://genai.by/be/publications/rag-vs-fine-tuning/ — RAG або fine-tuning: што выбраць для карпаратыўных ведаў (2026-08-18)
+- https://genai.by/be/publications/rag-access-control/ — Правы доступу ў RAG: фільтраваць да пошуку, а не пасля адказу (2026-08-18)
+- https://genai.by/be/publications/rag-knowledge-base-updates/ — Як абнаўляць базу ведаў RAG без паломкі актыўнай версіі (2026-08-18)
+- https://genai.by/be/publications/private-ai-cloud-hybrid-on-prem/ — Cloud, hybrid ці on-prem: як выбраць контур для AI (2026-08-18)
+- https://genai.by/be/publications/private-ai-threat-model/ — Мадэль пагроз для private AI: што застаецца небяспечным унутры перыметра (2026-08-18)
+- https://genai.by/be/publications/knowledge-base-launch/ — Як мы запусцілі базу ведаў CENTURY і дзе праходзіць мяжа яе магчымасцей (2026-05-05)
+- https://genai.by/be/publications/new-models-may-2026/ — Як мы выбіраем і маршрутызуем мадэлі ў CENTURY (2026-05-04)
+- https://genai.by/be/publications/ai-systems-inventory/ — Рэестр AI-сістэм: як знайсці схаваныя выдаткі і інтэграцыі без адказных (2026-09-05)
+- https://genai.by/be/publications/ai-pilot-production-decision/ — Калі AI-пілот можна запускаць у працу: пратакол рашэння (2026-09-07)
+- https://genai.by/be/publications/ai-business-value-measurement/ — Як падлічыць эфект AI, калі супрацоўнікі працуюць хутчэй (2026-09-08)
+- https://genai.by/be/publications/ai-process-ownership-training/ — Хто адказвае за AI-працэс: ролі, рашэнні і навучанне (2026-09-01)
+- https://genai.by/be/publications/ai-data-quality-contract/ — Ці гатовыя даныя да AI: кантракт якасці для адной задачы (2026-08-03)
+- https://genai.by/be/publications/social-listening-trend-validation/ — Аналітыка сацсетак: як адрозніць трэнд ад змены выбаркі (2026-08-05)
+- https://genai.by/be/publications/recommendation-system-business-metrics/ — Рэкамендацыйная сістэма: як вымяраць карысць без пасткі клікаў (2026-08-07)
+- https://genai.by/be/publications/ai-programming-education-independent-skills/ — ШІ на занятках па праграмаванні: як захаваць самастойнае рашэнне (2026-08-09)
+- https://genai.by/be/publications/ai-learning-assistant-validation/ — Навучальны AI-памочнік: як правяраць заданні, адказы і рэальны вынік (2026-08-11)
+- https://genai.by/be/publications/digital-application-statuses/ — Асабісты кабінет без страчаных заяў: статусы, памылкі і паўторная адпраўка (2026-08-23)
+- https://genai.by/be/publications/reproducible-allocation-algorithms/ — Алгарытм размеркавання месцаў: як зрабіць вынік узнаўляльным (2026-08-25)
+- https://genai.by/be/publications/iot-monitoring-data-reliability/ — Аддалены маніторынг: як не прыняць зніклыя даныя за норму (2026-08-01)
+- https://genai.by/be/publications/computer-vision-production-validation/ — Камп'ютарны зрок пасля пілота: даныя, памылковыя трывогі і абнаўленні (2026-08-13)
+- https://genai.by/be/publications/serverless-ai-background-jobs/ — Serverless для AI: чарга, паўторы і працяглыя заданні (2026-08-15)
+- https://genai.by/be/publications/logistics-event-document-integration/ — Лічбавая лагістыка: як звязаць падзеі, дакументы і працу без сеткі (2026-09-02)
+- https://genai.by/be/publications/ai-model-efficiency-benchmark/ — Як параўноўваць AI-мадэлі паводле хуткасці, якасці і энергіі (2026-08-17)
+- https://genai.by/be/publications/xr-pilot-value-validation/ — VR і AR у працы: як праверыць карысць да закупкі абсталявання (2026-08-21)
+- https://genai.by/be/publications/financial-ai-assistant-reconciliation/ — Фінансавы AI-памочнік: спачатку зверка аперацый, затым тлумачэнні (2026-08-19)
+
+### Сумесная публікацыя Вадзіма Уладымцава і Віталія Бахмата
+
+- https://genai.by/be/publications/ai-fundraising-nko/ — ШІ не заменіць фандрайзера. Але можа заўважна разгрузіць каманду НКА (2026-08-31)
+
+### Андрэй Сабалевіч — MyFin Group
+
+- https://genai.by/be/publications/ai-financial-advice-checklist/ — Ці можна давяраць AI свае грошы: як правяраць фінансавыя парады (2026-11-03)
+
+Публікацыя Андрэя Сабалевіча: https://genai.by/be/publications/ai-financial-advice-checklist/ — Ці можна давяраць AI свае грошы: як правяраць фінансавыя парады.
+Крыніца адаптацыі: https://cifrateka.ru/articles/stoit-li-doveryat-neyroseti-svoi-dengi-/
+
+Аўтар зыходнага матэрыялу — Андрэй Сабалевіч, Head of AI ў MyFin Group; таксама звязаны з праектам Bankiros.ru. Дата ў каталогу — дата публікацыі адаптацыі на genai.by.

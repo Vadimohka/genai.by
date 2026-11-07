@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Як параўноўваць AI-канфігурацыі на працоўнай задачы: якасць, p95 затрымкі, паўторы, выдаткі на вынік і энергія. Умоўны прыклад выбару і пратакол тэсту.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/ai-model-efficiency-benchmark/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/ai-model-efficiency-benchmark/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/ai-model-efficiency-benchmark/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/ai-model-efficiency-benchmark/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Як параўноўваць AI-мадэлі паводле хуткасці, якасці і энергіі">
+  <meta property="og:description" content="Як параўноўваць AI-канфігурацыі на працоўнай задачы: якасць, p95 затрымкі, паўторы, выдаткі на вынік і энергія. Умоўны прыклад выбару і пратакол тэсту.">
+  <meta property="og:url" content="https://genai.by/be/publications/ai-model-efficiency-benchmark/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Як параўноўваць AI-мадэлі паводле хуткасці, якасці і энергіі — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/ai-model-efficiency-benchmark/#article","headline":"Як параўноўваць AI-мадэлі паводле хуткасці, якасці і энергіі","description":"Як параўноўваць AI-канфігурацыі на працоўнай задачы: якасць, p95 затрымкі, паўторы, выдаткі на вынік і энергія. Умоўны прыклад выбару і пратакол тэсту.","datePublished":"2026-08-17T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/ai-model-efficiency-benchmark/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Як параўноўваць AI-мадэлі паводле хуткасці, якасці і энергіі","item":"https://genai.by/be/publications/ai-model-efficiency-benchmark/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/ai-model-efficiency-benchmark/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/ai-model-efficiency-benchmark/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Як параўноўваць AI-мадэлі паводле хуткасці, якасці і энергіі</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Навука, тэхналогіі і інавацыі</span>
+          <h1>Як параўноўваць AI-мадэлі паводле хуткасці, якасці і энергіі</h1>
+          <p>Пратакол выпрабаванняў для параўнання канфігурацый AI: аднолькавая задача, абмежаванні якасці, поўная затрымка і яўныя межы вымярэння энергіі.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-17T00:00:00+03:00">17 жніўня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section-1">Параўноўваць канфігурацыі на адной аперацыі</a></li><li><a href="#section-2">Зафіксаваць умовы запуску</a></li><li><a href="#section-3">Прыклад, дзе танны варыянт не адпавядае патрабаванням</a></li><li><a href="#section-4">Вымяраць энергію ў яўных межах</a></li><li><a href="#section-5">Як аформіць рашэнне</a></li></ol></aside>
+        <article class="article-body">
+          <p>Мадэль хутчэй адказвае на кароткі запыт, але часцей патрабуе паўторнай спробы. Іншая павольней пачынае генерацыю, затое ўкладаецца ў патрабаванні на доўгіх дакументах. Параўнанне паводле аднаго часу адказу не паказвае, якая канфігурацыя лепш выканае працоўную задачу.</p>
+<p>Для выбару патрэбны пратакол выпрабаванняў: аднолькавыя ўваходныя даныя, вызначаны вынік, абмежаванні якасці і нагрузкі, зафіксаваныя налады. Цана і энергія набываюць сэнс у межах гэтых умоў.</p>
+<h2 id="section-1">Параўноўваць канфігурацыі на адной аперацыі</h2>
+<p>Вызначце, што лічыцца завершаным заданнем: карэктна здабытыя палі, прыняты адказ або дакумент, які прайшоў праверкі. Захавайце набор уваходных даных і спосаб ацэньвання. Раздзяліце матэрыял для наладжвання і выніковай праверкі.</p>
+<p>Удзельнікам параўнання з'яўляецца ўся канфігурацыя: мадэль, промпт, інструменты, падрыхтоўка даных і правілы паўтораў. Калі аднаму варыянту дазволены дадатковы пошук, а іншаму не, гэта параўнанне сістэм з рознымі магчымасцямі. Яго можна праводзіць, але адрозненне трэба пазначыць.</p>
+<p>Парог якасці, дапушчальную затрымку і абавязковыя абмежаванні ўстанаўліваюць да выпрабавання. Хуткі варыянт, які не выконвае патрабаванні аперацыі, не становіцца пераможцам праз нізкі кошт.</p>
+<p>Тэма рэсурсных абмежаванняў нейрасетак разглядаецца ў <a href="https://libeldoc.bsuir.by/handle/123456789/52690">публікацыі 2023 года</a>. Для рашэння пра канкрэтную сістэму патрэбныя ўласныя вымярэнні: агульныя разважанні пра рост вылічэнняў не вызначаюць яе працоўную эфектыўнасць.</p>
+<h2 id="section-2">Зафіксаваць умовы запуску</h2>
+<p>У пратакол уключаюць версіі кампанентаў, параметры генерацыі, апаратную канфігурацыю або ідэнтыфікатар сэрвісу, памеры ўваходных даных і правілы кэшавання. Халодны запуск і прагрэты рэжым правяраюць асобна, калі абодва сустракаюцца ў эксплуатацыі.</p>
+<p>Спачатку вымерайце выкананне адзінкавых заданняў, затым паўтарыце тэст пры чаканай паралельнасці і ў рэжыме перагрузкі. У карыстальніцкую затрымку ўключайце чаканне чаргі, звароты да інструментаў і падрыхтоўку выніку.</p>
+<p>Хуткасць у токенах за секунду карысная для дыягностыкі, але не заўсёды супастаўная паміж мадэлямі: аб'ём і спосаб падзелу тэксту адрозніваюцца. Для прыкладнога выбару важнейшы час завершанай аперацыі з прынятым вынікам.</p>
+<p>Не абмяжоўвайцеся адным прагонам. Паўторы паказваюць роскід якасці і затрымкі. Для знешняга сэрвісу фіксуйце дату і даступныя звесткі пра версію; нязменная назва мадэлі не заўсёды дае поўны кантроль над унутранай рэалізацыяй.</p>
+<h2 id="section-3">Прыклад, дзе танны варыянт не адпавядае патрабаванням</h2>
+<p>Ніжэй — умоўны тэст з 1 000 заданняў. Да запуску ўстаноўлена: не менш за 95% прынятых вынікаў на гэтым тэсце і p95 поўнай затрымкі не больш за 10 секунд. Гэта ілюстрацыйныя патрабаванні, не рэкамендацыя для любога прадукту. p95 азначае, што прыкладна 95% вымераных затрымак не перавышаюць пазначанае значэнне.</p>
+<table>
+<thead>
+<tr>
+<th>Паказчык</th>
+<th style="text-align:right">Канфігурацыя A</th>
+<th style="text-align:right">Канфігурацыя B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Прынятыя вынікі</td>
+<td style="text-align:right">960</td>
+<td style="text-align:right">800</td>
+</tr>
+<tr>
+<td>p95 поўнай затрымкі</td>
+<td style="text-align:right">9 секунд</td>
+<td style="text-align:right">4 секунды</td>
+</tr>
+<tr>
+<td>Кошт машыннага прагону</td>
+<td style="text-align:right">30 умоўных грашовых адзінак</td>
+<td style="text-align:right">18 умоўных грашовых адзінак</td>
+</tr>
+<tr>
+<td>Выдаткі прагону на прыняты вынік</td>
+<td style="text-align:right">0,03125</td>
+<td style="text-align:right">0,0225</td>
+</tr>
+</tbody>
+</table>
+<p>B таннейшая і хутчэйшая, але не выконвае ўстаноўленую ўмову якасці. На гэтым этапе параўнання яна не падыходзіць для самастойнага выканання ўсёй аперацыі.</p>
+<p>Нельга незаўважна дадаць B выпраўленне чалавекам і пакінуць ранейшы кошт. У такім выпадку атрымаецца новая канфігурацыя, для якой паўторна вымяраюць поўны цыкл, выдаткі і якасць.</p>
+<p>Нават выкананне парога на 1 000 заданнях не даказвае яго захаванне на любым будучым патоку. Ацаніце нявызначанасць і ахоп важных класаў уваходных даных; рэдкія крытычныя памылкі правяраюць асобна.</p>
+<h2 id="section-4">Вымяраць энергію ў яўных межах</h2>
+<p>Энергія — гэта назапашанае спажыванне за інтэрвал працы. Для параўнання задайце, якія кампаненты ўваходзяць у вымярэнне: паскаральнік, увесь сервер, сетка, захоўванне і іншыя неабходныя часткі.</p>
+<p>Паказчык магутнасці адной GPU не роўны энергазатратам усёй аперацыі. Значэнне пашпартнай магутнасці таксама не з'яўляецца вымераным расходам. На ўласным стэндзе выкарыстоўвайце даступныя вымярэнні з вядомымі адзінкамі і частатой; пазначайце, ці ўключаны прастой і як размеркаваны агульныя выдаткі.</p>
+<p><a href="https://arxiv.org/abs/2410.12032">MLPerf Power</a> прапануе метадалогію супастаўнага вымярэння энергетычнай эфектыўнасці ML-сістэм. Апісаны тут прыкладны тэст не з'яўляецца сертыфікаваным прагонам MLPerf і не замяняе яго правілаў.</p>
+<p>Для знешняга API без тэлеметрыі пастаўшчыка нельга сумленна вылічыць энергію запыту з колькасці токенаў. У гэтым выпадку фіксуйце невядомасць, а даступны кошт вымярайце асобна. Вугляродны след запатрабуе дадатковых звестак пра энергазабеспячэнне і межы ўліку.</p>
+<h2 id="section-5">Як аформіць рашэнне</h2>
+<p>Захавайце зыходныя заданні, крытэрыі прыёмкі, налады, вынікі асобных спроб і зводку па класах уваходных даных. У рашэнні пазначце, які варыянт выканаў абмежаванні і ў якіх умовах праводзілася праверка.</p>
+<p>Поўны кошт валодання разглядаецца асобна ў артыкуле <a href="/be/publications/private-ai-tco/">пра TCO private AI</a>. Пратакол выпрабаванняў дае для такога разліку вымераныя характарыстыкі і дапамагае не падмяніць карысную працу колькасцю генерацый.</p>
+<p>Пасля змены мадэлі, маршрутызацыі або нагрузкі паўтарыце значную частку тэсту. Выбар адносіцца да зафіксаванай канфігурацыі; ён не з'яўляецца бестэрміновай уласцівасцю назвы мадэлі.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

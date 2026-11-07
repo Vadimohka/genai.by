@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Праверка гатоўнасці AI-пілота: межы задачы, незалежны тэст, выключэнні, эксплуатацыя і карысць. Табліца сведчанняў і прыклад выніковага рашэння.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/ai-pilot-production-decision/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/ai-pilot-production-decision/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/ai-pilot-production-decision/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/ai-pilot-production-decision/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Калі AI-пілот можна запускаць у працу: пратакол рашэння">
+  <meta property="og:description" content="Праверка гатоўнасці AI-пілота: межы задачы, незалежны тэст, выключэнні, эксплуатацыя і карысць. Табліца сведчанняў і прыклад выніковага рашэння.">
+  <meta property="og:url" content="https://genai.by/be/publications/ai-pilot-production-decision/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Калі AI-пілот можна запускаць у працу: пратакол рашэння — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/ai-pilot-production-decision/#article","headline":"Калі AI-пілот можна запускаць у працу: пратакол рашэння","description":"Праверка гатоўнасці AI-пілота: межы задачы, незалежны тэст, выключэнні, эксплуатацыя і карысць. Табліца сведчанняў і прыклад выніковага рашэння.","datePublished":"2026-09-07T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/ai-pilot-production-decision/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Калі AI-пілот можна запускаць у працу: пратакол рашэння","item":"https://genai.by/be/publications/ai-pilot-production-decision/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/ai-pilot-production-decision/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/ai-pilot-production-decision/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Калі AI-пілот можна запускаць у працу: пратакол рашэння</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Бізнес</span>
+          <h1>Калі AI-пілот можна запускаць у працу: пратакол рашэння</h1>
+          <p>Якія сведчанні сабраць да канца пілота і як аформіць дазвол на эксплуатацыю, абмежаваную дапрацоўку або закрыццё сцэнарыя.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-09-07T00:00:00+03:00">7 верасня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section-1">Зафіксаваць мяжу пілота да выніковага тэсту</a></li><li><a href="#section-2">Якія сведчанні пакласці на стол</a></li><li><a href="#section-3">Адрозніваць праверку адказаў ад праверкі працоўнага працэсу</a></li><li><a href="#section-4">Прыклад выніковага рашэння</a></li><li><a href="#section-5">Як не затрымацца ў бясконцай дапрацоўцы</a></li></ol></aside>
+        <article class="article-body">
+          <p>Пілот заканчваецца, калі ў каманды дастаткова падстаў для наступнага рашэння: запусціць абмежаваную эксплуатацыю, ліквідаваць канкрэтны дэфект або закрыць сцэнарый. Працоўная дэманстрацыя дае толькі частку гэтых падстаў.</p>
+<p>Розніца добра бачная на апрацоўцы дакументаў. Мадэль можа правільна здабыць палі з падрыхтаванага набору, а прамысловы працэс усё роўна застанецца негатовым: невядома, хто разбірае спрэчныя дакументы, як выяўляць прапушчаныя заданні і што рабіць пры змене фармату ўваходных файлаў.</p>
+<p>Праверку гатоўнасці зручна аформіць кароткім пратаколам. Яго складае каманда, а рашэнне прымае ўладальнік працэсу з удзелам адказных за эксплуатацыю і рызыкі.</p>
+<h2 id="section-1">Зафіксаваць мяжу пілота да выніковага тэсту</h2>
+<p>У апісанні пілота пазначце дапушчальныя ўваходныя даныя, чаканы вынік і межы аўтаматызацыі. Для здабывання палёў гэта могуць быць канкрэтныя тыпы дакументаў і мовы. Для памочніка падтрымкі — пералік тэм і забарона на самастойную адпраўку адказу.</p>
+<p>Па-за межамі гэтай вобласці сістэма павінна пераходзіць у загадзя прадугледжаны рэжым: перадаваць дакумент чалавеку, вяртаць паведамленне пра абмежаванне або адмаўляцца ад дзеяння. Пашырэнне вобласці прымянення патрабуе новай праверкі.</p>
+<p>Затым выберыце зыходны працэс для параўнання. Патрэбныя яго фактычныя выдаткі часу, памылкі і выключэнні. Параўнанне з ідэалізаванай ручной працай або з загадзя дрэнным чарнавіком не дапамагае вырашыць, ці варта змяняць дзейную аперацыю.</p>
+<p>Адкладзены набор для выніковай ацэнкі не выкарыстоўваюць для наладжвання промптаў і правілаў. Калі каманда выпраўляла сістэму паводле гэтага набору, яго вынікі ўжо не з'яўляюцца незалежнай праверкай. Для наступнага рашэння спатрэбіцца свежы матэрыял або яўна абмежаваная выснова.</p>
+<h2 id="section-2">Якія сведчанні пакласці на стол</h2>
+<p>У <a href="https://research.google/pubs/the-ml-test-score-a-rubric-for-ml-production-readiness-and-technical-debt-reduction/">The ML Test Score</a> гатоўнасць ML-сістэмы разглядаецца праз праверкі даных, мадэлі, інфраструктуры і маніторынгу. Для кіраўнічага рашэння гэты прынцып можна ператварыць у наступную табліцу.</p>
+<table>
+<thead>
+<tr>
+<th>Вобласць</th>
+<th>Сведчанне гатоўнасці</th>
+<th>Што блакуе пашырэнне</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Якасць аперацыі</td>
+<td>Супастаўленне з зыходным працэсам на загадзя вызначанай выбарцы</td>
+<td>Правяраліся толькі зручныя выпадкі</td>
+</tr>
+<tr>
+<td>Выключэнні</td>
+<td>Вынікі апрацоўкі няштатных і невядомых уваходных даных</td>
+<td>Сістэма хавае памылку праўдападобным адказам</td>
+</tr>
+<tr>
+<td>Даныя і паўнамоцтвы</td>
+<td>Узгоднены пералік крыніц, доступаў і дзеянняў</td>
+<td>Незразумела, якія даныя пакідаюць дазволенае асяроддзе</td>
+</tr>
+<tr>
+<td>Эксплуатацыя</td>
+<td>Журнал заданняў, апавяшчэнні, адказны за збой, правераны адкат</td>
+<td>Аднаўленне залежыць ад прысутнасці распрацоўшчыка</td>
+</tr>
+<tr>
+<td>Карысць</td>
+<td>Вымярэнне поўнага цыкла з праверкай і выпраўленнямі</td>
+<td>Улічваецца толькі хуткасць генерацыі</td>
+</tr>
+</tbody>
+</table>
+<p>Гэта прапанаваная форма пратакола, без універсальных прахадных працэнтаў. Парог залежыць ад наступстваў памылкі і патрабаванняў канкрэтнай аперацыі.</p>
+<h2 id="section-3">Адрозніваць праверку адказаў ад праверкі працоўнага працэсу</h2>
+<p>У ценявым рэжыме сістэма атрымлівае ўваходныя даныя, але яе вынік не змяняе працоўныя запісы і не ўплывае на кліента. Гэта дазваляе параўнаць адказы і вывучыць памылкі. Аднак такая праверка не паказвае, колькі часу супрацоўнік патраціць на новы інтэрфейс і як будзе дзейнічаць пры супярэчнасці паміж мадэллю і дакументам.</p>
+<p>Абмежаваная эксплуатацыя дадае гэтыя назіранні. Для яе загадзя вызначаюць карыстальнікаў з доступам, тыпы заданняў, гранічную нагрузку і парадак спынення. Выканаўцы павінны ведаць, дзе заканчваецца аўтаматызацыя і каму належыць спрэчны выпадак.</p>
+<p>Складаныя дакументы нельга незаўважна выключаць з назоўніка. Асобна паказвайце долю ўваходных даных, якія адпавядаюць умовам пілота, долю аўтаматычна завершаных аперацый і долю вяртанняў чалавеку. Высокая якасць на вузкім падмностве можа быць карысным вынікам, калі гэтае падмноства сумленна апісана.</p>
+<p>Адсутнасць інцыдэнтаў у невялікім тэсце не даказвае адсутнасць рызыкі. Таму небяспечныя сцэнарыі правяраюць мэтанакіравана, а рэшткавую нявызначанасць запісваюць у рашэнне.</p>
+<h2 id="section-4">Прыклад выніковага рашэння</h2>
+<p>Ніжэй — выдуманы прыклад фармулёўкі, а не справаздача пра праведзены праект.</p>
+<blockquote>
+<p>Дазволіць абмежаваную эксплуатацыю здабывання рэквізітаў з дакументаў узгодненага фармату. Да запісу ва ўліковую сістэму вынік пацвярджае аператар. Астатнія фарматы застаюцца ў ручным працэсе. Масавую апрацоўку не ўключаць да праверкі аднаўлення пасля збою. За гэтую праверку адказвае каманда інтэграцыі; рашэнне пра пашырэнне прымае ўладальнік дакументаабароту. Пры разыходжанні сум або страце сувязі з крыніцай заданне перадаецца аператару без аўтаматычнага запісу.</p>
+</blockquote>
+<p>У гэтым запісе зразумелыя вобласць дазволу, нявырашанае пытанне, уладальнік і рэзервовы парадак. Фармулёўка «пілот паспяховы, рэкамендуем маштабаванне» гэтых звестак не змяшчае.</p>
+<h2 id="section-5">Як не затрымацца ў бясконцай дапрацоўцы</h2>
+<p>Для працягу пілота патрэбна гіпотэза, якую можна праверыць. Напрыклад: «Памылкі звязаныя з двума варыянтамі формы; пасля выпраўлення праверым новыя дакументы абодвух варыянтаў». Разам з гіпотэзай задаюць бюджэт, тэрмін і ўмову спынення эксперымента.</p>
+<p>Калі чарговае пашырэнне не дае новых ведаў, карысна перагледзець саму задачу. Часам дастаткова звузіць набор уваходных даных або пакінуць мадэлі падрыхтоўку чарнавіка. Часам ручны працэс аказваецца больш прымальным паводле сукупнасці выдаткаў і рызык.</p>
+<p>Пытанні кошту раскрытыя асобна ў матэрыяле <a href="/be/publications/ai-project-cost-timeline/">пра тэрміны і бюджэт AI-праекта</a>, а будова тэставага набору — у <a href="/be/publications/ai-agent-evaluation-guide/">кіраўніцтве па ацэнцы AI-агентаў</a>. Выніковы пратакол звязвае гэтыя вынікі з адным рашэннем і адказным за яго.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

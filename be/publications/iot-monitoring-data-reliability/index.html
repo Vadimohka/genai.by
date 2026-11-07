@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Як будаваць надзейны маніторынг: час і якасць вымярэння, страта сувязі, познія пакеты, дублі і пацверджанне апавяшчэнняў. Без памылковага статусу нормы.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/iot-monitoring-data-reliability/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/iot-monitoring-data-reliability/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/iot-monitoring-data-reliability/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/iot-monitoring-data-reliability/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Аддалены маніторынг: як не прыняць зніклыя даныя за норму">
+  <meta property="og:description" content="Як будаваць надзейны маніторынг: час і якасць вымярэння, страта сувязі, познія пакеты, дублі і пацверджанне апавяшчэнняў. Без памылковага статусу нормы.">
+  <meta property="og:url" content="https://genai.by/be/publications/iot-monitoring-data-reliability/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Аддалены маніторынг: як не прыняць зніклыя даныя за норму — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/iot-monitoring-data-reliability/#article","headline":"Аддалены маніторынг: як не прыняць зніклыя даныя за норму","description":"Як будаваць надзейны маніторынг: час і якасць вымярэння, страта сувязі, познія пакеты, дублі і пацверджанне апавяшчэнняў. Без памылковага статусу нормы.","datePublished":"2026-08-01T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/iot-monitoring-data-reliability/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Аддалены маніторынг: як не прыняць зніклыя даныя за норму","item":"https://genai.by/be/publications/iot-monitoring-data-reliability/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/iot-monitoring-data-reliability/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/iot-monitoring-data-reliability/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Аддалены маніторынг: як не прыняць зніклыя даныя за норму</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Навука, тэхналогіі і інавацыі</span>
+          <h1>Аддалены маніторынг: як не прыняць зніклыя даныя за норму</h1>
+          <p>Чаму апошняе нармальнае вымярэнне не пацвярджае бягучага стану. Актуальнасць тэлеметрыі, паўторы, ахоп і маршрут апавяшчэння.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-01T00:00:00+03:00">1 жніўня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section-1">У кожнага вымярэння павінны быць час і якасць</a></li><li><a href="#section-2">Раздзяліць станы ў інтэрфейсе</a></li><li><a href="#section-3">Што адбываецца пры паўторнай дастаўцы</a></li><li><a href="#section-4">Вымяраць ахоп назірання</a></li><li><a href="#section-5">Замкнуць маршрут апавяшчэння</a></li></ol></aside>
+        <article class="article-body">
+          <p>На панэлі зялёны індыкатар, бо апошняе вымярэнне было нармальным. Але само вымярэнне зробленае даўно, сувязь з прыладай страчаная, а новыя даныя не паступаюць. Інтэрфейс захоўвае бачнасць дабрабыту ў момант, калі сістэма ўжо не ведае бягучага стану.</p>
+<p>Для маніторынгу трэба асобна апісваць назіраную велічыню, прыдатнасць вымярэння і даступнасць канала. Гэтыя станы нельга зводзіць да аднаго ліку ці колеру.</p>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/49353">Публікацыя пра архітэктуру дыстанцыйнага маніторынгу на аснове IoT</a> разглядае прататып сістэмы назірання за параметрамі чалавека. Далей разабраныя агульныя інжынерныя прынцыпы дастаўкі і інтэрпрэтацыі тэлеметрыі. Яны не з'яўляюцца рэкамендацыямі па дыягностыцы ці выбары медыцынскіх парогаў.</p>
+<h2 id="section-1">У кожнага вымярэння павінны быць час і якасць</h2>
+<p>Захоўвайце ідэнтыфікатар прылады, ідэнтыфікатар ці паслядоўны нумар вымярэння, час на прыладзе і час атрымання серверам. Карысныя версія прашыўкі, адзінкі вымярэння і вынік першаснай праверкі якасці.</p>
+<p>Час падзеі і час дастаўкі адказваюць на розныя пытанні. Пакет, які прыйшоў зараз, можа апісваць стан некалькі хвілін таму. Калі гадзіннік прылады збіўся, сервер павінен улічваць гэтую нявызначанасць, а не паказваць дакладны час без агаворкі.</p>
+<p>Для кожнага сцэнарыя вызначце максімальна дапушчальную даўнасць даных. Яна залежыць ад прызначэння сістэмы і не выбіраецца ўніверсальна для ўсіх датчыкаў. Пасля яе перавышэння інтэрфейс змяняе статус актуальнасці незалежна ад апошняга вымеранага значэння.</p>
+<h2 id="section-2">Раздзяліць станы ў інтэрфейсе</h2>
+<table>
+<thead>
+<tr>
+<th>Стан</th>
+<th>Што вядома сістэме</th>
+<th>Якое дзеянне прадугледжанае</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Актуальнае прыдатнае вымярэнне</td>
+<td>Ёсць свежыя ўваходныя даныя, якія прайшлі праверкі</td>
+<td>Выкарыстоўваць іх у межах дазволенай задачы</td>
+</tr>
+<tr>
+<td>Вымярэнне сумнеўнай якасці</td>
+<td>Пакет атрыманы, але значэнне нельга надзейна інтэрпрэтаваць</td>
+<td>Паказаць абмежаванне і запусціць праверку датчыка ці ўмоў вымярэння</td>
+</tr>
+<tr>
+<td>Даныя састарэлі</td>
+<td>Апошнія прыдатныя ўваходныя даныя старэйшыя за дапушчальны інтэрвал</td>
+<td>Не выдаваць іх за бягучы стан</td>
+</tr>
+<tr>
+<td>Сувязь адсутнічае</td>
+<td>Канал ці прылада недаступныя</td>
+<td>Запусціць прадугледжаны тэхнічны маршрут рэагавання</td>
+</tr>
+</tbody>
+</table>
+<p>Захаванае значэнне можна паказаць як гістарычнае, з яго часам. Яно не павінна падтрымліваць бягучы статус «норма», калі назіранне перарванае.</p>
+<h2 id="section-3">Што адбываецца пры паўторнай дастаўцы</h2>
+<p>Прылада з нестабільнай сувяззю можа назапасіць вымярэнні і адправіць іх пазней. Пры паўторы перадачы магчымыя дублі. Напрыклад, <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html">MQTT 5.0</a> наўпрост дапускае паўторную дастаўку пры QoS 1 — рэжыме «прынамсі адзін раз».</p>
+<p>Апрацоўшчык павінен пазнаваць адзін і той жа запіс і не ствараць з яго некалькі падзей. Для гэтага патрэбны ўстойлівы ключ вымярэння; адной прыблізнай пары «час і значэнне» можа быць недастаткова, бо аднолькавыя значэнні могуць узнікаць законна.</p>
+<p>Позні пакет запісваюць у гісторыю з часам вымярэння. Ён не павінен выцясняць больш свежыя даныя на бягучым індыкатары толькі таму, што прыйшоў апошнім. Паўторнае злучэнне таксама не азначае, што адноўленая бесперапынная гісторыя: праверце дыяпазон прапушчаных нумароў.</p>
+<p>Гарантыі транспарту датычацца пэўнага ўчастка перадачы. Яны самі па сабе не даказваюць, што даныя запісаныя ў прыкладную базу, апрацаваныя алгарытмам і даведзеныя да адказнага чалавека.</p>
+<h2 id="section-4">Вымяраць ахоп назірання</h2>
+<p>Дакладнасць алгарытму і даступнасць даных — асобныя характарыстыкі. Сістэма можа добра апрацоўваць прыдатныя запісы, але атрымліваць іх занадта рэдка для сваёй задачы.</p>
+<p>Разгледзім умоўны тэхнічны тэст. Са 100 чаканых унікальных вымярэнняў атрымана 80, з іх 70 прыдатныя для апрацоўкі. Дастаўка ахоплівае 80% чаканага патоку, а прыдатныя даныя — 70%. Дадатковыя паўторныя пакеты не павялічваюць гэты ахоп.</p>
+<p>Вызначэнне чаканай колькасці залежыць ад рэжыму датчыка. Для падзейнай прылады, якая адпраўляе даныя толькі пры змяненні, назоўнік будзе іншым. Яго трэба ўсталяваць да разліку метрык.</p>
+<p>Асобна вымярайце затрымку ад падзеі да прынятага апавяшчэння. У яе ўваходзяць перадача, чарга, вылічэнне і дастаўка паведамлення. Сярэдняе значэнне можа хаваць рэдкія затрымкі, крытычныя для выбранай аперацыі.</p>
+<h2 id="section-5">Замкнуць маршрут апавяшчэння</h2>
+<p>Для значнай падзеі прызначце атрымальніка, тэрмін рэакцыі і парадак эскалацыі. Статусы «апавяшчэнне створанае», «дастаўленае» і «прынятае чалавекам» адрозніваюцца. Карысна правяраць увесь маршрут на вучэбнай падзеі, уключаючы недаступнасць асноўнага атрымальніка.</p>
+<p>Раздзяляйце паведамленні пра назіраную падзею і тэхнічную страту назірання. Для іх могуць патрабавацца розныя выканаўцы і дзеянні. Падаўленне паўтораў павінна памяншаць шум, захоўваючы інфармацыю пра працягласць праблемы.</p>
+<p>Доступ да прылад і панэлі абмяжоўваюць паводле роляў, а даныя пры перадачы і захоўванні абараняюць адпаведна прызначэнню сістэмы. Абнаўленні прашыўкі і алгарытму праходзяць праверку сумяшчальнасці з захаванымі запісамі.</p>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/53959">Праца пра алгарытм вымярэння частаты сардэчных скарачэнняў</a> прысвечаная асобнай вылічальнай задачы. Наяўнасць алгарытму не пацвярджае прыдатнасці ўсёй сістэмы для медыцынскага выкарыстання: прызначэнне, клінічныя ўмовы і бяспека патрабуюць самастойнай ацэнкі. Інжынерны мінімум застаецца агульным — сістэма павінна сумленна паказваць, калі яна валодае данымі, а калі назіранне страчанае.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

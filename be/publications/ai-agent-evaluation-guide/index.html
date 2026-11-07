@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Кантрольны набор для AI-агента: вынік задачы, tool calls, правы, негатыўныя сцэнарыі, handoff, кошт, latency і рэгрэсіі.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/ai-agent-evaluation-guide/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/ai-agent-evaluation-guide/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/ai-agent-evaluation-guide/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/ai-agent-evaluation-guide/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Як тэставаць AI-агента перад запускам: eval, негатыўныя сцэнарыі і рэгрэсіі">
+  <meta property="og:description" content="Кантрольны набор для AI-агента: вынік задачы, tool calls, правы, негатыўныя сцэнарыі, handoff, кошт, latency і рэгрэсіі.">
+  <meta property="og:url" content="https://genai.by/be/publications/ai-agent-evaluation-guide/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Як тэставаць AI-агента перад запускам: eval, негатыўныя сцэнарыі і рэгрэсіі — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/ai-agent-evaluation-guide/#article","headline":"Як тэставаць AI-агента перад запускам: eval, негатыўныя сцэнарыі і рэгрэсіі","description":"Кантрольны набор для AI-агента: вынік задачы, tool calls, правы, негатыўныя сцэнарыі, handoff, кошт, latency і рэгрэсіі.","datePublished":"2026-08-18T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/ai-agent-evaluation-guide/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#egor","name":"Ягор Крачаў","url":"https://genai.by/be/#egor"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Як тэставаць AI-агента перад запускам: eval, негатыўныя сцэнарыі і рэгрэсіі","item":"https://genai.by/be/publications/ai-agent-evaluation-guide/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/ai-agent-evaluation-guide/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/ai-agent-evaluation-guide/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Як тэставаць AI-агента перад запускам: eval, негатыўныя сцэнарыі і рэгрэсіі</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Аўтаматызацыя</span>
+          <h1>Як тэставаць AI-агента перад запускам: eval, негатыўныя сцэнарыі і рэгрэсіі</h1>
+          <p>Eval AI-агента правярае не толькі тэкст адказу, але і канчатковы вынік, tool calls, правы, handoff, пабочныя эфекты, latency і кошт.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-18T00:00:00+03:00">18 жніўня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/egor-kryachev-176.png" width="88" height="88" alt="Ягор Крачаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#egor">Ягор Крачаў</a>
+          <small>CAIO · CENTURY AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section">Галоўнае</a></li><li><a href="#section-2">Ацэньвайце вынік, шлях і пабочныя эфекты</a></li><li><a href="#section-3">Збярыце кантрольны набор з рэальнай працы</a></li><li><a href="#score">Не змешвайце ўсе памылкі ў адзін score</a></li><li><a href="#section-4">Правярайце сістэму, а не толькі мадэль</a></li><li><a href="#section-5">Дадайце незалежную праверку выніку</a></li><li><a href="#section-6">Асобна праверце негатыўныя сцэнарыі</a></li><li><a href="#baseline">Зафіксуйце baseline і запускайце рэгрэсію</a></li><li><a href="#section-7">Калі агент гатовы да абмежаванага запуску</a></li><li><a href="#ai">Слаі ацэнкі AI-агента</a></li><li><a href="#section-8">Што ўключыць у кантрольны набор</a></li><li><a href="#section-10">Крыніцы і спасылкі</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Галоўнае</h2><p>Збярыце набор рэальных задач з улікам версій, загадзя апішыце дапушчальны вынік і забароненыя дзеянні, а затым правярайце outcome, trajectory і side effects. Крытычнае парушэнне правоў не павінна кампенсавацца прыгожым сярэднім score.</p></div></section><section><div><p><span>Пяць удалых размоў у дэма не даказваюць, што агент гатовы да працы. У дэма звычайна задаюць чаканыя пытанні, інтэграцыі адказваюць, дакументы свежыя, а чалавек побач заўважае дзіўнасць раней за карыстальніка.</span></p><p><span>Eval патрэбны, каб замяніць уражанне паўтаральнай праверкай. Ён адказвае не на пытанне «мадэль разумная?», а на пытанне «сістэма выконвае наш працэс з дапушчальнай якасцю, рызыкай і коштам?»</span></p><section><h2 id="section-2">Ацэньвайце вынік, шлях і пабочныя эфекты</h2><p><span>У звычайнага чатбота часта правяраюць тэкст адказу. У агента гэтага мала. Ён можа напісаць ідэальнае паведамленне пасля няправільнай змены ў CRM.</span></p><p><span>Мінімум тры слаі:</span></p><ol><li><strong>Outcome:</strong><span> задача сапраўды завершана або карэктна перададзена чалавеку.</span></li><li><strong>Trajectory:</strong><span> выбраны дапушчальныя інструменты, парадак і параметры.</span></li><li><strong>Side effects:</strong><span> не створана дубляў, не закрануты чужыя даныя, не выканана лішніх дзеянняў.</span></li></ol><p><span>Часам правільных траекторый некалькі. Таму не варта жорстка патрабаваць адзіны шлях, калі важныя вынік і абмежаванні. Але для плацяжу або выдалення дапушчальная паслядоўнасць можа быць строга вызначана.</span></p></section><section><h2 id="section-3">Збярыце кантрольны набор з рэальнай працы</h2><p><span>Пачніце не з тысячы штучных пытанняў, а з 50–100 рэпрэзентатыўных задач. Уключыце:</span></p><ul><li><span>частыя і простыя выпадкі;</span></li><li><span>рэдкія, але дарагія памылкі;</span></li><li><span>няпоўныя і супярэчлівыя даныя;</span></li><li><span>недаступную інтэграцыю;</span></li><li><span>паўтор аднаго і таго ж запыту;</span></li><li><span>запыт карыстальніка без патрэбных правоў;</span></li><li><span>спробу прымусіць агента ігнараваць правілы;</span></li><li><span>сітуацыю, дзе адзіны правільны вынік — адмова або handoff.</span></li></ul><p><span>Для кожнай задачы зафіксуйце дапушчальны вынік, забароненыя дзеянні, неабходныя доказы і ліміт кошту/часу.</span></p></section><section><h2 id="score">Не змешвайце ўсе памылкі ў адзін score</h2><p><span>Сярэднія 92 балы могуць хаваць адзін перавод грошай не таму атрымальніку. Раздзяліце метрыкі:</span></p><div><div class="article-table"><table><thead><tr><th scope="col"><span>Слой</span></th><th scope="col"><span>Што вымяраць</span></th></tr></thead><tbody><tr><th scope="row"><span>Выкананне</span></th><td><span>task success, карэктны канчатковы статус</span></td></tr><tr><th scope="row"><span>Інструменты</span></th><td><span>правільнасць выбару і параметраў tool call</span></td></tr><tr><th scope="row"><span>Бяспека</span></th><td><span>парушэнні правоў, лішнія дзеянні, уцечкі</span></td></tr><tr><th scope="row"><span>Handoff</span></th><td><span>абавязковыя і памылковыя перадачы чалавеку</span></td></tr><tr><th scope="row"><span>Надзейнасць</span></th><td><span>паўторы, таймаўты, аднаўленне пасля збою</span></td></tr><tr><th scope="row"><span>Досвед</span></th><td><span>зразумеласць адказу і намаганні карыстальніка</span></td></tr><tr><th scope="row"><span>Эканоміка</span></th><td><span>токены, выклікі знешніх API, час, кошт задачы</span></td></tr></tbody></table></div></div><p><span>Крытычныя парушэнні павінны быць асобным release gate. Іх нельга кампенсаваць прыгожым стылем у іншых прыкладах.</span></p></section><section><h2 id="section-4">Правярайце сістэму, а не толькі мадэль</h2><p><span>Anthropic асобна падкрэслівае, што агентныя eval складанейшыя за звычайныя: дыялог складаецца з многіх крокаў, агент змяняе стан і выкарыстоўвае інструменты. Памылка можа знаходзіцца ў апісанні інструмента, палітыцы, API, стане чаргі або даных — а не ў самой мадэлі.</span></p><p><span>Таму ў трасіроўцы патрэбныя версія мадэлі, prompt і policy, уваходныя даныя, tool calls, адказы інтэграцый і канчатковы стан. Без версій рэгрэсію немагчыма ўзнавіць.</span></p></section><section><h2 id="section-5">Дадайце незалежную праверку выніку</h2><p><span>LLM-as-a-judge карысны для сэнсу і якасці тэксту, але не павінен аднаасобна пацвярджаць правы доступу або факт знешняй аперацыі. Дзе магчыма, выкарыстоўвайце дэтэрмінаваны oracle: запіс існуе, сума супадае, забаронены дакумент не здабыты, ліст застаўся чарнавіком, задача з'явілася ў чарзе адзін раз.</span></p><p><span>Для суб'ектыўных крытэрыяў задайце кароткую шкалу ацэнкі і перыядычна звярайце аўтаматычную ацэнку з чалавекам.</span></p></section><section><h2 id="section-6">Асобна праверце негатыўныя сцэнарыі</h2><p><span>Пазітыўны тэст пытаецца: «Ці зможа агент стварыць задачу?» Негатыўны: «Ці зможа ён стварыць яе ад імя іншага карыстальніка, двойчы, без абавязковага поля або пасля заканчэння тэрміну пацвярджэння?»</span></p><p><span>Патрэбныя праверкі:</span></p><ul><li><span>prompt injection у лісце або дакуменце;</span></li><li><span>падмена ідэнтыфікатара рэсурсу;</span></li><li><span>празмерна вялікі ўвод;</span></li><li><span>сакрэт у логу або паведамленні пра памылку;</span></li><li><span>невядомы статус знешняга API;</span></li><li><span>паўтор пасля таймаўту;</span></li><li><span>перавышэнне бюджэту крокаў;</span></li><li><span>знікненне аператара пасля handoff.</span></li></ul></section><section><h2 id="baseline">Зафіксуйце baseline і запускайце рэгрэсію</h2><p><span>Eval мае сэнс, калі запускаецца зноў пасля змены мадэлі, промпта, схемы інструмента, базы ведаў або палітыкі. Параўноўвайце не толькі агульны працэнт поспеху, але і катэгорыі памылак, кошт і latency.</span></p><p><span>У праекце RAG-памочніка ГрДМУ кантрольны прагон пасля выпраўленняў даў 99 адказаў з ацэнкай «выдатна», адзін — «добра», праблемных — 0 са 100 пытанняў. Гэта вынік канкрэтнага набору і версіі, а не ўніверсальная «дакладнасць 99%» або незалежны тэст на новых пытаннях. Для інтэрпрэтацыі патрэбныя дата, шкала ацэнкі, склад крыніц і паўтор пасля зменаў.</span></p></section><section><h2 id="section-7">Калі агент гатовы да абмежаванага запуску</h2><ul><li><span>Усе крытычныя сцэнарыі праходзяць без парушэння правоў і лішніх дзеянняў.</span></li><li><span>Для важных адмоў і handoff няма страчаных задач.</span></li><li><span>Паўторная спроба не стварае дубль.</span></li><li><span>Устаноўлены бюджэты часу, крокаў і кошту.</span></li><li><span>Памылку можна ўзнавіць паводле трасіроўкі.</span></li><li><span>Ёсць уладальнік метрык і расклад паўторнага eval.</span></li><li><span>Пілот абмежаваны групай карыстальнікаў і наборам інструментаў са зваротнымі дзеяннямі.</span></li></ul><p><span>Першы production — не фінальны экзамен, а пачатак назірання. Але без кантрольнага набору назіранні не будзе з чым параўноўваць.</span></p></section></div></section><section><div><p>Параўнанне</p><h2 id="ai">Слаі ацэнкі AI-агента</h2><div><div class="article-table"><table><thead><tr><th scope="col">Слой</th><th scope="col">Пытанне</th><th scope="col">Сігнал</th></tr></thead><tbody><tr><th scope="row">Outcome</th><td>Задача сапраўды завершана?</td><td>Карэктны канчатковы статус</td></tr><tr><th scope="row">Trajectory</th><td>Ці дапушчальныя інструменты і параметры?</td><td>Праверка трасіроўкі</td></tr><tr><th scope="row">Safety</th><td>Ці не парушаны правы?</td><td>Pass/fail release gate</td></tr><tr><th scope="row">Operations</th><td>Сістэма вытрымлівае збой?</td><td>Паўторы, timeout, recovery</td></tr></tbody></table></div></div></div></section><section><div><div><p>Што праверыць</p><h2 id="section-8">Што ўключыць у кантрольны набор</h2></div><ol><li><span>Частыя, рэдкія і дарагія памылкі.</span></li><li><span>Няпоўныя, супярэчлівыя і састарэлыя даныя.</span></li><li><span>Пытанні без адказу і чаканы handoff.</span></li><li><span>Розныя ролі карыстальніка і спробы абысці правілы.</span></li><li><span>Паўтор пасля timeout, ліміты бюджэту і недаступны API.</span></li></ol></div></section><section><div><div><p>Як мы падыходзім да задачы</p><p>У кейсе RAG-памочніка ГрДМУ вынік 99/100 адносіцца да аднаго кантрольнага прагону. CENTURY фіксуе версію набору і паўтарае яго пасля зменаў мадэлі, prompt, інструментаў або базы ведаў.</p></div></div></section><section><h2 id="section-10">Крыніцы і спасылкі</h2><ul><li><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" rel="noopener noreferrer" target="_blank">Anthropic: Demystifying evals for AI agents</a></li><li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" rel="noopener noreferrer" target="_blank">OpenAI: A practical guide to building AI agents</a></li><li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" rel="noopener noreferrer" target="_blank">NIST Generative AI Profile</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Падрыхтоўка камп&#x27;ютарнага зроку да эксплуатацыі: умовы здымкі, незалежны тэст, памылковыя трывогі за змену і версіі апрацоўкі. Умоўны разлік памылак.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/computer-vision-production-validation/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/computer-vision-production-validation/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/computer-vision-production-validation/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/computer-vision-production-validation/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Камп&#x27;ютарны зрок пасля пілота: даныя, памылковыя трывогі і абнаўленні">
+  <meta property="og:description" content="Падрыхтоўка камп&#x27;ютарнага зроку да эксплуатацыі: умовы здымкі, незалежны тэст, памылковыя трывогі за змену і версіі апрацоўкі. Умоўны разлік памылак.">
+  <meta property="og:url" content="https://genai.by/be/publications/computer-vision-production-validation/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Камп'ютарны зрок пасля пілота: даныя, памылковыя трывогі і абнаўленні — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/computer-vision-production-validation/#article","headline":"Камп'ютарны зрок пасля пілота: даныя, памылковыя трывогі і абнаўленні","description":"Падрыхтоўка камп'ютарнага зроку да эксплуатацыі: умовы здымкі, незалежны тэст, памылковыя трывогі за змену і версіі апрацоўкі. Умоўны разлік памылак.","datePublished":"2026-08-13T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/computer-vision-production-validation/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Камп'ютарны зрок пасля пілота: даныя, памылковыя трывогі і абнаўленні","item":"https://genai.by/be/publications/computer-vision-production-validation/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/computer-vision-production-validation/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/computer-vision-production-validation/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Камп'ютарны зрок пасля пілота: даныя, памылковыя трывогі і абнаўленні</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Навука, тэхналогіі і інавацыі</span>
+          <h1>Камп'ютарны зрок пасля пілота: даныя, памылковыя трывогі і абнаўленні</h1>
+          <p>Што праверыць паміж дэманстрацыяй і рабочым кантролем: паходжанне здымкаў, памылкі, нагрузку на аператара і абнаўленне ўсяго ланцужка.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-13T00:00:00+03:00">13 жніўня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section-1">Вызначыць дапушчальную выяву</a></li><li><a href="#section-2">Раздзяліць навучанне і праверку паводле паходжання даных</a></li><li><a href="#section-3">Падлічыць нагрузку ад памылковых трывог</a></li><li><a href="#section-4">Выпускаць сістэму абмежавана</a></li><li><a href="#section-5">Абнаўленне павінна мець уласную прыёмку</a></li><li><a href="#section-6">Медыцынскія задачы патрабуюць асобнай падставы</a></li></ol></aside>
+        <article class="article-body">
+          <p>Мадэль правільна вылучае дэфект на дэманстрацыйных здымках. У эксплуатацыі ёй давядзецца працаваць з іншым асвятленнем, забруджанай оптыкай, новымі партыямі вырабаў і змененым становішчам камеры. Для выпуску патрэбныя звесткі пра якасць усёй аперацыі ў гэтых умовах.</p>
+<p>Праграма ўкаранення павінна звязваць выяву, разметку, рашэнне мадэлі і дзеянне чалавека. Іначай высокі паказчык на наборы здымкаў застанецца асобным эксперыментам, які цяжка выкарыстоўваць у працоўным працэсе.</p>
+<h2 id="section-1">Вызначыць дапушчальную выяву</h2>
+<p>Апішыце, што камера павінна бачыць: аб'ект, ракурс, асвятленне, дыяпазон памераў і дапушчальныя перашкоды. Зафіксуйце налады абсталявання і пераўтварэнні выявы. Для здымка па-за гэтымі ўмовамі прадугледзьце статус «непрыдатны для ацэнкі».</p>
+<p>Пры працы з цеплавізійнымі данымі асобна вызначце, ці патрэбныя задачы вымераныя тэмпературы, ці дастаткова візуальных прыкмет. Каляровае прадстаўленне нельга лічыць дакладнай тэмпературнай шкалой без звестак пра пераўтварэнне і наладжванне прыбора.</p>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/52741">Даследаванне апрацоўкі цеплавізійных відэасігналаў</a> разглядае апрацоўку цеплавізійных відэасігналаў. У прыкладным праекце шлях ад зыходных даных да кадра павінен быць узнаўляльным: змяненне палітры ці нармалізацыі не павінна незаўважна змяняць сэнс уваходных даных для мадэлі.</p>
+<h2 id="section-2">Раздзяліць навучанне і праверку паводле паходжання даных</h2>
+<p>Суседнія кадры аднаго відэа могуць быць амаль аднолькавымі. Калі частка трапіла ў навучанне, а частка ў тэст, вынік можа апісваць пазнаванне знаёмых умоў замест працы на новым аб'екце.</p>
+<p>Выбірайце падзел паводле таго ўзроўню, на які хочаце пераносіць выснову: выраб, партыя, камера, пляцоўка ці перыяд. Падзел паводле выпадковых выяў падыходзіць не для кожнага з гэтых пытанняў.</p>
+<p>Разметку таксама трэба правяраць. Апішыце, хто вызначае наяўнасць дэфекту, паводле якіх крытэрыяў і што рабіць пры разыходжанні ацэнак. Спрэчны прыклад не становіцца надзейным эталонам пасля механічнага выбару большасці.</p>
+<p>Частку матэрыялу варта пакінуць для незалежнай выніковай праверкі і не выкарыстоўваць для падбору парога. Пры змене мэтавай пляцоўкі ці тыпу аб'екта межы ранейшага выніку пераглядаюць.</p>
+<h2 id="section-3">Падлічыць нагрузку ад памылковых трывог</h2>
+<p>Разгледзім выдуманую змену з 10 000 вырабаў. У ёй сапраўды дэфектныя 100 вырабаў. Мадэль знаходзіць 90 з іх і памылкова пазначае 2% спраўных.</p>
+<p>З 9 900 спраўных вырабаў атрымліваюцца 198 памылковых трывог. Усяго на праверку паступяць 288 вырабаў: 90 з дэфектам і 198 без яго. Доля пацверджаных дэфектаў сярод трывог складзе 31,25%. Яшчэ 10 дэфектных вырабаў застануцца прапушчанымі.</p>
+<p>Гэты разлік паказвае, чаму аднаго паказчыка выяўлення недастаткова. Калі кожную трывогу разглядае спецыяліст, 198 лішніх праверак маюць асобную цану. Пропускі ацэньваюць асобна з улікам наступстваў.</p>
+<table>
+<thead>
+<tr>
+<th>Што вымяраць</th>
+<th>Якое рашэнне падтрымлівае паказчык</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Пропускі паводле тыпаў дэфекту</td>
+<td>Ці дапушчальная мадэль для выбранага кантролю</td>
+</tr>
+<tr>
+<td>Памылковыя трывогі за змену</td>
+<td>Ці хопіць часу на праверку і ці не заблакуецца паток</td>
+</tr>
+<tr>
+<td>Доля непрыдатных здымкаў</td>
+<td>Ці працуе сістэма збору даных</td>
+</tr>
+<tr>
+<td>Час поўнага рашэння</td>
+<td>Ці ўкладаецца аперацыя ў вытворчы цыкл</td>
+</tr>
+<tr>
+<td>Якасць паводле пляцовак і ўмоў</td>
+<td>Дзе пацверджаная прымяняльнасць выніку</td>
+</tr>
+</tbody>
+</table>
+<p>Усе лічбы прыкладу ўмоўныя. Рабочы парог выбіраюць паводле вымярэнняў і кошту розных памылак, затым правяраюць на даных, якія не выкарыстоўваліся для яго падбору.</p>
+<h2 id="section-4">Выпускаць сістэму абмежавана</h2>
+<p>Пачніце з рэжыму, у якім прапанову мадэлі можна супаставіць з дзейным кантролем без аўтаматычнага змянення лёсу вырабу. Захавайце сувязь паміж уваходным здымкам, версіяй мадэлі, рашэннем аператара і наступным пацверджаннем якасці.</p>
+<p>Пры абмежаваным уключэнні аўтаматычных дзеянняў павінны быць вызначаныя дазволеныя выпадкі і рэзервовы працэс. Непрыдатны здымак не павінен аўтаматычна атрымліваць статус «дэфекту няма».</p>
+<p>Збірайце звесткі пра выпадкі, у якіх мадэль нічога не выявіла. Калі правяраюцца толькі трывогі, ацаніць пропускі немагчыма. Спосаб кантрольнага адбору залежыць ад рызыкі і магчымасцей працэсу.</p>
+<h2 id="section-5">Абнаўленне павінна мець уласную прыёмку</h2>
+<p>Змяненне камеры, аб'ектыва, асвятлення ці падрыхтоўкі выяў можа патрабаваць такой жа праверкі, як новая мадэль. Вядзіце версіі ўсяго шляху апрацоўкі і захоўвайце магчымасць вярнуцца да папярэдняга варыянта.</p>
+<p>Паўторнае навучанне на выпраўленнях аператараў патрабуе праверкі складу даных: памылкі разметкі і перакос у бок ужо паказаных трывог могуць трапіць у новую версію. Да выпуску параўнайце змяненні паводле тыпаў дэфекту і ўмоў здымкі, а не толькі паводле агульнага сярэдняга паказчыка.</p>
+<p>Для эксплуатацыі загадзя вызначце, хто аналізуе змяненне патоку, зацвярджае новую версію і спыняе аўтаматычнае дзеянне. Падрабязны падыход да <a href="/be/publications/ai-agent-evaluation-guide/">праверкі сістэм перад запускам</a> карысны і тут, хоць набор тэстаў будзе прадметным.</p>
+<h2 id="section-6">Медыцынскія задачы патрабуюць асобнай падставы</h2>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/52722">Публікацыя пра камп'ютарны зрок і MLOps у медыцынскім абслугоўванні</a> акрэслівае напрамак прымянення. Яна не замяняе праверку канкрэтнага медыцынскага вырабу і ўмоў яго выкарыстання.</p>
+<p><a href="https://www.imdrf.org/sites/default/files/2025-02/IMDRF_AIML%20WG_GMLP_N88%20Final.pdf">Прынцыпы IMDRF GMLP 2025</a> вылучаюць незалежнасць навучальных і тэставых набораў, рэпрэзентатыўнасць клінічных даных і ацэнку ўзаемадзеяння чалавека з сістэмай. Прамысловы прыклад з вырабамі не дае падстаў пераносіць яго парогі на пацыентаў. Прызначэнне, клінічную ацэнку і прымяняльныя патрабаванні вызначаюць асобна.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

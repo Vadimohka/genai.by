@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Як ацэньваць рэкамендацыйную сістэму паводле выніку прадукту: зрушэнне клікаў, халодны старт, кантрольныя паказчыкі і праверка перад запускам.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/recommendation-system-business-metrics/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/recommendation-system-business-metrics/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/recommendation-system-business-metrics/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/recommendation-system-business-metrics/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Рэкамендацыйная сістэма: як вымяраць карысць без пасткі клікаў">
+  <meta property="og:description" content="Як ацэньваць рэкамендацыйную сістэму паводле выніку прадукту: зрушэнне клікаў, халодны старт, кантрольныя паказчыкі і праверка перад запускам.">
+  <meta property="og:url" content="https://genai.by/be/publications/recommendation-system-business-metrics/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Рэкамендацыйная сістэма: як вымяраць карысць без пасткі клікаў — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/recommendation-system-business-metrics/#article","headline":"Рэкамендацыйная сістэма: як вымяраць карысць без пасткі клікаў","description":"Як ацэньваць рэкамендацыйную сістэму паводле выніку прадукту: зрушэнне клікаў, халодны старт, кантрольныя паказчыкі і праверка перад запускам.","datePublished":"2026-08-07T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/recommendation-system-business-metrics/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Рэкамендацыйная сістэма: як вымяраць карысць без пасткі клікаў","item":"https://genai.by/be/publications/recommendation-system-business-metrics/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/recommendation-system-business-metrics/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/recommendation-system-business-metrics/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Рэкамендацыйная сістэма: як вымяраць карысць без пасткі клікаў</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Навука, тэхналогіі і інавацыі</span>
+          <h1>Рэкамендацыйная сістэма: як вымяраць карысць без пасткі клікаў</h1>
+          <p>Як звязаць рэкамендацыі з задачай прадукту, улічыць пазіцыю паказу і праверыць вынік пасля кліку. Ад простага параўнання да эксперымента.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-07T00:00:00+03:00">7 жніўня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section-1">Выбраць вынік, які мае сэнс пасля кліку</a></li><li><a href="#section-2">Клік залежыць ад месца паказу</a></li><li><a href="#section-3">Пачаць са зразумелага варыянта параўнання</a></li><li><a href="#section-4">Як арганізаваць праверку</a></li><li><a href="#section-5">Прыклад рашэння паводле вынікаў</a></li></ol></aside>
+        <article class="article-body">
+          <p>Рэкамендацыі могуць атрымліваць больш клікаў і пры гэтым горш выконваць задачу прадукту. Карыстальнік адкрывае прапанаваны тавар, але не купляе яго; чытае яркі загаловак, але не знаходзіць патрэбнага адказу; выбірае навучальны матэрыял, які не дапамагае засвоіць тэму.</p>
+<p>Таму да навучання мадэлі трэба вызначыць, які вынік лічыцца карысным і якія абмежаванні нельга парушаць дзеля яго росту.</p>
+<p><a href="https://developers.google.com/machine-learning/recommendation/overview">Агляд рэкамендацыйных сістэм Google</a> апісвае задачу персанальнага адбору кантэнту. Для ўкаранення гэтага недастаткова: спатрэбіцца звязаць назіраныя паводзіны з мэтай канкрэтнага сэрвісу.</p>
+<h2 id="section-1">Выбраць вынік, які мае сэнс пасля кліку</h2>
+<p>Для крамы гэта можа быць завершаная пакупка з улікам вяртанняў і даступнасці тавару. Для базы ведаў — знойдзены адказ і завершаная аперацыя. Для навучання — выкананне наступнага задання і правяральнае засваенне матэрыялу.</p>
+<p>Вызначце асноўную метрыку і ахоўныя паказчыкі. Калі аптымізуецца пакупка, назірайце за вяртаннямі і скаргамі. Калі хуткасць знаходжання адказу — за памылковымі рашэннямі пасля чытання. Для кожнай метрыкі ўкажыце перыяд, адзінку назірання і правіла звязвання падзеі з паказанай рэкамендацыяй.</p>
+<p>Не выкарыстоўвайце адкладзены вынік раней, чым ён паспеў праявіцца. Параўнанне вяртанняў на другі дзень пасля пакупкі з вяртаннямі за поўны месяц стварае няроўныя ўмовы.</p>
+<h2 id="section-2">Клік залежыць ад месца паказу</h2>
+<p>Карыстальнік не выбірае з усяго каталога: ён рэагуе на тое, што яму паказалі. Прадмет на першай пазіцыі мае іншую магчымасць быць заўважаным, чым прадмет у канцы спіса.</p>
+<p>Праца <a href="https://arxiv.org/abs/1608.04468">Joachims, Swaminathan і Schnabel пра зрушаную зваротную сувязь</a> разбірае праблему пазіцыйнага зрушэння ў даных пра клікі. Практычнае наступства для прадукту: журнал паказаў патрэбны разам з журналам дзеянняў. Адсутнасць кліку па непаказаным аб'екце нельга трактаваць як устаноўленую адсутнасць цікавасці.</p>
+<p>Захоўвайце ідэнтыфікатар запыту рэкамендацый, набор даступных кандыдатаў, паказаны парадак і наступныя падзеі. Доступ да гэтых журналаў і тэрміны захоўвання вызначаюць паводле задачы і патрабаванняў да даных.</p>
+<p>Калі сістэма вучыцца толькі на ўласных мінулых паказах, папулярныя аб'екты могуць зноў атрымліваць больш магчымасцей для ўзаемадзеяння. Механізм знаёмства з новымі аб'ектамі варта праектаваць асобна і правяраць з абмежаваннем рызыкі для карыстальніка.</p>
+<h2 id="section-3">Пачаць са зразумелага варыянта параўнання</h2>
+<p>Складаную мадэль карысна параўнаць з простым падыходам: папулярнае ў адпаведнай катэгорыі, працяг бягучага сцэнарыя або ручныя правілы падбору. Такі варыянт павінен выконваць тыя ж абмежаванні даступнасці, цаны і правоў, што і новая сістэма.</p>
+<p>Для новага карыстальніка можна прапанаваць выбар інтарэсаў або выкарыстоўваць кантэкст бягучай задачы. Не трэба прыдумляць падрабязны профіль па адным дзеянні. Для новага аб'екта карысныя карэктныя атрыбуты і асобны спосаб атрымаць першыя назіранні.</p>
+<p>Публікацыя <a href="https://libeldoc.bsuir.by/handle/123456789/52069">пра аналіз эстэтычных пераваг з дапамогай нейрасетак</a> адносіцца да даследчай пастаноўкі задачы. Сістэма, якая прадказвае ўзаемадзеянне з выявай, не атрымлівае з гэтага аб'ектыўную меру прыгажосці або дакладны псіхалагічны партрэт чалавека.</p>
+<h2 id="section-4">Як арганізаваць праверку</h2>
+<table>
+<thead>
+<tr>
+<th>Этап</th>
+<th>Што параўноўваць</th>
+<th>Тыповая прычына няправільнай высновы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Праверка на гістарычных даных</td>
+<td>Якасць на даных, не выкарыстаных для наладкі</td>
+<td>У навучанне трапілі будучыя падзеі</td>
+</tr>
+<tr>
+<td>Праверка правіл</td>
+<td>Даступнасць аб'ектаў, правы, выключэнні, ліміты</td>
+<td>Мадэль прапануе недапушчальны аб'ект</td>
+</tr>
+<tr>
+<td>Абмежаваны эксперымент</td>
+<td>Загадзя вызначаны дзелавы вынік</td>
+<td>Групы адрозніваюцца ўмовамі або змешваюцца</td>
+</tr>
+<tr>
+<td>Назіранне пасля запуску</td>
+<td>Якасць па сегментах і адкладзеныя наступствы</td>
+<td>Сярэдняе хавае пагаршэнне для часткі карыстальнікаў</td>
+</tr>
+</tbody>
+</table>
+<p>Пры падзеле па часе захавайце рэальную паслядоўнасць з'яўлення даных. Прыкмета, якой яшчэ не было ў момант рэкамендацыі, не павінна дапамагаць мадэлі ў гістарычным тэсце.</p>
+<p>У эксперыменце загадзя вызначце адзінку размеркавання па групах. Калі адзін чалавек рэгулярна карыстаецца сэрвісам, незалежнае пераключэнне варыянта на кожнай старонцы можа змешваць уплыў. Аб'ём назіранняў і спосаб ацэнкі нявызначанасці залежаць ад гэтай структуры.</p>
+<h2 id="section-5">Прыклад рашэння паводле вынікаў</h2>
+<p>Дапусцім, у выдуманым эксперыменце клікабельнасць вырасла з 5% да 7%, а доля завершаных пакупак сярод карыстальнікаў з паказам зменшылася з 2% да 1,8%. Гэтыя лічбы самі па сабе яшчэ не ўстанаўліваюць статыстычна ўстойлівага эфекту: патрэбныя аб'ём выбаркі і ацэнка нявызначанасці.</p>
+<p>Але ўжо нельга даць справаздачу аб поспеху толькі на падставе росту клікаў. Варта праверыць, якія аб'екты атрымалі паказы, ці выконваліся абмежаванні і ці не пагоршылася адпаведнасць мэце карыстальніка. Пры недахопе даных рашэнне адкладаюць; пры пацверджанай шкодзе вяртаюць папярэдні варыянт.</p>
+<p>Для кожнага выпуску захоўвайце версію мадэлі, прыкмет, каталога і правіл. Убудаваны рэзервовы падбор павінен заставацца карысным, калі персанальная рэкамендацыя недаступная або даных занадта мала.</p>
+<p>Вынік укаранення — узнаўляльнае паляпшэнне выбранай аперацыі ў вядомых умовах. Адзін прыгожы прыклад персанальнага трапляння гэтага не даказвае.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
