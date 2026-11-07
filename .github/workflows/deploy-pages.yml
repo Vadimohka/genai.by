@@ -35,7 +35,6 @@ jobs:
             --exclude='/_site/' \
             --exclude='/README.md' \
             --exclude='/RESEARCH.md' \
-            --exclude='/style.md' \
             ./ _site/
       - name: Upload site
         uses: actions/upload-pages-artifact@v5.0.0
