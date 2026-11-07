@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Як выбраць размяшчэнне AI паводле даных, якасці мадэляў, latency, маштабавання, эксплуатацыі і exit plan — без міфа «on-prem бяспечнейшы».">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/private-ai-cloud-hybrid-on-prem/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/private-ai-cloud-hybrid-on-prem/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/private-ai-cloud-hybrid-on-prem/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/private-ai-cloud-hybrid-on-prem/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Cloud, hybrid ці on-prem: як выбраць контур для AI">
+  <meta property="og:description" content="Як выбраць размяшчэнне AI паводле даных, якасці мадэляў, latency, маштабавання, эксплуатацыі і exit plan — без міфа «on-prem бяспечнейшы».">
+  <meta property="og:url" content="https://genai.by/be/publications/private-ai-cloud-hybrid-on-prem/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Cloud, hybrid ці on-prem: як выбраць контур для AI — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/private-ai-cloud-hybrid-on-prem/#article","headline":"Cloud, hybrid ці on-prem: як выбраць контур для AI","description":"Як выбраць размяшчэнне AI паводле даных, якасці мадэляў, latency, маштабавання, эксплуатацыі і exit plan — без міфа «on-prem бяспечнейшы».","datePublished":"2026-08-18T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/private-ai-cloud-hybrid-on-prem/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Cloud, hybrid ці on-prem: як выбраць контур для AI","item":"https://genai.by/be/publications/private-ai-cloud-hybrid-on-prem/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/private-ai-cloud-hybrid-on-prem/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/private-ai-cloud-hybrid-on-prem/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Cloud, hybrid ці on-prem: як выбраць контур для AI</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Навука, тэхналогіі і інавацыі</span>
+          <h1>Cloud, hybrid ці on-prem: як выбраць контур для AI</h1>
+          <p>Выбар private AI пачынаецца з патокаў даных, патрабаванняў да якасці, latency, эксплуатацыі і exit plan. On-prem не становіцца бяспечным толькі праз стойку ў офісе.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-18T00:00:00+03:00">18 жніўня 2026</time></span><span>4 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section">Галоўнае</a></li><li><a href="#section-2">Тры варыянты без маркетынгу</a></li><li><a href="#section-3">Пачніце з класіфікацыі даных</a></li><li><a href="#section-4">Параўноўвайце якасць на сваёй задачы</a></li><li><a href="#on-prem-zero-trust">On-prem не адмяняе zero trust</a></li><li><a href="#section-5">Хто будзе эксплуатаваць контур</a></li><li><a href="#section-6">Матрыца выбару</a></li><li><a href="#section-7">Практычны спосаб прыняць рашэнне</a></li><li><a href="#ai">Параўнанне AI-контураў</a></li><li><a href="#section-8">Да выбару размяшчэння</a></li><li><a href="#section-10">Крыніцы і спасылкі</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Галоўнае</h2><p>Класіфікуйце даныя і параўнайце мінімум дзве дапушчальныя архітэктуры на адным eval-наборы. Cloud выбіраюць за хуткасць і эластычнасць, on-prem — за кантроль пры гатовай эксплуатацыі, hybrid — калі мяжу даных сапраўды можна даказаць.</p></div></section><section><div><p><span>Выбар контуру для AI часта пачынаюць з гатовага адказу: служба бяспекі хоча on-prem, прадуктовая каманда — cloud. Абодва бакі могуць мець рацыю, але спрачаюцца занадта агульнымі словамі.</span></p><p><span>Не існуе «бяспечнага размяшчэння» ўвогуле. Ёсць канкрэтныя даныя, мадэлі пагроз, патрабаванні да якасці, затрымкі, даступнасці і каманда, якая ўсё гэта будзе абслугоўваць.</span></p><section><h2 id="section-2">Тры варыянты без маркетынгу</h2><p><strong>Cloud AI</strong><span> — мадэль і частка сэрвісаў працуюць у знешняга правайдара. Хуткі старт, шырокі выбар моцных мадэляў, эластычнае маштабаванне. Цана і правілы апрацоўкі залежаць ад пастаўшчыка і дагавора.</span></p><p><strong>On-prem AI</strong><span> — inference выконваецца, а ключавыя даныя знаходзяцца ў інфраструктуры арганізацыі. Больш кантролю над кампанентамі і сеткавымі патокамі, але ўся эксплуатацыя становіцца вашай адказнасцю.</span></p><p><strong>Hybrid AI</strong><span> — даныя і функцыі падзеленыя. Напрыклад, закрытыя дакументы і retrieval застаюцца ў private-контуры, а абязлічаная задача ідзе ў cloud-мадэль; або асноўны inference працуе лакальна, а cloud выкарыстоўваецца для дазволеных складаных выпадкаў.</span></p><p><span>Hybrid — не аўтаматычны кампраміс. Мяжу паміж контурамі павінна быць магчыма даказаць: якія палі ідуць вонкі, хто іх ачышчае, ці можна аднавіць зыходныя даныя, што трапляе ў логі.</span></p></section><section><h2 id="section-3">Пачніце з класіфікацыі даных</h2><p><span>Складзіце спіс патокаў, а не адну пазнаку «канфідэнцыйна»:</span></p><ul><li><span>карыстальніцкі ўвод;</span></li><li><span>сістэмны prompt;</span></li><li><span>знойдзеныя фрагменты дакументаў;</span></li><li><span>гісторыя дыялогу;</span></li><li><span>tool calls і адказы інтэграцый;</span></li><li><span>embeddings;</span></li><li><span>логі і трасіроўкі;</span></li><li><span>наборы для eval;</span></li><li><span>рэзервовыя копіі.</span></li></ul><p><span>Для кожнага патоку вызначце ўладальніка, дапушчальныя юрысдыкцыі і пастаўшчыкоў, тэрмін захоўвання, правы карыстальнікаў і спосаб выдалення. Часам галоўны дакумент нельга адпраўляць у cloud, але здабытыя неадчувальныя прыкметы можна. Часам нават факт існавання запыту закрыты.</span></p></section><section><h2 id="section-4">Параўноўвайце якасць на сваёй задачы</h2><p><span>Лакальная мадэль, якая фармальна змяшчаецца на даступны GPU, можа горш выконваць доўгія інструкцыі, tool use ці працаваць з рускай мовай. Cloud-мадэль можа быць якаснейшай, але недапушчальнай для часткі даных.</span></p><p><span>Патрэбны адзін eval-набор і мінімум дзве дапушчальныя архітэктуры. Вымярайце task success, grounding, правы, latency і кошт. Не выбірайце мадэль паводле памеру, лідарборда ці прыгожага агульнага benchmark.</span></p></section><section><h2 id="on-prem-zero-trust">On-prem не адмяняе zero trust</h2><p><span>NIST SP 800-207 наўпрост аддзяляе давер ад сеткавага размяшчэння. Сервер унутры офіса ўсё адно патрабуе ідэнтычнасцей карыстальнікаў і сэрвісаў, мінімальных правоў, сегментацыі, журналаў і праверкі кожнага запыту.</span></p><p><span>Калі агульны endpoint лакальнай мадэлі даступны ўсім унутраным дадаткам, ён можа стаць зручным каналам здабывання даных. Калі embeddings і логі ляжаць «унутры», але без ACL, перыметр не ратуе ад памылковага доступу супрацоўніка ці скампраметаванага сэрвісу.</span></p></section><section><h2 id="section-5">Хто будзе эксплуатаваць контур</h2><p><span>Для on-prem трэба сумленна прызначыць уладальнікаў:</span></p><ul><li><span>абнаўленняў драйвераў, runtime і мадэляў;</span></li><li><span>CVE і ланцужка паставак;</span></li><li><span>capacity planning;</span></li><li><span>маніторынгу GPU, latency, памылак і чэргаў;</span></li><li><span>рэзервавання і аднаўлення;</span></li><li><span>eval перад абнаўленнем;</span></li><li><span>рэагавання на інцыдэнт.</span></li></ul><p><span>NVIDIA NIM, напрыклад, прадугледжвае liveness/readiness і метрыкі, але наяўнасць endpoint не стварае аперацыйнага працэсу сама па сабе. Хтосьці павінен сачыць, каб сэрвіс быў не проста «жывы», а гатовы прымаць запыты і выдаваў дапушчальную якасць.</span></p></section><section><h2 id="section-6">Матрыца выбару</h2><div><div class="article-table"><table><thead><tr><th scope="col"><span>Фактар</span></th><th scope="col"><span>Cloud</span></th><th scope="col"><span>Hybrid</span></th><th scope="col"><span>On-prem</span></th></tr></thead><tbody><tr><th scope="row"><span>Хуткасць першага пілота</span></th><td><span>Звычайна высокая</span></td><td><span>Сярэдняя</span></td><td><span>Звычайна ніжэйшая</span></td></tr><tr><th scope="row"><span>Выбар моцных мадэляў</span></th><td><span>Шырокі</span></td><td><span>Шырокі для дазволеных патокаў</span></td><td><span>Абмежаваны інфраструктурай</span></td></tr><tr><th scope="row"><span>Кантроль кампанентаў</span></th><td><span>Абмежаваны пастаўшчыком</span></td><td><span>Падзелены</span></td><td><span>Максімальны</span></td></tr><tr><th scope="row"><span>Эластычнасць нагрузкі</span></th><td><span>Звычайна высокая</span></td><td><span>Залежыць ад мяжы</span></td><td><span>Трэба планаваць магутнасці</span></td></tr><tr><th scope="row"><span>Эксплуатацыйная нагрузка</span></th><td><span>Ніжэйшая, але не нулявая</span></td><td><span>Высокая праз два контуры</span></td><td><span>Максімальная</span></td></tr><tr><th scope="row"><span>Data residency</span></th><td><span>Паводле ўмоў правайдара</span></td><td><span>Наладжваецца паводле патокаў</span></td><td><span>Пад кантролем арганізацыі</span></td></tr><tr><th scope="row"><span>Цана пры нізкай загрузцы</span></th><td><span>Часта выгадней</span></td><td><span>Складаней лічыць</span></td><td><span>Рызыка дарагога прастою</span></td></tr><tr><th scope="row"><span>Exit plan</span></th><td><span>Залежыць ад API і даных</span></td><td><span>Патрэбны для абедзвюх частак</span></td><td><span>Залежыць ад hardware/runtime</span></td></tr></tbody></table></div></div></section><section><h2 id="section-7">Практычны спосаб прыняць рашэнне</h2><ol><li><span>Выберыце адзін працэс, не «AI для ўсёй кампаніі».</span></li><li><span>Намалюйце поўны data flow.</span></li><li><span>Зафіксуйце забароны і абавязковыя патрабаванні.</span></li><li><span>Адкіньце архітэктуры, якія ім не адпавядаюць.</span></li><li><span>Астатнія праверце на адным eval-наборы і профілі нагрузкі.</span></li><li><span>Падлічыце трохгадовы TCO, уключаючы людзей і прастой.</span></li><li><span>Праверце failure mode: што адбываецца пры недаступнасці мадэлі ці сеткі.</span></li><li><span>Апішыце змену пастаўшчыка і вяртанне даных.</span></li></ol><p><span>Часам выснова будзе «cloud з enterprise-наладамі». Часам — закрыты on-prem. Часта — hybrid з вельмі невялікай дазволенай мяжой. Важна, каб рашэнне вынікала з патрабаванняў, а не з адчування, што сервер ва ўласнай стойцы аўтаматычна бяспечны.</span></p></section></div></section><section><div><p>Параўнанне</p><h2 id="ai">Параўнанне AI-контураў</h2><div><div class="article-table"><table><thead><tr><th scope="col">Фактар</th><th scope="col">Cloud</th><th scope="col">Hybrid</th><th scope="col">On-prem</th></tr></thead><tbody><tr><th scope="row">Пілот</th><td>Хутка</td><td>Сярэдне</td><td>Звычайна даўжэй</td></tr><tr><th scope="row">Кантроль кампанентаў</th><td>У правайдара</td><td>Падзелены</td><td>У арганізацыі</td></tr><tr><th scope="row">Эластычнасць</th><td>Высокая</td><td>Залежыць ад мяжы</td><td>Трэба планаваць</td></tr><tr><th scope="row">Эксплуатацыя</th><td>Ніжэйшая, але не нулявая</td><td>Складаней</td><td>Максімальная</td></tr></tbody></table></div></div></div></section><section><div><div><p>Што праверыць</p><h2 id="section-8">Да выбару размяшчэння</h2></div><ol><li><span>Раскласці паводле патокаў prompt, дакументы, embeddings, логі і eval.</span></li><li><span>Зафіксаваць уладальніка, тэрмін захоўвання і дапушчальнага правайдара.</span></li><li><span>Праверыць якасць і latency на сваіх задачах.</span></li><li><span>Прызначыць уладальнікаў абнаўленняў, CVE, маніторынгу і recovery.</span></li><li><span>Апісаць маштабаванне і выхад з выбранага контуру.</span></li></ol></div></section><section><div><div><p>Як мы падыходзім да задачы</p><p>CENTURY разглядае private AI як аперацыйную адказнасць. Сеткавае размяшчэнне не замяняе ідэнтычнасці, мінімальных правоў, журнала, сегментацыі і праверкі ланцужка паставак.</p></div></div></section><section><h2 id="section-10">Крыніцы і спасылкі</h2><ul><li><a href="https://csrc.nist.gov/pubs/sp/800/207/final" rel="noopener noreferrer" target="_blank">NIST SP 800-207: Zero Trust Architecture</a></li><li><a href="https://docs.nvidia.com/nim/large-language-models/latest/reference/architecture.html" rel="noopener noreferrer" target="_blank">NVIDIA: NIM architecture</a></li><li><a href="https://learn.microsoft.com/en-us/ai/playbook/solutions/generative-ai/genai-gateway/reference-architectures/apim-based" rel="noopener noreferrer" target="_blank">Microsoft: On-premises generative AI gateway reference</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

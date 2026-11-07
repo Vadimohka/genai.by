@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Кантроль навучальнага AI-памочніка: версіі заданняў, карэктнасць адказу, педагагічная зваротная сувязь і незалежная праверка навыку. Прыклад з інтэгралам.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/ai-learning-assistant-validation/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/ai-learning-assistant-validation/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/ai-learning-assistant-validation/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/ai-learning-assistant-validation/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Навучальны AI-памочнік: як правяраць заданні, адказы і рэальны вынік">
+  <meta property="og:description" content="Кантроль навучальнага AI-памочніка: версіі заданняў, карэктнасць адказу, педагагічная зваротная сувязь і незалежная праверка навыку. Прыклад з інтэгралам.">
+  <meta property="og:url" content="https://genai.by/be/publications/ai-learning-assistant-validation/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Навучальны AI-памочнік: як правяраць заданні, адказы і рэальны вынік — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/ai-learning-assistant-validation/#article","headline":"Навучальны AI-памочнік: як правяраць заданні, адказы і рэальны вынік","description":"Кантроль навучальнага AI-памочніка: версіі заданняў, карэктнасць адказу, педагагічная зваротная сувязь і незалежная праверка навыку. Прыклад з інтэгралам.","datePublished":"2026-08-11T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/ai-learning-assistant-validation/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Навучальны AI-памочнік: як правяраць заданні, адказы і рэальны вынік","item":"https://genai.by/be/publications/ai-learning-assistant-validation/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/ai-learning-assistant-validation/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/ai-learning-assistant-validation/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Навучальны AI-памочнік: як правяраць заданні, адказы і рэальны вынік</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Навука, тэхналогіі і інавацыі</span>
+          <h1>Навучальны AI-памочнік: як правяраць заданні, адказы і рэальны вынік</h1>
+          <p>Як правяраць створаныя мадэллю заданні, прымаць эквівалентныя адказы і вымяраць навучанне асобна ад актыўнасці ў праграме.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-11T00:00:00+03:00">11 жніўня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section-1">Абмежаваць навучальны сцэнарый</a></li><li><a href="#section-2">Захоўваць заданне разам з умовамі праверкі</a></li><li><a href="#section-3">Прыклад: правільны інтэграл і няправільная плошча</a></li><li><a href="#section-4">Правяраць педагагічны эфект асобна</a></li><li><a href="#section-5">Як выпускаць абнаўленні</a></li></ol></aside>
+        <article class="article-body">
+          <p>Памочнік можа хутка падрыхтаваць дзесяць задач, растлумачыць памылку і падабраць наступны прыклад. Але для навучальнага прадукту трэба праверыць тры розныя вынікі: карэктнасць задання, якасць зваротнай сувязі і змену навыку навучэнца.</p>
+<p>Адзін паказчык «адказы спадабаліся» не ахоплівае гэтыя пытанні. Нават матэматычна правільнае тлумачэнне можа аказацца заўчасным, калі памочнік адразу раскрывае рашэнне замест прадугледжанай выкладчыкам падказкі.</p>
+<h2 id="section-1">Абмежаваць навучальны сцэнарый</h2>
+<p>Для першага запуску выберыце канкрэтны фрагмент праграмы: напрыклад, адрозненне вызначанага інтэграла і плошчы фігуры. Пазначце неабходныя веды, дапушчальныя спосабы рашэння і тыповыя памылковыя ўяўленні.</p>
+<p>Змест курса павінен мець правераную крыніцу і адказнага выкладчыка. У моўнай праграме гэта ўключае выбраную норму, слоўнік, дапушчальныя варыянты адказу і парадак працы са спрэчным ужываннем. Мадэль не павінна самастойна ператвараць адзін распаўсюджаны варыянт у адзіны правільны.</p>
+<p><a href="https://libeldoc.bsuir.by/handle/123456789/52716">Даследаванне архітэктуры праграмы для навучання беларускай мове</a> задае прадметную вобласць такога сэрвісу. Практычную выніковасць канкрэтнай рэалізацыі неабходна правяраць асобна: апісанне архітэктуры яе не вызначае.</p>
+<h2 id="section-2">Захоўваць заданне разам з умовамі праверкі</h2>
+<p>Карысная адзінка кантэнту змяшчае ўмову, абмежаванні, эталон або спосаб праверкі, тлумачэнне, дапушчальныя варыянты і версію. Захоўвайце таксама паходжанне матэрыялаў і факт праверкі выкладчыкам.</p>
+<p>Калі мадэль згенеравала новы варыянт, ён спачатку праходзіць праверку. Умовы выдачы неправеранага кантэнту павінны быць абмежаваныя; напрыклад, яго можна накіраваць выкладчыку для падрыхтоўкі занятку, але не выкарыстоўваць аўтаматычна ў ацэньванні.</p>
+<table>
+<thead>
+<tr>
+<th>Кампанент</th>
+<th>Што правяраць</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Умова</td>
+<td>Усе даныя зададзены, пытанне адназначнае, задача мае рашэнне ў выбранай вобласці</td>
+</tr>
+<tr>
+<td>Адказ</td>
+<td>Адпавядае ўмове і абмежаванням</td>
+</tr>
+<tr>
+<td>Тлумачэнне</td>
+<td>Кожны пераход дапушчальны і зразумелы для патрэбнага ўзроўню</td>
+</tr>
+<tr>
+<td>Праверка ўводу</td>
+<td>Карэктныя эквівалентныя формы прымаюцца, памылковыя не маскіруюцца акругленнем</td>
+</tr>
+<tr>
+<td>Зваротная сувязь</td>
+<td>Паведамляе пра канкрэтную памылку і захоўвае дазволеную глыбіню падказкі</td>
+</tr>
+</tbody>
+</table>
+<p>Для спрэчнага адказу патрэбны шлях да выкладчыка. Аўтаматычнае ацэньванне не павінна прымушаць навучэнца падладжвацца пад адзіны радок, калі задача дапускае некалькі раўнасільных фармулёвак.</p>
+<h2 id="section-3">Прыклад: правільны інтэграл і няправільная плошча</h2>
+<p>Разгледзім вучэбнае заданне: знайсці плошчу фігуры паміж графікам <code>y = x² − 2x</code> і воссю абсцыс на адрэзку ад 0 да 2.</p>
+<p>На гэтым адрэзку функцыя недадатная. Вызначаны інтэграл роўны:</p>
+<p><code>∫₀² (x² − 2x) dx = [x³/3 − x²]₀² = −4/3.</code></p>
+<p>Плошча роўная <code>4/3</code>, таму што тут трэба інтэграваць абсалютнае значэнне функцыі. Адказ <code>−4/3</code> паказвае, што вылічэнне магло быць выканана правільна, а сэнс пытання — прачытаны няправільна.</p>
+<p>Добрая зваротная сувязь спачатку дапамагае заўважыць разыходжанне: «Ці можа геаметрычная плошча быць адмоўнай? Як размешчаны графік на выбраным адрэзку?» Калі навучальны рэжым прадугледжвае самастойнае выпраўленне, адразу выдаваць канчатковую формулу неабавязкова.</p>
+<p>Праверку вылічэння можна выканаць незалежным спосабам, напрыклад з дапамогай <a href="https://docs.sympy.org/latest/tutorials/intro-tutorial/calculus.html">сімвальнага інтэгравання SymPy</a>. Але выклік вылічальнага інструмента не здымае неабходнасці праверыць пастаноўку. Інтэграл і плошча адказваюць на розныя пытанні.</p>
+<p>Тая ж праблема ўзнікае з запісам <code>sqrt(x²)</code>: для адвольнага рэчаіснага <code>x</code> гэта <code>|x|</code>. Замена на <code>x</code> патрабуе дадатковага абмежавання <code>x ≥ 0</code>. Памочнік павінен захоўваць вобласць вызначэння і ўмовы пераўтварэнняў.</p>
+<h2 id="section-4">Правяраць педагагічны эфект асобна</h2>
+<p>Для кожнага навучальнага блока выберыце назіраны навык. У прыкладзе з інтэгралам гэта здольнасць вызначыць знак функцыі і выбраць патрэбны выраз для плошчы.</p>
+<p>Пасля працы з памочнікам прапануйце новае заданне без падказак. Пажадана праверыць навык і пазней, калі вучань ужо не ўзнаўляе толькі што паказаны адказ. Параўноўвайце супастаўныя заданні і ўлічвайце зыходную падрыхтоўку.</p>
+<p>Колькасць паведамленняў, час у праграме і задаволенасць інтэрфейсам могуць апісваць выкарыстанне прадукту. Яны не даказваюць засваенне тэмы. Аналагічна рост паспяховасці заданняў унутры сэрвісу можа тлумачыцца больш падрабязнымі падказкамі.</p>
+<p>Публікацыя <a href="https://libeldoc.bsuir.by/handle/123456789/52051">пра вялікія даныя ў адукацыі</a> разглядае магчымасці адукацыйнай аналітыкі. Ва ўласным прадукце карысна пазбягаць аўтаматычных высноў пра здольнасці чалавека паводле абмежаванага лічбавага следу: назіранне адносіцца да канкрэтных заданняў і ўмоў.</p>
+<h2 id="section-5">Як выпускаць абнаўленні</h2>
+<p>Змяняць мадэль, падказкі і правілы праверкі лепш як звязаныя версіі. Перад выпускам праганяюць заданні з вядомымі памылкамі, карэктнымі альтэрнатывамі і памежнымі ўмовамі. Захоўваюць магчымасць узнавіць, які кантэнт бачыў навучэнец пры спрэчнай ацэнцы.</p>
+<p>Збор навучальных даных абмяжоўваюць задачай; доступ, захоўванне і падключэнне знешніх сэрвісаў узгадняюць з адказнымі за адукацыйны працэс і абарону даных. <a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research">UNESCO</a> рэкамендуе ацэньваць прыдатнасць генератыўнага AI з улікам педагагічных мэт і інтарэсаў навучэнцаў.</p>
+<p>Тэма генерацыі задач матэматычнага аналізу прысутнічае ў <a href="https://nauchforum.ru/archive/studjournal/17(240_2).pdf#page=8">публікацыі 2023 года</a>. Прыведзеныя тут матэматычныя прыклады і парадак праверкі — самастойная практычная распрацоўка, без заявы пра праведзены педагагічны эксперымент.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

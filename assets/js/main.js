@@ -4,11 +4,26 @@
 
   const toggle = document.querySelector('[data-menu-toggle]');
   const menu = document.querySelector('[data-mobile-menu]');
+  const isBelarusian = document.documentElement.lang.toLowerCase().startsWith('be');
+  const menuLabels = isBelarusian
+    ? { open: 'Адкрыць меню', close: 'Закрыць меню' }
+    : { open: 'Открыть меню', close: 'Закрыть меню' };
+
+  const languageLinks = document.querySelectorAll('[data-language-switch] a');
+  const syncLanguageAnchors = () => {
+    languageLinks.forEach((link) => {
+      const destination = new URL(link.href);
+      destination.hash = window.location.hash;
+      link.href = destination.href;
+    });
+  };
+  syncLanguageAnchors();
+  window.addEventListener('hashchange', syncLanguageAnchors);
 
   const closeMenu = () => {
     if (!toggle || !menu) return;
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Открыть меню');
+    toggle.setAttribute('aria-label', menuLabels.open);
     menu.hidden = true;
   };
 
@@ -16,7 +31,7 @@
     toggle.addEventListener('click', () => {
       const isOpen = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!isOpen));
-      toggle.setAttribute('aria-label', isOpen ? 'Открыть меню' : 'Закрыть меню');
+      toggle.setAttribute('aria-label', isOpen ? menuLabels.open : menuLabels.close);
       menu.hidden = isOpen;
     });
 

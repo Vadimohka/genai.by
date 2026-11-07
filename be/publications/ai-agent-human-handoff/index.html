@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Калі AI-агент павінен спыніцца і перадаць задачу аператару: сігналы, кантэкст, SLA, абарона ад падвойнага дзеяння і метрыкі.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/ai-agent-human-handoff/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/ai-agent-human-handoff/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/ai-agent-human-handoff/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/ai-agent-human-handoff/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Human handoff: калі AI-агент абавязаны перадаць задачу чалавеку">
+  <meta property="og:description" content="Калі AI-агент павінен спыніцца і перадаць задачу аператару: сігналы, кантэкст, SLA, абарона ад падвойнага дзеяння і метрыкі.">
+  <meta property="og:url" content="https://genai.by/be/publications/ai-agent-human-handoff/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Human handoff: калі AI-агент абавязаны перадаць задачу чалавеку — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/ai-agent-human-handoff/#article","headline":"Human handoff: калі AI-агент абавязаны перадаць задачу чалавеку","description":"Калі AI-агент павінен спыніцца і перадаць задачу аператару: сігналы, кантэкст, SLA, абарона ад падвойнага дзеяння і метрыкі.","datePublished":"2026-08-18T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/ai-agent-human-handoff/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#egor","name":"Ягор Крачаў","url":"https://genai.by/be/#egor"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Human handoff: калі AI-агент абавязаны перадаць задачу чалавеку","item":"https://genai.by/be/publications/ai-agent-human-handoff/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/ai-agent-human-handoff/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/ai-agent-human-handoff/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Human handoff: калі AI-агент абавязаны перадаць задачу чалавеку</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Аўтаматызацыя</span>
+          <h1>Human handoff: калі AI-агент абавязаны перадаць задачу чалавеку</h1>
+          <p>Human handoff — гэта не кнопка «паклікаць аператара», а пераход стану з прычынай, кантэкстам, уладальнікам, SLA і забаронай на паралельныя дзеянні агента.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-18T00:00:00+03:00">18 жніўня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/egor-kryachev-176.png" width="88" height="88" alt="Ягор Крачаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#egor">Ягор Крачаў</a>
+          <small>CAIO · CENTURY AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section">Галоўнае</a></li><li><a href="#section-2">Калі перадача абавязковая</a></li><li><a href="#section-3">Што перадаваць чалавеку</a></li><li><a href="#section-4">Перадача павінна змяняць уладальніка</a></li><li><a href="#section-5">Што паведаміць карыстальніку</a></li><li><a href="#sla">Чарга і SLA важнейшыя за прыгожы дыялог</a></li><li><a href="#handoff">Як вымяраць якасць handoff</a></li><li><a href="#section-6">Сцэнарый праверкі</a></li><li><a href="#section-7">Сігналы абавязковай перадачы</a></li><li><a href="#section-8">Што павінна трапіць да аператара</a></li><li><a href="#section-10">Крыніцы і спасылкі</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Галоўнае</h2><p>Перадавайце задачу чалавеку пры высокай цане памылкі, недахопе доказаў, выхадзе за ўзгоднены працэс, паўтаральным збоі, канфлікце правоў або яўнай просьбе карыстальніка. Перадача завершана толькі пасля надзейнага запісу задачы і прызначэння ўладальніка.</p></div></section><section><div><p><span>Фраза «пры неабходнасці падключым аператара» гучыць заспакаяльна, але нічога не праектуе. Хто вызначае неабходнасць? Што ўбачыць аператар? Хто адказвае карыстальніку, пакуль задача ляжыць у чарзе? Што адбудзецца, калі чалавек і агент адначасова працягнуць працу?</span></p><p><span>Human handoff — гэта не кнопка ў інтэрфейсе. Гэта паўнавартасны пераход стану з уладальнікам, данымі, тэрмінам і правіламі вяртання.</span></p><section><h2 id="section-2">Калі перадача абавязковая</h2><p><span>Не варта будаваць handoff толькі на «ўпэўненасці мадэлі». Лік 0,81 не азначае, што дзеянне бяспечнае, а 0,49 — што адказ абавязкова няправільны. Надзейней спалучаць некалькі прычын.</span></p><p><strong>Цана памылкі.</strong><span> Плацеж, змена дагавора, доступаў, медыцынская або юрыдычна значная рэкамендацыя не павінны станавіцца аўтаномнымі толькі таму, што мадэль адказала ўпэўнена.</span></p><p><strong>Недахоп доказаў.</strong><span> Калі карпаратыўны пошук не знайшоў дазволеную крыніцу або крыніцы супярэчаць адна адной, агент павінен сумленна спыніцца.</span></p><p><strong>Выхад за ўзгоднены працэс.</strong><span> Карыстальнік просіць дзеянне, для якога няма інструмента, палітыкі або адказнага ўладальніка.</span></p><p><strong>Паўтаральны збой.</strong><span> Тры аднолькавыя таймаўты — не запрашэнне паспрабаваць чацвёрты раз. Гэта сігнал для чалавека або тэхнічнай чаргі.</span></p><p><strong>Яўны запыт карыстальніка.</strong><span> «Паклічце менеджара» не павінна ператварацца ва ўгаворы працягнуць размову з ботам.</span></p><p><strong>Прыкметы канфлікту або ўразлівасці.</strong><span> Спроба змяніць правілы, здабыць закрытыя даныя, абысці паўнамоцтвы або прымусіць агента выканаць нечаканы выклік інструмента.</span></p></section><section><h2 id="section-3">Што перадаваць чалавеку</h2><p><span>Аператару не патрэбны ўвесь неапрацаваны дыялог на пяцьдзясят экранаў. Патрэбны кампактны пакет:</span></p><ul><li><span>задача карыстальніка сваімі словамі;</span></li><li><span>ужо правераныя факты і спасылкі на крыніцы;</span></li><li><span>выкананыя дзеянні і іх вынік;</span></li><li><span>прычына спынення;</span></li><li><span>наступны дапушчальны крок;</span></li><li><span>тэрмін або тэрміновасць;</span></li><li><span>важныя абмежаванні і згоды карыстальніка.</span></li></ul><p><span>Такі пакет эканоміць час і не прымушае чалавека пачынаць расследаванне нанова. Пры гэтым зыходная трасіроўка павінна заставацца даступнай асобна — для спрэчных выпадкаў і аўдыту.</span></p></section><section><h2 id="section-4">Перадача павінна змяняць уладальніка</h2><p><span>Пасля handoff агент не павінен ціха працягваць змяняць даныя. Задача пераходзіць у стан накшталт </span><code>waiting_for_human</code><span> або </span><code>assigned_to_operator</code><span>, атрымлівае адказнага і блакуе дзеянні, якія канфліктуюць.</span></p><p><span>Калі аператар вырашыў праблему, магчымыя тры завяршэнні:</span></p><ol><li><span>чалавек закрывае задачу;</span></li><li><span>чалавек ухваляе адзін канкрэтны крок агента;</span></li><li><span>чалавек вяртае агенту задачу з новымі абмежаваннямі.</span></li></ol><p><span>Нельга выкарыстоўваць расплывістае «працягвай»: лепш захаваць дакладны дазволены план і тэрмін яго дзеяння.</span></p></section><section><h2 id="section-5">Што паведаміць карыстальніку</h2><p><span>Дрэнная фраза: «Ваш запыт перададзены спецыялісту». Яна не дае ні чаканняў, ні наступнага кроку.</span></p><p><span>Лепш сказаць сумленна:</span></p><blockquote><span>Я не магу бяспечна завяршыць гэтую аперацыю аўтаматычна: у даных разыходзяцца рэквізіты. Перадаў задачу менеджару разам са знойдзенымі дакументамі. Адказ будзе ў працоўны час на працягу дзвюх гадзін; паўторна адпраўляць запыт не трэба.</span></blockquote><p><span>Гэта ілюстрацыйны прыклад для чаргі з такім рэжымам працы, а не агульны SLA CENTURY. У паведамленні павінны быць зразумелая прычына, адказны і рэальны тэрмін, які каманда здольная вытрымаць.</span></p></section><section><h2 id="sla">Чарга і SLA важнейшыя за прыгожы дыялог</h2><p><span>Handoff ламаецца не ў мадэлі, а ў аперацыйнай частцы. Калі чарга жыве толькі ў памяці працэсу, задача знікне пасля перазапуску. Калі няма lease і паўторнага захопу, яна можа назаўсёды застацца ў аператара, які скончыў змену.</span></p><p><span>Для крытычных працэсаў патрэбна durable queue: задача захоўваецца ў базе, выдаецца выканаўцу на абмежаваны час, пацвярджаецца пасля завяршэння і вяртаецца ў чаргу пры збоі. Менавіта так звычайныя backend-механізмы падтрымліваюць абяцанне «перадалі чалавеку».</span></p></section><section><h2 id="handoff">Як вымяраць якасць handoff</h2><p><span>Не радуйцеся аднаму нізкаму працэнту перадач. Ён можа азначаць, што агент смела памыляецца.</span></p><p><span>Глядзіце на набор метрык:</span></p><ul><li><span>доля абавязковых перадач, якія рэальна адбыліся;</span></li><li><span>памылковыя перадачы, дзе агент мог завяршыць задачу сам;</span></li><li><span>небяспечныя выпадкі без перадачы;</span></li><li><span>час да прыняцця аператарам;</span></li><li><span>час да вырашэння;</span></li><li><span>доля паўторнага тлумачэння праблемы карыстальнікам;</span></li><li><span>дублі знешніх дзеянняў;</span></li><li><span>прычыны, з якіх задача вярнулася агенту.</span></li></ul><p><span>Добры handoff памяншае рызыку і намаганні чалавека. Ён не абавязаны быць рэдкім.</span></p></section><section><h2 id="section-6">Сцэнарый праверкі</h2><p><span>Перад запускам вазьміце 30–50 рэальных сітуацый: звычайныя, памежныя, канфліктныя і наўмысна шкодныя. Для кожнай загадзя адзначце, хто павінен завяршыць задачу — агент або чалавек — і які кантэкст абавязкова павінен быць перададзены. Затым праганяйце набор пасля зменаў мадэлі, інструментаў і палітык.</span></p><p><span>OpenAI рэкамендуе human intervention як важную абарону для дзеянняў з высокай рызыкай і выпадкаў, калі агент перавышае зададзеныя парогі няўдач. Мы дадаём да гэтага інжынернае патрабаванне: перадача лічыцца выкананай толькі тады, калі задача надзейна запісана, атрымала ўладальніка і перастала аўтаномна змяняць знешні свет.</span></p></section></div></section><section><div><p>Параўнанне</p><h2 id="section-7">Сігналы абавязковай перадачы</h2><div><div class="article-table"><table><thead><tr><th scope="col">Сігнал</th><th scope="col">Што адбылося</th><th scope="col">Дзеянне</th></tr></thead><tbody><tr><th scope="row">Цана памылкі</th><td>Плацеж, дагавор або змена доступу</td><td>Спыніць і запытаць approval</td></tr><tr><th scope="row">Няма доказаў</th><td>Крыніцы не знойдзены або супярэчаць адна адной</td><td>Адмовіцца або перадаць</td></tr><tr><th scope="row">Збой</th><td>Паўторны timeout або недаступны API</td><td>Паставіць у durable queue</td></tr><tr><th scope="row">Запыт чалавека</th><td>Карыстальнік папрасіў менеджара</td><td>Прызначыць уладальніка і тэрмін</td></tr></tbody></table></div></div></div></section><section><div><div><p>Што праверыць</p><h2 id="section-8">Што павінна трапіць да аператара</h2></div><ol><li><span>Задача карыстальніка і прычына спынення.</span></li><li><span>Правераныя факты і спасылкі на дазволеныя крыніцы.</span></li><li><span>Ужо выкананыя дзеянні і іх вынікі.</span></li><li><span>Наступны дапушчальны крок і тэрмін адказу.</span></li><li><span>Ідэнтыфікатар задачы, які выключае паўторнае выкананне.</span></li></ol></div></section><section><div><div><p>Як мы падыходзім да задачы</p><p>У нашай архітэктурнай схеме handoff — асобны стан waiting_for_human: захаваны план нельга незаўважна замяніць новай генерацыяй, а задача павінна перажыць перазапуск і змену выканаўцы.</p></div></div></section><section><h2 id="section-10">Крыніцы і спасылкі</h2><ul><li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" rel="noopener noreferrer" target="_blank">OpenAI: A practical guide to building AI agents</a></li><li><a href="https://www.anthropic.com/research/trustworthy-agents" rel="noopener noreferrer" target="_blank">Anthropic: Trustworthy agents</a></li><li><a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener noreferrer" target="_blank">NIST AI Risk Management Framework</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Як падключыць AI-агента да CRM, пошты і дакументаў: мінімальныя правы, risk tiers, пацвярджэнні, ідэмпатэнтнасць, аўдыт і rollback.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/ai-agent-action-security/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/ai-agent-action-security/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/ai-agent-action-security/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/ai-agent-action-security/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Як даць AI-агенту доступ да рэальных сістэм і не страціць кантроль">
+  <meta property="og:description" content="Як падключыць AI-агента да CRM, пошты і дакументаў: мінімальныя правы, risk tiers, пацвярджэнні, ідэмпатэнтнасць, аўдыт і rollback.">
+  <meta property="og:url" content="https://genai.by/be/publications/ai-agent-action-security/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Як даць AI-агенту доступ да рэальных сістэм і не страціць кантроль — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/ai-agent-action-security/#article","headline":"Як даць AI-агенту доступ да рэальных сістэм і не страціць кантроль","description":"Як падключыць AI-агента да CRM, пошты і дакументаў: мінімальныя правы, risk tiers, пацвярджэнні, ідэмпатэнтнасць, аўдыт і rollback.","datePublished":"2026-08-18T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/ai-agent-action-security/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#egor","name":"Ягор Крачаў","url":"https://genai.by/be/#egor"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Як даць AI-агенту доступ да рэальных сістэм і не страціць кантроль","item":"https://genai.by/be/publications/ai-agent-action-security/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/ai-agent-action-security/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/ai-agent-action-security/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Як даць AI-агенту доступ да рэальных сістэм і не страціць кантроль</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Аўтаматызацыя</span>
+          <h1>Як даць AI-агенту доступ да рэальных сістэм і не страціць кантроль</h1>
+          <p>Бяспечны AI-агент пачынаецца з абмежаваных інструментаў, мінімальных правоў, пацвярджэнняў, ідэмпатэнтнасці, аўдыту і зразумелага rollback — не з доўгага сістэмнага промпта.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-18T00:00:00+03:00">18 жніўня 2026</time></span><span>6 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/egor-kryachev-176.png" width="88" height="88" alt="Ягор Крачаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#egor">Ягор Крачаў</a>
+          <small>CAIO · CENTURY AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section">Галоўнае</a></li><li><a href="#section-2">Спачатку вырашыце, ці патрэбны тут агент</a></li><li><a href="#section-3">Інвентарызацыя інструментаў важнейшая за сістэмны промпт</a></li><li><a href="#section-4">Падзяліце дзеянні паводле рызыкі</a></li><li><a href="#section-5">Не давайце агенту агульны сэрвісны ўліковы запіс</a></li><li><a href="#section-6">Пацвярджэнне — асобны стан, а не пытанне ў чаце</a></li><li><a href="#section-7">Абараніцеся ад паўторных дзеянняў</a></li><li><a href="#section-8">Запісвайце ў журнал не думкі мадэлі, а падзеі, якія можна праверыць</a></li><li><a href="#section-9">Прадумайце спыненне да першага запуску</a></li><li><a href="#checklist-production">Мінімальны checklist перад production</a></li><li><a href="#section-10">Узроўні рызыкі для інструментаў</a></li><li><a href="#section-11">Перад падключэннем рэальных даных</a></li><li><a href="#section-13">Крыніцы і спасылкі</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Галоўнае</h2><p>Падключайце да агента толькі канкрэтныя дзеянні з абмежаванымі параметрамі. Чытанне, запіс, адпраўку і выдаленне раздзяляйце; рызыкоўныя аперацыі выконвайце праз асобнае пацвярджэнне чалавекам, а паўторны выклік не павінен ствараць паўторны знешні эфект.</p></div></section><section><div><p><span>У AI-агента ёсць непрыемны момант сталення. Пакуль ён адказвае ў тэставым чаце, памылка выглядае смешна. Як толькі яму даюць пошту, CRM, каляндар або доступ да файлаў, тая ж памылка становіцца адпраўленым лістом, сапсаванай карткай кліента або выдаленым дакументам.</span></p><p><span>Таму бяспека агента пачынаецца не з промпта «будзь асцярожны». Яна пачынаецца з архітэктуры, у якой мадэль фізічна не можа зрабіць больш, чым ёй дазволілі.</span></p><section><h2 id="section-2">Спачатку вырашыце, ці патрэбны тут агент</h2><p><span>Калі працэс можна надзейна апісаць звычайным workflow, так і рабіце. Мадэль не абавязана выбіраць наступны крок, калі гэты крок вядомы загадзя. Напрыклад, захаваць заяўку, праверыць абавязковыя палі і паведаміць менеджару — гэта нармальны дэтэрмінаваны ланцужок. Агент патрэбны там, дзе парадак дзеянняў залежыць ад кантэксту: разабраць запыт, знайсці даныя ў некалькіх сістэмах, выбраць адпаведны сцэнарый і апрацаваць выключэнне.</span></p><p><span>Практычнае правіла простае: мадэль можа прапаноўваць рашэнне, а крытычны пераход выконвае звычайны код з яўнымі праверкамі.</span></p></section><section><h2 id="section-3">Інвентарызацыя інструментаў важнейшая за сістэмны промпт</h2><p><span>Да падключэння мадэлі выпішыце ўсе даступныя дзеянні. Не «праца з CRM», а асобна:</span></p><ul><li><span>прачытаць картку кліента;</span></li><li><span>знайсці здзелку;</span></li><li><span>дадаць унутраную нататку;</span></li><li><span>змяніць стадыю;</span></li><li><span>адправіць паведамленне;</span></li><li><span>выдаліць запіс.</span></li></ul><p><span>У кожнага інструмента павінны быць зразумелыя ўваходныя параметры, абмежаваны вынік і ўласная палітыка доступу. Універсальны інструмент накшталт </span><code>execute_any_sql</code><span> або </span><code>call_any_url</code><span> эканоміць пару дзён распрацоўкі, а потым ператварае любую памылку разважання ў інцыдэнт.</span></p><p><span>OWASP называе гэтую праблему excessive agency: сістэме даюць лішнія функцыі, лішнія паўнамоцтвы або занадта шмат аўтаноміі. Нармальнае рашэнне — не яшчэ адзін абзац у інструкцыі мадэлі, а менш даступных функцый і правоў.</span></p></section><section><h2 id="section-4">Падзяліце дзеянні паводле рызыкі</h2><p><span>Мы выкарыстоўваем чатыры практычныя ўзроўні.</span></p><div><div class="article-table"><table><thead><tr><th scope="col"><span>Узровень</span></th><th scope="col"><span>Прыклад</span></th><th scope="col"><span>Як выконваць</span></th></tr></thead><tbody><tr><th scope="row"><span>Нізкі</span></th><td><span>Пошук дакумента, чытанне статусу</span></td><td><span>Аўтаматычна, з журналам</span></td></tr><tr><th scope="row"><span>Сярэдні</span></th><td><span>Чарнавік ліста, унутраная нататка</span></td><td><span>Аўтаматычна, але без знешняй адпраўкі</span></td></tr><tr><th scope="row"><span>Высокі</span></th><td><span>Адпраўка кліенту, змена статусу здзелкі</span></td><td><span>Пасля яўнага пацвярджэння чалавекам</span></td></tr><tr><th scope="row"><span>Крытычны</span></th><td><span>Плацеж, выдаленне, змена правоў</span></td><td><span>Асобны абаронены працэс; часта ўвогуле па-за агентам</span></td></tr></tbody></table></div></div><p><span>Рызыка залежыць не толькі ад назвы дзеяння. Ліст самому сабе і масавая рассылка — розныя інструменты. Чытанне публічнага каталога і чытанне кадравых дакументаў — таксама.</span></p></section><section><h2 id="section-5">Не давайце агенту агульны сэрвісны ўліковы запіс</h2><p><span>Бяспечней выконваць дзеянне ў кантэксце канкрэтнага карыстальніка і яго ролі. Калі менеджар не бачыць фінансавую справаздачу, агент менеджара таксама не павінен яе бачыць. Калі супрацоўнік не можа змяняць правы доступу, мадэль не павінна атрымліваць гэтае права праз «тэхнічны» ўліковы запіс.</span></p><p><span>Гэта адпавядае zero trust: знаходжанне ўнутры карпаратыўнай сеткі само па сабе не стварае даверу. У кожным запыце важныя ідэнтычнасць, роля, рэсурс і канкрэтнае дзеянне.</span></p></section><section><h2 id="section-6">Пацвярджэнне — асобны стан, а не пытанне ў чаце</h2><p><span>Дрэнны approval выглядае так: «Вы ўпэўнены?» — «Так». Праз пяць хвілін незразумела, што менавіта пацвердзіў чалавек і ці не змяніліся параметры.</span></p><p><span>Добрае пацвярджэнне захоўвае:</span></p><ul><li><span>дакладнае дзеянне і мэту;</span></li><li><span>канчатковыя параметры, якія будуць адпраўлены;</span></li><li><span>чаканы эфект;</span></li><li><span>тэрмін дзеяння пацвярджэння;</span></li><li><span>карыстальніка, які пацвердзіў;</span></li><li><span>ідэнтыфікатар аперацыі для абароны ад паўторнага запуску.</span></li></ul><p><span>У адной з нашых архітэктурных схем рызыкоўны запуск пераходзіць у асобны стан </span><code>waiting_for_human</code><span>. Пасля пацвярджэння выконваецца менавіта захаваны план, а не нанова згенераваная версія. Гэта невялікая дэталь, але яна прыбірае клас памылак «чалавек бачыў адно, мадэль зрабіла іншае».</span></p></section><section><h2 id="section-7">Абараніцеся ад паўторных дзеянняў</h2><p><span>Агенты паўтараюць выклікі: праз таймаўт, сеткавую памылку, паўторную спробу або незразумелы адказ інструмента. Таму знешняя аперацыя павінна быць ідэмпатэнтнай. Адзін </span><code>submission_id</code><span> — адна заяўка; адзін </span><code>payment_intent</code><span> — адзін плацеж; адзін ключ аперацыі — адна змена.</span></p><p><span>У API заявак CENTURY выкарыстоўваюцца праверка палёў, абмежаванні памеру запыту і частаты зваротаў, абарона ад паўторнай адпраўкі і бяспечныя паведамленні пра памылкі. Такія механізмы патрэбныя і вакол агента. Пры гэтым межы абароны залежаць ад захоўвання стану і знешняга API: кэш у памяці працэсу не гарантуе аднаразовую дастаўку пасля перазапуску або неадназначнага адказу знешняй сістэмы.</span></p></section><section><h2 id="section-8">Запісвайце ў журнал не думкі мадэлі, а падзеі, якія можна праверыць</h2><p><span>Для разбору інцыдэнту патрэбныя факты:</span></p><ol><li><span>хто ініцыяваў задачу;</span></li><li><span>якая версія агента і палітыкі працавала;</span></li><li><span>якія інструменты былі выкліканы;</span></li><li><span>якія параметры прайшлі праверку;</span></li><li><span>што пацвердзіў чалавек;</span></li><li><span>які знешні вынік атрыманы;</span></li><li><span>ці быў адкат.</span></li></ol><p><span>Логі не павінны ператварацца ў звалку персанальных даных і сакрэтаў. Токены, паролі і поўны змест закрытых дакументаў там не патрэбныя. Патрэбныя ідэнтыфікатары, тып падзеі, рашэнне палітыкі і спасылка на абароненую крыніцу доказаў.</span></p></section><section><h2 id="section-9">Прадумайце спыненне да першага запуску</h2><p><span>У агента павінны быць stop conditions: ліміт крокаў, часу і кошту; спыненне пасля памылкі, якая паўтараецца; забарона на змену мэты; перадача чалавеку, калі дзеянне не пацверджана або сістэма адказвае неадназначна.</span></p><p><span>І яшчэ — rollback. Для зменаў файлаў або кода мы аддаём перавагу ізаляванай працоўнай прасторы і кантрольнай кропцы перад рызыкоўным крокам. Для CRM гэта можа быць журнал папярэдніх значэнняў. Для адпраўленага ліста сапраўднага rollback няма, таму адпраўка і патрабуе больш строгага gate.</span></p></section><section><h2 id="checklist-production">Мінімальны checklist перад production</h2><ul><li><span>У агента няма ўніверсальных інструментаў і агульных адміністратарскіх правоў.</span></li><li><span>Чытанне, запіс, адпраўка і выдаленне раздзелены.</span></li><li><span>Дзеянні з высокай рызыкай патрабуюць змястоўнага пацвярджэння.</span></li><li><span>Паўторны выклік не стварае паўторны знешні эфект.</span></li><li><span>Усе рашэнні палітыкі і дзеянні трапляюць у аўдыт.</span></li><li><span>Ёсць ліміты крокаў, часу, кошту і паўтораў.</span></li><li><span>Негатыўныя сцэнарыі правераны да падключэння рэальных даных.</span></li><li><span>Для зваротных аперацый існуе правераны rollback.</span></li></ul><p><span>Калі на палову пунктаў адказ «дададзім потым», агент пакуль гатовы толькі да дэма. Гэта нармальна. Ненармальна — падаваць дэма як кіраваную працоўную сістэму.</span></p></section></div></section><section><div><p>Параўнанне</p><h2 id="section-10">Узроўні рызыкі для інструментаў</h2><div><div class="article-table"><table><thead><tr><th scope="col">Узровень</th><th scope="col">Прыклад</th><th scope="col">Правіла</th></tr></thead><tbody><tr><th scope="row">Нізкі</th><td>Пошук дакумента або статусу</td><td>Аўтаматычна, з журналам</td></tr><tr><th scope="row">Сярэдні</th><td>Чарнавік ліста або ўнутраная нататка</td><td>Без знешняй адпраўкі</td></tr><tr><th scope="row">Высокі</th><td>Адпраўка кліенту або змена здзелкі</td><td>Яўнае пацвярджэнне</td></tr><tr><th scope="row">Крытычны</th><td>Плацеж, выдаленне або правы</td><td>Асобны абаронены працэс</td></tr></tbody></table></div></div></div></section><section><div><div><p>Што праверыць</p><h2 id="section-11">Перад падключэннем рэальных даных</h2></div><ol><li><span>Прыбраць універсальныя інструменты і агульныя адміністратарскія правы.</span></li><li><span>Раздзяліць чытанне, запіс, адпраўку і выдаленне.</span></li><li><span>Захоўваць дакладныя параметры пацверджанага дзеяння.</span></li><li><span>Зрабіць паўтор знешняй аперацыі ідэмпатэнтным.</span></li><li><span>Задаць ліміты крокаў, часу, кошту і паўтораў.</span></li></ol></div></section><section><div><div><p>Як мы падыходзім да задачы</p><p>У праектах CENTURY агент разглядаецца як кіраваны выканаўца ўнутры працэсу: палітыкі інструментаў, кантэкст карыстальніка, пацвярджэнне і аўдыт знаходзяцца па-за мадэллю і правяраюцца звычайным кодам.</p></div></div></section><section><h2 id="section-13">Крыніцы і спасылкі</h2><ul><li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" rel="noopener noreferrer" target="_blank">OpenAI: A practical guide to building AI agents</a></li><li><a href="https://genai.owasp.org/llmrisk/llm062025-excessive-agency/" rel="noopener noreferrer" target="_blank">OWASP: Excessive Agency</a></li><li><a href="https://www.nist.gov/itl/ai-risk-management-framework" rel="noopener noreferrer" target="_blank">NIST AI Risk Management Framework</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

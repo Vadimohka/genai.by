@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Практычная ацэнка RAG па слаях: retrieval, grounding, дакладнасць цытат, карыснасць, адмова без даных і permission-тэсты.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/rag-evaluation-citations/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/rag-evaluation-citations/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/rag-evaluation-citations/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/rag-evaluation-citations/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Як ацэньваць RAG і адказы з крыніцамі">
+  <meta property="og:description" content="Практычная ацэнка RAG па слаях: retrieval, grounding, дакладнасць цытат, карыснасць, адмова без даных і permission-тэсты.">
+  <meta property="og:url" content="https://genai.by/be/publications/rag-evaluation-citations/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Як ацэньваць RAG і адказы з крыніцамі — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/rag-evaluation-citations/#article","headline":"Як ацэньваць RAG і адказы з крыніцамі","description":"Практычная ацэнка RAG па слаях: retrieval, grounding, дакладнасць цытат, карыснасць, адмова без даных і permission-тэсты.","datePublished":"2026-07-21T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/rag-evaluation-citations/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Як ацэньваць RAG і адказы з крыніцамі","item":"https://genai.by/be/publications/rag-evaluation-citations/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/rag-evaluation-citations/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/rag-evaluation-citations/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Як ацэньваць RAG і адказы з крыніцамі</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Навука, тэхналогіі і інавацыі</span>
+          <h1>Як ацэньваць RAG і адказы з крыніцамі</h1>
+          <p>RAG ацэньваюць па слаях: ці знаходзіць retrieval патрэбны фрагмент, ці абапіраецца адказ на яго, ці правільная цытата, ці карысны вынік і ці выкананыя правы доступу.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-07-21T00:00:00+03:00">21 ліпеня 2026</time></span><span>3 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section">Галоўнае</a></li><li><a href="#retrieval">Спачатку правярайце retrieval</a></li><li><a href="#grounding-citations">Grounding і citations — асобныя праверкі</a></li><li><a href="#100">Прыклад з практыкі: кантрольны прагон са 100 пытанняў</a></li><li><a href="#score">Крытычная памылка не павінна растварацца ў сярэднім score</a></li><li><a href="#rag">Мінімальная карта ацэнкі RAG</a></li><li><a href="#section-2">Як сабраць кантрольны набор</a></li><li><a href="#section-4">Крыніцы і спасылкі</a></li></ol></aside>
+        <article class="article-body">
+          <section><div><h2 id="section">Галоўнае</h2><p>Не зводзьце ацэнку RAG да меркавання «адказ выглядае добра». Спачатку праверце retrieval на эталонных пытаннях, затым grounding і цытаты, пасля — карыснасць адказу, адмову пры недахопе даных і permission-тэсты. Кожны слой павінен мець асобную прычыну памылкі.</p></div></section><section><div><p><span>У RAG ёсць непрыемная асаблівасць: прыгожы адказ можа хаваць адразу некалькі розных памылак. Патрэбны дакумент не знойдзены, знойдзены не той фрагмент, адказ абапіраецца не на кантэкст, цытата вядзе не туды, а правы доступу парушаныя. Калі ўсё гэта звесці да агульнага ўражання «выглядае нармальна», сістэма будзе дэградаваць незаўважна.</span></p><p><span>Таму ацэнка RAG павінна раздзяляць retrieval, grounding, citations, usefulness і access control. Такі падыход падтрымліваецца і тэхнічнымі рэкамендацыямі NIST па generative AI, і практыкай production-RAG сістэм.</span></p><section><h2 id="retrieval">Спачатку правярайце retrieval</h2><p><span>Калі патрэбны дакумент не трапіў у top-k, далейшая ацэнка стылю адказу мала што дасць. На гэтым слаі карысны невялікі эталонны набор пытанняў з чаканымі крыніцамі і ручная праверка трапляння фрагмента.</span></p><p><span>У карпаратыўных ведах часта важнейшая не abstract relevance, а траплянне ў адзін дазволены і актуальны дакумент. Таму recall і reviewed passage hit звычайна карыснейшыя за асераднёную метрыку па ўсіх тэкстах.</span></p></section><section><h2 id="grounding-citations">Grounding і citations — асобныя праверкі</h2><p><span>Нават правільны retrieved chunk не гарантуе карэктнага адказу. Мадэль можа дадумаць крок, злучыць дзве версіі інструкцыі або ўказаць спасылку на суседнюю, але недастатковую крыніцу. Правярайце сцвярджэнні па пунктах: што менавіта сказана, дзе гэта пацвярджаецца і ці дастаткова доказу для бізнес-задачы.</span></p><ul><li><span>Адказ пацвярджаецца знойдзеным кантэкстам, а не агульнай імавернасцю мадэлі.</span></li><li><span>Цытата вядзе на тую ж крыніцу і той жа сэнсавы фрагмент.</span></li><li><span>Пры недахопе даных сістэма адмаўляецца або яўна пазначае няпоўнасць адказу.</span></li></ul></section><section><h2 id="100">Прыклад з практыкі: кантрольны прагон са 100 пытанняў</h2><p><span>У RAG-памочніку ГрДМУ мы выкарыстоўвалі зафіксаваны набор са 100 пытанняў і экспертную рубрыку якасці. У адным датаваным кантрольным прагоне 99 адказаў атрымалі ацэнку «выдатна», адзін — «добра», праблемных адказаў не было.</span></p><p><span>Гэтыя лічбы апісваюць толькі канкрэтную версію базы, канфігурацыі і набору. Гэта не «99% accuracy» мадэлі і не гарантыя для будучых пытанняў. Карысны доказ тут — узнаўляльная працэдура: захаваць пытанні, дазволеныя крыніцы, ролі, версіі кампанентаў, ацэнкі і прычыны памылак, а затым паўтарыць прагон пасля змены retrieval, prompt, мадэлі або даных.</span></p><ul><li><span>Не пераносіць вынік аднаго набору на ўсе карыстальніцкія запыты.</span></li><li><span>Публікаваць размеркаванне ацэнак і крытычныя памылкі, а не толькі сярэдняе.</span></li><li><span>Дадаваць новыя рэальныя памылкі ў versioned regression-набор.</span></li></ul></section><section><h2 id="score">Крытычная памылка не павінна растварацца ў сярэднім score</h2><p><span>Для production-RAG карысна мець release gate: уцечка праз парушэнне доступу, няправільная цытата ў адчувальным працэсе або ўпэўнены адказ без доказаў павінны блакаваць рэліз незалежна ад агульнага сярэдняга бала. Менавіта так ацэнка застаецца інжынерным інструментам, а не вітрынай для дэма.</span></p></section></div></section><section><div><p>Параўнанне</p><h2 id="rag">Мінімальная карта ацэнкі RAG</h2><div><div class="article-table"><table><thead><tr><th scope="col">Слой</th><th scope="col">Пытанне</th><th scope="col">Практычны сігнал</th></tr></thead><tbody><tr><th scope="row">Retrieval</th><td>Ці знойдзеная патрэбная крыніца?</td><td>Recall@k або ручная праверка трапляння</td></tr><tr><th scope="row">Grounding</th><td>Ці пацвярджаецца адказ кантэкстам?</td><td>Pass/fail па сцвярджэннях</td></tr><tr><th scope="row">Citation</th><td>Ці вядзе спасылка да патрэбнага фрагмента?</td><td>Дакладнасць і паўната цытат</td></tr><tr><th scope="row">Usefulness</th><td>Ці вырашае адказ задачу карыстальніка?</td><td>Рубрыка або парнае параўнанне</td></tr><tr><th scope="row">Access</th><td>Ці не трапіла забароненая крыніца?</td><td>Permission test па ролях</td></tr></tbody></table></div></div></div></section><section><div><div><p>Што праверыць</p><h2 id="section-2">Як сабраць кантрольны набор</h2></div><ol><li><span>Уключыць частыя, рэдкія, неадназначныя і састарэлыя пытанні.</span></li><li><span>Для кожнага пытання ўказаць дапушчальныя крыніцы і чаканую адмову.</span></li><li><span>Асобна дадаць запыты без адказу ў базе ведаў.</span></li><li><span>Праверыць ролі з рознымі правамі на адным і тым жа пытанні.</span></li><li><span>Паўтараць набор пасля змены chunking, індэкса, мадэлі або prompt.</span></li></ol></div></section><section><div><div><p>Як мы падыходзім да задачы</p><p>CENTURY спачатку выпраўляе retrieval і правы доступу. Наладка стылю адказу не кампенсуе няправільны дакумент, а агульны score не павінен хаваць уцечку праз парушэнне правоў або памылковую цытату.</p></div></div></section><section><h2 id="section-4">Крыніцы і спасылкі</h2><ul><li><a href="https://arxiv.org/abs/2005.11401" rel="noopener noreferrer" target="_blank">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a></li><li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" rel="noopener noreferrer" target="_blank">NIST Generative AI Profile</a></li></ul></section>
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

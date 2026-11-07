@@ -215,7 +215,7 @@ const errorPage = await readFile(new URL('../404.html', import.meta.url), 'utf8'
 assertSharedFooter(errorPage, '404 page');
 
 const sitemap = await readFile(new URL('../sitemap.xml', import.meta.url), 'utf8');
-assert.equal((sitemap.match(/<loc>/g) || []).length, 42, 'sitemap contains home, catalogue, and 40 articles');
+assert.equal((sitemap.match(/<loc>/g) || []).length, 84, 'sitemap contains home, catalogue, and 40 articles in both languages');
 for (const [slug, published] of Object.entries(expectedPublished)) {
   const escapedUrl = `https://genai.by/publications/${slug}/`.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   assert.match(sitemap, new RegExp(`<url>\\s*<loc>${escapedUrl}</loc>\\s*<lastmod>${published.slice(0, 10)}</lastmod>\\s*</url>`), `${slug} sitemap date matches publication date`);

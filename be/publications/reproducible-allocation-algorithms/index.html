@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="be-BY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Як кантраляваць алгарытм размеркавання: прыярытэты, роўнасць, версіі даных, інварыянты і тлумачэнне з журнала. Навучальны прыклад з двума напрамкамі.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://genai.by/be/publications/reproducible-allocation-algorithms/">
+  <link rel="alternate" hreflang="ru-BY" href="https://genai.by/publications/reproducible-allocation-algorithms/">
+  <link rel="alternate" hreflang="be-BY" href="https://genai.by/be/publications/reproducible-allocation-algorithms/">
+  <link rel="alternate" hreflang="x-default" href="https://genai.by/publications/reproducible-allocation-algorithms/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="be_BY">
+  <meta property="og:locale:alternate" content="ru_BY">
+  <meta property="og:title" content="Алгарытм размеркавання месцаў: як зрабіць вынік узнаўляльным">
+  <meta property="og:description" content="Як кантраляваць алгарытм размеркавання: прыярытэты, роўнасць, версіі даных, інварыянты і тлумачэнне з журнала. Навучальны прыклад з двума напрамкамі.">
+  <meta property="og:url" content="https://genai.by/be/publications/reproducible-allocation-algorithms/">
+  <meta property="og:image" content="https://genai.by/assets/img/og-caio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Алгарытм размеркавання месцаў: як зрабіць вынік узнаўляльным — CAIO / Практыка</title>
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20261103-3">
+  <link rel="stylesheet" href="/assets/css/publications.css?v=20260908-2">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://genai.by/be/publications/reproducible-allocation-algorithms/#article","headline":"Алгарытм размеркавання месцаў: як зрабіць вынік узнаўляльным","description":"Як кантраляваць алгарытм размеркавання: прыярытэты, роўнасць, версіі даных, інварыянты і тлумачэнне з журнала. Навучальны прыклад з двума напрамкамі.","datePublished":"2026-08-25T00:00:00+03:00","inLanguage":"be-BY","mainEntityOfPage":"https://genai.by/be/publications/reproducible-allocation-algorithms/","image":"https://genai.by/assets/img/og-caio.png","author":{"@type":"Person","@id":"https://genai.by/be/#vadim","name":"Вадзім Уладымцаў","url":"https://genai.by/be/#vadim"},"publisher":{"@type":"Organization","name":"CAIO / Практыка","url":"https://genai.by/be/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Галоўная","item":"https://genai.by/be/"},{"@type":"ListItem","position":2,"name":"Публікацыі","item":"https://genai.by/be/publications/"},{"@type":"ListItem","position":3,"name":"Алгарытм размеркавання месцаў: як зрабіць вынік узнаўляльным","item":"https://genai.by/be/publications/reproducible-allocation-algorithms/"}]}]}</script>
+  <link rel="stylesheet" href="/assets/css/languages.css?v=20261107-1">
+</head>
+<body class="publication-page">
+  <a class="skip-link" href="#article">Да зместу</a>
+  <div class="viewport-frame"><div class="site-shell publication-shell">
+    <header class="site-header" data-header>
+      <a class="brand" href="/be/" aria-label="CAIO Практыка — на галоўную">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="42" height="42" alt="" decoding="async"></span>
+        <span class="brand-copy">
+          <strong>CAIO</strong>
+          <small>практыка</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Асноўная навігацыя">
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+
+      <div class="header-actions">
+          <nav class="language-switch" aria-label="Мова сайта" data-language-switch>
+            <a href="/publications/reproducible-allocation-algorithms/" lang="ru" hreflang="ru-BY" aria-label="Русская версия" data-language="ru">RU</a>
+            <a href="/be/publications/reproducible-allocation-algorithms/" lang="be" hreflang="be-BY" aria-label="Беларуская версія" data-language="be" aria-current="page">BE</a>
+          </nav>
+        <a class="header-cta" href="/be/#contact">Напісаць нам</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Адкрыць меню" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Мабільная навігацыя" data-mobile-menu hidden>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/" aria-current="page">Публікацыі</a>
+      </nav>
+    </header>
+    <main id="article">
+      <nav class="breadcrumbs" aria-label="Навігацыйны ланцужок"><a href="/be/">Галоўная</a><span>/</span><a href="/be/publications/">Публікацыі</a><span>/</span><span>Алгарытм размеркавання месцаў: як зрабіць вынік узнаўляльным</span></nav>
+      <header class="article-hero">
+        <div class="article-hero-copy">
+          <span class="mono-label">Навука, тэхналогіі і інавацыі</span>
+          <h1>Алгарытм размеркавання месцаў: як зрабіць вынік узнаўляльным</h1>
+          <p>Версіі правіл, уваходны зрэз, інварыянты і след разліку: як растлумачыць прызначэнне месца або рэсурсу без здагадак моўнай мадэлі.</p>
+          <div class="article-meta"><span>Апублікавана <time datetime="2026-08-25T00:00:00+03:00">25 жніўня 2026</time></span><span>5 хв чытання</span></div>
+        </div>
+        <aside class="article-author" aria-label="Аўтар публікацыі">
+          <img src="/assets/img/vadim-vladymtsev-176.jpg" width="88" height="88" alt="Вадзім Уладымцаў" decoding="async">
+          <span>Аўтар</span>
+          <a href="/be/#vadim">Вадзім Уладымцаў</a>
+          <small>Прадукт, архітэктура і інжынерная эксплуатацыя AI</small>
+        </aside>
+      </header>
+      <div class="article-layout">
+        <aside class="article-toc"><span class="mono-label">У артыкуле</span><ol><li><a href="#section-1">Пачаць з фармальнага апісання правіл</a></li><li><a href="#section-2">Невялікі навучальны прыклад</a></li><li><a href="#section-3">Зафіксаваць уваходны зрэз</a></li><li><a href="#section-4">Правяраць уласцівасці выніку</a></li><li><a href="#section-5">Тлумачыць на падставе следу разліку</a></li></ol></aside>
+        <article class="article-body">
+          <p>Калі сістэма размяркоўвае месцы, заяўкі або абмежаваныя рэсурсы, пытанне «чаму атрымаўся такі вынік» павінна мець правяральны адказ. Патрэбныя зыходныя даныя, правілы, якія дзейнічалі, і паслядоўнасць рашэнняў. Пераканаўчае тлумачэнне, створанае пасля разліку, не замяняе гэтых матэрыялаў.</p>
+<p>У <a href="https://libeldoc.bsuir.by/handle/123456789/60486">працы Уладымцава і Магілеўца 2025 года</a> разглядаецца аптымізацыя залічэння на прыкладзе аўтаматызаванай сістэмы БДУІР. Для іншых задач карыснае больш агульнае інжынернае пытанне: як аддзяліць зацверджаныя правілы размеркавання ад рэалізацыі і наступнага тлумачэння.</p>
+<h2 id="section-1">Пачаць з фармальнага апісання правіл</h2>
+<p>Да выбару алгарытму вызначце даступныя рэсурсы, абмежаванні, прыярытэты, падставы для адмовы і парадак развязання роўнасці. У правіл павінны быць версія, дата прымяняльнасці і ўпаўнаважаны ўладальнік.</p>
+<p>Не пакідайце ў кодзе няяўных прыярытэтаў. Парадак радкоў у базе даных, час паступлення тэхнічнага запыту або выпадковае значэнне не павінны вырашаць лёс заяўкі, калі такі парадак наўпрост не прадугледжаны правіламі.</p>
+<p>Калі правілы супярэчаць адно аднаму або не апісваюць спрэчную сітуацыю, сістэма павінна выявіць нявызначанасць. Самастойна выбраць зручнае тлумачэнне і схаваць яго ў алгарытме — непрыдатны спосаб аўтаматызацыі.</p>
+<h2 id="section-2">Невялікі навучальны прыклад</h2>
+<p>Уявім выдуманае размеркаванне на два навучальныя напрамкі, X і Y. На кожным адно месца. Для прыкладу загадзя ўстаноўлена: заяўкі разглядаюцца па змяншэнні бала; кандыдат атрымлівае першы даступны напрамак са свайго спіса. Рэальныя правілы прыёму могуць быць арганізаваныя інакш.</p>
+<table>
+<thead>
+<tr>
+<th>Заяўка</th>
+<th style="text-align:right">Бал</th>
+<th>Перавагі</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align:right">98</td>
+<td>X, затым Y</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align:right">96</td>
+<td>Толькі X</td>
+</tr>
+<tr>
+<td>C</td>
+<td style="text-align:right">95</td>
+<td>Толькі Y</td>
+</tr>
+</tbody>
+</table>
+<p>Пры гэтых правілах A атрымлівае X, B застаецца без месца, C атрымлівае Y. Можна ўявіць іншае размеркаванне: A на Y і B на X. Яно таксама запаўняе абодва месцы, але пазбаўляе A першага выбару. Каб выбіраць паміж такімі варыянтамі, патрэбныя загадзя ўстаноўленая мэта і правіла прыярытэту. Само запаўненне ўсіх месцаў яшчэ не вызначае адзіны правільны вынік.</p>
+<p>Калі A зменіць перавагі на Y, затым X, вынік стане іншым: A атрымлівае Y, B — X, C застаецца без месца. Таму версія спіса пераваг уваходзіць у зыходныя даныя разліку.</p>
+<p>Калі ў A і B аднолькавы бал, апісаных умоў недастаткова для вызначэння парадку. Спачатку патрэбнае зацверджанае правіла развязання роўнасці. Выбар па ўнутраным ідэнтыфікатары не становіцца дапушчальным толькі таму, што яго лёгка ўзнавіць.</p>
+<h2 id="section-3">Зафіксаваць уваходны зрэз</h2>
+<p>Для кожнага запуску захавайце склад заявак, версіі іх даных, даступную ёмістасць і версію правіл. Асобна ўкажыце момант, на які сфарміраваны зрэз. Змены пасля гэтага моманту павінны трапляць у наступны разлік паводле вызначанай працэдуры.</p>
+<p>Уваходны набор карысна забяспечыць кантрольнай сумай, а вынік — ідэнтыфікатарам запуску. Гэта дапамагае выявіць падмену або выпадковую змену файлаў, але не даказвае карэктнасці саміх правіл і паўнамоцтваў на іх зацвярджэнне.</p>
+<p>Персанальныя даныя ў дыягнастычных выгрузках абмяжоўваюць неабходным складам. Для тэхнічнага параўнання часта дастаткова ўнутраных ідэнтыфікатараў; магчымасць супаставіць іх з людзьмі павінна заставацца ва ўпаўнаважаных супрацоўнікаў.</p>
+<h2 id="section-4">Правяраць уласцівасці выніку</h2>
+<p>Прыклады ахопліваюць толькі частку паводзін. Дадаткова правярайце інварыянты — умовы, якія павінны выконвацца для любога дапушчальнага ўваходу.</p>
+<table>
+<thead>
+<tr>
+<th>Уласцівасць</th>
+<th>Прыклад праверкі</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Абмежаванне ёмістасці</td>
+<td>Колькасць прызначэнняў не перавышае даступныя месцы</td>
+</tr>
+<tr>
+<td>Адзінасць</td>
+<td>Адна заяўка не атрымлівае некалькі несумяшчальных прызначэнняў</td>
+</tr>
+<tr>
+<td>Дапушчальнасць</td>
+<td>Прызначаны варыянт дазволены ўмовамі заяўкі і правіламі</td>
+</tr>
+<tr>
+<td>Узнаўляльнасць</td>
+<td>Аднолькавыя версіі ўваходу і правіл даюць аднолькавы вынік</td>
+</tr>
+<tr>
+<td>Незалежнасць ад выпадковага парадку</td>
+<td>Перастаноўка радкоў не змяняе вынік, калі правілы не выкарыстоўваюць гэты парадак</td>
+</tr>
+</tbody>
+</table>
+<p>Для складаных квот і прыярытэтаў спатрэбяцца дадатковыя ўласцівасці. Універсальны прагны алгарытм з навучальнага прыкладу не варта пераносіць на такія выпадкі без доказу адпаведнасці правілам.</p>
+<p>Правярайце крайнія ўваходы: пусты набор, нулявую ёмістасць, аднолькавыя прыярытэты, адкліканую заяўку, недапушчальную перавагу. Карысна параўноўваць незалежныя рэалізацыі на невялікіх наборах, для якіх вынік можна праверыць поўным пераборам.</p>
+<h2 id="section-5">Тлумачыць на падставе следу разліку</h2>
+<p>Журнал павінен захоўваць прымененае правіла, разгледжаны варыянт, прычыну прыняцця або адхілення і стан абмежаванняў. Для перагляду канкрэтнай заяўкі гэта часта важнейшае за агульны працэнт паспяховых прызначэнняў.</p>
+<p>Моўную мадэль можна выкарыстоўваць для перакладу структураванага следу на зразумелую мову. Ёй перадаюць толькі дазволеныя даныя і правяраюць, што тлумачэнне не дадае новых падстаў. Пры адсутнасці следу сістэма паведамляе пра немагчымасць пацвердзіць прычыну.</p>
+<p>Афіцыйнае рашэнне прымае ўпаўнаважаны працэс. Мадэль не павінна змяняць прыярытэты або падмяняць падставы прыгожым разважаннем.</p>
+<p>Перад публікацыяй выніку праверце подпіс адказнага, версію запуску і парадак апрацоўкі выпраўленняў. Паўторны разлік нельга незаўважна выдаваць за папярэдні: удзельнікі і сістэмы суправаджэння павінны адрозніваць версіі.</p>
+<p>Артыкул апісвае інжынерны парадак кантролю, а не актуальныя ўмовы паступлення. Прымяняльныя правілы, паўнамоцтвы і парадак абскарджання неабходна вызначаць для канкрэтнай арганізацыі і перыяду.</p>
+
+        </article>
+      </div>
+      <section class="article-cta"><span class="mono-label">Наступны крок</span><h2>Разабраць тэму<br>на вашай задачы.</h2><a class="button button-primary" href="/be/#contact">Абмеркаваць задачу <span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/img/icon-192.png" width="64" height="64" alt="" loading="lazy" decoding="async"></span>
+        <div>
+          <strong>CAIO / PRACTICE</strong>
+          <p class="footer-description">Практыка для AI-лідараў і каманд, якія ўкараняюць AI</p>
+        </div>
+      </div>
+      <nav class="footer-navigation" aria-label="Навігацыя ўнізе старонкі">
+        <span class="footer-label">Навігацыя</span>
+        <a href="/be/#experts">Эксперты</a>
+        <a href="/be/#work">Праца</a>
+        <a href="/be/#format">Фармат</a>
+        <a href="/be/publications/">Публікацыі</a>
+        <a href="/be/#contact">Кантакты</a>
+      </nav>
+      <div class="footer-companies">
+        <span class="footer-label">Кампаніі экспертаў</span>
+        <div class="footer-company-group">
+          <a class="footer-company" href="https://century-ai.by/" target="_blank" rel="noopener noreferrer">CENTURY <span aria-hidden="true">↗</span></a>
+          <a class="footer-company" href="https://stacklevel.group/" target="_blank" rel="noopener noreferrer">STACKLEVEL GROUP <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer-company-group">
+          <span class="footer-company">MyFin Group</span>
+          <a class="footer-company footer-company-secondary" href="https://bankiros.ru/" target="_blank" rel="noopener noreferrer">Bankiros.ru <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© <span data-year>2026</span></span>
+        <span>Мінск · Беларусь</span>
+      </div>
+    </footer>
+  </div></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
