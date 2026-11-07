@@ -37,7 +37,7 @@ CAIO / Practice — кансультацыі і сумесныя практык�
 
 Усе тры эксперты гэтай групы звязаныя з CENTURY і STACKLEVEL GROUP.
 
-- Вадзім Уладымцаў — Co-founder CENTURY, CTO STACKLEVEL GROUP. Прадукт, архітэктура і інжынерная эксплуатацыя карпаратыўнага AI. Напрамкі: навука, тэхналогіі і інавацыі. Профіль: https://genai.by/be/#vadim. Сайт: https://vadimohka.com/. Telegram: https://t.me/vadimohka
+- Вадзім Владымцев — Co-founder CENTURY, CTO STACKLEVEL GROUP. Прадукт, архітэктура і інжынерная эксплуатацыя карпаратыўнага AI. Напрамкі: навука, тэхналогіі і інавацыі. Профіль: https://genai.by/be/#vadim. Сайт: https://vadimohka.com/. Telegram: https://t.me/vadimohka
 - Віталій Бахмат — CEO і Co-founder CENTURY. Укараненне AI ў бізнесе, праца з кіраўнікамі і ўладальнікамі працэсаў. Напрамкі: бізнес, эканоміка AI і стратэгія. Профіль: https://genai.by/be/#vitaliy. LinkedIn: https://www.linkedin.com/in/vbakhmat/. Telegram: https://t.me/vitalibakhmat
 - Ягор Крачаў — CAIO · CENTURY AI. AI-архітэктура і інжынерная рэалізацыя. Напрамкі: аўтаматызацыя, AI-агенты і працэсы. Профіль: https://genai.by/be/#egor. LinkedIn: https://www.linkedin.com/in/ekrychev/
 
@@ -86,7 +86,7 @@ Sitemap: https://genai.by/sitemap.xml
 - https://genai.by/be/publications/how-ai-automates-companies/ — Як ШІ аўтаматызуе кампаніі: задачы, кантэкст і новыя межы роляў (2026-08-23)
 - https://genai.by/be/publications/ai-agent-vs-generic-chatbot/ — Чат-бот, Telegram-бот або AI-агент: як мы выбіраем рашэнне для бізнесу (2026-04-15)
 
-### Вадзім Уладымцаў
+### Вадзім Владымцев
 
 - https://genai.by/be/publications/rag-evaluation-citations/ — Як ацэньваць RAG і адказы з крыніцамі (2026-07-21)
 - https://genai.by/be/publications/private-on-prem-ai/ — Калі патрэбны private або on-prem AI (2026-07-21)
@@ -116,7 +116,7 @@ Sitemap: https://genai.by/sitemap.xml
 - https://genai.by/be/publications/xr-pilot-value-validation/ — VR і AR у працы: як праверыць карысць да закупкі абсталявання (2026-08-21)
 - https://genai.by/be/publications/financial-ai-assistant-reconciliation/ — Фінансавы AI-памочнік: спачатку зверка аперацый, затым тлумачэнні (2026-08-19)
 
-### Сумесная публікацыя Вадзіма Уладымцава і Віталія Бахмата
+### Сумесная публікацыя Вадзіма Владымцева і Віталія Бахмата
 
 - https://genai.by/be/publications/ai-fundraising-nko/ — ШІ не заменіць фандрайзера. Але можа заўважна разгрузіць каманду НКА (2026-08-31)
 

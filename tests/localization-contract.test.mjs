@@ -219,7 +219,7 @@ test('unknown Belarusian URLs use localized 404 content without redirecting', as
     switcher.querySelectorAll = () => languageLinks;
     const manifest = element({ href: '/site.webmanifest' });
     const label = element({ 'aria-label': 'Навигация в подвале' });
-    const nodes = ['Этой страницы', 'здесь нет.', 'На главную'].map((textContent) => ({
+    const nodes = ['Этой страницы', 'здесь нет', 'На главную'].map((textContent) => ({
       textContent, parentElement: { closest: () => null },
     }));
     const document = {
@@ -241,7 +241,7 @@ test('unknown Belarusian URLs use localized 404 content without redirecting', as
     const localized = pathname.startsWith('/be/');
     assert.equal(document.documentElement.lang, localized ? 'be-BY' : 'ru-BY');
     assert.equal(document.title, localized ? 'Старонка не знойдзена — CAIO / Практыка' : 'Страница не найдена — CAIO / Практика');
-    assert.deepEqual(nodes.map((node) => node.textContent), localized ? ['Гэтай старонкі', 'тут няма.', 'На галоўную'] : ['Этой страницы', 'здесь нет.', 'На главную']);
+    assert.deepEqual(nodes.map((node) => node.textContent), localized ? ['Гэтай старонкі', 'тут няма', 'На галоўную'] : ['Этой страницы', 'здесь нет', 'На главную']);
     assert.equal(links[0].getAttribute('href'), localized ? '/be/' : '/');
     assert.equal(links[1].getAttribute('href'), localized ? '/be/#contact' : '/#contact');
     assert.equal(links[2].getAttribute('href'), localized ? '/be/publications/' : '/publications/');

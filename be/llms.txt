@@ -37,7 +37,7 @@ CAIO / Practice — кансультацыі і сумесныя практык�
 
 Усе тры эксперты гэтай групы звязаныя з CENTURY і STACKLEVEL GROUP.
 
-- Вадзім Уладымцаў — Co-founder CENTURY, CTO STACKLEVEL GROUP. Прадукт, архітэктура і інжынерная эксплуатацыя карпаратыўнага AI. Напрамкі: навука, тэхналогіі і інавацыі. Профіль: https://genai.by/be/#vadim. Сайт: https://vadimohka.com/. Telegram: https://t.me/vadimohka
+- Вадзім Владымцев — Co-founder CENTURY, CTO STACKLEVEL GROUP. Прадукт, архітэктура і інжынерная эксплуатацыя карпаратыўнага AI. Напрамкі: навука, тэхналогіі і інавацыі. Профіль: https://genai.by/be/#vadim. Сайт: https://vadimohka.com/. Telegram: https://t.me/vadimohka
 - Віталій Бахмат — CEO і Co-founder CENTURY. Укараненне AI ў бізнесе, праца з кіраўнікамі і ўладальнікамі працэсаў. Напрамкі: бізнес, эканоміка AI і стратэгія. Профіль: https://genai.by/be/#vitaliy. LinkedIn: https://www.linkedin.com/in/vbakhmat/. Telegram: https://t.me/vitalibakhmat
 - Ягор Крачаў — CAIO · CENTURY AI. AI-архітэктура і інжынерная рэалізацыя. Напрамкі: аўтаматызацыя, AI-агенты і працэсы. Профіль: https://genai.by/be/#egor. LinkedIn: https://www.linkedin.com/in/ekrychev/
 

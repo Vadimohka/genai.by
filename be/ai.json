@@ -57,7 +57,7 @@
       "@type": "Service",
       "@id": "https://genai.by/be/#service",
       "name": "CAIO Practice",
-      "description": "Бясплатныя індывідуальныя кансультацыі і навучанне каманд для CAIO, CTO, CIO і кіраўнікоў трансфармацыі.",
+      "description": "Бясплатныя індывідуальныя кансультацыі і навучанне каманд для CAIO, CTO, CIO і кіраўнікоў трансфармацыі",
       "provider": [
         {
           "@id": "https://genai.by/be/#vadim"
@@ -84,7 +84,7 @@
     {
       "@type": "Person",
       "@id": "https://genai.by/be/#vadim",
-      "name": "Вадзім Уладымцаў",
+      "name": "Вадзім Владымцев",
       "jobTitle": "Co-founder CENTURY · CTO STACKLEVEL GROUP",
       "url": "https://genai.by/be/#vadim",
       "image": "https://genai.by/assets/img/vadim-vladymtsev-176.jpg",
@@ -151,7 +151,7 @@
         "AI-агенты",
         "Працэсы"
       ],
-      "description": "Працуе з AI-архітэктурай і інжынернай рэалізацыяй: дапамагае ператвараць задачы і абмежаванні ўкаранення ў працоўныя сістэмы.",
+      "description": "Працуе з AI-архітэктурай і інжынернай рэалізацыяй: дапамагае ператвараць задачы і абмежаванні ўкаранення ў працоўныя сістэмы",
       "sameAs": [
         "https://www.linkedin.com/in/ekrychev/"
       ],
@@ -185,7 +185,7 @@
         "Прадукт",
         "Аналітыка"
       ],
-      "description": "Адказвае за эфектыўнае і прыбытковае ўкараненне AI ў сярэднім бізнесе, стварае ўнутраныя прадукты і аналітыку.",
+      "description": "Адказвае за эфектыўнае і прыбытковае ўкараненне AI ў сярэднім бізнесе, стварае ўнутраныя прадукты і аналітыку",
       "sameAs": [
         "https://www.linkedin.com/in/andrei-sobalevich/"
       ],
@@ -202,7 +202,7 @@
       "@type": "Article",
       "@id": "https://genai.by/be/publications/ai-financial-advice-checklist/#article",
       "headline": "Ці можна давяраць AI свае грошы: як правяраць фінансавыя парады",
-      "description": "Як выкарыстоўваць AI ў фінансавых пытаннях: правяраць крыніцы, лічыць асобна і супастаўляць умовы. Паводле матэрыялу Андрэя Сабалевіча на сайце «Цифратека».",
+      "description": "Як выкарыстоўваць AI ў фінансавых пытаннях: правяраць крыніцы, лічыць асобна і супастаўляць умовы. Паводле матэрыялу Андрэя Сабалевіча на сайце «Цифратека»",
       "datePublished": "2026-11-03T00:00:00+03:00",
       "inLanguage": "be-BY",
       "mainEntityOfPage": "https://genai.by/be/publications/ai-financial-advice-checklist/",
