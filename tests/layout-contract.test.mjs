@@ -176,16 +176,21 @@ test('both homepages introduce the experts before describing the work', () => {
   }
 });
 
-test('homepages retain location metadata without displaying the street address', () => {
+test('homepage location metadata agrees with the public city and country', () => {
   for (const page of pages.filter((item) => item.home)) {
     const metadata = new Map(page.nodes.filter((node) => node.tag === 'meta')
       .map((node) => [node.attrs.name, node.attrs.content]));
-    for (const key of ['geo.region', 'geo.placename', 'geo.address']) {
+    for (const key of ['geo.region', 'geo.placename']) {
       assert.ok(metadata.get(key)?.trim(), page.path + ': ' + key + ' is available to crawlers');
     }
     const body = page.nodes.find((node) => node.tag === 'body');
-    assert.ok(!text(body.text).includes(text(metadata.get('geo.address'))),
-      page.path + ': street address is not visible page copy');
+    assert.equal(metadata.get('geo.region'), 'BY-HM', page.path + ': primary location is Minsk, Belarus');
+    assert.ok(text(body.text).includes(text(metadata.get('geo.placename'))),
+      page.path + ': crawler city matches the visible location');
+    assert.ok(!metadata.has('geo.address'), page.path + ': no unpublished street address is asserted');
+    const geography = page.ids.get('geography');
+    assert.ok(geography && /Беларус/.test(text(geography.text)),
+      page.path + ': primary country is explained in visible content');
     const contact = page.ids.get('contact');
     assert.ok(contact, page.path + ': contact section remains addressable');
     assert.ok(!page.nodes.some((node) => node.tag === 'address' && inside(node, contact)),
